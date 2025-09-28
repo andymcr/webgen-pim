@@ -22,11 +22,6 @@
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//CollectionDisplayOptions/LineDirection"/>
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//CollectionDisplayOptions/PageDirection"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="webui.ecore#//PaginationControlPlacements">
-      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/Below"/>
-      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/Above"/>
-      <genEnumLiterals ecoreEnumLiteral="webui.ecore#//PaginationControlPlacements/AboveAndBelow"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="webui.ecore#//ContainerActionsPlacement">
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//ContainerActionsPlacement/Above"/>
       <genEnumLiterals ecoreEnumLiteral="webui.ecore#//ContainerActionsPlacement/Below"/>
@@ -295,35 +290,31 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/findContainerSelection"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/findElementSelection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filters"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filter"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/supportedFilters"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/emptyMessage"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/omitFieldLabels"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/defaultPaginationSize"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/maximumPaginationSize"/>
-      <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationControlPlacement"/>
-      <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/nextNpages"/>
-      <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/previousNpages"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/nextPageLabel"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/nextPageIconName"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/previousPageLabel"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/previousPageIconName"/>
-      <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/useDisabledPageLinks"/>
-      <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/useFirstLastPageLinks"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/firstPageLabel"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/firstPageIconName"/>
-      <genFeatures createChild="false" propertyCategory="Interface" propertyDescription=""
-          ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/lastPageLabel"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/lastPageIconName"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationElementClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/paginationAnchorClass"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/emptyMessage"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/containingType"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/isContained"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/referencableEntities"/>
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/valueEntities"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="webui.ecore#//CollectionFilter"/>
+    <genClasses ecoreClass="webui.ecore#//ArrayFilter"/>
+    <genClasses ecoreClass="webui.ecore#//BooleanFilter"/>
+    <genClasses ecoreClass="webui.ecore#//ChoiceFilter"/>
+    <genClasses ecoreClass="webui.ecore#//ComparisionFilter"/>
+    <genClasses ecoreClass="webui.ecore#//DateTimeFilter"/>
+    <genClasses ecoreClass="webui.ecore#//EntityFilter"/>
+    <genClasses ecoreClass="webui.ecore#//NullFilter"/>
+    <genClasses ecoreClass="webui.ecore#//NumericFilter"/>
+    <genClasses ecoreClass="webui.ecore#//TextFilter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//TextFilter/attribute"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//EditUnit">
       <genFeatures createChild="false" propertyCategory="Security" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/useCaptcha"/>

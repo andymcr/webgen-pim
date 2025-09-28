@@ -459,6 +459,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="findContainerSelection"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="findElementSelection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filters" upperBound="-1"
+        eType="#//CollectionFilter" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedFilters" upperBound="-1"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
@@ -471,6 +473,19 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emptyMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionFilter" abstract="true" eSuperTypes="../../work.andycarpenter.webgen.pims.base/model/base.ecore#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrayFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChoiceFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisionFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTimeFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntityFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NullFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NumericFilter" eSuperTypes="#//CollectionFilter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextFilter" eSuperTypes="#//CollectionFilter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Attribute"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EditUnit" abstract="true" eSuperTypes="#//SingletonUnit">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCaptcha" lowerBound="1"

@@ -573,6 +573,7 @@ abstract rule CollectionUnit {
 			else
 				website.findElementSelection.findSelection()
 			endif,
+		filters <- website.filters,
 		filter <-
 			if website.filter.oclIsUndefined() then
 				website.filter
@@ -584,6 +585,83 @@ abstract rule CollectionUnit {
 		defaultPaginationSize <- website.defaultPaginationSize,
 		maximumPaginationSize <- website.maximumPaginationSize,
 		emptyMessage <- website.emptyMessage
+	)
+}
+
+-- @extends NamedElement
+abstract rule CollectionFilter {
+	from website : Website!CollectionFilter
+	to waf : WAF!CollectionFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule ArrayFilter {
+	from website : Website!ArrayFilter
+	to waf : WAF!ArrayFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule BooleanFilter {
+	from website : Website!BooleanFilter
+	to waf : WAF!BooleanFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule ChoiceFilter {
+	from website : Website!ChoiceFilter
+	to waf : WAF!ChoiceFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule DateTimeFilter {
+	from website : Website!DateTimeFilter
+	to waf : WAF!DateTimeFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule EntityFilter {
+	from website : Website!EntityFilter
+	to waf : WAF!EntityFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule NullFilter {
+	from website : Website!NullFilter
+	to waf : WAF!NullFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule NumericFilter {
+	from website : Website!NumericFilter
+	to waf : WAF!NumericFilter (
+	)
+}
+
+-- @extends CollectionFilter
+rule TextFilter {
+	from website : Website!TextFilter
+	to waf : WAF!TextFilter (
+		attribute  <-
+			if website.attribute.oclIsUndefined() then
+				OclUndefined
+			else
+				website.attribute.findOrmFeature()
+			endif,
+		placeholder <-
+			if website.attribute.oclIsUndefined() then
+				''
+			else if website.attribute.placeholder <> '' then
+				website.attribite.placeholder
+			else
+				website.attribute.name.createLabel()
+			endif endif
 	)
 }
 

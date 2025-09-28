@@ -62,26 +62,10 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addFindElementSelectionPropertyDescriptor(object);
 			addFilterPropertyDescriptor(object);
 			addSupportedFiltersPropertyDescriptor(object);
-			addEmptyMessagePropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addDefaultPaginationSizePropertyDescriptor(object);
 			addMaximumPaginationSizePropertyDescriptor(object);
-			addPaginationControlPlacementPropertyDescriptor(object);
-			addNextNpagesPropertyDescriptor(object);
-			addPreviousNpagesPropertyDescriptor(object);
-			addNextPageLabelPropertyDescriptor(object);
-			addNextPageIconNamePropertyDescriptor(object);
-			addPreviousPageLabelPropertyDescriptor(object);
-			addPreviousPageIconNamePropertyDescriptor(object);
-			addUseDisabledPageLinksPropertyDescriptor(object);
-			addUseFirstLastPageLinksPropertyDescriptor(object);
-			addFirstPageLabelPropertyDescriptor(object);
-			addFirstPageIconNamePropertyDescriptor(object);
-			addLastPageLabelPropertyDescriptor(object);
-			addLastPageIconNamePropertyDescriptor(object);
-			addPaginationClassPropertyDescriptor(object);
-			addPaginationElementClassPropertyDescriptor(object);
-			addPaginationAnchorClassPropertyDescriptor(object);
+			addEmptyMessagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -391,358 +375,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Pagination Control Placement feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPaginationControlPlacementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_paginationControlPlacement_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_paginationControlPlacement_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_PaginationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Next Npages feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextNpagesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_nextNpages_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_nextNpages_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__NEXT_NPAGES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 getString("_UI_PaginationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Previous Npages feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPreviousNpagesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_previousNpages_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_previousNpages_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__PREVIOUS_NPAGES,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 getString("_UI_PaginationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Next Page Label feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextPageLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_nextPageLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_nextPageLabel_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__NEXT_PAGE_LABEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Next Page Icon Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextPageIconNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_nextPageIconName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_nextPageIconName_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__NEXT_PAGE_ICON_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Previous Page Label feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPreviousPageLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_previousPageLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_previousPageLabel_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__PREVIOUS_PAGE_LABEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Previous Page Icon Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPreviousPageIconNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_previousPageIconName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_previousPageIconName_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Use Disabled Page Links feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUseDisabledPageLinksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_useDisabledPageLinks_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_useDisabledPageLinks_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_PaginationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Use First Last Page Links feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUseFirstLastPageLinksPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_useFirstLastPageLinks_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_useFirstLastPageLinks_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 getString("_UI_PaginationPropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the First Page Label feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFirstPageLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_firstPageLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_firstPageLabel_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__FIRST_PAGE_LABEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the First Page Icon Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFirstPageIconNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_firstPageIconName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_firstPageIconName_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__FIRST_PAGE_ICON_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Last Page Label feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLastPageLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_lastPageLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_lastPageLabel_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__LAST_PAGE_LABEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Last Page Icon Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLastPageIconNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_lastPageIconName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_lastPageIconName_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__LAST_PAGE_ICON_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Pagination Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPaginationClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_paginationClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_paginationClass_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__PAGINATION_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Pagination Element Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPaginationElementClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_paginationElementClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_paginationElementClass_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Pagination Anchor Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPaginationAnchorClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_paginationAnchorClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_paginationAnchorClass_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -755,6 +387,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE);
+			childrenFeatures.add(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS);
 		}
 		return childrenFeatures;
 	}
@@ -800,29 +433,14 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 
 		switch (notification.getFeatureID(CollectionUnit.class)) {
 			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
-			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
 			case WebuiPackage.COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE:
-			case WebuiPackage.COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT:
-			case WebuiPackage.COLLECTION_UNIT__NEXT_NPAGES:
-			case WebuiPackage.COLLECTION_UNIT__PREVIOUS_NPAGES:
-			case WebuiPackage.COLLECTION_UNIT__NEXT_PAGE_LABEL:
-			case WebuiPackage.COLLECTION_UNIT__NEXT_PAGE_ICON_NAME:
-			case WebuiPackage.COLLECTION_UNIT__PREVIOUS_PAGE_LABEL:
-			case WebuiPackage.COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME:
-			case WebuiPackage.COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS:
-			case WebuiPackage.COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS:
-			case WebuiPackage.COLLECTION_UNIT__FIRST_PAGE_LABEL:
-			case WebuiPackage.COLLECTION_UNIT__FIRST_PAGE_ICON_NAME:
-			case WebuiPackage.COLLECTION_UNIT__LAST_PAGE_LABEL:
-			case WebuiPackage.COLLECTION_UNIT__LAST_PAGE_ICON_NAME:
-			case WebuiPackage.COLLECTION_UNIT__PAGINATION_CLASS:
-			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS:
-			case WebuiPackage.COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS:
+			case WebuiPackage.COLLECTION_UNIT__EMPTY_MESSAGE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case WebuiPackage.COLLECTION_UNIT__ELEMENT_TITLE:
+			case WebuiPackage.COLLECTION_UNIT__FILTERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -859,6 +477,51 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			(createChildParameter
 				(WebuiPackage.Literals.COLLECTION_UNIT__ELEMENT_TITLE,
 				 WebuiFactory.eINSTANCE.createResourceDisplayValue()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createArrayFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createBooleanFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createChoiceFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createComparisionFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createDateTimeFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createEntityFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createNullFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createNumericFilter()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.COLLECTION_UNIT__FILTERS,
+				 WebuiFactory.eINSTANCE.createTextFilter()));
 	}
 
 	protected List<Selection> getSelections(final Entity entity) {

@@ -6917,13 +6917,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 7;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 7;
+	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Supported Filters</b></em>' reference list.
@@ -6932,16 +6941,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+	int COLLECTION_UNIT__SUPPORTED_FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -6971,148 +6971,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = DYNAMIC_UNIT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__NEXT_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__PREVIOUS_NPAGES = DYNAMIC_UNIT_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__NEXT_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 19;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 20;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = DYNAMIC_UNIT_FEATURE_COUNT + 21;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__FIRST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 22;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 23;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__LAST_PAGE_LABEL = DYNAMIC_UNIT_FEATURE_COUNT + 24;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__LAST_PAGE_ICON_NAME = DYNAMIC_UNIT_FEATURE_COUNT + 25;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__PAGINATION_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 26;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 27;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = DYNAMIC_UNIT_FEATURE_COUNT + 28;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -7121,7 +6986,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 29;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -7169,6 +7034,385 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT_OPERATION_COUNT = DYNAMIC_UNIT_OPERATION_COUNT + 5;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CollectionFilterImpl <em>Collection Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.CollectionFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionFilter()
+	 * @generated
+	 */
+	int COLLECTION_FILTER = 41;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER__NAME = BasePackage.NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Collection Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Collection Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ArrayFilterImpl <em>Array Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ArrayFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getArrayFilter()
+	 * @generated
+	 */
+	int ARRAY_FILTER = 42;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Array Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Array Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BooleanFilterImpl <em>Boolean Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.BooleanFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBooleanFilter()
+	 * @generated
+	 */
+	int BOOLEAN_FILTER = 43;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Boolean Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Boolean Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChoiceFilterImpl <em>Choice Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ChoiceFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChoiceFilter()
+	 * @generated
+	 */
+	int CHOICE_FILTER = 44;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Choice Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Choice Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ComparisionFilterImpl <em>Comparision Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.ComparisionFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getComparisionFilter()
+	 * @generated
+	 */
+	int COMPARISION_FILTER = 45;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Comparision Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Comparision Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateTimeFilterImpl <em>Date Time Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.DateTimeFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateTimeFilter()
+	 * @generated
+	 */
+	int DATE_TIME_FILTER = 46;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Date Time Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Date Time Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.EntityFilterImpl <em>Entity Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.EntityFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEntityFilter()
+	 * @generated
+	 */
+	int ENTITY_FILTER = 47;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Entity Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Entity Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.NullFilterImpl <em>Null Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.NullFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getNullFilter()
+	 * @generated
+	 */
+	int NULL_FILTER = 48;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Null Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Null Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.NumericFilterImpl <em>Numeric Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.NumericFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getNumericFilter()
+	 * @generated
+	 */
+	int NUMERIC_FILTER = 49;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Numeric Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Numeric Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextFilterImpl <em>Text Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.TextFilterImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextFilter()
+	 * @generated
+	 */
+	int TEXT_FILTER = 50;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER__ATTRIBUTE = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Text Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Text Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER_OPERATION_COUNT = COLLECTION_FILTER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl <em>Edit Unit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7176,7 +7420,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 41;
+	int EDIT_UNIT = 51;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7609,7 +7853,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 42;
+	int CREATE_UNIT = 52;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8042,7 +8286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 44;
+	int CREATE_UPDATE_UNIT = 54;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
@@ -8052,7 +8296,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 43;
+	int UPDATE_UNIT = 53;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8953,7 +9197,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 45;
+	int MAP_UNIT = 55;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9422,7 +9666,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 46;
+	int DETAILS_UNIT = 56;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9792,7 +10036,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int TABULAR_UNIT = 47;
+	int TABULAR_UNIT = 57;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10155,6 +10399,15 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10171,15 +10424,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -10209,148 +10453,13 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
+	int TABULAR_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Header Class Override</b></em>' attribute.
@@ -10441,7 +10550,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 48;
+	int CARDS_UNIT = 58;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10804,6 +10913,15 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10820,15 +10938,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -10858,148 +10967,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
+	int CARDS_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -11126,7 +11100,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getValueContext()
 	 * @generated
 	 */
-	int VALUE_CONTEXT = 63;
+	int VALUE_CONTEXT = 73;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl <em>Text Cards Unit</em>}' class.
@@ -11136,7 +11110,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 50;
+	int TEXT_CARDS_UNIT = 60;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -11146,7 +11120,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 51;
+	int DATE_CARDS_UNIT = 61;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -11156,7 +11130,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 56;
+	int CONTROL_UNIT = 66;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -11166,7 +11140,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 57;
+	int SEARCH_UNIT = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}' class.
@@ -11176,7 +11150,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 52;
+	int IMAGE_UNIT = 62;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -11186,7 +11160,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 53;
+	int IMAGE_CARDS_UNIT = 63;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -11196,7 +11170,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 54;
+	int SLIDER_UNIT = 64;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -11206,7 +11180,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 55;
+	int GALLERY_UNIT = 65;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -11216,7 +11190,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 73;
+	int SELECT_ACTION = 83;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -11226,7 +11200,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 72;
+	int DELETE_ACTION = 82;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -11236,7 +11210,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 49;
+	int BADGE = 59;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -11707,6 +11681,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11723,15 +11706,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__SUPPORTED_FILTERS = CARDS_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -11761,148 +11735,13 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__MAXIMUM_PAGINATION_SIZE = CARDS_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT = CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__NEXT_NPAGES = CARDS_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__PREVIOUS_NPAGES = CARDS_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__NEXT_PAGE_LABEL = CARDS_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__NEXT_PAGE_ICON_NAME = CARDS_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__PREVIOUS_PAGE_LABEL = CARDS_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME = CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__USE_DISABLED_PAGE_LINKS = CARDS_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS = CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__FIRST_PAGE_LABEL = CARDS_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__FIRST_PAGE_ICON_NAME = CARDS_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__LAST_PAGE_LABEL = CARDS_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__LAST_PAGE_ICON_NAME = CARDS_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__PAGINATION_CLASS = CARDS_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CARDS_UNIT__PAGINATION_ANCHOR_CLASS = CARDS_UNIT__PAGINATION_ANCHOR_CLASS;
+	int TEXT_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -12382,6 +12221,15 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12398,15 +12246,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__SUPPORTED_FILTERS = CARDS_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -12436,148 +12275,13 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__MAXIMUM_PAGINATION_SIZE = CARDS_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT = CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__NEXT_NPAGES = CARDS_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__PREVIOUS_NPAGES = CARDS_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__NEXT_PAGE_LABEL = CARDS_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__NEXT_PAGE_ICON_NAME = CARDS_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__PREVIOUS_PAGE_LABEL = CARDS_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME = CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__USE_DISABLED_PAGE_LINKS = CARDS_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS = CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__FIRST_PAGE_LABEL = CARDS_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__FIRST_PAGE_ICON_NAME = CARDS_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__LAST_PAGE_LABEL = CARDS_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__LAST_PAGE_ICON_NAME = CARDS_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__PAGINATION_CLASS = CARDS_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATE_CARDS_UNIT__PAGINATION_ANCHOR_CLASS = CARDS_UNIT__PAGINATION_ANCHOR_CLASS;
+	int DATE_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -13174,6 +12878,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13190,15 +12903,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__SUPPORTED_FILTERS = CARDS_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -13228,148 +12932,13 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__MAXIMUM_PAGINATION_SIZE = CARDS_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT = CARDS_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__NEXT_NPAGES = CARDS_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__PREVIOUS_NPAGES = CARDS_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__NEXT_PAGE_LABEL = CARDS_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__NEXT_PAGE_ICON_NAME = CARDS_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__PREVIOUS_PAGE_LABEL = CARDS_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME = CARDS_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__USE_DISABLED_PAGE_LINKS = CARDS_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS = CARDS_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__FIRST_PAGE_LABEL = CARDS_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__FIRST_PAGE_ICON_NAME = CARDS_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__LAST_PAGE_LABEL = CARDS_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__LAST_PAGE_ICON_NAME = CARDS_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__PAGINATION_CLASS = CARDS_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__PAGINATION_ELEMENT_CLASS = CARDS_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_CARDS_UNIT__PAGINATION_ANCHOR_CLASS = CARDS_UNIT__PAGINATION_ANCHOR_CLASS;
+	int IMAGE_CARDS_UNIT__EMPTY_MESSAGE = CARDS_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Badges</b></em>' containment reference list.
@@ -13921,6 +13490,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13937,15 +13515,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -13975,148 +13544,13 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SLIDER_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
+	int SLIDER_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -14587,6 +14021,15 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
+
+	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14603,15 +14046,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__SUPPORTED_FILTERS = COLLECTION_UNIT__SUPPORTED_FILTERS;
-
-	/**
-	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -14641,148 +14075,13 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__MAXIMUM_PAGINATION_SIZE = COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE;
 
 	/**
-	 * The feature id for the '<em><b>Pagination Control Placement</b></em>' attribute.
+	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__PAGINATION_CONTROL_PLACEMENT = COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Next Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__NEXT_NPAGES = COLLECTION_UNIT__NEXT_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Previous Npages</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__PREVIOUS_NPAGES = COLLECTION_UNIT__PREVIOUS_NPAGES;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__NEXT_PAGE_LABEL = COLLECTION_UNIT__NEXT_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Next Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__NEXT_PAGE_ICON_NAME = COLLECTION_UNIT__NEXT_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__PREVIOUS_PAGE_LABEL = COLLECTION_UNIT__PREVIOUS_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Previous Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__PREVIOUS_PAGE_ICON_NAME = COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Use Disabled Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__USE_DISABLED_PAGE_LINKS = COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>Use First Last Page Links</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__USE_FIRST_LAST_PAGE_LINKS = COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS;
-
-	/**
-	 * The feature id for the '<em><b>First Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__FIRST_PAGE_LABEL = COLLECTION_UNIT__FIRST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>First Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__FIRST_PAGE_ICON_NAME = COLLECTION_UNIT__FIRST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__LAST_PAGE_LABEL = COLLECTION_UNIT__LAST_PAGE_LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Last Page Icon Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__LAST_PAGE_ICON_NAME = COLLECTION_UNIT__LAST_PAGE_ICON_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__PAGINATION_CLASS = COLLECTION_UNIT__PAGINATION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Element Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__PAGINATION_ELEMENT_CLASS = COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Pagination Anchor Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GALLERY_UNIT__PAGINATION_ANCHOR_CLASS = COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS;
+	int GALLERY_UNIT__EMPTY_MESSAGE = COLLECTION_UNIT__EMPTY_MESSAGE;
 
 	/**
 	 * The feature id for the '<em><b>Image Path Feature</b></em>' containment reference.
@@ -15638,7 +14937,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
 	 * @generated
 	 */
-	int REGISTRATION_UNIT = 58;
+	int REGISTRATION_UNIT = 68;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16071,7 +15370,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
 	 * @generated
 	 */
-	int LOGIN_UNIT = 59;
+	int LOGIN_UNIT = 69;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16504,7 +15803,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLogoutUnit()
 	 * @generated
 	 */
-	int LOGOUT_UNIT = 60;
+	int LOGOUT_UNIT = 70;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16847,7 +16146,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
 	 * @generated
 	 */
-	int FORGOTTEN_PASSWORD_UNIT = 61;
+	int FORGOTTEN_PASSWORD_UNIT = 71;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17334,7 +16633,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResetPasswordUnit()
 	 * @generated
 	 */
-	int RESET_PASSWORD_UNIT = 62;
+	int RESET_PASSWORD_UNIT = 72;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17767,7 +17066,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDisplayValue()
 	 * @generated
 	 */
-	int DISPLAY_VALUE = 64;
+	int DISPLAY_VALUE = 74;
 
 	/**
 	 * The number of structural features of the '<em>Display Value</em>' class.
@@ -17795,7 +17094,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAssociationDisplayValue()
 	 * @generated
 	 */
-	int ASSOCIATION_DISPLAY_VALUE = 65;
+	int ASSOCIATION_DISPLAY_VALUE = 75;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17913,7 +17212,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAttributeDisplayValue()
 	 * @generated
 	 */
-	int ATTRIBUTE_DISPLAY_VALUE = 66;
+	int ATTRIBUTE_DISPLAY_VALUE = 76;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17977,7 +17276,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLabelDisplayValue()
 	 * @generated
 	 */
-	int LABEL_DISPLAY_VALUE = 67;
+	int LABEL_DISPLAY_VALUE = 77;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' reference.
@@ -18023,7 +17322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResourceDisplayValue()
 	 * @generated
 	 */
-	int RESOURCE_DISPLAY_VALUE = 68;
+	int RESOURCE_DISPLAY_VALUE = 78;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18087,7 +17386,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 69;
+	int ACTION_CONTAINER = 79;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -18151,7 +17450,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 70;
+	int ACTION = 80;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18323,7 +17622,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 71;
+	int SECURITY_ACTION = 81;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18531,7 +17830,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 77;
+	int OPERATION_ACTION = 87;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -18541,7 +17840,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 74;
+	int CONTAINER_SELECT_ACTION = 84;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -18551,7 +17850,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 75;
+	int INSTANCE_SELECT_ACTION = 85;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19254,7 +18553,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTargetAction()
 	 * @generated
 	 */
-	int TARGET_ACTION = 76;
+	int TARGET_ACTION = 86;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -19633,7 +18932,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 79;
+	int INSTANCE_OPERATION_ACTION = 89;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -19643,7 +18942,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 78;
+	int CONTAINER_OPERATION_ACTION = 88;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -20031,7 +19330,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 80;
+	int GENERAL_OPERATION_ACTION = 90;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -20230,7 +19529,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 81;
+	int MESSAGE = 91;
 
 	/**
 	 * The feature id for the '<em><b>Value Entities</b></em>' reference list.
@@ -20294,7 +19593,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 82;
+	int AUTHENTICATION_MENU_PLACEMENT = 92;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -20304,7 +19603,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 83;
+	int PAGE_TOP_MENU_OPTIONS = 93;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -20314,17 +19613,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 84;
-
-	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.webui.PaginationControlPlacements
-	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
-	 * @generated
-	 */
-	int PAGINATION_CONTROL_PLACEMENTS = 85;
+	int COLLECTION_DISPLAY_OPTIONS = 94;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement <em>Container Actions Placement</em>}' enum.
@@ -20334,7 +19623,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerActionsPlacement()
 	 * @generated
 	 */
-	int CONTAINER_ACTIONS_PLACEMENT = 86;
+	int CONTAINER_ACTIONS_PLACEMENT = 95;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}' enum.
@@ -20344,7 +19633,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceActionsPlacement()
 	 * @generated
 	 */
-	int INSTANCE_ACTIONS_PLACEMENT = 87;
+	int INSTANCE_ACTIONS_PLACEMENT = 96;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -22522,6 +21811,17 @@ public interface WebuiPackage extends EPackage {
 	EReference getCollectionUnit_FindElementSelection();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters <em>Filters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Filters</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EReference getCollectionUnit_Filters();
+
+	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22588,182 +21888,6 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCollectionUnit_MaximumPaginationSize();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationControlPlacement <em>Pagination Control Placement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pagination Control Placement</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationControlPlacement()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_PaginationControlPlacement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextNpages <em>Next Npages</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Next Npages</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextNpages()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_NextNpages();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPreviousNpages <em>Previous Npages</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Previous Npages</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPreviousNpages()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_PreviousNpages();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextPageLabel <em>Next Page Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Next Page Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextPageLabel()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_NextPageLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextPageIconName <em>Next Page Icon Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Next Page Icon Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getNextPageIconName()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_NextPageIconName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPreviousPageLabel <em>Previous Page Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Previous Page Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPreviousPageLabel()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_PreviousPageLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPreviousPageIconName <em>Previous Page Icon Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Previous Page Icon Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPreviousPageIconName()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_PreviousPageIconName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isUseDisabledPageLinks <em>Use Disabled Page Links</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Use Disabled Page Links</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#isUseDisabledPageLinks()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_UseDisabledPageLinks();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isUseFirstLastPageLinks <em>Use First Last Page Links</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Use First Last Page Links</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#isUseFirstLastPageLinks()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_UseFirstLastPageLinks();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFirstPageLabel <em>First Page Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>First Page Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getFirstPageLabel()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_FirstPageLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFirstPageIconName <em>First Page Icon Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>First Page Icon Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getFirstPageIconName()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_FirstPageIconName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getLastPageLabel <em>Last Page Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Last Page Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getLastPageLabel()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_LastPageLabel();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getLastPageIconName <em>Last Page Icon Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Last Page Icon Name</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getLastPageIconName()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_LastPageIconName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationClass <em>Pagination Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pagination Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationClass()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_PaginationClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationElementClass <em>Pagination Element Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pagination Element Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationElementClass()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_PaginationElementClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationAnchorClass <em>Pagination Anchor Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pagination Anchor Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getPaginationAnchorClass()
-	 * @see #getCollectionUnit()
-	 * @generated
-	 */
-	EAttribute getCollectionUnit_PaginationAnchorClass();
-
-	/**
 	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#containingType() <em>Containing Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22802,6 +21926,117 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getCollectionUnit__ValueEntities();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter <em>Collection Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Collection Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter
+	 * @generated
+	 */
+	EClass getCollectionFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ArrayFilter <em>Array Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Array Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ArrayFilter
+	 * @generated
+	 */
+	EClass getArrayFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.BooleanFilter <em>Boolean Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Boolean Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.BooleanFilter
+	 * @generated
+	 */
+	EClass getBooleanFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ChoiceFilter <em>Choice Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Choice Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ChoiceFilter
+	 * @generated
+	 */
+	EClass getChoiceFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ComparisionFilter <em>Comparision Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Comparision Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.ComparisionFilter
+	 * @generated
+	 */
+	EClass getComparisionFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DateTimeFilter <em>Date Time Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Date Time Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.DateTimeFilter
+	 * @generated
+	 */
+	EClass getDateTimeFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.EntityFilter <em>Entity Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entity Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EntityFilter
+	 * @generated
+	 */
+	EClass getEntityFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.NullFilter <em>Null Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Null Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.NullFilter
+	 * @generated
+	 */
+	EClass getNullFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.NumericFilter <em>Numeric Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Numeric Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.NumericFilter
+	 * @generated
+	 */
+	EClass getNumericFilter();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.TextFilter <em>Text Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Filter</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.TextFilter
+	 * @generated
+	 */
+	EClass getTextFilter();
+
+	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.TextFilter#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.TextFilter#getAttribute()
+	 * @see #getTextFilter()
+	 * @generated
+	 */
+	EReference getTextFilter_Attribute();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.EditUnit <em>Edit Unit</em>}'.
@@ -24281,16 +23516,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getCollectionDisplayOptions();
-
-	/**
-	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Pagination Control Placements</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.PaginationControlPlacements
-	 * @generated
-	 */
-	EEnum getPaginationControlPlacements();
 
 	/**
 	 * Returns the meta object for enum '{@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement <em>Container Actions Placement</em>}'.
@@ -26034,6 +25259,14 @@ public interface WebuiPackage extends EPackage {
 		EReference COLLECTION_UNIT__FIND_ELEMENT_SELECTION = eINSTANCE.getCollectionUnit_FindElementSelection();
 
 		/**
+		 * The meta object literal for the '<em><b>Filters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_UNIT__FILTERS = eINSTANCE.getCollectionUnit_Filters();
+
+		/**
 		 * The meta object literal for the '<em><b>Filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26082,134 +25315,6 @@ public interface WebuiPackage extends EPackage {
 		EAttribute COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = eINSTANCE.getCollectionUnit_MaximumPaginationSize();
 
 		/**
-		 * The meta object literal for the '<em><b>Pagination Control Placement</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT = eINSTANCE.getCollectionUnit_PaginationControlPlacement();
-
-		/**
-		 * The meta object literal for the '<em><b>Next Npages</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__NEXT_NPAGES = eINSTANCE.getCollectionUnit_NextNpages();
-
-		/**
-		 * The meta object literal for the '<em><b>Previous Npages</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__PREVIOUS_NPAGES = eINSTANCE.getCollectionUnit_PreviousNpages();
-
-		/**
-		 * The meta object literal for the '<em><b>Next Page Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__NEXT_PAGE_LABEL = eINSTANCE.getCollectionUnit_NextPageLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Next Page Icon Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__NEXT_PAGE_ICON_NAME = eINSTANCE.getCollectionUnit_NextPageIconName();
-
-		/**
-		 * The meta object literal for the '<em><b>Previous Page Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__PREVIOUS_PAGE_LABEL = eINSTANCE.getCollectionUnit_PreviousPageLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Previous Page Icon Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME = eINSTANCE.getCollectionUnit_PreviousPageIconName();
-
-		/**
-		 * The meta object literal for the '<em><b>Use Disabled Page Links</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS = eINSTANCE.getCollectionUnit_UseDisabledPageLinks();
-
-		/**
-		 * The meta object literal for the '<em><b>Use First Last Page Links</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS = eINSTANCE.getCollectionUnit_UseFirstLastPageLinks();
-
-		/**
-		 * The meta object literal for the '<em><b>First Page Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__FIRST_PAGE_LABEL = eINSTANCE.getCollectionUnit_FirstPageLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>First Page Icon Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__FIRST_PAGE_ICON_NAME = eINSTANCE.getCollectionUnit_FirstPageIconName();
-
-		/**
-		 * The meta object literal for the '<em><b>Last Page Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__LAST_PAGE_LABEL = eINSTANCE.getCollectionUnit_LastPageLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Last Page Icon Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__LAST_PAGE_ICON_NAME = eINSTANCE.getCollectionUnit_LastPageIconName();
-
-		/**
-		 * The meta object literal for the '<em><b>Pagination Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__PAGINATION_CLASS = eINSTANCE.getCollectionUnit_PaginationClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Pagination Element Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS = eINSTANCE.getCollectionUnit_PaginationElementClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Pagination Anchor Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS = eINSTANCE.getCollectionUnit_PaginationAnchorClass();
-
-		/**
 		 * The meta object literal for the '<em><b>Containing Type</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26240,6 +25345,114 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation COLLECTION_UNIT___VALUE_ENTITIES = eINSTANCE.getCollectionUnit__ValueEntities();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CollectionFilterImpl <em>Collection Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.CollectionFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionFilter()
+		 * @generated
+		 */
+		EClass COLLECTION_FILTER = eINSTANCE.getCollectionFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ArrayFilterImpl <em>Array Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ArrayFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getArrayFilter()
+		 * @generated
+		 */
+		EClass ARRAY_FILTER = eINSTANCE.getArrayFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.BooleanFilterImpl <em>Boolean Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.BooleanFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBooleanFilter()
+		 * @generated
+		 */
+		EClass BOOLEAN_FILTER = eINSTANCE.getBooleanFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ChoiceFilterImpl <em>Choice Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ChoiceFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChoiceFilter()
+		 * @generated
+		 */
+		EClass CHOICE_FILTER = eINSTANCE.getChoiceFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ComparisionFilterImpl <em>Comparision Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.ComparisionFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getComparisionFilter()
+		 * @generated
+		 */
+		EClass COMPARISION_FILTER = eINSTANCE.getComparisionFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateTimeFilterImpl <em>Date Time Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.DateTimeFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateTimeFilter()
+		 * @generated
+		 */
+		EClass DATE_TIME_FILTER = eINSTANCE.getDateTimeFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.EntityFilterImpl <em>Entity Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.EntityFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEntityFilter()
+		 * @generated
+		 */
+		EClass ENTITY_FILTER = eINSTANCE.getEntityFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.NullFilterImpl <em>Null Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.NullFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getNullFilter()
+		 * @generated
+		 */
+		EClass NULL_FILTER = eINSTANCE.getNullFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.NumericFilterImpl <em>Numeric Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.NumericFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getNumericFilter()
+		 * @generated
+		 */
+		EClass NUMERIC_FILTER = eINSTANCE.getNumericFilter();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextFilterImpl <em>Text Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.TextFilterImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextFilter()
+		 * @generated
+		 */
+		EClass TEXT_FILTER = eINSTANCE.getTextFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEXT_FILTER__ATTRIBUTE = eINSTANCE.getTextFilter_Attribute();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl <em>Edit Unit</em>}' class.
@@ -27440,16 +26653,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum COLLECTION_DISPLAY_OPTIONS = eINSTANCE.getCollectionDisplayOptions();
-
-		/**
-		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.PaginationControlPlacements <em>Pagination Control Placements</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see work.andycarpenter.webgen.pims.webui.PaginationControlPlacements
-		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPaginationControlPlacements()
-		 * @generated
-		 */
-		EEnum PAGINATION_CONTROL_PLACEMENTS = eINSTANCE.getPaginationControlPlacements();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement <em>Container Actions Placement</em>}' enum.

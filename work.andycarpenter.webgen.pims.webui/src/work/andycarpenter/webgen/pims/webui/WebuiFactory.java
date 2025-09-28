@@ -274,6 +274,87 @@ public interface WebuiFactory extends EFactory {
 	DateField createDateField();
 
 	/**
+	 * Returns a new object of class '<em>Array Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Array Filter</em>'.
+	 * @generated
+	 */
+	ArrayFilter createArrayFilter();
+
+	/**
+	 * Returns a new object of class '<em>Boolean Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boolean Filter</em>'.
+	 * @generated
+	 */
+	BooleanFilter createBooleanFilter();
+
+	/**
+	 * Returns a new object of class '<em>Choice Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Choice Filter</em>'.
+	 * @generated
+	 */
+	ChoiceFilter createChoiceFilter();
+
+	/**
+	 * Returns a new object of class '<em>Comparision Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comparision Filter</em>'.
+	 * @generated
+	 */
+	ComparisionFilter createComparisionFilter();
+
+	/**
+	 * Returns a new object of class '<em>Date Time Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Date Time Filter</em>'.
+	 * @generated
+	 */
+	DateTimeFilter createDateTimeFilter();
+
+	/**
+	 * Returns a new object of class '<em>Entity Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entity Filter</em>'.
+	 * @generated
+	 */
+	EntityFilter createEntityFilter();
+
+	/**
+	 * Returns a new object of class '<em>Null Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Null Filter</em>'.
+	 * @generated
+	 */
+	NullFilter createNullFilter();
+
+	/**
+	 * Returns a new object of class '<em>Numeric Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Numeric Filter</em>'.
+	 * @generated
+	 */
+	NumericFilter createNumericFilter();
+
+	/**
+	 * Returns a new object of class '<em>Text Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Filter</em>'.
+	 * @generated
+	 */
+	TextFilter createTextFilter();
+
+	/**
 	 * Returns a new object of class '<em>Create Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

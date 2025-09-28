@@ -435,6 +435,85 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.COLLECTION_FILTER: {
+				CollectionFilter collectionFilter = (CollectionFilter)theEObject;
+				T result = caseCollectionFilter(collectionFilter);
+				if (result == null) result = caseNamedElement(collectionFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.ARRAY_FILTER: {
+				ArrayFilter arrayFilter = (ArrayFilter)theEObject;
+				T result = caseArrayFilter(arrayFilter);
+				if (result == null) result = caseCollectionFilter(arrayFilter);
+				if (result == null) result = caseNamedElement(arrayFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.BOOLEAN_FILTER: {
+				BooleanFilter booleanFilter = (BooleanFilter)theEObject;
+				T result = caseBooleanFilter(booleanFilter);
+				if (result == null) result = caseCollectionFilter(booleanFilter);
+				if (result == null) result = caseNamedElement(booleanFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.CHOICE_FILTER: {
+				ChoiceFilter choiceFilter = (ChoiceFilter)theEObject;
+				T result = caseChoiceFilter(choiceFilter);
+				if (result == null) result = caseCollectionFilter(choiceFilter);
+				if (result == null) result = caseNamedElement(choiceFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.COMPARISION_FILTER: {
+				ComparisionFilter comparisionFilter = (ComparisionFilter)theEObject;
+				T result = caseComparisionFilter(comparisionFilter);
+				if (result == null) result = caseCollectionFilter(comparisionFilter);
+				if (result == null) result = caseNamedElement(comparisionFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.DATE_TIME_FILTER: {
+				DateTimeFilter dateTimeFilter = (DateTimeFilter)theEObject;
+				T result = caseDateTimeFilter(dateTimeFilter);
+				if (result == null) result = caseCollectionFilter(dateTimeFilter);
+				if (result == null) result = caseNamedElement(dateTimeFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.ENTITY_FILTER: {
+				EntityFilter entityFilter = (EntityFilter)theEObject;
+				T result = caseEntityFilter(entityFilter);
+				if (result == null) result = caseCollectionFilter(entityFilter);
+				if (result == null) result = caseNamedElement(entityFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.NULL_FILTER: {
+				NullFilter nullFilter = (NullFilter)theEObject;
+				T result = caseNullFilter(nullFilter);
+				if (result == null) result = caseCollectionFilter(nullFilter);
+				if (result == null) result = caseNamedElement(nullFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.NUMERIC_FILTER: {
+				NumericFilter numericFilter = (NumericFilter)theEObject;
+				T result = caseNumericFilter(numericFilter);
+				if (result == null) result = caseCollectionFilter(numericFilter);
+				if (result == null) result = caseNamedElement(numericFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case WebuiPackage.TEXT_FILTER: {
+				TextFilter textFilter = (TextFilter)theEObject;
+				T result = caseTextFilter(textFilter);
+				if (result == null) result = caseCollectionFilter(textFilter);
+				if (result == null) result = caseNamedElement(textFilter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.EDIT_UNIT: {
 				EditUnit editUnit = (EditUnit)theEObject;
 				T result = caseEditUnit(editUnit);
@@ -1581,6 +1660,156 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCollectionUnit(CollectionUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Collection Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Collection Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCollectionFilter(CollectionFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Array Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Array Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArrayFilter(ArrayFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boolean Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boolean Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBooleanFilter(BooleanFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Choice Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Choice Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChoiceFilter(ChoiceFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Comparision Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Comparision Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComparisionFilter(ComparisionFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Date Time Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Date Time Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDateTimeFilter(DateTimeFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntityFilter(EntityFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Null Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Null Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNullFilter(NullFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Numeric Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Numeric Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNumericFilter(NumericFilter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextFilter(TextFilter object) {
 		return null;
 	}
 

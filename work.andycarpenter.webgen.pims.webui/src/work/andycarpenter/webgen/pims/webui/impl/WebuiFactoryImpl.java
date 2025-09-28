@@ -85,6 +85,15 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.UNIT_LABEL: return createUnitLabel();
 			case WebuiPackage.DATA_TYPE_FIELD: return createDataTypeField();
 			case WebuiPackage.DATE_FIELD: return createDateField();
+			case WebuiPackage.ARRAY_FILTER: return createArrayFilter();
+			case WebuiPackage.BOOLEAN_FILTER: return createBooleanFilter();
+			case WebuiPackage.CHOICE_FILTER: return createChoiceFilter();
+			case WebuiPackage.COMPARISION_FILTER: return createComparisionFilter();
+			case WebuiPackage.DATE_TIME_FILTER: return createDateTimeFilter();
+			case WebuiPackage.ENTITY_FILTER: return createEntityFilter();
+			case WebuiPackage.NULL_FILTER: return createNullFilter();
+			case WebuiPackage.NUMERIC_FILTER: return createNumericFilter();
+			case WebuiPackage.TEXT_FILTER: return createTextFilter();
 			case WebuiPackage.CREATE_UNIT: return createCreateUnit();
 			case WebuiPackage.UPDATE_UNIT: return createUpdateUnit();
 			case WebuiPackage.CREATE_UPDATE_UNIT: return createCreateUpdateUnit();
@@ -135,8 +144,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return createPageTopMenuOptionsFromString(eDataType, initialValue);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
 				return createCollectionDisplayOptionsFromString(eDataType, initialValue);
-			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
-				return createPaginationControlPlacementsFromString(eDataType, initialValue);
 			case WebuiPackage.CONTAINER_ACTIONS_PLACEMENT:
 				return createContainerActionsPlacementFromString(eDataType, initialValue);
 			case WebuiPackage.INSTANCE_ACTIONS_PLACEMENT:
@@ -160,8 +167,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 				return convertPageTopMenuOptionsToString(eDataType, instanceValue);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
 				return convertCollectionDisplayOptionsToString(eDataType, instanceValue);
-			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
-				return convertPaginationControlPlacementsToString(eDataType, instanceValue);
 			case WebuiPackage.CONTAINER_ACTIONS_PLACEMENT:
 				return convertContainerActionsPlacementToString(eDataType, instanceValue);
 			case WebuiPackage.INSTANCE_ACTIONS_PLACEMENT:
@@ -477,6 +482,105 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public DateField createDateField() {
 		DateFieldImpl dateField = new DateFieldImpl();
 		return dateField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ArrayFilter createArrayFilter() {
+		ArrayFilterImpl arrayFilter = new ArrayFilterImpl();
+		return arrayFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public BooleanFilter createBooleanFilter() {
+		BooleanFilterImpl booleanFilter = new BooleanFilterImpl();
+		return booleanFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ChoiceFilter createChoiceFilter() {
+		ChoiceFilterImpl choiceFilter = new ChoiceFilterImpl();
+		return choiceFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ComparisionFilter createComparisionFilter() {
+		ComparisionFilterImpl comparisionFilter = new ComparisionFilterImpl();
+		return comparisionFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DateTimeFilter createDateTimeFilter() {
+		DateTimeFilterImpl dateTimeFilter = new DateTimeFilterImpl();
+		return dateTimeFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EntityFilter createEntityFilter() {
+		EntityFilterImpl entityFilter = new EntityFilterImpl();
+		return entityFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NullFilter createNullFilter() {
+		NullFilterImpl nullFilter = new NullFilterImpl();
+		return nullFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NumericFilter createNumericFilter() {
+		NumericFilterImpl numericFilter = new NumericFilterImpl();
+		return numericFilter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TextFilter createTextFilter() {
+		TextFilterImpl textFilter = new TextFilterImpl();
+		return textFilter;
 	}
 
 	/**
@@ -877,26 +981,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	public String convertCollectionDisplayOptionsToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PaginationControlPlacements createPaginationControlPlacementsFromString(EDataType eDataType, String initialValue) {
-		PaginationControlPlacements result = PaginationControlPlacements.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertPaginationControlPlacementsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

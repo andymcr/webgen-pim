@@ -176,6 +176,26 @@ public class WebuiValidator extends EObjectValidator {
 				return validateSingletonUnit((SingletonUnit)value, diagnostics, context);
 			case WebuiPackage.COLLECTION_UNIT:
 				return validateCollectionUnit((CollectionUnit)value, diagnostics, context);
+			case WebuiPackage.COLLECTION_FILTER:
+				return validateCollectionFilter((CollectionFilter)value, diagnostics, context);
+			case WebuiPackage.ARRAY_FILTER:
+				return validateArrayFilter((ArrayFilter)value, diagnostics, context);
+			case WebuiPackage.BOOLEAN_FILTER:
+				return validateBooleanFilter((BooleanFilter)value, diagnostics, context);
+			case WebuiPackage.CHOICE_FILTER:
+				return validateChoiceFilter((ChoiceFilter)value, diagnostics, context);
+			case WebuiPackage.COMPARISION_FILTER:
+				return validateComparisionFilter((ComparisionFilter)value, diagnostics, context);
+			case WebuiPackage.DATE_TIME_FILTER:
+				return validateDateTimeFilter((DateTimeFilter)value, diagnostics, context);
+			case WebuiPackage.ENTITY_FILTER:
+				return validateEntityFilter((EntityFilter)value, diagnostics, context);
+			case WebuiPackage.NULL_FILTER:
+				return validateNullFilter((NullFilter)value, diagnostics, context);
+			case WebuiPackage.NUMERIC_FILTER:
+				return validateNumericFilter((NumericFilter)value, diagnostics, context);
+			case WebuiPackage.TEXT_FILTER:
+				return validateTextFilter((TextFilter)value, diagnostics, context);
 			case WebuiPackage.EDIT_UNIT:
 				return validateEditUnit((EditUnit)value, diagnostics, context);
 			case WebuiPackage.CREATE_UNIT:
@@ -264,8 +284,6 @@ public class WebuiValidator extends EObjectValidator {
 				return validatePageTopMenuOptions((PageTopMenuOptions)value, diagnostics, context);
 			case WebuiPackage.COLLECTION_DISPLAY_OPTIONS:
 				return validateCollectionDisplayOptions((CollectionDisplayOptions)value, diagnostics, context);
-			case WebuiPackage.PAGINATION_CONTROL_PLACEMENTS:
-				return validatePaginationControlPlacements((PaginationControlPlacements)value, diagnostics, context);
 			case WebuiPackage.CONTAINER_ACTIONS_PLACEMENT:
 				return validateContainerActionsPlacement((ContainerActionsPlacement)value, diagnostics, context);
 			case WebuiPackage.INSTANCE_ACTIONS_PLACEMENT:
@@ -1208,6 +1226,196 @@ public class WebuiValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateCollectionFilter(CollectionFilter collectionFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(collectionFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(collectionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(collectionFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateArrayFilter(ArrayFilter arrayFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(arrayFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(arrayFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(arrayFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateBooleanFilter(BooleanFilter booleanFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(booleanFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(booleanFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(booleanFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateChoiceFilter(ChoiceFilter choiceFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(choiceFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(choiceFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(choiceFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateComparisionFilter(ComparisionFilter comparisionFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(comparisionFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(comparisionFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(comparisionFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateDateTimeFilter(DateTimeFilter dateTimeFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(dateTimeFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(dateTimeFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(dateTimeFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEntityFilter(EntityFilter entityFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(entityFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entityFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(entityFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNullFilter(NullFilter nullFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(nullFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(nullFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(nullFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateNumericFilter(NumericFilter numericFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(numericFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(numericFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(numericFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTextFilter(TextFilter textFilter, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		if (!validate_NoCircularContainment(textFilter, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(textFilter, diagnostics, context);
+		if (result || diagnostics != null) result &= baseValidator.validateNamedElement_nameNeedsAtLeastOneCharacter(textFilter, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateEditUnit(EditUnit editUnit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(editUnit, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(editUnit, diagnostics, context);
@@ -2112,15 +2320,6 @@ public class WebuiValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCollectionDisplayOptions(CollectionDisplayOptions collectionDisplayOptions, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validatePaginationControlPlacements(PaginationControlPlacements paginationControlPlacements, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

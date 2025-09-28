@@ -240,6 +240,46 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createCollectionUnitAdapter();
 			}
 			@Override
+			public Adapter caseCollectionFilter(CollectionFilter object) {
+				return createCollectionFilterAdapter();
+			}
+			@Override
+			public Adapter caseArrayFilter(ArrayFilter object) {
+				return createArrayFilterAdapter();
+			}
+			@Override
+			public Adapter caseBooleanFilter(BooleanFilter object) {
+				return createBooleanFilterAdapter();
+			}
+			@Override
+			public Adapter caseChoiceFilter(ChoiceFilter object) {
+				return createChoiceFilterAdapter();
+			}
+			@Override
+			public Adapter caseComparisionFilter(ComparisionFilter object) {
+				return createComparisionFilterAdapter();
+			}
+			@Override
+			public Adapter caseDateTimeFilter(DateTimeFilter object) {
+				return createDateTimeFilterAdapter();
+			}
+			@Override
+			public Adapter caseEntityFilter(EntityFilter object) {
+				return createEntityFilterAdapter();
+			}
+			@Override
+			public Adapter caseNullFilter(NullFilter object) {
+				return createNullFilterAdapter();
+			}
+			@Override
+			public Adapter caseNumericFilter(NumericFilter object) {
+				return createNumericFilterAdapter();
+			}
+			@Override
+			public Adapter caseTextFilter(TextFilter object) {
+				return createTextFilterAdapter();
+			}
+			@Override
 			public Adapter caseEditUnit(EditUnit object) {
 				return createEditUnitAdapter();
 			}
@@ -1072,6 +1112,146 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCollectionUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter <em>Collection Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter
+	 * @generated
+	 */
+	public Adapter createCollectionFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ArrayFilter <em>Array Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ArrayFilter
+	 * @generated
+	 */
+	public Adapter createArrayFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.BooleanFilter <em>Boolean Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.BooleanFilter
+	 * @generated
+	 */
+	public Adapter createBooleanFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ChoiceFilter <em>Choice Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ChoiceFilter
+	 * @generated
+	 */
+	public Adapter createChoiceFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ComparisionFilter <em>Comparision Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.ComparisionFilter
+	 * @generated
+	 */
+	public Adapter createComparisionFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DateTimeFilter <em>Date Time Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.DateTimeFilter
+	 * @generated
+	 */
+	public Adapter createDateTimeFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.EntityFilter <em>Entity Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.EntityFilter
+	 * @generated
+	 */
+	public Adapter createEntityFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.NullFilter <em>Null Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.NullFilter
+	 * @generated
+	 */
+	public Adapter createNullFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.NumericFilter <em>Numeric Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.NumericFilter
+	 * @generated
+	 */
+	public Adapter createNumericFilterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.TextFilter <em>Text Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.webui.TextFilter
+	 * @generated
+	 */
+	public Adapter createTextFilterAdapter() {
 		return null;
 	}
 

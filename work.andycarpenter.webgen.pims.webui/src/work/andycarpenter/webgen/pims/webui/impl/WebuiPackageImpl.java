@@ -17,96 +17,7 @@ import work.andycarpenter.webgen.pims.image.ImagePackage;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
-import work.andycarpenter.webgen.pims.webui.Action;
-import work.andycarpenter.webgen.pims.webui.ActionContainer;
-import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
-import work.andycarpenter.webgen.pims.webui.AssociationDisplayValue;
-import work.andycarpenter.webgen.pims.webui.AttributeDisplayValue;
-import work.andycarpenter.webgen.pims.webui.AuthenticationMenuPlacement;
-import work.andycarpenter.webgen.pims.webui.Badge;
-import work.andycarpenter.webgen.pims.webui.CardsUnit;
-import work.andycarpenter.webgen.pims.webui.CardsUnitStyles;
-import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
-import work.andycarpenter.webgen.pims.webui.CollectionUnit;
-import work.andycarpenter.webgen.pims.webui.CollectionUnitStyles;
-import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
-import work.andycarpenter.webgen.pims.webui.ContainerOperationAction;
-import work.andycarpenter.webgen.pims.webui.ContainerSelectAction;
-import work.andycarpenter.webgen.pims.webui.ContentUnit;
-import work.andycarpenter.webgen.pims.webui.ContentUnitStyles;
-import work.andycarpenter.webgen.pims.webui.ControlUnit;
-import work.andycarpenter.webgen.pims.webui.Controller;
-import work.andycarpenter.webgen.pims.webui.ControllerLink;
-import work.andycarpenter.webgen.pims.webui.CreateSitemapUnit;
-import work.andycarpenter.webgen.pims.webui.CreateUnit;
-import work.andycarpenter.webgen.pims.webui.CreateUpdateUnit;
-import work.andycarpenter.webgen.pims.webui.DataTypeField;
-import work.andycarpenter.webgen.pims.webui.DateCardsUnit;
-import work.andycarpenter.webgen.pims.webui.DateField;
-import work.andycarpenter.webgen.pims.webui.DefaultUnitStyles;
-import work.andycarpenter.webgen.pims.webui.DeleteAction;
-import work.andycarpenter.webgen.pims.webui.DetailsUnit;
-import work.andycarpenter.webgen.pims.webui.DetailsUnitStyles;
-import work.andycarpenter.webgen.pims.webui.DisplayValue;
-import work.andycarpenter.webgen.pims.webui.DynamicUnit;
-import work.andycarpenter.webgen.pims.webui.DynamicUnitStyles;
-import work.andycarpenter.webgen.pims.webui.EditStaticTextMenuEntry;
-import work.andycarpenter.webgen.pims.webui.EditUnit;
-import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
-import work.andycarpenter.webgen.pims.webui.FormUnitStyles;
-import work.andycarpenter.webgen.pims.webui.GalleryUnit;
-import work.andycarpenter.webgen.pims.webui.GalleryUnitStyles;
-import work.andycarpenter.webgen.pims.webui.GeneralOperationAction;
-import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
-import work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles;
-import work.andycarpenter.webgen.pims.webui.ImageUnit;
-import work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement;
-import work.andycarpenter.webgen.pims.webui.InstanceOperationAction;
-import work.andycarpenter.webgen.pims.webui.InstanceSelectAction;
-import work.andycarpenter.webgen.pims.webui.InterfaceField;
-import work.andycarpenter.webgen.pims.webui.LabelDisplayValue;
-import work.andycarpenter.webgen.pims.webui.LoginUnit;
-import work.andycarpenter.webgen.pims.webui.LogoutUnit;
-import work.andycarpenter.webgen.pims.webui.MapUnit;
-import work.andycarpenter.webgen.pims.webui.Menu;
-import work.andycarpenter.webgen.pims.webui.MenuEntry;
-import work.andycarpenter.webgen.pims.webui.MenuFeature;
-import work.andycarpenter.webgen.pims.webui.Message;
-import work.andycarpenter.webgen.pims.webui.MultiPageController;
-import work.andycarpenter.webgen.pims.webui.Navigation;
-import work.andycarpenter.webgen.pims.webui.OperationAction;
-import work.andycarpenter.webgen.pims.webui.PageTopMenuOptions;
-import work.andycarpenter.webgen.pims.webui.PaginationControlPlacements;
-import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
-import work.andycarpenter.webgen.pims.webui.ResetPasswordUnit;
-import work.andycarpenter.webgen.pims.webui.ResourceDisplayValue;
-import work.andycarpenter.webgen.pims.webui.RouteActual;
-import work.andycarpenter.webgen.pims.webui.SearchUnit;
-import work.andycarpenter.webgen.pims.webui.SecurityAction;
-import work.andycarpenter.webgen.pims.webui.SelectAction;
-import work.andycarpenter.webgen.pims.webui.SelectableUnit;
-import work.andycarpenter.webgen.pims.webui.SinglePageController;
-import work.andycarpenter.webgen.pims.webui.SingletonUnit;
-import work.andycarpenter.webgen.pims.webui.SliderUnit;
-import work.andycarpenter.webgen.pims.webui.SliderUnitStyles;
-import work.andycarpenter.webgen.pims.webui.StaticUnit;
-import work.andycarpenter.webgen.pims.webui.StaticUnitStyles;
-import work.andycarpenter.webgen.pims.webui.SubmenuEntry;
-import work.andycarpenter.webgen.pims.webui.TabularUnit;
-import work.andycarpenter.webgen.pims.webui.TabularUnitStyles;
-import work.andycarpenter.webgen.pims.webui.TargetAction;
-import work.andycarpenter.webgen.pims.webui.TextCardsUnit;
-import work.andycarpenter.webgen.pims.webui.UnitAssociation;
-import work.andycarpenter.webgen.pims.webui.UnitElement;
-import work.andycarpenter.webgen.pims.webui.UnitFeature;
-import work.andycarpenter.webgen.pims.webui.UnitField;
-import work.andycarpenter.webgen.pims.webui.UnitLabel;
-import work.andycarpenter.webgen.pims.webui.UnitResource;
-import work.andycarpenter.webgen.pims.webui.UpdateUnit;
-import work.andycarpenter.webgen.pims.webui.ValueContext;
-import work.andycarpenter.webgen.pims.webui.WebUI;
-import work.andycarpenter.webgen.pims.webui.WebuiFactory;
-import work.andycarpenter.webgen.pims.webui.WebuiPackage;
+import work.andycarpenter.webgen.pims.webui.*;
 import work.andycarpenter.webgen.pims.webui.util.WebuiValidator;
 
 /**
@@ -402,6 +313,76 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass collectionUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass collectionFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arrayFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass booleanFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass choiceFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass comparisionFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dateTimeFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entityFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nullFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass numericFilterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textFilterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -710,13 +691,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EEnum collectionDisplayOptionsEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum paginationControlPlacementsEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -2837,7 +2811,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCollectionUnit_Filter() {
+	public EReference getCollectionUnit_Filters() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -2847,7 +2821,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCollectionUnit_SupportedFilters() {
+	public EReference getCollectionUnit_Filter() {
 		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -2857,8 +2831,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getCollectionUnit_SupportedFilters() {
+		return (EReference)collectionUnitEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getCollectionUnit_EmptyMessage() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(8);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -2889,166 +2873,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EAttribute getCollectionUnit_MaximumPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_PaginationControlPlacement() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_NextNpages() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_PreviousNpages() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_NextPageLabel() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_NextPageIconName() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_PreviousPageLabel() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_PreviousPageIconName() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_UseDisabledPageLinks() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_UseFirstLastPageLinks() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_FirstPageLabel() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_FirstPageIconName() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_LastPageLabel() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_LastPageIconName() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_PaginationClass() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_PaginationElementClass() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_PaginationAnchorClass() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(27);
 	}
 
 	/**
@@ -3089,6 +2913,116 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EOperation getCollectionUnit__ValueEntities() {
 		return collectionUnitEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCollectionFilter() {
+		return collectionFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getArrayFilter() {
+		return arrayFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBooleanFilter() {
+		return booleanFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getChoiceFilter() {
+		return choiceFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getComparisionFilter() {
+		return comparisionFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDateTimeFilter() {
+		return dateTimeFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEntityFilter() {
+		return entityFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNullFilter() {
+		return nullFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNumericFilter() {
+		return numericFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTextFilter() {
+		return textFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTextFilter_Attribute() {
+		return (EReference)textFilterEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4487,16 +4421,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EEnum getPaginationControlPlacements() {
-		return paginationControlPlacementsEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getContainerActionsPlacement() {
 		return containerActionsPlacementEEnum;
 	}
@@ -4782,32 +4706,38 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__SELECTION);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FIND_CONTAINER_SELECTION);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FIND_ELEMENT_SELECTION);
+		createEReference(collectionUnitEClass, COLLECTION_UNIT__FILTERS);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FILTER);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__SUPPORTED_FILTERS);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__EMPTY_MESSAGE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__OMIT_FIELD_LABELS);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_CONTROL_PLACEMENT);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__NEXT_NPAGES);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PREVIOUS_NPAGES);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__NEXT_PAGE_LABEL);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__NEXT_PAGE_ICON_NAME);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PREVIOUS_PAGE_LABEL);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PREVIOUS_PAGE_ICON_NAME);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__USE_DISABLED_PAGE_LINKS);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__USE_FIRST_LAST_PAGE_LINKS);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__FIRST_PAGE_LABEL);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__FIRST_PAGE_ICON_NAME);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__LAST_PAGE_LABEL);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__LAST_PAGE_ICON_NAME);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_CLASS);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_ELEMENT_CLASS);
-		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__PAGINATION_ANCHOR_CLASS);
+		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__EMPTY_MESSAGE);
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___CONTAINING_TYPE);
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___IS_CONTAINED);
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___REFERENCABLE_ENTITIES);
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___VALUE_ENTITIES);
+
+		collectionFilterEClass = createEClass(COLLECTION_FILTER);
+
+		arrayFilterEClass = createEClass(ARRAY_FILTER);
+
+		booleanFilterEClass = createEClass(BOOLEAN_FILTER);
+
+		choiceFilterEClass = createEClass(CHOICE_FILTER);
+
+		comparisionFilterEClass = createEClass(COMPARISION_FILTER);
+
+		dateTimeFilterEClass = createEClass(DATE_TIME_FILTER);
+
+		entityFilterEClass = createEClass(ENTITY_FILTER);
+
+		nullFilterEClass = createEClass(NULL_FILTER);
+
+		numericFilterEClass = createEClass(NUMERIC_FILTER);
+
+		textFilterEClass = createEClass(TEXT_FILTER);
+		createEReference(textFilterEClass, TEXT_FILTER__ATTRIBUTE);
 
 		editUnitEClass = createEClass(EDIT_UNIT);
 		createEAttribute(editUnitEClass, EDIT_UNIT__USE_CAPTCHA);
@@ -4990,7 +4920,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		authenticationMenuPlacementEEnum = createEEnum(AUTHENTICATION_MENU_PLACEMENT);
 		pageTopMenuOptionsEEnum = createEEnum(PAGE_TOP_MENU_OPTIONS);
 		collectionDisplayOptionsEEnum = createEEnum(COLLECTION_DISPLAY_OPTIONS);
-		paginationControlPlacementsEEnum = createEEnum(PAGINATION_CONTROL_PLACEMENTS);
 		containerActionsPlacementEEnum = createEEnum(CONTAINER_ACTIONS_PLACEMENT);
 		instanceActionsPlacementEEnum = createEEnum(INSTANCE_ACTIONS_PLACEMENT);
 	}
@@ -5078,6 +5007,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		collectionUnitEClass.getESuperTypes().add(this.getDynamicUnit());
 		collectionUnitEClass.getESuperTypes().add(this.getSelectableUnit());
 		collectionUnitEClass.getESuperTypes().add(this.getValueContext());
+		collectionFilterEClass.getESuperTypes().add(theBasePackage.getNamedElement());
+		arrayFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		booleanFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		choiceFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		comparisionFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		dateTimeFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		entityFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		nullFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		numericFilterEClass.getESuperTypes().add(this.getCollectionFilter());
+		textFilterEClass.getESuperTypes().add(this.getCollectionFilter());
 		editUnitEClass.getESuperTypes().add(this.getSingletonUnit());
 		createUnitEClass.getESuperTypes().add(this.getEditUnit());
 		updateUnitEClass.getESuperTypes().add(this.getEditUnit());
@@ -5385,28 +5324,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getCollectionUnit_Selection(), thePersistencePackage.getSelection(), null, "selection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_FindContainerSelection(), thePersistencePackage.getSelection(), null, "findContainerSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_FindElementSelection(), thePersistencePackage.getSelection(), null, "findElementSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollectionUnit_Filters(), this.getCollectionFilter(), null, "filters", null, 0, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_Filter(), thePersistencePackage.getFilter(), null, "filter", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_SupportedFilters(), thePersistencePackage.getFilter(), null, "supportedFilters", null, 0, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_EmptyMessage(), ecorePackage.getEString(), "emptyMessage", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_OmitFieldLabels(), ecorePackage.getEBoolean(), "omitFieldLabels", "false", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_DefaultPaginationSize(), ecorePackage.getEInt(), "defaultPaginationSize", "10", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_MaximumPaginationSize(), ecorePackage.getEInt(), "maximumPaginationSize", "0", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_PaginationControlPlacement(), this.getPaginationControlPlacements(), "paginationControlPlacement", "Below", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_NextNpages(), ecorePackage.getEInt(), "nextNpages", "2", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_PreviousNpages(), ecorePackage.getEInt(), "previousNpages", "2", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_NextPageLabel(), ecorePackage.getEString(), "nextPageLabel", "&gt;", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_NextPageIconName(), ecorePackage.getEString(), "nextPageIconName", "chevron_right", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_PreviousPageLabel(), ecorePackage.getEString(), "previousPageLabel", "&lt;", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_PreviousPageIconName(), ecorePackage.getEString(), "previousPageIconName", "chevron_left", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_UseDisabledPageLinks(), ecorePackage.getEBoolean(), "useDisabledPageLinks", "true", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_UseFirstLastPageLinks(), ecorePackage.getEBoolean(), "useFirstLastPageLinks", "false", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_FirstPageLabel(), ecorePackage.getEString(), "firstPageLabel", "<<", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_FirstPageIconName(), ecorePackage.getEString(), "firstPageIconName", "first_page", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_LastPageLabel(), ecorePackage.getEString(), "lastPageLabel", ">>", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_LastPageIconName(), ecorePackage.getEString(), "lastPageIconName", "last_page", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_PaginationClass(), ecorePackage.getEString(), "paginationClass", "pagination", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_PaginationElementClass(), ecorePackage.getEString(), "paginationElementClass", "page-item", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionUnit_PaginationAnchorClass(), ecorePackage.getEString(), "paginationAnchorClass", "page-link", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionUnit_EmptyMessage(), ecorePackage.getEString(), "emptyMessage", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getCollectionUnit__ContainingType(), thePersistencePackage.getEntity(), "containingType", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -5415,6 +5339,27 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEOperation(getCollectionUnit__ReferencableEntities(), thePersistencePackage.getEntity(), "referencableEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getCollectionUnit__ValueEntities(), thePersistencePackage.getEntity(), "valueEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(collectionFilterEClass, CollectionFilter.class, "CollectionFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(arrayFilterEClass, ArrayFilter.class, "ArrayFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(booleanFilterEClass, BooleanFilter.class, "BooleanFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(choiceFilterEClass, ChoiceFilter.class, "ChoiceFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(comparisionFilterEClass, ComparisionFilter.class, "ComparisionFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dateTimeFilterEClass, DateTimeFilter.class, "DateTimeFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(entityFilterEClass, EntityFilter.class, "EntityFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(nullFilterEClass, NullFilter.class, "NullFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(numericFilterEClass, NumericFilter.class, "NumericFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textFilterEClass, TextFilter.class, "TextFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTextFilter_Attribute(), thePersistencePackage.getAttribute(), null, "attribute", null, 1, 1, TextFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(editUnitEClass, EditUnit.class, "EditUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEditUnit_UseCaptcha(), ecorePackage.getEBoolean(), "useCaptcha", "false", 1, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5613,11 +5558,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEEnum(collectionDisplayOptionsEEnum, CollectionDisplayOptions.class, "CollectionDisplayOptions");
 		addEEnumLiteral(collectionDisplayOptionsEEnum, CollectionDisplayOptions.LINE_DIRECTION);
 		addEEnumLiteral(collectionDisplayOptionsEEnum, CollectionDisplayOptions.PAGE_DIRECTION);
-
-		initEEnum(paginationControlPlacementsEEnum, PaginationControlPlacements.class, "PaginationControlPlacements");
-		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.BELOW);
-		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.ABOVE);
-		addEEnumLiteral(paginationControlPlacementsEEnum, PaginationControlPlacements.ABOVE_AND_BELOW);
 
 		initEEnum(containerActionsPlacementEEnum, ContainerActionsPlacement.class, "ContainerActionsPlacement");
 		addEEnumLiteral(containerActionsPlacementEEnum, ContainerActionsPlacement.ABOVE);
