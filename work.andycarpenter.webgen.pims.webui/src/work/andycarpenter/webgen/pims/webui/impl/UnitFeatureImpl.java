@@ -757,13 +757,11 @@ public abstract class UnitFeatureImpl extends UnitFieldImpl implements UnitFeatu
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Entity contextEntity() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return getDisplayedOn().getContentType();
 	}
 
 	/**

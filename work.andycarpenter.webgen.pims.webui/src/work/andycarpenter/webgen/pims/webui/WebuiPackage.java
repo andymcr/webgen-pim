@@ -3964,15 +3964,6 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE___REFERENCABLE_ENTITIES = UNIT_FIELD___REFERENCABLE_ENTITIES;
 
 	/**
-	 * The operation id for the '<em>Context Entity</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_FEATURE___CONTEXT_ENTITY = UNIT_FIELD_OPERATION_COUNT + 0;
-
-	/**
 	 * The operation id for the '<em>Name</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3982,13 +3973,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_FEATURE___NAME = UNIT_FIELD_OPERATION_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Context Entity</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE___CONTEXT_ENTITY = UNIT_FIELD_OPERATION_COUNT + 2;
+
+	/**
 	 * The number of operations of the '<em>Unit Feature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_FEATURE_OPERATION_COUNT = UNIT_FIELD_OPERATION_COUNT + 2;
+	int UNIT_FEATURE_OPERATION_COUNT = UNIT_FIELD_OPERATION_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl <em>Unit Element</em>}' class.
@@ -21296,6 +21296,16 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitFeature_Autofocus();
 
 	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.UnitFeature#contextEntity() <em>Context Entity</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Context Entity</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitFeature#contextEntity()
+	 * @generated
+	 */
+	EOperation getUnitFeature__ContextEntity();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.UnitElement <em>Unit Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -24853,6 +24863,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UNIT_FEATURE__AUTOFOCUS = eINSTANCE.getUnitFeature_Autofocus();
+
+		/**
+		 * The meta object literal for the '<em><b>Context Entity</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation UNIT_FEATURE___CONTEXT_ENTITY = eINSTANCE.getUnitFeature__ContextEntity();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.UnitElementImpl <em>Unit Element</em>}' class.

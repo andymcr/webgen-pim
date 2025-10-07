@@ -223,6 +223,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/emptyCollectionDisplay"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/footer"/>
       <genFeatures createChild="false" propertyCategory="Navigation" ecoreFeature="ecore:EAttribute webui.ecore#//UnitFeature/autofocus"/>
+      <genOperations ecoreOperation="webui.ecore#//UnitFeature/contextEntity"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitElement">
       <genFeatures property="None" children="true" createChild="true" propertyCategory="Business"
@@ -431,7 +432,8 @@
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ResetPasswordUnit"/>
     <genClasses image="false" ecoreClass="webui.ecore#//ValueContext">
-      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//ValueContext/valueEntities.1"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" propertyCategory="Debug"
+          ecoreFeature="ecore:EReference webui.ecore#//ValueContext/valueEntities.1"/>
       <genOperations ecoreOperation="webui.ecore#//ValueContext/valueEntities"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//DisplayValue"/>

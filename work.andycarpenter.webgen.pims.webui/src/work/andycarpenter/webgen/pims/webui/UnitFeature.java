@@ -4,6 +4,7 @@ package work.andycarpenter.webgen.pims.webui;
 
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.Predicate;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Path;
 
 /**
@@ -319,5 +320,13 @@ public interface UnitFeature extends UnitField, Path, ActionContainer {
 	 * @generated
 	 */
 	void setAutofocus(boolean value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	Entity contextEntity();
 
 } // UnitFeature

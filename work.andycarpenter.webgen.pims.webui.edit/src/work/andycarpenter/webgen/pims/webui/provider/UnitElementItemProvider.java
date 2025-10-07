@@ -71,8 +71,8 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
 			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 			getResourceLocator(),
-			getString("_UI_UnitElement_attribute_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_UnitElement_attribute_feature", "_UI_UnitElement_type"),
+			getString("_UI_AttributePathElement_attribute_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_AttributePathElement_attribute_feature", "_UI_UnitElement_type"),
 			PersistencePackage.Literals.ATTRIBUTE_PATH_ELEMENT__ATTRIBUTE,
 			true, false, true, null,
 			getString("_UI_ModelPropertyCategory"),

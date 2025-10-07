@@ -328,6 +328,7 @@
       <details key="atMostOneSelectAction" value="actions->select(a | a.oclIsKindOf(SelectAction))->size() &lt; 2"/>
       <details key="noDeleteActions" value="actions->select(a | a.oclIsKindOf(DeleteAction))->isEmpty()"/>
     </eAnnotations>
+    <eOperations name="contextEntity" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="displayLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="required" lowerBound="1"
