@@ -2941,6 +2941,46 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getCollectionFilter_Attribute() {
+		return (EReference)collectionFilterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionFilter_PlaceholderOverride() {
+		return (EAttribute)collectionFilterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionFilter_TitleOverride() {
+		return (EAttribute)collectionFilterEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionFilter_Help() {
+		return (EAttribute)collectionFilterEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getArrayFilter() {
 		return arrayFilterEClass;
 	}
@@ -3023,16 +3063,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EClass getTextFilter() {
 		return textFilterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTextFilter_Attribute() {
-		return (EReference)textFilterEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4730,6 +4760,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___VALUE_ENTITIES);
 
 		collectionFilterEClass = createEClass(COLLECTION_FILTER);
+		createEReference(collectionFilterEClass, COLLECTION_FILTER__ATTRIBUTE);
+		createEAttribute(collectionFilterEClass, COLLECTION_FILTER__PLACEHOLDER_OVERRIDE);
+		createEAttribute(collectionFilterEClass, COLLECTION_FILTER__TITLE_OVERRIDE);
+		createEAttribute(collectionFilterEClass, COLLECTION_FILTER__HELP);
 
 		arrayFilterEClass = createEClass(ARRAY_FILTER);
 
@@ -4748,7 +4782,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		numericFilterEClass = createEClass(NUMERIC_FILTER);
 
 		textFilterEClass = createEClass(TEXT_FILTER);
-		createEReference(textFilterEClass, TEXT_FILTER__ATTRIBUTE);
 
 		editUnitEClass = createEClass(EDIT_UNIT);
 		createEAttribute(editUnitEClass, EDIT_UNIT__USE_CAPTCHA);
@@ -5354,6 +5387,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEOperation(getCollectionUnit__ValueEntities(), thePersistencePackage.getEntity(), "valueEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(collectionFilterEClass, CollectionFilter.class, "CollectionFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCollectionFilter_Attribute(), thePersistencePackage.getAttribute(), null, "attribute", null, 1, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionFilter_PlaceholderOverride(), ecorePackage.getEString(), "placeholderOverride", "", 0, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionFilter_TitleOverride(), ecorePackage.getEString(), "titleOverride", "", 0, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionFilter_Help(), ecorePackage.getEString(), "help", "", 0, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arrayFilterEClass, ArrayFilter.class, "ArrayFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -5372,7 +5409,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEClass(numericFilterEClass, NumericFilter.class, "NumericFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(textFilterEClass, TextFilter.class, "TextFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTextFilter_Attribute(), thePersistencePackage.getAttribute(), null, "attribute", null, 1, 1, TextFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(editUnitEClass, EditUnit.class, "EditUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEditUnit_UseCaptcha(), ecorePackage.getEBoolean(), "useCaptcha", "false", 1, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

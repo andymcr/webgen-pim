@@ -7053,13 +7053,49 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_FILTER__NAME = BasePackage.NAMED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER__ATTRIBUTE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER__PLACEHOLDER_OVERRIDE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER__TITLE_OVERRIDE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER__HELP = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Collection Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FILTER_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int COLLECTION_FILTER_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Collection Filter</em>' class.
@@ -7088,6 +7124,42 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARRAY_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER__HELP = COLLECTION_FILTER__HELP;
 
 	/**
 	 * The number of structural features of the '<em>Array Filter</em>' class.
@@ -7127,6 +7199,42 @@ public interface WebuiPackage extends EPackage {
 	int BOOLEAN_FILTER__NAME = COLLECTION_FILTER__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER__HELP = COLLECTION_FILTER__HELP;
+
+	/**
 	 * The number of structural features of the '<em>Boolean Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7162,6 +7270,42 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHOICE_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER__HELP = COLLECTION_FILTER__HELP;
 
 	/**
 	 * The number of structural features of the '<em>Choice Filter</em>' class.
@@ -7201,6 +7345,42 @@ public interface WebuiPackage extends EPackage {
 	int COMPARISION_FILTER__NAME = COLLECTION_FILTER__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER__HELP = COLLECTION_FILTER__HELP;
+
+	/**
 	 * The number of structural features of the '<em>Comparision Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7236,6 +7416,42 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_TIME_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER__HELP = COLLECTION_FILTER__HELP;
 
 	/**
 	 * The number of structural features of the '<em>Date Time Filter</em>' class.
@@ -7275,6 +7491,42 @@ public interface WebuiPackage extends EPackage {
 	int ENTITY_FILTER__NAME = COLLECTION_FILTER__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER__HELP = COLLECTION_FILTER__HELP;
+
+	/**
 	 * The number of structural features of the '<em>Entity Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7312,6 +7564,42 @@ public interface WebuiPackage extends EPackage {
 	int NULL_FILTER__NAME = COLLECTION_FILTER__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER__HELP = COLLECTION_FILTER__HELP;
+
+	/**
 	 * The number of structural features of the '<em>Null Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7347,6 +7635,42 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int NUMERIC_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Attribute</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER__HELP = COLLECTION_FILTER__HELP;
 
 	/**
 	 * The number of structural features of the '<em>Numeric Filter</em>' class.
@@ -7392,7 +7716,34 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FILTER__ATTRIBUTE = COLLECTION_FILTER_FEATURE_COUNT + 0;
+	int TEXT_FILTER__ATTRIBUTE = COLLECTION_FILTER__ATTRIBUTE;
+
+	/**
+	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER__PLACEHOLDER_OVERRIDE = COLLECTION_FILTER__PLACEHOLDER_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER__TITLE_OVERRIDE = COLLECTION_FILTER__TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Help</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER__HELP = COLLECTION_FILTER__HELP;
 
 	/**
 	 * The number of structural features of the '<em>Text Filter</em>' class.
@@ -7401,7 +7752,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 1;
+	int TEXT_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Text Filter</em>' class.
@@ -21948,6 +22299,50 @@ public interface WebuiPackage extends EPackage {
 	EClass getCollectionFilter();
 
 	/**
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getAttribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Attribute</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter#getAttribute()
+	 * @see #getCollectionFilter()
+	 * @generated
+	 */
+	EReference getCollectionFilter_Attribute();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getPlaceholderOverride <em>Placeholder Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Placeholder Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter#getPlaceholderOverride()
+	 * @see #getCollectionFilter()
+	 * @generated
+	 */
+	EAttribute getCollectionFilter_PlaceholderOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getTitleOverride <em>Title Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter#getTitleOverride()
+	 * @see #getCollectionFilter()
+	 * @generated
+	 */
+	EAttribute getCollectionFilter_TitleOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getHelp <em>Help</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Help</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter#getHelp()
+	 * @see #getCollectionFilter()
+	 * @generated
+	 */
+	EAttribute getCollectionFilter_Help();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ArrayFilter <em>Array Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22036,17 +22431,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTextFilter();
-
-	/**
-	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.TextFilter#getAttribute <em>Attribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Attribute</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.TextFilter#getAttribute()
-	 * @see #getTextFilter()
-	 * @generated
-	 */
-	EReference getTextFilter_Attribute();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.EditUnit <em>Edit Unit</em>}'.
@@ -25375,6 +25759,38 @@ public interface WebuiPackage extends EPackage {
 		EClass COLLECTION_FILTER = eINSTANCE.getCollectionFilter();
 
 		/**
+		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_FILTER__ATTRIBUTE = eINSTANCE.getCollectionFilter_Attribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Placeholder Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_FILTER__PLACEHOLDER_OVERRIDE = eINSTANCE.getCollectionFilter_PlaceholderOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Title Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_FILTER__TITLE_OVERRIDE = eINSTANCE.getCollectionFilter_TitleOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Help</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_FILTER__HELP = eINSTANCE.getCollectionFilter_Help();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ArrayFilterImpl <em>Array Filter</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25463,14 +25879,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEXT_FILTER = eINSTANCE.getTextFilter();
-
-		/**
-		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TEXT_FILTER__ATTRIBUTE = eINSTANCE.getTextFilter_Attribute();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl <em>Edit Unit</em>}' class.

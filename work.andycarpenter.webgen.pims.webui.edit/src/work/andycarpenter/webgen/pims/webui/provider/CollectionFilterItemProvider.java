@@ -10,9 +10,13 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import work.andycarpenter.webgen.pims.base.provider.NamedElementItemProvider;
 import work.andycarpenter.webgen.pims.webui.CollectionFilter;
+import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
  * This is the item provider adapter for a {@link work.andycarpenter.webgen.pims.webui.CollectionFilter} object.
@@ -43,8 +47,100 @@ public class CollectionFilterItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addAttributePropertyDescriptor(object);
+			addPlaceholderOverridePropertyDescriptor(object);
+			addTitleOverridePropertyDescriptor(object);
+			addHelpPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Attribute feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAttributePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionFilter_attribute_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionFilter_attribute_feature", "_UI_CollectionFilter_type"),
+				 WebuiPackage.Literals.COLLECTION_FILTER__ATTRIBUTE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 getString("_UI_ModelPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Placeholder Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPlaceholderOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionFilter_placeholderOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionFilter_placeholderOverride_feature", "_UI_CollectionFilter_type"),
+				 WebuiPackage.Literals.COLLECTION_FILTER__PLACEHOLDER_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Title Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTitleOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionFilter_titleOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionFilter_titleOverride_feature", "_UI_CollectionFilter_type"),
+				 WebuiPackage.Literals.COLLECTION_FILTER__TITLE_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Help feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHelpPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionFilter_help_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionFilter_help_feature", "_UI_CollectionFilter_type"),
+				 WebuiPackage.Literals.COLLECTION_FILTER__HELP,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
 	}
 
 	/**
@@ -72,6 +168,14 @@ public class CollectionFilterItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(CollectionFilter.class)) {
+			case WebuiPackage.COLLECTION_FILTER__PLACEHOLDER_OVERRIDE:
+			case WebuiPackage.COLLECTION_FILTER__TITLE_OVERRIDE:
+			case WebuiPackage.COLLECTION_FILTER__HELP:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

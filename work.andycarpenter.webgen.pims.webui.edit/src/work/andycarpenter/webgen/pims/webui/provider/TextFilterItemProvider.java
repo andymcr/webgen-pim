@@ -8,11 +8,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import work.andycarpenter.webgen.pims.webui.TextFilter;
-import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 
 /**
  * This is the item provider adapter for a {@link work.andycarpenter.webgen.pims.webui.TextFilter} object.
@@ -42,31 +39,8 @@ public class TextFilterItemProvider extends CollectionFilterItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAttributePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Attribute feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAttributePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_TextFilter_attribute_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TextFilter_attribute_feature", "_UI_TextFilter_type"),
-				 WebuiPackage.Literals.TEXT_FILTER__ATTRIBUTE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

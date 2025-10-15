@@ -592,6 +592,29 @@ abstract rule CollectionUnit {
 abstract rule CollectionFilter {
 	from website : Website!CollectionFilter
 	to waf : WAF!CollectionFilter (
+		attribute  <-
+			if website.attribute.oclIsUndefined() then
+				OclUndefined
+			else
+				website.attribute.findOrmFeature()
+			endif,
+		placeholderOverride <-
+			if website.placeholderOverride.trim() <> '' then
+				website.placeholderOverride.trim()
+			else if website.attribute.oclIsUndefined() then
+				''
+			else
+				website.attribute.displayLabel
+			endif endif,
+		titleOverride <-
+			if website.titleOverride.trim() <> '' then
+				website.titleOverride.trim()
+			else if website.attribute.oclIsUndefined() then
+				''
+			else
+				website.attribute.displayLabel
+			endif endif,
+		help  <- website.help.trim()
 	)
 }
 
@@ -648,20 +671,6 @@ rule NumericFilter {
 rule TextFilter {
 	from website : Website!TextFilter
 	to waf : WAF!TextFilter (
-		attribute  <-
-			if website.attribute.oclIsUndefined() then
-				OclUndefined
-			else
-				website.attribute.findOrmFeature()
-			endif,
-		placeholder <-
-			if website.attribute.oclIsUndefined() then
-				''
-			else if website.attribute.placeholder <> '' then
-				website.attribite.placeholder
-			else
-				website.attribute.name.createLabel()
-			endif endif
 	)
 }
 
