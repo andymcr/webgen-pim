@@ -2941,7 +2941,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCollectionFilter_Attribute() {
+	public EReference getCollectionFilter_Affects() {
 		return (EReference)collectionFilterEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2951,8 +2951,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionFilter_PlaceholderOverride() {
-		return (EAttribute)collectionFilterEClass.getEStructuralFeatures().get(1);
+	public EReference getCollectionFilter_Attribute() {
+		return (EReference)collectionFilterEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2961,7 +2961,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionFilter_TitleOverride() {
+	public EAttribute getCollectionFilter_PlaceholderOverride() {
 		return (EAttribute)collectionFilterEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -2971,8 +2971,28 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionFilter_Help() {
+	public EAttribute getCollectionFilter_TitleOverride() {
 		return (EAttribute)collectionFilterEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionFilter_Help() {
+		return (EAttribute)collectionFilterEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getCollectionFilter__ReferencableEntities() {
+		return collectionFilterEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -4760,10 +4780,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEOperation(collectionUnitEClass, COLLECTION_UNIT___VALUE_ENTITIES);
 
 		collectionFilterEClass = createEClass(COLLECTION_FILTER);
+		createEReference(collectionFilterEClass, COLLECTION_FILTER__AFFECTS);
 		createEReference(collectionFilterEClass, COLLECTION_FILTER__ATTRIBUTE);
 		createEAttribute(collectionFilterEClass, COLLECTION_FILTER__PLACEHOLDER_OVERRIDE);
 		createEAttribute(collectionFilterEClass, COLLECTION_FILTER__TITLE_OVERRIDE);
 		createEAttribute(collectionFilterEClass, COLLECTION_FILTER__HELP);
+		createEOperation(collectionFilterEClass, COLLECTION_FILTER___REFERENCABLE_ENTITIES);
 
 		arrayFilterEClass = createEClass(ARRAY_FILTER);
 
@@ -5370,7 +5392,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getCollectionUnit_Selection(), thePersistencePackage.getSelection(), null, "selection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_FindContainerSelection(), thePersistencePackage.getSelection(), null, "findContainerSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_FindElementSelection(), thePersistencePackage.getSelection(), null, "findElementSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCollectionUnit_Filters(), this.getCollectionFilter(), null, "filters", null, 0, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCollectionUnit_Filters(), this.getCollectionFilter(), this.getCollectionFilter_Affects(), "filters", null, 0, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_Filter(), thePersistencePackage.getFilter(), null, "filter", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_SupportedFilters(), thePersistencePackage.getFilter(), null, "supportedFilters", null, 0, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_OmitFieldLabels(), ecorePackage.getEBoolean(), "omitFieldLabels", "false", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5387,10 +5409,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEOperation(getCollectionUnit__ValueEntities(), thePersistencePackage.getEntity(), "valueEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(collectionFilterEClass, CollectionFilter.class, "CollectionFilter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCollectionFilter_Affects(), this.getCollectionUnit(), this.getCollectionUnit_Filters(), "affects", null, 1, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionFilter_Attribute(), thePersistencePackage.getAttribute(), null, "attribute", null, 1, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionFilter_PlaceholderOverride(), ecorePackage.getEString(), "placeholderOverride", "", 0, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionFilter_TitleOverride(), ecorePackage.getEString(), "titleOverride", "", 0, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionFilter_Help(), ecorePackage.getEString(), "help", "", 0, 1, CollectionFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getCollectionFilter__ReferencableEntities(), thePersistencePackage.getEntity(), "referencableEntities", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(arrayFilterEClass, ArrayFilter.class, "ArrayFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -5798,6 +5823,12 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		   new String[] {
 			   "canOnlyTitleWithSingletons", "not unitTitle.oclIsUndefined() implies \n\tif unitTitle.oclIsKindOf(persistence::Attribute) then\n\t\tunitTitle.oclAsType(persistence::Attribute).cardinality <> persistence::Cardinality::Many\n\telse\n\t\ttrue\n\tendif",
 			   "selectionMustNotBeSingleton", "not selection.oclIsUndefined() implies\n\tselection.limit <> 1"
+		   });
+		addAnnotation
+		  (getCollectionFilter__ReferencableEntities(),
+		   source,
+		   new String[] {
+			   "body", "if affects.selection.oclIsUndefined(} then\t\n\tOrderedSet{self.definedBy.serves}\nelse\n\taffects.selection.referencableEntities(}\nendif"
 		   });
 		addAnnotation
 		  (detailsUnitEClass,

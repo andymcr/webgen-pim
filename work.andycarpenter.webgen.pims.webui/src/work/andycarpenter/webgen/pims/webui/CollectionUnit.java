@@ -199,11 +199,13 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContex
 	/**
 	 * Returns the value of the '<em><b>Filters</b></em>' containment reference list.
 	 * The list contents are of type {@link work.andycarpenter.webgen.pims.webui.CollectionFilter}.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getAffects <em>Affects</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Filters</em>' containment reference list.
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_Filters()
-	 * @model containment="true"
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter#getAffects
+	 * @model opposite="affects" containment="true"
 	 * @generated
 	 */
 	EList<CollectionFilter> getFilters();

@@ -2,8 +2,10 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.base.NamedElement;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
+import work.andycarpenter.webgen.pims.persistence.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +16,7 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getAffects <em>Affects</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getAttribute <em>Attribute</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getPlaceholderOverride <em>Placeholder Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getTitleOverride <em>Title Override</em>}</li>
@@ -25,6 +28,30 @@ import work.andycarpenter.webgen.pims.persistence.Attribute;
  * @generated
  */
 public interface CollectionFilter extends NamedElement {
+
+	/**
+	 * Returns the value of the '<em><b>Affects</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters <em>Filters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Affects</em>' container reference.
+	 * @see #setAffects(CollectionUnit)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionFilter_Affects()
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters
+	 * @model opposite="filters" required="true" transient="false"
+	 * @generated
+	 */
+	CollectionUnit getAffects();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getAffects <em>Affects</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Affects</em>' container reference.
+	 * @see #getAffects()
+	 * @generated
+	 */
+	void setAffects(CollectionUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>Attribute</b></em>' reference.
@@ -116,4 +143,12 @@ public interface CollectionFilter extends NamedElement {
 	 * @generated
 	 */
 	void setHelp(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if affects.selection.oclIsUndefined(} then\t\n\tOrderedSet{self.definedBy.serves}\nelse\n\taffects.selection.referencableEntities(}\nendif'"
+	 * @generated
+	 */
+	EList<Entity> referencableEntities();
 } // CollectionFilter

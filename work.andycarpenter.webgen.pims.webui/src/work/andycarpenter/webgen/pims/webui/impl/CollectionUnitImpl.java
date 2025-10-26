@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -347,6 +347,21 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT__FILTERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFilters()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Label getUnitTitle() {
 		if (unitTitle != null && unitTitle.eIsProxy()) {
@@ -578,7 +593,7 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	@Override
 	public EList<CollectionFilter> getFilters() {
 		if (filters == null) {
-			filters = new EObjectContainmentEList<CollectionFilter>(CollectionFilter.class, this, WebuiPackage.COLLECTION_UNIT__FILTERS);
+			filters = new EObjectContainmentWithInverseEList<CollectionFilter>(CollectionFilter.class, this, WebuiPackage.COLLECTION_UNIT__FILTERS, WebuiPackage.COLLECTION_FILTER__AFFECTS);
 		}
 		return filters;
 	}

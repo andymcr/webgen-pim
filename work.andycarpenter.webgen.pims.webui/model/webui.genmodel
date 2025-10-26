@@ -306,11 +306,13 @@
       <genOperations ecoreOperation="webui.ecore#//CollectionUnit/valueEntities"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CollectionFilter">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference webui.ecore#//CollectionFilter/affects"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Model" propertySortChoices="true"
           ecoreFeature="ecore:EReference webui.ecore#//CollectionFilter/attribute"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionFilter/placeholderOverride"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionFilter/titleOverride"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionFilter/help"/>
+      <genOperations ecoreOperation="webui.ecore#//CollectionFilter/referencableEntities"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//ArrayFilter"/>
     <genClasses ecoreClass="webui.ecore#//BooleanFilter"/>

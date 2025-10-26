@@ -7053,13 +7053,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_FILTER__NAME = BasePackage.NAMED_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER__AFFECTS = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FILTER__ATTRIBUTE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int COLLECTION_FILTER__ATTRIBUTE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Placeholder Override</b></em>' attribute.
@@ -7068,7 +7077,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FILTER__PLACEHOLDER_OVERRIDE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int COLLECTION_FILTER__PLACEHOLDER_OVERRIDE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Title Override</b></em>' attribute.
@@ -7077,7 +7086,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FILTER__TITLE_OVERRIDE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int COLLECTION_FILTER__TITLE_OVERRIDE = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Help</b></em>' attribute.
@@ -7086,7 +7095,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FILTER__HELP = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int COLLECTION_FILTER__HELP = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Collection Filter</em>' class.
@@ -7095,7 +7104,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FILTER_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int COLLECTION_FILTER_FEATURE_COUNT = BasePackage.NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_FILTER___REFERENCABLE_ENTITIES = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Collection Filter</em>' class.
@@ -7104,7 +7122,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_FILTER_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int COLLECTION_FILTER_OPERATION_COUNT = BasePackage.NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ArrayFilterImpl <em>Array Filter</em>}' class.
@@ -7124,6 +7142,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARRAY_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7171,6 +7198,15 @@ public interface WebuiPackage extends EPackage {
 	int ARRAY_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARRAY_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Array Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7197,6 +7233,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7244,6 +7289,15 @@ public interface WebuiPackage extends EPackage {
 	int BOOLEAN_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Boolean Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7270,6 +7324,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHOICE_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7317,6 +7380,15 @@ public interface WebuiPackage extends EPackage {
 	int CHOICE_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Choice Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7343,6 +7415,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPARISION_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7390,6 +7471,15 @@ public interface WebuiPackage extends EPackage {
 	int COMPARISION_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISION_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Comparision Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7416,6 +7506,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_TIME_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7463,6 +7562,15 @@ public interface WebuiPackage extends EPackage {
 	int DATE_TIME_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Date Time Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7489,6 +7597,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENTITY_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7536,6 +7653,15 @@ public interface WebuiPackage extends EPackage {
 	int ENTITY_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Entity Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7562,6 +7688,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int NULL_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7609,6 +7744,15 @@ public interface WebuiPackage extends EPackage {
 	int NULL_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NULL_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Null Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7635,6 +7779,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int NUMERIC_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7682,6 +7835,15 @@ public interface WebuiPackage extends EPackage {
 	int NUMERIC_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
+
+	/**
 	 * The number of operations of the '<em>Numeric Filter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7708,6 +7870,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_FILTER__NAME = COLLECTION_FILTER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Affects</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER__AFFECTS = COLLECTION_FILTER__AFFECTS;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' reference.
@@ -7753,6 +7924,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_FILTER_FEATURE_COUNT = COLLECTION_FILTER_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Referencable Entities</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FILTER___REFERENCABLE_ENTITIES = COLLECTION_FILTER___REFERENCABLE_ENTITIES;
 
 	/**
 	 * The number of operations of the '<em>Text Filter</em>' class.
@@ -22299,6 +22479,17 @@ public interface WebuiPackage extends EPackage {
 	EClass getCollectionFilter();
 
 	/**
+	 * Returns the meta object for the container reference '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getAffects <em>Affects</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Affects</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter#getAffects()
+	 * @see #getCollectionFilter()
+	 * @generated
+	 */
+	EReference getCollectionFilter_Affects();
+
+	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#getAttribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22341,6 +22532,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCollectionFilter_Help();
+
+	/**
+	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.CollectionFilter#referencableEntities() <em>Referencable Entities</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Referencable Entities</em>' operation.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionFilter#referencableEntities()
+	 * @generated
+	 */
+	EOperation getCollectionFilter__ReferencableEntities();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.ArrayFilter <em>Array Filter</em>}'.
@@ -25759,6 +25960,14 @@ public interface WebuiPackage extends EPackage {
 		EClass COLLECTION_FILTER = eINSTANCE.getCollectionFilter();
 
 		/**
+		 * The meta object literal for the '<em><b>Affects</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COLLECTION_FILTER__AFFECTS = eINSTANCE.getCollectionFilter_Affects();
+
+		/**
 		 * The meta object literal for the '<em><b>Attribute</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25789,6 +25998,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLLECTION_FILTER__HELP = eINSTANCE.getCollectionFilter_Help();
+
+		/**
+		 * The meta object literal for the '<em><b>Referencable Entities</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation COLLECTION_FILTER___REFERENCABLE_ENTITIES = eINSTANCE.getCollectionFilter__ReferencableEntities();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.ArrayFilterImpl <em>Array Filter</em>}' class.
