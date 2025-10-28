@@ -11,8 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import work.andycarpenter.webgen.pims.security.AuthorisationExpression;
 import work.andycarpenter.webgen.pims.webui.Menu;
 import work.andycarpenter.webgen.pims.webui.MenuEntry;
 import work.andycarpenter.webgen.pims.webui.SubmenuEntry;
@@ -27,23 +25,12 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SubmenuEntryImpl#getPartOf <em>Part Of</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SubmenuEntryImpl#getAuthorisation <em>Authorisation</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.SubmenuEntryImpl#isAlwaysVisible <em>Always Visible</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
-	/**
-	 * The cached value of the '{@link #getAuthorisation() <em>Authorisation</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAuthorisation()
-	 * @generated
-	 * @ordered
-	 */
-	protected AuthorisationExpression authorisation;
-
 	/**
 	 * The default value of the '{@link #isAlwaysVisible() <em>Always Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -132,51 +119,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 	 * @generated
 	 */
 	@Override
-	public AuthorisationExpression getAuthorisation() {
-		return authorisation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAuthorisation(AuthorisationExpression newAuthorisation, NotificationChain msgs) {
-		AuthorisationExpression oldAuthorisation = authorisation;
-		authorisation = newAuthorisation;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.SUBMENU_ENTRY__AUTHORISATION, oldAuthorisation, newAuthorisation);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setAuthorisation(AuthorisationExpression newAuthorisation) {
-		if (newAuthorisation != authorisation) {
-			NotificationChain msgs = null;
-			if (authorisation != null)
-				msgs = ((InternalEObject)authorisation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.SUBMENU_ENTRY__AUTHORISATION, null, msgs);
-			if (newAuthorisation != null)
-				msgs = ((InternalEObject)newAuthorisation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.SUBMENU_ENTRY__AUTHORISATION, null, msgs);
-			msgs = basicSetAuthorisation(newAuthorisation, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.SUBMENU_ENTRY__AUTHORISATION, newAuthorisation, newAuthorisation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public boolean isAlwaysVisible() {
 		return alwaysVisible;
 	}
@@ -220,8 +162,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		switch (featureID) {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				return basicSetPartOf(null, msgs);
-			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
-				return basicSetAuthorisation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -250,8 +190,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		switch (featureID) {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				return getPartOf();
-			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
-				return getAuthorisation();
 			case WebuiPackage.SUBMENU_ENTRY__ALWAYS_VISIBLE:
 				return isAlwaysVisible();
 		}
@@ -268,9 +206,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		switch (featureID) {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				setPartOf((Menu)newValue);
-				return;
-			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
-				setAuthorisation((AuthorisationExpression)newValue);
 				return;
 			case WebuiPackage.SUBMENU_ENTRY__ALWAYS_VISIBLE:
 				setAlwaysVisible((Boolean)newValue);
@@ -290,9 +225,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				setPartOf((Menu)null);
 				return;
-			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
-				setAuthorisation((AuthorisationExpression)null);
-				return;
 			case WebuiPackage.SUBMENU_ENTRY__ALWAYS_VISIBLE:
 				setAlwaysVisible(ALWAYS_VISIBLE_EDEFAULT);
 				return;
@@ -310,8 +242,6 @@ public class SubmenuEntryImpl extends MenuImpl implements SubmenuEntry {
 		switch (featureID) {
 			case WebuiPackage.SUBMENU_ENTRY__PART_OF:
 				return getPartOf() != null;
-			case WebuiPackage.SUBMENU_ENTRY__AUTHORISATION:
-				return authorisation != null;
 			case WebuiPackage.SUBMENU_ENTRY__ALWAYS_VISIBLE:
 				return alwaysVisible != ALWAYS_VISIBLE_EDEFAULT;
 		}

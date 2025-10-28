@@ -1161,18 +1161,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSubmenuEntry_Authorisation() {
-		return (EReference)submenuEntryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getSubmenuEntry_AlwaysVisible() {
-		return (EAttribute)submenuEntryEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)submenuEntryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4565,7 +4555,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(menuEntryEClass, MENU_ENTRY__PART_OF);
 
 		submenuEntryEClass = createEClass(SUBMENU_ENTRY);
-		createEReference(submenuEntryEClass, SUBMENU_ENTRY__AUTHORISATION);
 		createEAttribute(submenuEntryEClass, SUBMENU_ENTRY__ALWAYS_VISIBLE);
 
 		actionMenuEntryEClass = createEClass(ACTION_MENU_ENTRY);
@@ -5183,7 +5172,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getMenuEntry_PartOf(), this.getMenu(), this.getMenu_Entries(), "partOf", null, 1, 1, MenuEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(submenuEntryEClass, SubmenuEntry.class, "SubmenuEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubmenuEntry_Authorisation(), theSecurityPackage.getAuthorisationExpression(), null, "authorisation", null, 0, 1, SubmenuEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSubmenuEntry_AlwaysVisible(), ecorePackage.getEBoolean(), "alwaysVisible", "false", 1, 1, SubmenuEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(actionMenuEntryEClass, ActionMenuEntry.class, "ActionMenuEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

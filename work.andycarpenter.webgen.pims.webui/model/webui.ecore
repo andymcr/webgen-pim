@@ -105,8 +105,6 @@
         eType="#//Menu" eOpposite="#//Menu/entries"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SubmenuEntry" eSuperTypes="#//Menu #//MenuEntry">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="authorisation" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.security/model/security.ecore#//AuthorisationExpression"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="alwaysVisible" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>

@@ -563,22 +563,13 @@ public interface WebuiPackage extends EPackage {
 	int SUBMENU_ENTRY__PART_OF = MENU_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Authorisation</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUBMENU_ENTRY__AUTHORISATION = MENU_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Always Visible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMENU_ENTRY__ALWAYS_VISIBLE = MENU_FEATURE_COUNT + 2;
+	int SUBMENU_ENTRY__ALWAYS_VISIBLE = MENU_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Submenu Entry</em>' class.
@@ -587,7 +578,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUBMENU_ENTRY_FEATURE_COUNT = MENU_FEATURE_COUNT + 3;
+	int SUBMENU_ENTRY_FEATURE_COUNT = MENU_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Submenu Entry</em>' class.
@@ -20569,17 +20560,6 @@ public interface WebuiPackage extends EPackage {
 	EClass getSubmenuEntry();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#getAuthorisation <em>Authorisation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Authorisation</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.SubmenuEntry#getAuthorisation()
-	 * @see #getSubmenuEntry()
-	 * @generated
-	 */
-	EReference getSubmenuEntry_Authorisation();
-
-	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.SubmenuEntry#isAlwaysVisible <em>Always Visible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -24460,14 +24440,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SUBMENU_ENTRY = eINSTANCE.getSubmenuEntry();
-
-		/**
-		 * The meta object literal for the '<em><b>Authorisation</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUBMENU_ENTRY__AUTHORISATION = eINSTANCE.getSubmenuEntry_Authorisation();
 
 		/**
 		 * The meta object literal for the '<em><b>Always Visible</b></em>' attribute feature.

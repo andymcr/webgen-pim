@@ -138,7 +138,6 @@ abstract rule MenuEntry {
 rule SubmenuEntry {
 	from website : Website!SubmenuEntry
 	to waf : WAF!SubmenuEntry (
-		authorisation <- website.authorisation
 	)
 }
 
