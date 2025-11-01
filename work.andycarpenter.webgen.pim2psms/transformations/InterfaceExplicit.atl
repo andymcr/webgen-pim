@@ -579,7 +579,6 @@ abstract rule CollectionUnit {
 			else
 				website.filter.findFilter()
 			endif,
-		supportedFilters <-	website.supportedFilters->collect(f | f.findFilter()),
 		omitFieldLabels <- website.omitFieldLabels,
 		defaultPaginationSize <- website.defaultPaginationSize,
 		maximumPaginationSize <- website.maximumPaginationSize,

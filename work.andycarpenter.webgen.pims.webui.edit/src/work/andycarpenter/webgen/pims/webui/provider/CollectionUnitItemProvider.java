@@ -61,7 +61,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addFindContainerSelectionPropertyDescriptor(object);
 			addFindElementSelectionPropertyDescriptor(object);
 			addFilterPropertyDescriptor(object);
-			addSupportedFiltersPropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addDefaultPaginationSizePropertyDescriptor(object);
 			addMaximumPaginationSizePropertyDescriptor(object);
@@ -255,35 +254,6 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				 null,
 				 getString("_UI_BusinessPropertyCategory"),
 				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Supported Filters feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	protected void addSupportedFiltersPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
-			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-			getResourceLocator(),
-			getString("_UI_CollectionUnit_supportedFilters_feature"),
-			getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_supportedFilters_feature", "_UI_CollectionUnit_type"),
-			WebuiPackage.Literals.COLLECTION_UNIT__SUPPORTED_FILTERS,
-			true, false, true, null,
-			getString("_UI_BusinessPropertyCategory"),
-			null) {
-				@Override
-				public Collection<?> getChoiceOfValues(Object object) {
-					if (object instanceof CollectionUnit) {
-						final CollectionUnit unit = (CollectionUnit) object;
-						if (unit.getSelection() != null) {
-							return unit.getSelection().getFilters();
-						}
-					}
-					return Collections.emptySet();
-				}
-		});
 	}
 
 	/**

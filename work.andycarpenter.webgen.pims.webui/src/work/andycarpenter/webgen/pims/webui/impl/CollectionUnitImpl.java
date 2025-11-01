@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.Filter;
@@ -46,7 +44,6 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilter <em>Filter</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSupportedFilters <em>Supported Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
@@ -155,16 +152,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected Filter filter;
-
-	/**
-	 * The cached value of the '{@link #getSupportedFilters() <em>Supported Filters</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSupportedFilters()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Filter> supportedFilters;
 
 	/**
 	 * The default value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
@@ -644,19 +631,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
-	public EList<Filter> getSupportedFilters() {
-		if (supportedFilters == null) {
-			supportedFilters = new EObjectResolvingEList<Filter>(Filter.class, this, WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS);
-		}
-		return supportedFilters;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getEmptyMessage() {
 		return emptyMessage;
 	}
@@ -790,8 +764,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FILTER:
 				if (resolve) return getFilter();
 				return basicGetFilter();
-			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
-				return getSupportedFilters();
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				return isOmitFieldLabels();
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
@@ -837,10 +809,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return;
 			case WebuiPackage.COLLECTION_UNIT__FILTER:
 				setFilter((Filter)newValue);
-				return;
-			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
-				getSupportedFilters().clear();
-				getSupportedFilters().addAll((Collection<? extends Filter>)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels((Boolean)newValue);
@@ -890,9 +858,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FILTER:
 				setFilter((Filter)null);
 				return;
-			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
-				getSupportedFilters().clear();
-				return;
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
 				return;
@@ -935,8 +900,6 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return filters != null && !filters.isEmpty();
 			case WebuiPackage.COLLECTION_UNIT__FILTER:
 				return filter != null;
-			case WebuiPackage.COLLECTION_UNIT__SUPPORTED_FILTERS:
-				return supportedFilters != null && !supportedFilters.isEmpty();
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:

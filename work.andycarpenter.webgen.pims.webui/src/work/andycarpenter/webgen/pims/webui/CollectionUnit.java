@@ -25,7 +25,6 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSupportedFilters <em>Supported Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
@@ -235,22 +234,6 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContex
 	 * @generated
 	 */
 	void setFilter(Filter value);
-
-	/**
-	 * Returns the value of the '<em><b>Supported Filters</b></em>' reference list.
-	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Filter}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Supported Filters</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Supported Filters</em>' reference list.
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_SupportedFilters()
-	 * @model
-	 * @generated
-	 */
-	EList<Filter> getSupportedFilters();
 
 	/**
 	 * Returns the value of the '<em><b>Empty Message</b></em>' attribute.
