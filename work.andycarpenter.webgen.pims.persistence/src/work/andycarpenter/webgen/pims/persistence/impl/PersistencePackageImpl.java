@@ -1394,8 +1394,18 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEntity_ImplementsResetPasswordInterface() {
+	public EAttribute getEntity_ImplementsPasswordAuthenticatedInterface() {
 		return (EAttribute)entityEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEntity_ImplementsResetPasswordInterface() {
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(20);
 	}
 
 	/**
@@ -2757,6 +2767,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		createEAttribute(entityEClass, ENTITY__AUTO_KEY_PERSISTENT_TYPE);
 		createEAttribute(entityEClass, ENTITY__AUTO_KEY_GENERATION_STRATEGY);
 		createEAttribute(entityEClass, ENTITY__IMPLEMENTS_USER_INTERFACE);
+		createEAttribute(entityEClass, ENTITY__IMPLEMENTS_PASSWORD_AUTHENTICATED_INTERFACE);
 		createEAttribute(entityEClass, ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE);
 
 		serializationGroupEClass = createEClass(SERIALIZATION_GROUP);
@@ -3123,6 +3134,7 @@ public class PersistencePackageImpl extends EPackageImpl implements PersistenceP
 		initEAttribute(getEntity_AutoKeyPersistentType(), ecorePackage.getEString(), "autoKeyPersistentType", "integer", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_AutoKeyGenerationStrategy(), ecorePackage.getEString(), "autoKeyGenerationStrategy", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_ImplementsUserInterface(), ecorePackage.getEBoolean(), "implementsUserInterface", "false", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEntity_ImplementsPasswordAuthenticatedInterface(), ecorePackage.getEBoolean(), "implementsPasswordAuthenticatedInterface", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_ImplementsResetPasswordInterface(), ecorePackage.getEBoolean(), "implementsResetPasswordInterface", "false", 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serializationGroupEClass, SerializationGroup.class, "SerializationGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -65,6 +65,7 @@ public class EntityItemProvider extends ClassifierItemProvider {
 			addAutoKeyPersistentTypePropertyDescriptor(object);
 			addAutoKeyGenerationStrategyPropertyDescriptor(object);
 			addImplementsUserInterfacePropertyDescriptor(object);
+			addImplementsPasswordAuthenticatedInterfacePropertyDescriptor(object);
 			addImplementsResetPasswordInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -423,6 +424,28 @@ public class EntityItemProvider extends ClassifierItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Implements Password Authenticated Interface feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplementsPasswordAuthenticatedInterfacePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Entity_implementsPasswordAuthenticatedInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Entity_implementsPasswordAuthenticatedInterface_feature", "_UI_Entity_type"),
+				 PersistencePackage.Literals.ENTITY__IMPLEMENTS_PASSWORD_AUTHENTICATED_INTERFACE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Implements Reset Password Interface feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -520,6 +543,7 @@ public class EntityItemProvider extends ClassifierItemProvider {
 			case PersistencePackage.ENTITY__AUTO_KEY_PERSISTENT_TYPE:
 			case PersistencePackage.ENTITY__AUTO_KEY_GENERATION_STRATEGY:
 			case PersistencePackage.ENTITY__IMPLEMENTS_USER_INTERFACE:
+			case PersistencePackage.ENTITY__IMPLEMENTS_PASSWORD_AUTHENTICATED_INTERFACE:
 			case PersistencePackage.ENTITY__IMPLEMENTS_RESET_PASSWORD_INTERFACE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

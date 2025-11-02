@@ -81,7 +81,11 @@ public class UnitElementItemProvider extends UnitFeatureItemProvider {
 				public Collection<?> getChoiceOfValues(Object object) {
 					if (object instanceof UnitElement) {
 						final UnitElement attribute = (UnitElement) object;
-						return attribute.contextEntity().getAttributes();
+						if (attribute.contextEntity() == null) {
+							return Collections.emptySet();
+						} else {
+							return attribute.contextEntity().getAttributes();
+						}
 					}
 
 					return Collections.emptySet();

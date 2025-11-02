@@ -33,6 +33,7 @@ import work.andycarpenter.webgen.pims.base.Classifier;
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyPersistentType <em>Auto Key Persistent Type</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#getAutoKeyGenerationStrategy <em>Auto Key Generation Strategy</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#isImplementsUserInterface <em>Implements User Interface</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#isImplementsPasswordAuthenticatedInterface <em>Implements Password Authenticated Interface</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.persistence.Entity#isImplementsResetPasswordInterface <em>Implements Reset Password Interface</em>}</li>
  * </ul>
  *
@@ -450,6 +451,28 @@ public interface Entity extends Classifier {
 	 * @generated
 	 */
 	void setImplementsUserInterface(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Implements Password Authenticated Interface</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implements Password Authenticated Interface</em>' attribute.
+	 * @see #setImplementsPasswordAuthenticatedInterface(boolean)
+	 * @see work.andycarpenter.webgen.pims.persistence.PersistencePackage#getEntity_ImplementsPasswordAuthenticatedInterface()
+	 * @model
+	 * @generated
+	 */
+	boolean isImplementsPasswordAuthenticatedInterface();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.persistence.Entity#isImplementsPasswordAuthenticatedInterface <em>Implements Password Authenticated Interface</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Implements Password Authenticated Interface</em>' attribute.
+	 * @see #isImplementsPasswordAuthenticatedInterface()
+	 * @generated
+	 */
+	void setImplementsPasswordAuthenticatedInterface(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Implements Reset Password Interface</b></em>' attribute.
