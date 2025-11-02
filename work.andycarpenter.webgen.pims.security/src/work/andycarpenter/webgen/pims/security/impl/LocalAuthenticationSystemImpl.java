@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem;
+import work.andycarpenter.webgen.pims.security.Role;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
 import work.andycarpenter.webgen.pims.security.SecurityUnit;
 
@@ -198,44 +199,24 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	protected SecurityUnit resetPasswordUnit;
 
 	/**
-	 * The default value of the '{@link #getViewRole() <em>View Role</em>}' attribute.
+	 * The cached value of the '{@link #getViewRole() <em>View Role</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getViewRole()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VIEW_ROLE_EDEFAULT = "ROLE_SECURITY";
+	protected Role viewRole;
 
 	/**
-	 * The cached value of the '{@link #getViewRole() <em>View Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getViewRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected String viewRole = VIEW_ROLE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getEditRole() <em>Edit Role</em>}' attribute.
+	 * The cached value of the '{@link #getEditRole() <em>Edit Role</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEditRole()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String EDIT_ROLE_EDEFAULT = "ROLE_SECURITY";
-
-	/**
-	 * The cached value of the '{@link #getEditRole() <em>Edit Role</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEditRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected String editRole = EDIT_ROLE_EDEFAULT;
+	protected Role editRole;
 
 	/**
 	 * The default value of the '{@link #isUseCaptcha() <em>Use Captcha</em>}' attribute.
@@ -868,7 +849,24 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getViewRole() {
+	public Role getViewRole() {
+		if (viewRole != null && viewRole.eIsProxy()) {
+			InternalEObject oldViewRole = (InternalEObject)viewRole;
+			viewRole = (Role)eResolveProxy(oldViewRole);
+			if (viewRole != oldViewRole) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE, oldViewRole, viewRole));
+			}
+		}
+		return viewRole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Role basicGetViewRole() {
 		return viewRole;
 	}
 
@@ -878,8 +876,8 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setViewRole(String newViewRole) {
-		String oldViewRole = viewRole;
+	public void setViewRole(Role newViewRole) {
+		Role oldViewRole = viewRole;
 		viewRole = newViewRole;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE, oldViewRole, viewRole));
@@ -891,7 +889,24 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
-	public String getEditRole() {
+	public Role getEditRole() {
+		if (editRole != null && editRole.eIsProxy()) {
+			InternalEObject oldEditRole = (InternalEObject)editRole;
+			editRole = (Role)eResolveProxy(oldEditRole);
+			if (editRole != oldEditRole) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE, oldEditRole, editRole));
+			}
+		}
+		return editRole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Role basicGetEditRole() {
 		return editRole;
 	}
 
@@ -901,8 +916,8 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 	 * @generated
 	 */
 	@Override
-	public void setEditRole(String newEditRole) {
-		String oldEditRole = editRole;
+	public void setEditRole(Role newEditRole) {
+		Role oldEditRole = editRole;
 		editRole = newEditRole;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE, oldEditRole, editRole));
@@ -1092,9 +1107,11 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				if (resolve) return getResetPasswordUnit();
 				return basicGetResetPasswordUnit();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
-				return getViewRole();
+				if (resolve) return getViewRole();
+				return basicGetViewRole();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
-				return getEditRole();
+				if (resolve) return getEditRole();
+				return basicGetEditRole();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				return isUseCaptcha();
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME:
@@ -1159,10 +1176,10 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				setResetPasswordUnit((SecurityUnit)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
-				setViewRole((String)newValue);
+				setViewRole((Role)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
-				setEditRole((String)newValue);
+				setEditRole((Role)newValue);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				setUseCaptcha((Boolean)newValue);
@@ -1234,10 +1251,10 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 				setResetPasswordUnit((SecurityUnit)null);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
-				setViewRole(VIEW_ROLE_EDEFAULT);
+				setViewRole((Role)null);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
-				setEditRole(EDIT_ROLE_EDEFAULT);
+				setEditRole((Role)null);
 				return;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				setUseCaptcha(USE_CAPTCHA_EDEFAULT);
@@ -1296,9 +1313,9 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT:
 				return resetPasswordUnit != null;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE:
-				return VIEW_ROLE_EDEFAULT == null ? viewRole != null : !VIEW_ROLE_EDEFAULT.equals(viewRole);
+				return viewRole != null;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE:
-				return EDIT_ROLE_EDEFAULT == null ? editRole != null : !EDIT_ROLE_EDEFAULT.equals(editRole);
+				return editRole != null;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__USE_CAPTCHA:
 				return useCaptcha != USE_CAPTCHA_EDEFAULT;
 			case SecurityPackage.LOCAL_AUTHENTICATION_SYSTEM__ALLOW_REMEMBER_ME:
@@ -1329,10 +1346,6 @@ public class LocalAuthenticationSystemImpl extends AuthenticationImpl implements
 		result.append(authenticationName);
 		result.append(", resetPasswordRequestName: ");
 		result.append(resetPasswordRequestName);
-		result.append(", viewRole: ");
-		result.append(viewRole);
-		result.append(", editRole: ");
-		result.append(editRole);
 		result.append(", useCaptcha: ");
 		result.append(useCaptcha);
 		result.append(", allowRememberMe: ");

@@ -144,7 +144,7 @@ unique lazy rule implicitAuthenticationsPage {
 		name <- 'authentications',
 		displayLabel <- 'Authentications',
 		authorisation <- 
-			if website.viewRole.trim() <> '' then
+			if not website.viewRole.oclIsUndefined() then
 				thisModule.implicitViewAuthorisation(website)
 			else
 				OclUndefined
@@ -182,7 +182,7 @@ unique lazy rule implicitAuthenticationsPage {
 		name <- 'delete',
 		displayLabel <- 'Delete',
 		localAuthorisation <- 
-			if website.editRole.trim() <> '' then
+			if not website.editRole.oclIsUndefined() then
 				thisModule.implicitEditAuthorisation(website)
 			else
 				OclUndefined
@@ -194,7 +194,7 @@ unique lazy rule implicitAuthenticationsPage {
 		name <- 'update',
 		displayLabel <- 'Update Authentication',
 		authorisation <- 
-			if website.editRole.trim() <> '' then
+			if not website.editRole.oclIsUndefined() then
 				thisModule.implicitEditAuthorisation(website)
 			else
 				OclUndefined
@@ -236,14 +236,14 @@ unique lazy rule implicitAuthenticationsPage {
 lazy rule implicitEditAuthorisation {
 	from website : Website!LocalAuthenticationSystem
 	to security : WAF!IsGrantedRole (
-		role <- thisModule.findWafRole(website.editRole)
+		role <- thisModule.findWafRole(website.editRole.name)
 	)
 }
 
 lazy rule implicitViewAuthorisation {
 	from website : Website!LocalAuthenticationSystem
 	to security : WAF!IsGrantedRole (
-		role <- thisModule.findWafRole(website.viewRole)
+		role <- thisModule.findWafRole(website.viewRole.name)
 	)
 }
 

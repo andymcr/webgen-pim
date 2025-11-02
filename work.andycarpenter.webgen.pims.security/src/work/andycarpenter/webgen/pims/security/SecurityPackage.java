@@ -836,7 +836,7 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT = AUTHENTICATION_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>View Role</b></em>' attribute.
+	 * The feature id for the '<em><b>View Role</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -845,7 +845,7 @@ public interface SecurityPackage extends EPackage {
 	int LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE = AUTHENTICATION_FEATURE_COUNT + 13;
 
 	/**
-	 * The feature id for the '<em><b>Edit Role</b></em>' attribute.
+	 * The feature id for the '<em><b>Edit Role</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1946,26 +1946,26 @@ public interface SecurityPackage extends EPackage {
 	EReference getLocalAuthenticationSystem_ResetPasswordUnit();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole <em>View Role</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole <em>View Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>View Role</em>'.
+	 * @return the meta object for the reference '<em>View Role</em>'.
 	 * @see work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getViewRole()
 	 * @see #getLocalAuthenticationSystem()
 	 * @generated
 	 */
-	EAttribute getLocalAuthenticationSystem_ViewRole();
+	EReference getLocalAuthenticationSystem_ViewRole();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getEditRole <em>Edit Role</em>}'.
+	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getEditRole <em>Edit Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Edit Role</em>'.
+	 * @return the meta object for the reference '<em>Edit Role</em>'.
 	 * @see work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#getEditRole()
 	 * @see #getLocalAuthenticationSystem()
 	 * @generated
 	 */
-	EAttribute getLocalAuthenticationSystem_EditRole();
+	EReference getLocalAuthenticationSystem_EditRole();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.security.LocalAuthenticationSystem#isUseCaptcha <em>Use Captcha</em>}'.
@@ -2557,20 +2557,20 @@ public interface SecurityPackage extends EPackage {
 		EReference LOCAL_AUTHENTICATION_SYSTEM__RESET_PASSWORD_UNIT = eINSTANCE.getLocalAuthenticationSystem_ResetPasswordUnit();
 
 		/**
-		 * The meta object literal for the '<em><b>View Role</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>View Role</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE = eINSTANCE.getLocalAuthenticationSystem_ViewRole();
+		EReference LOCAL_AUTHENTICATION_SYSTEM__VIEW_ROLE = eINSTANCE.getLocalAuthenticationSystem_ViewRole();
 
 		/**
-		 * The meta object literal for the '<em><b>Edit Role</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Edit Role</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE = eINSTANCE.getLocalAuthenticationSystem_EditRole();
+		EReference LOCAL_AUTHENTICATION_SYSTEM__EDIT_ROLE = eINSTANCE.getLocalAuthenticationSystem_EditRole();
 
 		/**
 		 * The meta object literal for the '<em><b>Use Captcha</b></em>' attribute feature.

@@ -390,7 +390,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}
@@ -412,7 +412,7 @@ public class LocalAuthenticationSystemItemProvider extends AuthenticationItemPro
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 getString("_UI_SecurityPropertyCategory"),
 				 null));
 	}

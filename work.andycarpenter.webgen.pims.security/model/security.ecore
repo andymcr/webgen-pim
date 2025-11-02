@@ -123,10 +123,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="forgottenPasswordUnit"
         eType="#//SecurityUnit"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resetPasswordUnit" eType="#//SecurityUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="ROLE_SECURITY"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="editRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="ROLE_SECURITY"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewRole" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="editRole" eType="#//Role"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCaptcha" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="true"/>
