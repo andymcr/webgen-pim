@@ -163,6 +163,7 @@ rule Entity {
 		autoKeyGenerationStrategy <- website.autoKeyGenerationStrategy,
 		implementsUserInterface <- website.implementsUserInterface,
 --		implementForumUser <- website.forumUser
+		implementsPasswordAuthenticatedInterface <- website.implementsPasswordAuthenticatedInterface,
 		implementsResetPasswordInterface <- website.implementsResetPasswordInterface
 	)
 }

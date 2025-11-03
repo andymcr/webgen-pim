@@ -81,7 +81,7 @@ public class CollectionFilterItemProvider
 					if (object instanceof CollectionFilter) {
 						final CollectionFilter filter = (CollectionFilter) object;
 						final Set<Feature> features = new HashSet<Feature>();
-						for (Entity entity : filter.getAffects().getSelection().referencableEntities()) {
+						for (Entity entity : filter.getAffects().referencableEntities()) {
 							features.addAll(entity.getAttributes());
 						}
 
