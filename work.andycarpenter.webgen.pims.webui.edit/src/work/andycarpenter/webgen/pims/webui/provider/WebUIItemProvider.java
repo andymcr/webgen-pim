@@ -69,7 +69,13 @@ public class WebUIItemProvider
 			addDefaultTimeFormatPropertyDescriptor(object);
 			addDefaultDateTimeFormatPropertyDescriptor(object);
 			addDefaultCancelLabelPropertyDescriptor(object);
+			addDefaultCancelIconPropertyDescriptor(object);
+			addDefaultClearLabelPropertyDescriptor(object);
+			addDefaultClearIconPropertyDescriptor(object);
 			addDefaultSaveLabelPropertyDescriptor(object);
+			addDefaultSaveIconPropertyDescriptor(object);
+			addDefaultSearchLabelPropertyDescriptor(object);
+			addDefaultSearchIconPropertyDescriptor(object);
 			addDefaultPageStyleClassPropertyDescriptor(object);
 			addDefaultMaximumUploadSizePropertyDescriptor(object);
 		}
@@ -187,6 +193,94 @@ public class WebUIItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Default Cancel Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCancelLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCancelLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCancelLabel_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CANCEL_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Cancel Icon feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultCancelIconPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultCancelIcon_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCancelIcon_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CANCEL_ICON,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Clear Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultClearLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultClearLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultClearLabel_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CLEAR_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Clear Icon feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultClearIconPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultClearIcon_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultClearIcon_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_CLEAR_ICON,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Default Save Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,6 +294,72 @@ public class WebUIItemProvider
 				 getString("_UI_WebUI_defaultSaveLabel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSaveLabel_feature", "_UI_WebUI_type"),
 				 WebuiPackage.Literals.WEB_UI__DEFAULT_SAVE_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Save Icon feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSaveIconPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSaveIcon_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSaveIcon_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SAVE_ICON,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Search Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSearchLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSearchLabel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSearchLabel_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SEARCH_LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Default Search Icon feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDefaultSearchIconPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WebUI_defaultSearchIcon_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultSearchIcon_feature", "_UI_WebUI_type"),
+				 WebuiPackage.Literals.WEB_UI__DEFAULT_SEARCH_ICON,
 				 true,
 				 false,
 				 false,
@@ -227,28 +387,6 @@ public class WebUIItemProvider
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Default Cancel Label feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDefaultCancelLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_WebUI_defaultCancelLabel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WebUI_defaultCancelLabel_feature", "_UI_WebUI_type"),
-				 WebuiPackage.Literals.WEB_UI__DEFAULT_CANCEL_LABEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -355,7 +493,13 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_DATE_TIME_FORMAT:
 			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_ICON:
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_LABEL:
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_ICON:
 			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_ICON:
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_LABEL:
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_ICON:
 			case WebuiPackage.WEB_UI__DEFAULT_PAGE_STYLE_CLASS:
 			case WebuiPackage.WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

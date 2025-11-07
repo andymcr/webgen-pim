@@ -47,7 +47,13 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCancelLabel <em>Default Cancel Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCancelIcon <em>Default Cancel Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultClearLabel <em>Default Clear Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultClearIcon <em>Default Clear Icon</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSaveLabel <em>Default Save Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSaveIcon <em>Default Save Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSearchLabel <em>Default Search Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSearchIcon <em>Default Search Icon</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultPageStyleClass <em>Default Page Style Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStyles <em>Default Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsStyles <em>Default Cards Styles</em>}</li>
@@ -205,6 +211,66 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected String defaultCancelLabel = DEFAULT_CANCEL_LABEL_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getDefaultCancelIcon() <em>Default Cancel Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCancelIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CANCEL_ICON_EDEFAULT = "Cancel";
+
+	/**
+	 * The cached value of the '{@link #getDefaultCancelIcon() <em>Default Cancel Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCancelIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultCancelIcon = DEFAULT_CANCEL_ICON_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultClearLabel() <em>Default Clear Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultClearLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CLEAR_LABEL_EDEFAULT = "Cancel";
+
+	/**
+	 * The cached value of the '{@link #getDefaultClearLabel() <em>Default Clear Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultClearLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultClearLabel = DEFAULT_CLEAR_LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultClearIcon() <em>Default Clear Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultClearIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_CLEAR_ICON_EDEFAULT = "Cancel";
+
+	/**
+	 * The cached value of the '{@link #getDefaultClearIcon() <em>Default Clear Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultClearIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultClearIcon = DEFAULT_CLEAR_ICON_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getDefaultSaveLabel() <em>Default Save Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -223,6 +289,66 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected String defaultSaveLabel = DEFAULT_SAVE_LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSaveIcon() <em>Default Save Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSaveIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SAVE_ICON_EDEFAULT = "Save";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSaveIcon() <em>Default Save Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSaveIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSaveIcon = DEFAULT_SAVE_ICON_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSearchLabel() <em>Default Search Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSearchLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SEARCH_LABEL_EDEFAULT = "Save";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSearchLabel() <em>Default Search Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSearchLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSearchLabel = DEFAULT_SEARCH_LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDefaultSearchIcon() <em>Default Search Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSearchIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DEFAULT_SEARCH_ICON_EDEFAULT = "Cancel";
+
+	/**
+	 * The cached value of the '{@link #getDefaultSearchIcon() <em>Default Search Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultSearchIcon()
+	 * @generated
+	 * @ordered
+	 */
+	protected String defaultSearchIcon = DEFAULT_SEARCH_ICON_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultPageStyleClass() <em>Default Page Style Class</em>}' attribute.
@@ -609,6 +735,98 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public String getDefaultCancelLabel() {
+		return defaultCancelLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCancelLabel(String newDefaultCancelLabel) {
+		String oldDefaultCancelLabel = defaultCancelLabel;
+		defaultCancelLabel = newDefaultCancelLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL, oldDefaultCancelLabel, defaultCancelLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultCancelIcon() {
+		return defaultCancelIcon;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCancelIcon(String newDefaultCancelIcon) {
+		String oldDefaultCancelIcon = defaultCancelIcon;
+		defaultCancelIcon = newDefaultCancelIcon;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CANCEL_ICON, oldDefaultCancelIcon, defaultCancelIcon));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultClearLabel() {
+		return defaultClearLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultClearLabel(String newDefaultClearLabel) {
+		String oldDefaultClearLabel = defaultClearLabel;
+		defaultClearLabel = newDefaultClearLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CLEAR_LABEL, oldDefaultClearLabel, defaultClearLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultClearIcon() {
+		return defaultClearIcon;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultClearIcon(String newDefaultClearIcon) {
+		String oldDefaultClearIcon = defaultClearIcon;
+		defaultClearIcon = newDefaultClearIcon;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CLEAR_ICON, oldDefaultClearIcon, defaultClearIcon));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getDefaultSaveLabel() {
 		return defaultSaveLabel;
 	}
@@ -624,6 +842,75 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		defaultSaveLabel = newDefaultSaveLabel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL, oldDefaultSaveLabel, defaultSaveLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSaveIcon() {
+		return defaultSaveIcon;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSaveIcon(String newDefaultSaveIcon) {
+		String oldDefaultSaveIcon = defaultSaveIcon;
+		defaultSaveIcon = newDefaultSaveIcon;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SAVE_ICON, oldDefaultSaveIcon, defaultSaveIcon));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSearchLabel() {
+		return defaultSearchLabel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSearchLabel(String newDefaultSearchLabel) {
+		String oldDefaultSearchLabel = defaultSearchLabel;
+		defaultSearchLabel = newDefaultSearchLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SEARCH_LABEL, oldDefaultSearchLabel, defaultSearchLabel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getDefaultSearchIcon() {
+		return defaultSearchIcon;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultSearchIcon(String newDefaultSearchIcon) {
+		String oldDefaultSearchIcon = defaultSearchIcon;
+		defaultSearchIcon = newDefaultSearchIcon;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SEARCH_ICON, oldDefaultSearchIcon, defaultSearchIcon));
 	}
 
 	/**
@@ -1060,29 +1347,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public String getDefaultCancelLabel() {
-		return defaultCancelLabel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDefaultCancelLabel(String newDefaultCancelLabel) {
-		String oldDefaultCancelLabel = defaultCancelLabel;
-		defaultCancelLabel = newDefaultCancelLabel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL, oldDefaultCancelLabel, defaultCancelLabel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String getDefaultMaximumUploadSize() {
 		return defaultMaximumUploadSize;
 	}
@@ -1181,8 +1445,20 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultDateTimeFormat();
 			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
 				return getDefaultCancelLabel();
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_ICON:
+				return getDefaultCancelIcon();
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_LABEL:
+				return getDefaultClearLabel();
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_ICON:
+				return getDefaultClearIcon();
 			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
 				return getDefaultSaveLabel();
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_ICON:
+				return getDefaultSaveIcon();
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_LABEL:
+				return getDefaultSearchLabel();
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_ICON:
+				return getDefaultSearchIcon();
 			case WebuiPackage.WEB_UI__DEFAULT_PAGE_STYLE_CLASS:
 				return getDefaultPageStyleClass();
 			case WebuiPackage.WEB_UI__DEFAULT_STYLES:
@@ -1246,8 +1522,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
 				setDefaultCancelLabel((String)newValue);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_ICON:
+				setDefaultCancelIcon((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_LABEL:
+				setDefaultClearLabel((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_ICON:
+				setDefaultClearIcon((String)newValue);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
 				setDefaultSaveLabel((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_ICON:
+				setDefaultSaveIcon((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_LABEL:
+				setDefaultSearchLabel((String)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_ICON:
+				setDefaultSearchIcon((String)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_PAGE_STYLE_CLASS:
 				setDefaultPageStyleClass((String)newValue);
@@ -1321,8 +1615,26 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
 				setDefaultCancelLabel(DEFAULT_CANCEL_LABEL_EDEFAULT);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_ICON:
+				setDefaultCancelIcon(DEFAULT_CANCEL_ICON_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_LABEL:
+				setDefaultClearLabel(DEFAULT_CLEAR_LABEL_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_ICON:
+				setDefaultClearIcon(DEFAULT_CLEAR_ICON_EDEFAULT);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
 				setDefaultSaveLabel(DEFAULT_SAVE_LABEL_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_ICON:
+				setDefaultSaveIcon(DEFAULT_SAVE_ICON_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_LABEL:
+				setDefaultSearchLabel(DEFAULT_SEARCH_LABEL_EDEFAULT);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_ICON:
+				setDefaultSearchIcon(DEFAULT_SEARCH_ICON_EDEFAULT);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_PAGE_STYLE_CLASS:
 				setDefaultPageStyleClass(DEFAULT_PAGE_STYLE_CLASS_EDEFAULT);
@@ -1387,8 +1699,20 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return DEFAULT_DATE_TIME_FORMAT_EDEFAULT == null ? defaultDateTimeFormat != null : !DEFAULT_DATE_TIME_FORMAT_EDEFAULT.equals(defaultDateTimeFormat);
 			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_LABEL:
 				return DEFAULT_CANCEL_LABEL_EDEFAULT == null ? defaultCancelLabel != null : !DEFAULT_CANCEL_LABEL_EDEFAULT.equals(defaultCancelLabel);
+			case WebuiPackage.WEB_UI__DEFAULT_CANCEL_ICON:
+				return DEFAULT_CANCEL_ICON_EDEFAULT == null ? defaultCancelIcon != null : !DEFAULT_CANCEL_ICON_EDEFAULT.equals(defaultCancelIcon);
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_LABEL:
+				return DEFAULT_CLEAR_LABEL_EDEFAULT == null ? defaultClearLabel != null : !DEFAULT_CLEAR_LABEL_EDEFAULT.equals(defaultClearLabel);
+			case WebuiPackage.WEB_UI__DEFAULT_CLEAR_ICON:
+				return DEFAULT_CLEAR_ICON_EDEFAULT == null ? defaultClearIcon != null : !DEFAULT_CLEAR_ICON_EDEFAULT.equals(defaultClearIcon);
 			case WebuiPackage.WEB_UI__DEFAULT_SAVE_LABEL:
 				return DEFAULT_SAVE_LABEL_EDEFAULT == null ? defaultSaveLabel != null : !DEFAULT_SAVE_LABEL_EDEFAULT.equals(defaultSaveLabel);
+			case WebuiPackage.WEB_UI__DEFAULT_SAVE_ICON:
+				return DEFAULT_SAVE_ICON_EDEFAULT == null ? defaultSaveIcon != null : !DEFAULT_SAVE_ICON_EDEFAULT.equals(defaultSaveIcon);
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_LABEL:
+				return DEFAULT_SEARCH_LABEL_EDEFAULT == null ? defaultSearchLabel != null : !DEFAULT_SEARCH_LABEL_EDEFAULT.equals(defaultSearchLabel);
+			case WebuiPackage.WEB_UI__DEFAULT_SEARCH_ICON:
+				return DEFAULT_SEARCH_ICON_EDEFAULT == null ? defaultSearchIcon != null : !DEFAULT_SEARCH_ICON_EDEFAULT.equals(defaultSearchIcon);
 			case WebuiPackage.WEB_UI__DEFAULT_PAGE_STYLE_CLASS:
 				return DEFAULT_PAGE_STYLE_CLASS_EDEFAULT == null ? defaultPageStyleClass != null : !DEFAULT_PAGE_STYLE_CLASS_EDEFAULT.equals(defaultPageStyleClass);
 			case WebuiPackage.WEB_UI__DEFAULT_STYLES:
@@ -1435,8 +1759,20 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		result.append(defaultDateTimeFormat);
 		result.append(", defaultCancelLabel: ");
 		result.append(defaultCancelLabel);
+		result.append(", defaultCancelIcon: ");
+		result.append(defaultCancelIcon);
+		result.append(", defaultClearLabel: ");
+		result.append(defaultClearLabel);
+		result.append(", defaultClearIcon: ");
+		result.append(defaultClearIcon);
 		result.append(", defaultSaveLabel: ");
 		result.append(defaultSaveLabel);
+		result.append(", defaultSaveIcon: ");
+		result.append(defaultSaveIcon);
+		result.append(", defaultSearchLabel: ");
+		result.append(defaultSearchLabel);
+		result.append(", defaultSearchIcon: ");
+		result.append(defaultSearchIcon);
 		result.append(", defaultPageStyleClass: ");
 		result.append(defaultPageStyleClass);
 		result.append(", defaultMaximumUploadSize: ");

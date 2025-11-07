@@ -42,8 +42,12 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindContainerSelection <em>Find Container Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindElementSelection <em>Find Element Selection</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilter <em>Filter</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilters <em>Filters</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getClearLabelOverride <em>Clear Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getClearIconOverride <em>Clear Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSearchLabelOverride <em>Search Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSearchIconOverride <em>Search Icon Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
@@ -134,6 +138,16 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	protected Selection findElementSelection;
 
 	/**
+	 * The cached value of the '{@link #getFilter() <em>Filter</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFilter()
+	 * @generated
+	 * @ordered
+	 */
+	protected Filter filter;
+
+	/**
 	 * The cached value of the '{@link #getFilters() <em>Filters</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -144,14 +158,84 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	protected EList<CollectionFilter> filters;
 
 	/**
-	 * The cached value of the '{@link #getFilter() <em>Filter</em>}' reference.
+	 * The default value of the '{@link #getClearLabelOverride() <em>Clear Label Override</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFilter()
+	 * @see #getClearLabelOverride()
 	 * @generated
 	 * @ordered
 	 */
-	protected Filter filter;
+	protected static final String CLEAR_LABEL_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClearLabelOverride() <em>Clear Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClearLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String clearLabelOverride = CLEAR_LABEL_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClearIconOverride() <em>Clear Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClearIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLEAR_ICON_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClearIconOverride() <em>Clear Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClearIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String clearIconOverride = CLEAR_ICON_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSearchLabelOverride() <em>Search Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSearchLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SEARCH_LABEL_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSearchLabelOverride() <em>Search Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSearchLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String searchLabelOverride = SEARCH_LABEL_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSearchIconOverride() <em>Search Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSearchIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SEARCH_ICON_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSearchIconOverride() <em>Search Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSearchIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String searchIconOverride = SEARCH_ICON_OVERRIDE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isOmitFieldLabels() <em>Omit Field Labels</em>}' attribute.
@@ -591,6 +675,98 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
+	public String getClearLabelOverride() {
+		return clearLabelOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClearLabelOverride(String newClearLabelOverride) {
+		String oldClearLabelOverride = clearLabelOverride;
+		clearLabelOverride = newClearLabelOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE, oldClearLabelOverride, clearLabelOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getClearIconOverride() {
+		return clearIconOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setClearIconOverride(String newClearIconOverride) {
+		String oldClearIconOverride = clearIconOverride;
+		clearIconOverride = newClearIconOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE, oldClearIconOverride, clearIconOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSearchLabelOverride() {
+		return searchLabelOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSearchLabelOverride(String newSearchLabelOverride) {
+		String oldSearchLabelOverride = searchLabelOverride;
+		searchLabelOverride = newSearchLabelOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE, oldSearchLabelOverride, searchLabelOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSearchIconOverride() {
+		return searchIconOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSearchIconOverride(String newSearchIconOverride) {
+		String oldSearchIconOverride = searchIconOverride;
+		searchIconOverride = newSearchIconOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE, oldSearchIconOverride, searchIconOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Filter getFilter() {
 		if (filter != null && filter.eIsProxy()) {
 			InternalEObject oldFilter = (InternalEObject)filter;
@@ -759,11 +935,19 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				if (resolve) return getFindElementSelection();
 				return basicGetFindElementSelection();
-			case WebuiPackage.COLLECTION_UNIT__FILTERS:
-				return getFilters();
 			case WebuiPackage.COLLECTION_UNIT__FILTER:
 				if (resolve) return getFilter();
 				return basicGetFilter();
+			case WebuiPackage.COLLECTION_UNIT__FILTERS:
+				return getFilters();
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
+				return getClearLabelOverride();
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
+				return getClearIconOverride();
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE:
+				return getSearchLabelOverride();
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE:
+				return getSearchIconOverride();
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				return isOmitFieldLabels();
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
@@ -803,12 +987,24 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				setFindElementSelection((Selection)newValue);
 				return;
+			case WebuiPackage.COLLECTION_UNIT__FILTER:
+				setFilter((Filter)newValue);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__FILTERS:
 				getFilters().clear();
 				getFilters().addAll((Collection<? extends CollectionFilter>)newValue);
 				return;
-			case WebuiPackage.COLLECTION_UNIT__FILTER:
-				setFilter((Filter)newValue);
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
+				setClearLabelOverride((String)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
+				setClearIconOverride((String)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE:
+				setSearchLabelOverride((String)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE:
+				setSearchIconOverride((String)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels((Boolean)newValue);
@@ -852,11 +1048,23 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				setFindElementSelection((Selection)null);
 				return;
+			case WebuiPackage.COLLECTION_UNIT__FILTER:
+				setFilter((Filter)null);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__FILTERS:
 				getFilters().clear();
 				return;
-			case WebuiPackage.COLLECTION_UNIT__FILTER:
-				setFilter((Filter)null);
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
+				setClearLabelOverride(CLEAR_LABEL_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
+				setClearIconOverride(CLEAR_ICON_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE:
+				setSearchLabelOverride(SEARCH_LABEL_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE:
+				setSearchIconOverride(SEARCH_ICON_OVERRIDE_EDEFAULT);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				setOmitFieldLabels(OMIT_FIELD_LABELS_EDEFAULT);
@@ -896,10 +1104,18 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return findContainerSelection != null;
 			case WebuiPackage.COLLECTION_UNIT__FIND_ELEMENT_SELECTION:
 				return findElementSelection != null;
-			case WebuiPackage.COLLECTION_UNIT__FILTERS:
-				return filters != null && !filters.isEmpty();
 			case WebuiPackage.COLLECTION_UNIT__FILTER:
 				return filter != null;
+			case WebuiPackage.COLLECTION_UNIT__FILTERS:
+				return filters != null && !filters.isEmpty();
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
+				return CLEAR_LABEL_OVERRIDE_EDEFAULT == null ? clearLabelOverride != null : !CLEAR_LABEL_OVERRIDE_EDEFAULT.equals(clearLabelOverride);
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
+				return CLEAR_ICON_OVERRIDE_EDEFAULT == null ? clearIconOverride != null : !CLEAR_ICON_OVERRIDE_EDEFAULT.equals(clearIconOverride);
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE:
+				return SEARCH_LABEL_OVERRIDE_EDEFAULT == null ? searchLabelOverride != null : !SEARCH_LABEL_OVERRIDE_EDEFAULT.equals(searchLabelOverride);
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE:
+				return SEARCH_ICON_OVERRIDE_EDEFAULT == null ? searchIconOverride != null : !SEARCH_ICON_OVERRIDE_EDEFAULT.equals(searchIconOverride);
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 				return omitFieldLabels != OMIT_FIELD_LABELS_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
@@ -1003,6 +1219,14 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (truncateElementTitle: ");
 		result.append(truncateElementTitle);
+		result.append(", clearLabelOverride: ");
+		result.append(clearLabelOverride);
+		result.append(", clearIconOverride: ");
+		result.append(clearIconOverride);
+		result.append(", searchLabelOverride: ");
+		result.append(searchLabelOverride);
+		result.append(", searchIconOverride: ");
+		result.append(searchIconOverride);
 		result.append(", omitFieldLabels: ");
 		result.append(omitFieldLabels);
 		result.append(", defaultPaginationSize: ");

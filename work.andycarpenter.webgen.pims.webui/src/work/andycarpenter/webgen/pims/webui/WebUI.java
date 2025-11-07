@@ -26,7 +26,13 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTimeFormat <em>Default Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel <em>Default Cancel Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelIcon <em>Default Cancel Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearLabel <em>Default Clear Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearIcon <em>Default Clear Icon</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveLabel <em>Default Save Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveIcon <em>Default Save Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchLabel <em>Default Search Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchIcon <em>Default Search Icon</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultPageStyleClass <em>Default Page Style Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyles <em>Default Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsStyles <em>Default Cards Styles</em>}</li>
@@ -237,6 +243,98 @@ public interface WebUI extends EObject {
 	void setDefaultDateTimeFormat(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Default Cancel Label</b></em>' attribute.
+	 * The default value is <code>"Cancel"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Cancel Label</em>' attribute.
+	 * @see #setDefaultCancelLabel(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCancelLabel()
+	 * @model default="Cancel"
+	 * @generated
+	 */
+	String getDefaultCancelLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel <em>Default Cancel Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Cancel Label</em>' attribute.
+	 * @see #getDefaultCancelLabel()
+	 * @generated
+	 */
+	void setDefaultCancelLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Cancel Icon</b></em>' attribute.
+	 * The default value is <code>"Cancel"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Cancel Icon</em>' attribute.
+	 * @see #setDefaultCancelIcon(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCancelIcon()
+	 * @model default="Cancel"
+	 * @generated
+	 */
+	String getDefaultCancelIcon();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelIcon <em>Default Cancel Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Cancel Icon</em>' attribute.
+	 * @see #getDefaultCancelIcon()
+	 * @generated
+	 */
+	void setDefaultCancelIcon(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Clear Label</b></em>' attribute.
+	 * The default value is <code>"Cancel"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Clear Label</em>' attribute.
+	 * @see #setDefaultClearLabel(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultClearLabel()
+	 * @model default="Cancel"
+	 * @generated
+	 */
+	String getDefaultClearLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearLabel <em>Default Clear Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Clear Label</em>' attribute.
+	 * @see #getDefaultClearLabel()
+	 * @generated
+	 */
+	void setDefaultClearLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Clear Icon</b></em>' attribute.
+	 * The default value is <code>"Cancel"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Clear Icon</em>' attribute.
+	 * @see #setDefaultClearIcon(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultClearIcon()
+	 * @model default="Cancel"
+	 * @generated
+	 */
+	String getDefaultClearIcon();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearIcon <em>Default Clear Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Clear Icon</em>' attribute.
+	 * @see #getDefaultClearIcon()
+	 * @generated
+	 */
+	void setDefaultClearIcon(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Default Save Label</b></em>' attribute.
 	 * The default value is <code>"Save"</code>.
 	 * <!-- begin-user-doc -->
@@ -258,6 +356,75 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultSaveLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Save Icon</b></em>' attribute.
+	 * The default value is <code>"Save"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Save Icon</em>' attribute.
+	 * @see #setDefaultSaveIcon(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSaveIcon()
+	 * @model default="Save"
+	 * @generated
+	 */
+	String getDefaultSaveIcon();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveIcon <em>Default Save Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Save Icon</em>' attribute.
+	 * @see #getDefaultSaveIcon()
+	 * @generated
+	 */
+	void setDefaultSaveIcon(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Search Label</b></em>' attribute.
+	 * The default value is <code>"Save"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Search Label</em>' attribute.
+	 * @see #setDefaultSearchLabel(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSearchLabel()
+	 * @model default="Save"
+	 * @generated
+	 */
+	String getDefaultSearchLabel();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchLabel <em>Default Search Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Search Label</em>' attribute.
+	 * @see #getDefaultSearchLabel()
+	 * @generated
+	 */
+	void setDefaultSearchLabel(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Search Icon</b></em>' attribute.
+	 * The default value is <code>"Cancel"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Search Icon</em>' attribute.
+	 * @see #setDefaultSearchIcon(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSearchIcon()
+	 * @model default="Cancel"
+	 * @generated
+	 */
+	String getDefaultSearchIcon();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchIcon <em>Default Search Icon</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Search Icon</em>' attribute.
+	 * @see #getDefaultSearchIcon()
+	 * @generated
+	 */
+	void setDefaultSearchIcon(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Page Style Class</b></em>' attribute.
@@ -479,29 +646,6 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultTabularStyles(TabularUnitStyles value);
-
-	/**
-	 * Returns the value of the '<em><b>Default Cancel Label</b></em>' attribute.
-	 * The default value is <code>"Cancel"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Cancel Label</em>' attribute.
-	 * @see #setDefaultCancelLabel(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCancelLabel()
-	 * @model default="Cancel"
-	 * @generated
-	 */
-	String getDefaultCancelLabel();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel <em>Default Cancel Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Cancel Label</em>' attribute.
-	 * @see #getDefaultCancelLabel()
-	 * @generated
-	 */
-	void setDefaultCancelLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Maximum Upload Size</b></em>' attribute.

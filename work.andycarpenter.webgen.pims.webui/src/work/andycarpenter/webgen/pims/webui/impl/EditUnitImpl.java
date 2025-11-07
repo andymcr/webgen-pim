@@ -26,11 +26,13 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#isUseCaptcha <em>Use Captcha</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getDisableWhen <em>Disable When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmDestination <em>Confirm Destination</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmLabel <em>Confirm Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelDestination <em>Cancel Destination</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelLabelOverride <em>Cancel Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelIconOverride <em>Cancel Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSaveLabelOverride <em>Save Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSaveIconOverride <em>Save Icon Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmMessage <em>Confirm Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSuccessMessage <em>Success Message</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelDestination <em>Cancel Destination</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelLabel <em>Cancel Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getUnitInputGroupClass <em>Unit Input Group Class</em>}</li>
  * </ul>
  *
@@ -78,24 +80,94 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	protected ContentUnit confirmDestination;
 
 	/**
-	 * The default value of the '{@link #getConfirmLabel() <em>Confirm Label</em>}' attribute.
+	 * The cached value of the '{@link #getCancelDestination() <em>Cancel Destination</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConfirmLabel()
+	 * @see #getCancelDestination()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONFIRM_LABEL_EDEFAULT = null;
+	protected ContentUnit cancelDestination;
 
 	/**
-	 * The cached value of the '{@link #getConfirmLabel() <em>Confirm Label</em>}' attribute.
+	 * The default value of the '{@link #getCancelLabelOverride() <em>Cancel Label Override</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConfirmLabel()
+	 * @see #getCancelLabelOverride()
 	 * @generated
 	 * @ordered
 	 */
-	protected String confirmLabel = CONFIRM_LABEL_EDEFAULT;
+	protected static final String CANCEL_LABEL_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCancelLabelOverride() <em>Cancel Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCancelLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cancelLabelOverride = CANCEL_LABEL_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCancelIconOverride() <em>Cancel Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCancelIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CANCEL_ICON_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCancelIconOverride() <em>Cancel Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCancelIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cancelIconOverride = CANCEL_ICON_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSaveLabelOverride() <em>Save Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaveLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SAVE_LABEL_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSaveLabelOverride() <em>Save Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaveLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String saveLabelOverride = SAVE_LABEL_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSaveIconOverride() <em>Save Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaveIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SAVE_ICON_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSaveIconOverride() <em>Save Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaveIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String saveIconOverride = SAVE_ICON_OVERRIDE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getConfirmMessage() <em>Confirm Message</em>}' containment reference.
@@ -116,36 +188,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @ordered
 	 */
 	protected Message successMessage;
-
-	/**
-	 * The cached value of the '{@link #getCancelDestination() <em>Cancel Destination</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCancelDestination()
-	 * @generated
-	 * @ordered
-	 */
-	protected ContentUnit cancelDestination;
-
-	/**
-	 * The default value of the '{@link #getCancelLabel() <em>Cancel Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCancelLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CANCEL_LABEL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCancelLabel() <em>Cancel Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCancelLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected String cancelLabel = CANCEL_LABEL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUnitInputGroupClass() <em>Unit Input Group Class</em>}' attribute.
@@ -300,29 +342,6 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public String getConfirmLabel() {
-		return confirmLabel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setConfirmLabel(String newConfirmLabel) {
-		String oldConfirmLabel = confirmLabel;
-		confirmLabel = newConfirmLabel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CONFIRM_LABEL, oldConfirmLabel, confirmLabel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Message getConfirmMessage() {
 		return confirmMessage;
 	}
@@ -453,8 +472,8 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public String getCancelLabel() {
-		return cancelLabel;
+	public String getCancelLabelOverride() {
+		return cancelLabelOverride;
 	}
 
 	/**
@@ -463,11 +482,80 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
-	public void setCancelLabel(String newCancelLabel) {
-		String oldCancelLabel = cancelLabel;
-		cancelLabel = newCancelLabel;
+	public void setCancelLabelOverride(String newCancelLabelOverride) {
+		String oldCancelLabelOverride = cancelLabelOverride;
+		cancelLabelOverride = newCancelLabelOverride;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CANCEL_LABEL, oldCancelLabel, cancelLabel));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CANCEL_LABEL_OVERRIDE, oldCancelLabelOverride, cancelLabelOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCancelIconOverride() {
+		return cancelIconOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCancelIconOverride(String newCancelIconOverride) {
+		String oldCancelIconOverride = cancelIconOverride;
+		cancelIconOverride = newCancelIconOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE, oldCancelIconOverride, cancelIconOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSaveLabelOverride() {
+		return saveLabelOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSaveLabelOverride(String newSaveLabelOverride) {
+		String oldSaveLabelOverride = saveLabelOverride;
+		saveLabelOverride = newSaveLabelOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE, oldSaveLabelOverride, saveLabelOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSaveIconOverride() {
+		return saveIconOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSaveIconOverride(String newSaveIconOverride) {
+		String oldSaveIconOverride = saveIconOverride;
+		saveIconOverride = newSaveIconOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE, oldSaveIconOverride, saveIconOverride));
 	}
 
 	/**
@@ -526,17 +614,21 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				if (resolve) return getConfirmDestination();
 				return basicGetConfirmDestination();
-			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
-				return getConfirmLabel();
+			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
+				if (resolve) return getCancelDestination();
+				return basicGetCancelDestination();
+			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL_OVERRIDE:
+				return getCancelLabelOverride();
+			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
+				return getCancelIconOverride();
+			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
+				return getSaveLabelOverride();
+			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
+				return getSaveIconOverride();
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				return getConfirmMessage();
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
 				return getSuccessMessage();
-			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
-				if (resolve) return getCancelDestination();
-				return basicGetCancelDestination();
-			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
-				return getCancelLabel();
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				return getUnitInputGroupClass();
 		}
@@ -560,20 +652,26 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				setConfirmDestination((ContentUnit)newValue);
 				return;
-			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
-				setConfirmLabel((String)newValue);
+			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
+				setCancelDestination((ContentUnit)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL_OVERRIDE:
+				setCancelLabelOverride((String)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
+				setCancelIconOverride((String)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
+				setSaveLabelOverride((String)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
+				setSaveIconOverride((String)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				setConfirmMessage((Message)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
 				setSuccessMessage((Message)newValue);
-				return;
-			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
-				setCancelDestination((ContentUnit)newValue);
-				return;
-			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
-				setCancelLabel((String)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				setUnitInputGroupClass((String)newValue);
@@ -599,20 +697,26 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				setConfirmDestination((ContentUnit)null);
 				return;
-			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
-				setConfirmLabel(CONFIRM_LABEL_EDEFAULT);
+			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
+				setCancelDestination((ContentUnit)null);
+				return;
+			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL_OVERRIDE:
+				setCancelLabelOverride(CANCEL_LABEL_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
+				setCancelIconOverride(CANCEL_ICON_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
+				setSaveLabelOverride(SAVE_LABEL_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
+				setSaveIconOverride(SAVE_ICON_OVERRIDE_EDEFAULT);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				setConfirmMessage((Message)null);
 				return;
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
 				setSuccessMessage((Message)null);
-				return;
-			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
-				setCancelDestination((ContentUnit)null);
-				return;
-			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
-				setCancelLabel(CANCEL_LABEL_EDEFAULT);
 				return;
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				setUnitInputGroupClass(UNIT_INPUT_GROUP_CLASS_EDEFAULT);
@@ -635,16 +739,20 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return disableWhen != null;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_DESTINATION:
 				return confirmDestination != null;
-			case WebuiPackage.EDIT_UNIT__CONFIRM_LABEL:
-				return CONFIRM_LABEL_EDEFAULT == null ? confirmLabel != null : !CONFIRM_LABEL_EDEFAULT.equals(confirmLabel);
+			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
+				return cancelDestination != null;
+			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL_OVERRIDE:
+				return CANCEL_LABEL_OVERRIDE_EDEFAULT == null ? cancelLabelOverride != null : !CANCEL_LABEL_OVERRIDE_EDEFAULT.equals(cancelLabelOverride);
+			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
+				return CANCEL_ICON_OVERRIDE_EDEFAULT == null ? cancelIconOverride != null : !CANCEL_ICON_OVERRIDE_EDEFAULT.equals(cancelIconOverride);
+			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
+				return SAVE_LABEL_OVERRIDE_EDEFAULT == null ? saveLabelOverride != null : !SAVE_LABEL_OVERRIDE_EDEFAULT.equals(saveLabelOverride);
+			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
+				return SAVE_ICON_OVERRIDE_EDEFAULT == null ? saveIconOverride != null : !SAVE_ICON_OVERRIDE_EDEFAULT.equals(saveIconOverride);
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				return confirmMessage != null;
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
 				return successMessage != null;
-			case WebuiPackage.EDIT_UNIT__CANCEL_DESTINATION:
-				return cancelDestination != null;
-			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL:
-				return CANCEL_LABEL_EDEFAULT == null ? cancelLabel != null : !CANCEL_LABEL_EDEFAULT.equals(cancelLabel);
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				return UNIT_INPUT_GROUP_CLASS_EDEFAULT == null ? unitInputGroupClass != null : !UNIT_INPUT_GROUP_CLASS_EDEFAULT.equals(unitInputGroupClass);
 		}
@@ -663,10 +771,14 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (useCaptcha: ");
 		result.append(useCaptcha);
-		result.append(", confirmLabel: ");
-		result.append(confirmLabel);
-		result.append(", cancelLabel: ");
-		result.append(cancelLabel);
+		result.append(", cancelLabelOverride: ");
+		result.append(cancelLabelOverride);
+		result.append(", cancelIconOverride: ");
+		result.append(cancelIconOverride);
+		result.append(", saveLabelOverride: ");
+		result.append(saveLabelOverride);
+		result.append(", saveIconOverride: ");
+		result.append(saveIconOverride);
 		result.append(", unitInputGroupClass: ");
 		result.append(unitInputGroupClass);
 		result.append(')');

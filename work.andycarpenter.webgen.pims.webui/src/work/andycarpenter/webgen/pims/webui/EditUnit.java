@@ -16,11 +16,13 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#isUseCaptcha <em>Use Captcha</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getDisableWhen <em>Disable When</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmDestination <em>Confirm Destination</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmLabel <em>Confirm Label</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabelOverride <em>Cancel Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelIconOverride <em>Cancel Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveLabelOverride <em>Save Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveIconOverride <em>Save Icon Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel <em>Cancel Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}</li>
  * </ul>
  *
@@ -105,32 +107,6 @@ public interface EditUnit extends SingletonUnit {
 	void setConfirmDestination(ContentUnit value);
 
 	/**
-	 * Returns the value of the '<em><b>Confirm Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Confirm Label</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Confirm Label</em>' attribute.
-	 * @see #setConfirmLabel(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ConfirmLabel()
-	 * @model
-	 * @generated
-	 */
-	String getConfirmLabel();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmLabel <em>Confirm Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Confirm Label</em>' attribute.
-	 * @see #getConfirmLabel()
-	 * @generated
-	 */
-	void setConfirmLabel(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Confirm Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -201,30 +177,92 @@ public interface EditUnit extends SingletonUnit {
 	void setCancelDestination(ContentUnit value);
 
 	/**
-	 * Returns the value of the '<em><b>Cancel Label</b></em>' attribute.
+	 * Returns the value of the '<em><b>Cancel Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cancel Label</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cancel Label</em>' attribute.
-	 * @see #setCancelLabel(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CancelLabel()
+	 * @return the value of the '<em>Cancel Label Override</em>' attribute.
+	 * @see #setCancelLabelOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CancelLabelOverride()
 	 * @model
 	 * @generated
 	 */
-	String getCancelLabel();
+	String getCancelLabelOverride();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel <em>Cancel Label</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabelOverride <em>Cancel Label Override</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cancel Label</em>' attribute.
-	 * @see #getCancelLabel()
+	 * @param value the new value of the '<em>Cancel Label Override</em>' attribute.
+	 * @see #getCancelLabelOverride()
 	 * @generated
 	 */
-	void setCancelLabel(String value);
+	void setCancelLabelOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cancel Icon Override</em>' attribute.
+	 * @see #setCancelIconOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CancelIconOverride()
+	 * @model
+	 * @generated
+	 */
+	String getCancelIconOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelIconOverride <em>Cancel Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cancel Icon Override</em>' attribute.
+	 * @see #getCancelIconOverride()
+	 * @generated
+	 */
+	void setCancelIconOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Save Label Override</em>' attribute.
+	 * @see #setSaveLabelOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_SaveLabelOverride()
+	 * @model
+	 * @generated
+	 */
+	String getSaveLabelOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveLabelOverride <em>Save Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Save Label Override</em>' attribute.
+	 * @see #getSaveLabelOverride()
+	 * @generated
+	 */
+	void setSaveLabelOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Save Icon Override</em>' attribute.
+	 * @see #setSaveIconOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_SaveIconOverride()
+	 * @model
+	 * @generated
+	 */
+	String getSaveIconOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveIconOverride <em>Save Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Save Icon Override</em>' attribute.
+	 * @see #getSaveIconOverride()
+	 * @generated
+	 */
+	void setSaveIconOverride(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Unit Input Group Class</b></em>' attribute.

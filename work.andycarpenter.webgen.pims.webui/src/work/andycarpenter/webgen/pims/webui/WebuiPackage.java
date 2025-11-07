@@ -154,13 +154,67 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_CANCEL_LABEL = 8;
 
 	/**
+	 * The feature id for the '<em><b>Default Cancel Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CANCEL_ICON = 9;
+
+	/**
+	 * The feature id for the '<em><b>Default Clear Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CLEAR_LABEL = 10;
+
+	/**
+	 * The feature id for the '<em><b>Default Clear Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CLEAR_ICON = 11;
+
+	/**
 	 * The feature id for the '<em><b>Default Save Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SAVE_LABEL = 9;
+	int WEB_UI__DEFAULT_SAVE_LABEL = 12;
+
+	/**
+	 * The feature id for the '<em><b>Default Save Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SAVE_ICON = 13;
+
+	/**
+	 * The feature id for the '<em><b>Default Search Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SEARCH_LABEL = 14;
+
+	/**
+	 * The feature id for the '<em><b>Default Search Icon</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SEARCH_ICON = 15;
 
 	/**
 	 * The feature id for the '<em><b>Default Page Style Class</b></em>' attribute.
@@ -169,7 +223,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_PAGE_STYLE_CLASS = 10;
+	int WEB_UI__DEFAULT_PAGE_STYLE_CLASS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Styles</b></em>' containment reference.
@@ -178,7 +232,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STYLES = 11;
+	int WEB_UI__DEFAULT_STYLES = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Cards Styles</b></em>' containment reference.
@@ -187,7 +241,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARDS_STYLES = 12;
+	int WEB_UI__DEFAULT_CARDS_STYLES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Default Image Cards Styles</b></em>' containment reference.
@@ -196,7 +250,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_IMAGE_CARDS_STYLES = 13;
+	int WEB_UI__DEFAULT_IMAGE_CARDS_STYLES = 19;
 
 	/**
 	 * The feature id for the '<em><b>Default Details Styles</b></em>' containment reference.
@@ -205,7 +259,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DETAILS_STYLES = 14;
+	int WEB_UI__DEFAULT_DETAILS_STYLES = 20;
 
 	/**
 	 * The feature id for the '<em><b>Default Form Styles</b></em>' containment reference.
@@ -214,7 +268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FORM_STYLES = 15;
+	int WEB_UI__DEFAULT_FORM_STYLES = 21;
 
 	/**
 	 * The feature id for the '<em><b>Default Gallery Styles</b></em>' containment reference.
@@ -223,7 +277,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_GALLERY_STYLES = 16;
+	int WEB_UI__DEFAULT_GALLERY_STYLES = 22;
 
 	/**
 	 * The feature id for the '<em><b>Default Slider Styles</b></em>' containment reference.
@@ -232,7 +286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SLIDER_STYLES = 17;
+	int WEB_UI__DEFAULT_SLIDER_STYLES = 23;
 
 	/**
 	 * The feature id for the '<em><b>Default Static Styles</b></em>' containment reference.
@@ -241,7 +295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STATIC_STYLES = 18;
+	int WEB_UI__DEFAULT_STATIC_STYLES = 24;
 
 	/**
 	 * The feature id for the '<em><b>Default Tabular Styles</b></em>' containment reference.
@@ -250,7 +304,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_TABULAR_STYLES = 19;
+	int WEB_UI__DEFAULT_TABULAR_STYLES = 25;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -259,7 +313,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 20;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 26;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -268,7 +322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 21;
+	int WEB_UI_FEATURE_COUNT = 27;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -1038,13 +1092,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT_STYLES__FILTERS_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+	int COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
@@ -1053,7 +1116,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
+	int COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit Styles</em>' class.
@@ -1062,7 +1125,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 2;
+	int COLLECTION_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit Styles</em>' class.
@@ -1162,6 +1225,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DEFAULT_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -1298,6 +1370,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -1479,6 +1560,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT_STYLES__ANCHOR_CLASS = CARDS_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT_STYLES__FILTERS_CLASS = CARDS_UNIT_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -1916,6 +2006,15 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
 
 	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
+
+	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2050,6 +2149,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -2241,6 +2349,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -6908,22 +7025,58 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__FIND_ELEMENT_SELECTION = DYNAMIC_UNIT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT__FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 7;
-
-	/**
 	 * The feature id for the '<em><b>Filter</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 8;
+	int COLLECTION_UNIT__FILTER = DYNAMIC_UNIT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__CLEAR_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__SEARCH_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -6932,7 +7085,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -6941,7 +7094,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 10;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -6950,7 +7103,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -6959,7 +7112,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -6968,7 +7121,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -8269,13 +8422,49 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CONFIRM_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 3;
+	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__CANCEL_LABEL_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__CANCEL_ICON_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__SAVE_LABEL_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__SAVE_ICON_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -8284,7 +8473,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 4;
+	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
@@ -8293,25 +8482,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__SUCCESS_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__CANCEL_DESTINATION = SINGLETON_UNIT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EDIT_UNIT__CANCEL_LABEL = SINGLETON_UNIT_FEATURE_COUNT + 7;
+	int EDIT_UNIT__SUCCESS_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -8320,7 +8491,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 8;
+	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
@@ -8329,7 +8500,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 9;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -8702,13 +8873,49 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int CREATE_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -8727,24 +8934,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -9145,13 +9334,49 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int UPDATE_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -9170,24 +9395,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -9586,13 +9793,49 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_UPDATE_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int CREATE_UPDATE_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -9611,24 +9854,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CREATE_UPDATE_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -10046,13 +10271,49 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAP_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int MAP_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -10071,24 +10332,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAP_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -10912,6 +11155,15 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10921,13 +11173,40 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+	int TABULAR_UNIT__CLEAR_LABEL_OVERRIDE = COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__SEARCH_LABEL_OVERRIDE = COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -11417,6 +11696,15 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11426,13 +11714,40 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+	int CARDS_UNIT__CLEAR_LABEL_OVERRIDE = COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__SEARCH_LABEL_OVERRIDE = COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -12176,6 +12491,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12185,13 +12509,40 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
+	int TEXT_CARDS_UNIT__CLEAR_LABEL_OVERRIDE = CARDS_UNIT__CLEAR_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__CLEAR_ICON_OVERRIDE = CARDS_UNIT__CLEAR_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__SEARCH_LABEL_OVERRIDE = CARDS_UNIT__SEARCH_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__SEARCH_ICON_OVERRIDE = CARDS_UNIT__SEARCH_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -12707,6 +13058,15 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12716,13 +13076,40 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
+	int DATE_CARDS_UNIT__CLEAR_LABEL_OVERRIDE = CARDS_UNIT__CLEAR_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__CLEAR_ICON_OVERRIDE = CARDS_UNIT__CLEAR_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__SEARCH_LABEL_OVERRIDE = CARDS_UNIT__SEARCH_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__SEARCH_ICON_OVERRIDE = CARDS_UNIT__SEARCH_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -13355,6 +13742,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__FIND_ELEMENT_SELECTION = CARDS_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13364,13 +13760,40 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_CARDS_UNIT__FILTER = CARDS_UNIT__FILTER;
+	int IMAGE_CARDS_UNIT__CLEAR_LABEL_OVERRIDE = CARDS_UNIT__CLEAR_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__CLEAR_ICON_OVERRIDE = CARDS_UNIT__CLEAR_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__SEARCH_LABEL_OVERRIDE = CARDS_UNIT__SEARCH_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__SEARCH_ICON_OVERRIDE = CARDS_UNIT__SEARCH_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -13958,6 +14381,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13967,13 +14399,40 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+	int SLIDER_UNIT__CLEAR_LABEL_OVERRIDE = COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__SEARCH_LABEL_OVERRIDE = COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -14480,6 +14939,15 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__FIND_ELEMENT_SELECTION = COLLECTION_UNIT__FIND_ELEMENT_SELECTION;
 
 	/**
+	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+
+	/**
 	 * The feature id for the '<em><b>Filters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14489,13 +14957,40 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
 
 	/**
-	 * The feature id for the '<em><b>Filter</b></em>' reference.
+	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT__FILTER = COLLECTION_UNIT__FILTER;
+	int GALLERY_UNIT__CLEAR_LABEL_OVERRIDE = COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__SEARCH_LABEL_OVERRIDE = COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -15723,13 +16218,49 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTRATION_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int REGISTRATION_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -15748,24 +16279,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REGISTRATION_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -16156,13 +16669,49 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGIN_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int LOGIN_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -16181,24 +16730,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGIN_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -16932,13 +17463,49 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORGOTTEN_PASSWORD_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int FORGOTTEN_PASSWORD_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -16957,24 +17524,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORGOTTEN_PASSWORD_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -17419,13 +17968,49 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT__CONFIRM_DESTINATION = EDIT_UNIT__CONFIRM_DESTINATION;
 
 	/**
-	 * The feature id for the '<em><b>Confirm Label</b></em>' attribute.
+	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESET_PASSWORD_UNIT__CONFIRM_LABEL = EDIT_UNIT__CONFIRM_LABEL;
+	int RESET_PASSWORD_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CANCEL_LABEL_OVERRIDE = EDIT_UNIT__CANCEL_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Cancel Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__SAVE_LABEL_OVERRIDE = EDIT_UNIT__SAVE_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -17444,24 +18029,6 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_PASSWORD_UNIT__SUCCESS_MESSAGE = EDIT_UNIT__SUCCESS_MESSAGE;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Destination</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESET_PASSWORD_UNIT__CANCEL_DESTINATION = EDIT_UNIT__CANCEL_DESTINATION;
-
-	/**
-	 * The feature id for the '<em><b>Cancel Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESET_PASSWORD_UNIT__CANCEL_LABEL = EDIT_UNIT__CANCEL_LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -20184,6 +20751,50 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultDateTimeFormat();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel <em>Default Cancel Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Cancel Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultCancelLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelIcon <em>Default Cancel Icon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Cancel Icon</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelIcon()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultCancelIcon();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearLabel <em>Default Clear Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Clear Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearLabel()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultClearLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearIcon <em>Default Clear Icon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Clear Icon</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearIcon()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultClearIcon();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveLabel <em>Default Save Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20193,6 +20804,39 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWebUI_DefaultSaveLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveIcon <em>Default Save Icon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Save Icon</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveIcon()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSaveIcon();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchLabel <em>Default Search Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Search Label</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchLabel()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSearchLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchIcon <em>Default Search Icon</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Search Icon</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchIcon()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSearchIcon();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultPageStyleClass <em>Default Page Style Class</em>}'.
@@ -20303,17 +20947,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWebUI_DefaultTabularStyles();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel <em>Default Cancel Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Cancel Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel()
-	 * @see #getWebUI()
-	 * @generated
-	 */
-	EAttribute getWebUI_DefaultCancelLabel();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}'.
@@ -20699,6 +21332,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCollectionUnitStyles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getFiltersClass <em>Filters Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filters Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getFiltersClass()
+	 * @see #getCollectionUnitStyles()
+	 * @generated
+	 */
+	EAttribute getCollectionUnitStyles_FiltersClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceControlClass <em>Instance Control Class</em>}'.
@@ -22271,6 +22915,50 @@ public interface WebuiPackage extends EPackage {
 	EReference getCollectionUnit_Filters();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearLabelOverride <em>Clear Label Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Clear Label Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearLabelOverride()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_ClearLabelOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearIconOverride <em>Clear Icon Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Clear Icon Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearIconOverride()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_ClearIconOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchLabelOverride <em>Search Label Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Search Label Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchLabelOverride()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_SearchLabelOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchIconOverride <em>Search Icon Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Search Icon Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchIconOverride()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_SearchIconOverride();
+
+	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22574,17 +23262,6 @@ public interface WebuiPackage extends EPackage {
 	EReference getEditUnit_ConfirmDestination();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmLabel <em>Confirm Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Confirm Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmLabel()
-	 * @see #getEditUnit()
-	 * @generated
-	 */
-	EAttribute getEditUnit_ConfirmLabel();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22618,15 +23295,48 @@ public interface WebuiPackage extends EPackage {
 	EReference getEditUnit_CancelDestination();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel <em>Cancel Label</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabelOverride <em>Cancel Label Override</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cancel Label</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabel()
+	 * @return the meta object for the attribute '<em>Cancel Label Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabelOverride()
 	 * @see #getEditUnit()
 	 * @generated
 	 */
-	EAttribute getEditUnit_CancelLabel();
+	EAttribute getEditUnit_CancelLabelOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelIconOverride <em>Cancel Icon Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cancel Icon Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getCancelIconOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_CancelIconOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveLabelOverride <em>Save Label Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Save Label Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getSaveLabelOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_SaveLabelOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveIconOverride <em>Save Icon Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Save Icon Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getSaveIconOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_SaveIconOverride();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}'.
@@ -24127,12 +24837,68 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_DATE_TIME_FORMAT = eINSTANCE.getWebUI_DefaultDateTimeFormat();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Cancel Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CANCEL_LABEL = eINSTANCE.getWebUI_DefaultCancelLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Cancel Icon</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CANCEL_ICON = eINSTANCE.getWebUI_DefaultCancelIcon();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Clear Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CLEAR_LABEL = eINSTANCE.getWebUI_DefaultClearLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Clear Icon</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CLEAR_ICON = eINSTANCE.getWebUI_DefaultClearIcon();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Save Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_SAVE_LABEL = eINSTANCE.getWebUI_DefaultSaveLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Save Icon</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SAVE_ICON = eINSTANCE.getWebUI_DefaultSaveIcon();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Search Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SEARCH_LABEL = eINSTANCE.getWebUI_DefaultSearchLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Search Icon</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SEARCH_ICON = eINSTANCE.getWebUI_DefaultSearchIcon();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Page Style Class</b></em>' attribute feature.
@@ -24213,14 +24979,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WEB_UI__DEFAULT_TABULAR_STYLES = eINSTANCE.getWebUI_DefaultTabularStyles();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Cancel Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute WEB_UI__DEFAULT_CANCEL_LABEL = eINSTANCE.getWebUI_DefaultCancelLabel();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Maximum Upload Size</b></em>' attribute feature.
@@ -24531,6 +25289,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COLLECTION_UNIT_STYLES = eINSTANCE.getCollectionUnitStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Filters Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT_STYLES__FILTERS_CLASS = eINSTANCE.getCollectionUnitStyles_FiltersClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Instance Control Class</b></em>' attribute feature.
@@ -25759,6 +26525,38 @@ public interface WebuiPackage extends EPackage {
 		EReference COLLECTION_UNIT__FILTERS = eINSTANCE.getCollectionUnit_Filters();
 
 		/**
+		 * The meta object literal for the '<em><b>Clear Label Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE = eINSTANCE.getCollectionUnit_ClearLabelOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Clear Icon Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__CLEAR_ICON_OVERRIDE = eINSTANCE.getCollectionUnit_ClearIconOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Search Label Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE = eINSTANCE.getCollectionUnit_SearchLabelOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Search Icon Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__SEARCH_ICON_OVERRIDE = eINSTANCE.getCollectionUnit_SearchIconOverride();
+
+		/**
 		 * The meta object literal for the '<em><b>Filter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26013,14 +26811,6 @@ public interface WebuiPackage extends EPackage {
 		EReference EDIT_UNIT__CONFIRM_DESTINATION = eINSTANCE.getEditUnit_ConfirmDestination();
 
 		/**
-		 * The meta object literal for the '<em><b>Confirm Label</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EDIT_UNIT__CONFIRM_LABEL = eINSTANCE.getEditUnit_ConfirmLabel();
-
-		/**
 		 * The meta object literal for the '<em><b>Confirm Message</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26045,12 +26835,36 @@ public interface WebuiPackage extends EPackage {
 		EReference EDIT_UNIT__CANCEL_DESTINATION = eINSTANCE.getEditUnit_CancelDestination();
 
 		/**
-		 * The meta object literal for the '<em><b>Cancel Label</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Cancel Label Override</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EDIT_UNIT__CANCEL_LABEL = eINSTANCE.getEditUnit_CancelLabel();
+		EAttribute EDIT_UNIT__CANCEL_LABEL_OVERRIDE = eINSTANCE.getEditUnit_CancelLabelOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Cancel Icon Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__CANCEL_ICON_OVERRIDE = eINSTANCE.getEditUnit_CancelIconOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Save Label Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__SAVE_LABEL_OVERRIDE = eINSTANCE.getEditUnit_SaveLabelOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Save Icon Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__SAVE_ICON_OVERRIDE = eINSTANCE.getEditUnit_SaveIconOverride();
 
 		/**
 		 * The meta object literal for the '<em><b>Unit Input Group Class</b></em>' attribute feature.

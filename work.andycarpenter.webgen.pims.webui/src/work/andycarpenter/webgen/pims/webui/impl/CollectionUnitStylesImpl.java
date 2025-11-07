@@ -19,6 +19,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitStylesImpl#getFiltersClass <em>Filters Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitStylesImpl#getInstanceControlClass <em>Instance Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitStylesImpl#getInstanceActionClass <em>Instance Action Class</em>}</li>
  * </ul>
@@ -26,6 +27,26 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * @generated
  */
 public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl implements CollectionUnitStyles {
+	/**
+	 * The default value of the '{@link #getFiltersClass() <em>Filters Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFiltersClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FILTERS_CLASS_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getFiltersClass() <em>Filters Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFiltersClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String filtersClass = FILTERS_CLASS_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getInstanceControlClass() <em>Instance Control Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,6 +112,29 @@ public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl imp
 	 * @generated
 	 */
 	@Override
+	public String getFiltersClass() {
+		return filtersClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFiltersClass(String newFiltersClass) {
+		String oldFiltersClass = filtersClass;
+		filtersClass = newFiltersClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT_STYLES__FILTERS_CLASS, oldFiltersClass, filtersClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getInstanceControlClass() {
 		return instanceControlClass;
 	}
@@ -139,6 +183,8 @@ public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT_STYLES__FILTERS_CLASS:
+				return getFiltersClass();
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				return getInstanceControlClass();
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS:
@@ -155,6 +201,9 @@ public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT_STYLES__FILTERS_CLASS:
+				setFiltersClass((String)newValue);
+				return;
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				setInstanceControlClass((String)newValue);
 				return;
@@ -173,6 +222,9 @@ public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT_STYLES__FILTERS_CLASS:
+				setFiltersClass(FILTERS_CLASS_EDEFAULT);
+				return;
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				setInstanceControlClass(INSTANCE_CONTROL_CLASS_EDEFAULT);
 				return;
@@ -191,6 +243,8 @@ public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case WebuiPackage.COLLECTION_UNIT_STYLES__FILTERS_CLASS:
+				return FILTERS_CLASS_EDEFAULT == null ? filtersClass != null : !FILTERS_CLASS_EDEFAULT.equals(filtersClass);
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS:
 				return INSTANCE_CONTROL_CLASS_EDEFAULT == null ? instanceControlClass != null : !INSTANCE_CONTROL_CLASS_EDEFAULT.equals(instanceControlClass);
 			case WebuiPackage.COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS:
@@ -209,7 +263,9 @@ public abstract class CollectionUnitStylesImpl extends DynamicUnitStylesImpl imp
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (instanceControlClass: ");
+		result.append(" (filtersClass: ");
+		result.append(filtersClass);
+		result.append(", instanceControlClass: ");
 		result.append(instanceControlClass);
 		result.append(", instanceActionClass: ");
 		result.append(instanceActionClass);

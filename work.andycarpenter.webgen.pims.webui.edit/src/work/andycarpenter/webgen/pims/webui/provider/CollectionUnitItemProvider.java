@@ -61,6 +61,10 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addFindContainerSelectionPropertyDescriptor(object);
 			addFindElementSelectionPropertyDescriptor(object);
 			addFilterPropertyDescriptor(object);
+			addClearLabelOverridePropertyDescriptor(object);
+			addClearIconOverridePropertyDescriptor(object);
+			addSearchLabelOverridePropertyDescriptor(object);
+			addSearchIconOverridePropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addDefaultPaginationSizePropertyDescriptor(object);
 			addMaximumPaginationSizePropertyDescriptor(object);
@@ -257,6 +261,94 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Clear Label Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClearLabelOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_clearLabelOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_clearLabelOverride_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Clear Icon Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClearIconOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_clearIconOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_clearIconOverride_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Search Label Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSearchLabelOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_searchLabelOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_searchLabelOverride_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Search Icon Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSearchIconOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_searchIconOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_searchIconOverride_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Empty Message feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,6 +495,10 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 
 		switch (notification.getFeatureID(CollectionUnit.class)) {
 			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE:
+			case WebuiPackage.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE:
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:
 			case WebuiPackage.COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE:
 			case WebuiPackage.COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE:

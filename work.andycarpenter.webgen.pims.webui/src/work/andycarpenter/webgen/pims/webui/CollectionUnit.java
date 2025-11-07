@@ -23,8 +23,12 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSelection <em>Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindContainerSelection <em>Find Container Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindElementSelection <em>Find Element Selection</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters <em>Filters</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters <em>Filters</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearLabelOverride <em>Clear Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearIconOverride <em>Clear Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchLabelOverride <em>Search Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchIconOverride <em>Search Icon Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
@@ -208,6 +212,94 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContex
 	 * @generated
 	 */
 	EList<CollectionFilter> getFilters();
+
+	/**
+	 * Returns the value of the '<em><b>Clear Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Clear Label Override</em>' attribute.
+	 * @see #setClearLabelOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_ClearLabelOverride()
+	 * @model
+	 * @generated
+	 */
+	String getClearLabelOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearLabelOverride <em>Clear Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Clear Label Override</em>' attribute.
+	 * @see #getClearLabelOverride()
+	 * @generated
+	 */
+	void setClearLabelOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Clear Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Clear Icon Override</em>' attribute.
+	 * @see #setClearIconOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_ClearIconOverride()
+	 * @model
+	 * @generated
+	 */
+	String getClearIconOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearIconOverride <em>Clear Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Clear Icon Override</em>' attribute.
+	 * @see #getClearIconOverride()
+	 * @generated
+	 */
+	void setClearIconOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Search Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Search Label Override</em>' attribute.
+	 * @see #setSearchLabelOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_SearchLabelOverride()
+	 * @model
+	 * @generated
+	 */
+	String getSearchLabelOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchLabelOverride <em>Search Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Search Label Override</em>' attribute.
+	 * @see #getSearchLabelOverride()
+	 * @generated
+	 */
+	void setSearchLabelOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Search Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Search Icon Override</em>' attribute.
+	 * @see #setSearchIconOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_SearchIconOverride()
+	 * @model
+	 * @generated
+	 */
+	String getSearchIconOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchIconOverride <em>Search Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Search Icon Override</em>' attribute.
+	 * @see #getSearchIconOverride()
+	 * @generated
+	 */
+	void setSearchIconOverride(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Filter</b></em>' reference.

@@ -39,8 +39,20 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="jS F Y G.i"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCancelLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Cancel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCancelIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Cancel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultClearLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Cancel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultClearIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Cancel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSaveLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Save"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSaveIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Save"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSearchLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Save"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSearchIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="Cancel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPageStyleClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultStyles" lowerBound="1"
@@ -142,6 +154,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionUnitStyles" abstract="true"
       eSuperTypes="#//DynamicUnitStyles">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filtersClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceActionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -458,9 +472,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="findContainerSelection"
         eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="findElementSelection" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Selection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="filters" upperBound="-1"
         eType="#//CollectionFilter" containment="true" eOpposite="#//CollectionFilter/affects"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="filter" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.presistence/model/persistence.ecore#//Filter"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clearLabelOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clearIconOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="searchLabelOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="searchIconOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="omitFieldLabels" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPaginationSize"
@@ -503,13 +521,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="disableWhen" eType="ecore:EClass ../../work.andycarpenter.webgen.pims.expression/model/expression.ecore#//Predicate"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="confirmDestination" eType="#//ContentUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="confirmLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cancelDestination" eType="#//ContentUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelLabelOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelIconOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="saveLabelOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="saveIconOverride" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="confirmMessage" eType="#//Message"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="successMessage" eType="#//Message"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cancelDestination" eType="#//ContentUnit"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cancelLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unitInputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>

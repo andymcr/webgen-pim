@@ -61,7 +61,13 @@ rule WafModel {
 		controllers <- website.webUI.controllers,
 		useFormFloatingLabels <- thisModule.findWebsiteUI().useFormFloatingLabels,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
+		defaultCancelIcon <- thisModule.findWebsiteUI().defaultCancelIcon,
+		defaultClearLabel <- thisModule.findWebsiteUI().defaultClearLabel,
+		defaultClearIcon <- thisModule.findWebsiteUI().defaultClearIcon,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
+		defaultSaveIcon <- thisModule.findWebsiteUI().defaultSaveIcon,
+		defaultSearchLabel <- thisModule.findWebsiteUI().defaultSearchLabel,
+		defaultSearchIcon <- thisModule.findWebsiteUI().defaultSearchIcon,
 		defaultPageClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
 		defaultUnitStyles <- thisModule.findWebsiteUI().defaultStyles,
 		defaultCardsStyles <- thisModule.findWebsiteUI().defaultCardsStyles,
@@ -183,6 +189,7 @@ abstract rule DynamicUnitStyles {
 rule CollectionUnitStyles {
 	from website : Website!CollectionUnitStyles
 	to waf : WAF!CollectionUnitStyles (
+		filtersClass <- website.filtersClass,
 		instanceControlClass <- website.instanceControlClass,
 		instanceActionClass <- website.instanceActionClass
 	)
@@ -582,7 +589,11 @@ abstract rule CollectionUnit {
 		omitFieldLabels <- website.omitFieldLabels,
 		defaultPaginationSize <- website.defaultPaginationSize,
 		maximumPaginationSize <- website.maximumPaginationSize,
-		emptyMessage <- website.emptyMessage
+		emptyMessage <- website.emptyMessage,
+		clearLabelOverride <- website.clearLabelOverride,
+		clearIconOverride <- website.clearIconOverride,
+		searchLabelOverride <- website.searchLabelOverride,
+		searchIconOverride <- website.searchIconOverride
 	)
 }
 
@@ -688,31 +699,13 @@ abstract rule EditUnit {
 				''
 			endif endif,
 		confirmDestination <- website.confirmDestination,
-		confirmLabel <-
-			if not website.confirmLabel.oclIsUndefined() and website.confirmLabel <> '' then
-				website.confirmLabel
-			else
-				if  website.oclIsTypeOf(Website!CreateUnit) then
-					'Create'
-				else if  website.oclIsTypeOf(Website!CreateUpdateUnit) then
-					'Save'
-				else if  website.oclIsTypeOf(Website!UpdateUnit) then
-					'Update'
-				else if  website.oclIsTypeOf(Website!MapUnit) then
-					'Save'
-				else
-					'Edit'
-				endif endif endif endif
-			endif,
-		confirmMessage <- website.confirmMessage,
-		successMessage <- website.successMessage,
 		cancelDestination <- website.cancelDestination,
-		cancelLabel <-
-			if not website.cancelLabel.oclIsUndefined() and website.cancelLabel <> '' then
-				website.confirmLabel
-			else
-				'Cancel'
-			endif
+		cancelLabelOverride <- website.cancelLabelOverride,
+		cancelIconOverride <- website.cancelIconOverride,
+		saveLabelOverride <- website.saveLabelOverride,
+		saveIconOverride <- website.saveIconOverride,
+		confirmMessage <- website.confirmMessage,
+		successMessage <- website.successMessage
 	)
 }
 

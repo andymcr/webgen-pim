@@ -43,7 +43,13 @@
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultTimeFormat"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultDateTimeFormat"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultCancelLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultCancelIcon"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultClearLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultClearIcon"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultSaveLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultSaveIcon"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultSearchLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultSearchIcon"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultPageStyleClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultCardsStyles"/>
@@ -100,6 +106,7 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnitStyles/anchorClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//CollectionUnitStyles">
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/filtersClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceActionClass"/>
     </genClasses>
@@ -290,9 +297,13 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/findContainerSelection"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/findElementSelection"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filters"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filters"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/clearLabelOverride"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/clearIconOverride"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/searchLabelOverride"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/searchIconOverride"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/omitFieldLabels"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/defaultPaginationSize"/>
       <genFeatures createChild="false" propertyCategory="Pagination" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/maximumPaginationSize"/>
@@ -326,12 +337,15 @@
           ecoreFeature="ecore:EReference webui.ecore#//EditUnit/disableWhen"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/confirmDestination"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/confirmLabel"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/confirmMessage"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/successMessage"/>
       <genFeatures notify="false" createChild="false" propertyCategory="Navigation"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/cancelDestination"/>
-      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/cancelLabel"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/cancelLabelOverride"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/cancelIconOverride"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/saveLabelOverride"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/saveIconOverride"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory="Interface"
+          ecoreFeature="ecore:EReference webui.ecore#//EditUnit/confirmMessage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//EditUnit/successMessage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//EditUnit/unitInputGroupClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//CreateUnit"/>
