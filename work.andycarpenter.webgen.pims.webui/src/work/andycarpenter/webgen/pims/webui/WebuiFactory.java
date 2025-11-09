@@ -85,6 +85,15 @@ public interface WebuiFactory extends EFactory {
 	MenuFeature createMenuFeature();
 
 	/**
+	 * Returns a new object of class '<em>Collection Unit Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Collection Unit Styles</em>'.
+	 * @generated
+	 */
+	CollectionUnitStyles createCollectionUnitStyles();
+
+	/**
 	 * Returns a new object of class '<em>Default Unit Styles</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

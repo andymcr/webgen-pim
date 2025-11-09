@@ -114,6 +114,8 @@ public class WebuiValidator extends EObjectValidator {
 				return validateContentUnitStyles((ContentUnitStyles)value, diagnostics, context);
 			case WebuiPackage.DYNAMIC_UNIT_STYLES:
 				return validateDynamicUnitStyles((DynamicUnitStyles)value, diagnostics, context);
+			case WebuiPackage.COLLECTION_STYLES:
+				return validateCollectionStyles((CollectionStyles)value, diagnostics, context);
 			case WebuiPackage.COLLECTION_UNIT_STYLES:
 				return validateCollectionUnitStyles((CollectionUnitStyles)value, diagnostics, context);
 			case WebuiPackage.DEFAULT_UNIT_STYLES:
@@ -499,6 +501,15 @@ public class WebuiValidator extends EObjectValidator {
 	 */
 	public boolean validateDynamicUnitStyles(DynamicUnitStyles dynamicUnitStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(dynamicUnitStyles, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCollectionStyles(CollectionStyles collectionStyles, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(collectionStyles, diagnostics, context);
 	}
 
 	/**

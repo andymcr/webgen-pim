@@ -19,7 +19,7 @@ import work.andycarpenter.webgen.pims.webui.GalleryUnitStyles;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GalleryUnitStylesItemProvider extends CollectionUnitStylesItemProvider {
+public class GalleryUnitStylesItemProvider extends CollectionStylesItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

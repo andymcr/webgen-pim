@@ -28,7 +28,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class CardsUnitStylesImpl extends CollectionUnitStylesImpl implements CardsUnitStyles {
+public class CardsUnitStylesImpl extends CollectionStylesImpl implements CardsUnitStyles {
 	/**
 	 * The default value of the '{@link #getCardClass() <em>Card Class</em>}' attribute.
 	 * <!-- begin-user-doc -->

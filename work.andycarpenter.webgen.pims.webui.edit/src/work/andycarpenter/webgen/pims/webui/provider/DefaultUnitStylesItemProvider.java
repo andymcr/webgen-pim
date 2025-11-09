@@ -19,7 +19,7 @@ import work.andycarpenter.webgen.pims.webui.DefaultUnitStyles;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DefaultUnitStylesItemProvider extends CollectionUnitStylesItemProvider {
+public class DefaultUnitStylesItemProvider extends DynamicUnitStylesItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

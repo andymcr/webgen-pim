@@ -428,6 +428,7 @@ public class WebUIItemProvider
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__CONTROLLERS);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES);
+			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_COLLECTION_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_FORM_STYLES);
@@ -508,6 +509,7 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__CONTROLLERS:
 			case WebuiPackage.WEB_UI__DEFAULT_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
+			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
@@ -561,6 +563,11 @@ public class WebUIItemProvider
 			(createChildParameter
 				(WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES,
 				 WebuiFactory.eINSTANCE.createImageCardsUnitStyles()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.WEB_UI__DEFAULT_COLLECTION_STYLES,
+				 WebuiFactory.eINSTANCE.createCollectionUnitStyles()));
 
 		newChildDescriptors.add
 			(createChildParameter

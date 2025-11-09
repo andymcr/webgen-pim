@@ -244,13 +244,22 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_CARDS_STYLES = 18;
 
 	/**
+	 * The feature id for the '<em><b>Default Collection Styles</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_COLLECTION_STYLES = 19;
+
+	/**
 	 * The feature id for the '<em><b>Default Image Cards Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_IMAGE_CARDS_STYLES = 19;
+	int WEB_UI__DEFAULT_IMAGE_CARDS_STYLES = 20;
 
 	/**
 	 * The feature id for the '<em><b>Default Details Styles</b></em>' containment reference.
@@ -259,7 +268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DETAILS_STYLES = 20;
+	int WEB_UI__DEFAULT_DETAILS_STYLES = 21;
 
 	/**
 	 * The feature id for the '<em><b>Default Form Styles</b></em>' containment reference.
@@ -268,7 +277,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FORM_STYLES = 21;
+	int WEB_UI__DEFAULT_FORM_STYLES = 22;
 
 	/**
 	 * The feature id for the '<em><b>Default Gallery Styles</b></em>' containment reference.
@@ -277,7 +286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_GALLERY_STYLES = 22;
+	int WEB_UI__DEFAULT_GALLERY_STYLES = 23;
 
 	/**
 	 * The feature id for the '<em><b>Default Slider Styles</b></em>' containment reference.
@@ -286,7 +295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SLIDER_STYLES = 23;
+	int WEB_UI__DEFAULT_SLIDER_STYLES = 24;
 
 	/**
 	 * The feature id for the '<em><b>Default Static Styles</b></em>' containment reference.
@@ -295,7 +304,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STATIC_STYLES = 24;
+	int WEB_UI__DEFAULT_STATIC_STYLES = 25;
 
 	/**
 	 * The feature id for the '<em><b>Default Tabular Styles</b></em>' containment reference.
@@ -304,7 +313,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_TABULAR_STYLES = 25;
+	int WEB_UI__DEFAULT_TABULAR_STYLES = 26;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -313,7 +322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 26;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 27;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -322,7 +331,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 27;
+	int WEB_UI_FEATURE_COUNT = 28;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -982,6 +991,151 @@ public interface WebuiPackage extends EPackage {
 	int DYNAMIC_UNIT_STYLES_OPERATION_COUNT = CONTENT_UNIT_STYLES_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl <em>Collection Styles</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl
+	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionStyles()
+	 * @generated
+	 */
+	int COLLECTION_STYLES = 10;
+
+	/**
+	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__FILTERS_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES__INSTANCE_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Collection Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Collection Styles</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DefaultUnitStylesImpl <em>Default Unit Styles</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -989,7 +1143,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDefaultUnitStyles()
 	 * @generated
 	 */
-	int DEFAULT_UNIT_STYLES = 11;
+	int DEFAULT_UNIT_STYLES = 12;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitStylesImpl <em>Collection Unit Styles</em>}' class.
@@ -999,7 +1153,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnitStyles()
 	 * @generated
 	 */
-	int COLLECTION_UNIT_STYLES = 10;
+	int COLLECTION_UNIT_STYLES = 11;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1008,7 +1162,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
+	int COLLECTION_UNIT_STYLES__SECTION_CLASS = COLLECTION_STYLES__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -1017,7 +1171,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
+	int COLLECTION_UNIT_STYLES__CAPTION_CLASS = COLLECTION_STYLES__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -1026,7 +1180,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
+	int COLLECTION_UNIT_STYLES__CONTENT_CLASS = COLLECTION_STYLES__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -1035,7 +1189,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
+	int COLLECTION_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_STYLES__FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
@@ -1044,7 +1198,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+	int COLLECTION_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_STYLES__DEFINITION_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -1053,7 +1207,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
+	int COLLECTION_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_STYLES__FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -1062,7 +1216,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
+	int COLLECTION_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_STYLES__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -1071,7 +1225,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
+	int COLLECTION_UNIT_STYLES__CONTROL_CLASS = COLLECTION_STYLES__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -1080,7 +1234,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+	int COLLECTION_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_STYLES__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -1089,7 +1243,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
+	int COLLECTION_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_STYLES__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
@@ -1098,7 +1252,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__FILTERS_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
+	int COLLECTION_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -1107,7 +1261,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
+	int COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
@@ -1116,7 +1270,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 2;
+	int COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit Styles</em>' class.
@@ -1125,7 +1279,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 3;
+	int COLLECTION_UNIT_STYLES_FEATURE_COUNT = COLLECTION_STYLES_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Collection Unit Styles</em>' class.
@@ -1134,7 +1288,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
+	int COLLECTION_UNIT_STYLES_OPERATION_COUNT = COLLECTION_STYLES_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1143,7 +1297,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__SECTION_CLASS = COLLECTION_UNIT_STYLES__SECTION_CLASS;
+	int DEFAULT_UNIT_STYLES__SECTION_CLASS = DYNAMIC_UNIT_STYLES__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -1152,7 +1306,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__CAPTION_CLASS = COLLECTION_UNIT_STYLES__CAPTION_CLASS;
+	int DEFAULT_UNIT_STYLES__CAPTION_CLASS = DYNAMIC_UNIT_STYLES__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -1161,7 +1315,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__CONTENT_CLASS = COLLECTION_UNIT_STYLES__CONTENT_CLASS;
+	int DEFAULT_UNIT_STYLES__CONTENT_CLASS = DYNAMIC_UNIT_STYLES__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -1170,7 +1324,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__FIELD_LIST_CLASS;
+	int DEFAULT_UNIT_STYLES__FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
@@ -1179,7 +1333,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+	int DEFAULT_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = DYNAMIC_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -1188,7 +1342,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_UNIT_STYLES__FIELD_LABEL_CLASS;
+	int DEFAULT_UNIT_STYLES__FIELD_LABEL_CLASS = DYNAMIC_UNIT_STYLES__FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -1197,7 +1351,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_UNIT_STYLES__FIELD_VALUE_CLASS;
+	int DEFAULT_UNIT_STYLES__FIELD_VALUE_CLASS = DYNAMIC_UNIT_STYLES__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -1206,7 +1360,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__CONTROL_CLASS = COLLECTION_UNIT_STYLES__CONTROL_CLASS;
+	int DEFAULT_UNIT_STYLES__CONTROL_CLASS = DYNAMIC_UNIT_STYLES__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -1215,7 +1369,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+	int DEFAULT_UNIT_STYLES__ACTION_NAVIGATION_CLASS = DYNAMIC_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -1224,34 +1378,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEFAULT_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
+	int DEFAULT_UNIT_STYLES__ANCHOR_CLASS = DYNAMIC_UNIT_STYLES__ANCHOR_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Default Unit Styles</em>' class.
@@ -1260,7 +1387,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES_FEATURE_COUNT = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 0;
+	int DEFAULT_UNIT_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Default Unit Styles</em>' class.
@@ -1269,7 +1396,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEFAULT_UNIT_STYLES_OPERATION_COUNT = COLLECTION_UNIT_STYLES_OPERATION_COUNT + 0;
+	int DEFAULT_UNIT_STYLES_OPERATION_COUNT = DYNAMIC_UNIT_STYLES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl <em>Cards Unit Styles</em>}' class.
@@ -1279,7 +1406,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnitStyles()
 	 * @generated
 	 */
-	int CARDS_UNIT_STYLES = 12;
+	int CARDS_UNIT_STYLES = 13;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1288,7 +1415,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__SECTION_CLASS = COLLECTION_UNIT_STYLES__SECTION_CLASS;
+	int CARDS_UNIT_STYLES__SECTION_CLASS = COLLECTION_STYLES__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -1297,7 +1424,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CAPTION_CLASS = COLLECTION_UNIT_STYLES__CAPTION_CLASS;
+	int CARDS_UNIT_STYLES__CAPTION_CLASS = COLLECTION_STYLES__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -1306,7 +1433,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CONTENT_CLASS = COLLECTION_UNIT_STYLES__CONTENT_CLASS;
+	int CARDS_UNIT_STYLES__CONTENT_CLASS = COLLECTION_STYLES__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -1315,7 +1442,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__FIELD_LIST_CLASS;
+	int CARDS_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_STYLES__FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
@@ -1324,7 +1451,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+	int CARDS_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_STYLES__DEFINITION_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -1333,7 +1460,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_UNIT_STYLES__FIELD_LABEL_CLASS;
+	int CARDS_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_STYLES__FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -1342,7 +1469,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_UNIT_STYLES__FIELD_VALUE_CLASS;
+	int CARDS_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_STYLES__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -1351,7 +1478,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CONTROL_CLASS = COLLECTION_UNIT_STYLES__CONTROL_CLASS;
+	int CARDS_UNIT_STYLES__CONTROL_CLASS = COLLECTION_STYLES__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -1360,7 +1487,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+	int CARDS_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_STYLES__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -1369,7 +1496,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+	int CARDS_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_STYLES__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
@@ -1378,7 +1505,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
+	int CARDS_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -1387,7 +1514,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
+	int CARDS_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
@@ -1396,7 +1523,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
+	int CARDS_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Card Class</b></em>' attribute.
@@ -1405,7 +1532,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 0;
+	int CARDS_UNIT_STYLES__CARD_CLASS = COLLECTION_STYLES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Card Header Class</b></em>' attribute.
@@ -1414,7 +1541,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_HEADER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 1;
+	int CARDS_UNIT_STYLES__CARD_HEADER_CLASS = COLLECTION_STYLES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Card Body Class</b></em>' attribute.
@@ -1423,7 +1550,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_BODY_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 2;
+	int CARDS_UNIT_STYLES__CARD_BODY_CLASS = COLLECTION_STYLES_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Card Footer Class</b></em>' attribute.
@@ -1432,7 +1559,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__CARD_FOOTER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 3;
+	int CARDS_UNIT_STYLES__CARD_FOOTER_CLASS = COLLECTION_STYLES_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Badge Class</b></em>' attribute.
@@ -1441,7 +1568,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__BADGE_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 4;
+	int CARDS_UNIT_STYLES__BADGE_CLASS = COLLECTION_STYLES_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Cards Unit Styles</em>' class.
@@ -1450,7 +1577,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES_FEATURE_COUNT = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 5;
+	int CARDS_UNIT_STYLES_FEATURE_COUNT = COLLECTION_STYLES_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Cards Unit Styles</em>' class.
@@ -1459,7 +1586,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES_OPERATION_COUNT = COLLECTION_UNIT_STYLES_OPERATION_COUNT + 0;
+	int CARDS_UNIT_STYLES_OPERATION_COUNT = COLLECTION_STYLES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitStylesImpl <em>Image Cards Unit Styles</em>}' class.
@@ -1469,7 +1596,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnitStyles()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT_STYLES = 13;
+	int IMAGE_CARDS_UNIT_STYLES = 14;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1668,7 +1795,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnitStyles()
 	 * @generated
 	 */
-	int DETAILS_UNIT_STYLES = 14;
+	int DETAILS_UNIT_STYLES = 15;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1786,7 +1913,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getFormUnitStyles()
 	 * @generated
 	 */
-	int FORM_UNIT_STYLES = 15;
+	int FORM_UNIT_STYLES = 16;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1913,7 +2040,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnitStyles()
 	 * @generated
 	 */
-	int GALLERY_UNIT_STYLES = 16;
+	int GALLERY_UNIT_STYLES = 17;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -1922,7 +2049,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__SECTION_CLASS = COLLECTION_UNIT_STYLES__SECTION_CLASS;
+	int GALLERY_UNIT_STYLES__SECTION_CLASS = COLLECTION_STYLES__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -1931,7 +2058,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__CAPTION_CLASS = COLLECTION_UNIT_STYLES__CAPTION_CLASS;
+	int GALLERY_UNIT_STYLES__CAPTION_CLASS = COLLECTION_STYLES__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -1940,7 +2067,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__CONTENT_CLASS = COLLECTION_UNIT_STYLES__CONTENT_CLASS;
+	int GALLERY_UNIT_STYLES__CONTENT_CLASS = COLLECTION_STYLES__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -1949,7 +2076,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__FIELD_LIST_CLASS;
+	int GALLERY_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_STYLES__FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
@@ -1958,7 +2085,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+	int GALLERY_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_STYLES__DEFINITION_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -1967,7 +2094,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_UNIT_STYLES__FIELD_LABEL_CLASS;
+	int GALLERY_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_STYLES__FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -1976,7 +2103,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_UNIT_STYLES__FIELD_VALUE_CLASS;
+	int GALLERY_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_STYLES__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -1985,7 +2112,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__CONTROL_CLASS = COLLECTION_UNIT_STYLES__CONTROL_CLASS;
+	int GALLERY_UNIT_STYLES__CONTROL_CLASS = COLLECTION_STYLES__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -1994,7 +2121,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+	int GALLERY_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_STYLES__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -2003,7 +2130,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+	int GALLERY_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_STYLES__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
@@ -2012,7 +2139,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
+	int GALLERY_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -2021,7 +2148,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
+	int GALLERY_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
@@ -2030,7 +2157,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
+	int GALLERY_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Gallery Unit Styles</em>' class.
@@ -2039,7 +2166,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES_FEATURE_COUNT = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 0;
+	int GALLERY_UNIT_STYLES_FEATURE_COUNT = COLLECTION_STYLES_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Gallery Unit Styles</em>' class.
@@ -2048,7 +2175,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GALLERY_UNIT_STYLES_OPERATION_COUNT = COLLECTION_UNIT_STYLES_OPERATION_COUNT + 0;
+	int GALLERY_UNIT_STYLES_OPERATION_COUNT = COLLECTION_STYLES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitStylesImpl <em>Slider Unit Styles</em>}' class.
@@ -2058,7 +2185,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnitStyles()
 	 * @generated
 	 */
-	int SLIDER_UNIT_STYLES = 17;
+	int SLIDER_UNIT_STYLES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -2067,7 +2194,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__SECTION_CLASS = COLLECTION_UNIT_STYLES__SECTION_CLASS;
+	int SLIDER_UNIT_STYLES__SECTION_CLASS = COLLECTION_STYLES__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -2076,7 +2203,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__CAPTION_CLASS = COLLECTION_UNIT_STYLES__CAPTION_CLASS;
+	int SLIDER_UNIT_STYLES__CAPTION_CLASS = COLLECTION_STYLES__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -2085,7 +2212,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__CONTENT_CLASS = COLLECTION_UNIT_STYLES__CONTENT_CLASS;
+	int SLIDER_UNIT_STYLES__CONTENT_CLASS = COLLECTION_STYLES__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -2094,7 +2221,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__FIELD_LIST_CLASS;
+	int SLIDER_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_STYLES__FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
@@ -2103,7 +2230,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+	int SLIDER_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_STYLES__DEFINITION_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -2112,7 +2239,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_UNIT_STYLES__FIELD_LABEL_CLASS;
+	int SLIDER_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_STYLES__FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -2121,7 +2248,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_UNIT_STYLES__FIELD_VALUE_CLASS;
+	int SLIDER_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_STYLES__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -2130,7 +2257,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__CONTROL_CLASS = COLLECTION_UNIT_STYLES__CONTROL_CLASS;
+	int SLIDER_UNIT_STYLES__CONTROL_CLASS = COLLECTION_STYLES__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -2139,7 +2266,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+	int SLIDER_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_STYLES__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -2148,7 +2275,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+	int SLIDER_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_STYLES__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
@@ -2157,7 +2284,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
+	int SLIDER_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -2166,7 +2293,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
+	int SLIDER_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
@@ -2175,7 +2302,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
+	int SLIDER_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The number of structural features of the '<em>Slider Unit Styles</em>' class.
@@ -2184,7 +2311,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES_FEATURE_COUNT = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 0;
+	int SLIDER_UNIT_STYLES_FEATURE_COUNT = COLLECTION_STYLES_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Slider Unit Styles</em>' class.
@@ -2193,7 +2320,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SLIDER_UNIT_STYLES_OPERATION_COUNT = COLLECTION_UNIT_STYLES_OPERATION_COUNT + 0;
+	int SLIDER_UNIT_STYLES_OPERATION_COUNT = COLLECTION_STYLES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitStylesImpl <em>Static Unit Styles</em>}' class.
@@ -2203,7 +2330,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnitStyles()
 	 * @generated
 	 */
-	int STATIC_UNIT_STYLES = 18;
+	int STATIC_UNIT_STYLES = 19;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -2258,7 +2385,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnitStyles()
 	 * @generated
 	 */
-	int TABULAR_UNIT_STYLES = 19;
+	int TABULAR_UNIT_STYLES = 20;
 
 	/**
 	 * The feature id for the '<em><b>Section Class</b></em>' attribute.
@@ -2267,7 +2394,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__SECTION_CLASS = COLLECTION_UNIT_STYLES__SECTION_CLASS;
+	int TABULAR_UNIT_STYLES__SECTION_CLASS = COLLECTION_STYLES__SECTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Caption Class</b></em>' attribute.
@@ -2276,7 +2403,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__CAPTION_CLASS = COLLECTION_UNIT_STYLES__CAPTION_CLASS;
+	int TABULAR_UNIT_STYLES__CAPTION_CLASS = COLLECTION_STYLES__CAPTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Content Class</b></em>' attribute.
@@ -2285,7 +2412,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__CONTENT_CLASS = COLLECTION_UNIT_STYLES__CONTENT_CLASS;
+	int TABULAR_UNIT_STYLES__CONTENT_CLASS = COLLECTION_STYLES__CONTENT_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field List Class</b></em>' attribute.
@@ -2294,7 +2421,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__FIELD_LIST_CLASS;
+	int TABULAR_UNIT_STYLES__FIELD_LIST_CLASS = COLLECTION_STYLES__FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Definition Field List Class</b></em>' attribute.
@@ -2303,7 +2430,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS;
+	int TABULAR_UNIT_STYLES__DEFINITION_FIELD_LIST_CLASS = COLLECTION_STYLES__DEFINITION_FIELD_LIST_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Label Class</b></em>' attribute.
@@ -2312,7 +2439,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_UNIT_STYLES__FIELD_LABEL_CLASS;
+	int TABULAR_UNIT_STYLES__FIELD_LABEL_CLASS = COLLECTION_STYLES__FIELD_LABEL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Field Value Class</b></em>' attribute.
@@ -2321,7 +2448,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_UNIT_STYLES__FIELD_VALUE_CLASS;
+	int TABULAR_UNIT_STYLES__FIELD_VALUE_CLASS = COLLECTION_STYLES__FIELD_VALUE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Control Class</b></em>' attribute.
@@ -2330,7 +2457,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__CONTROL_CLASS = COLLECTION_UNIT_STYLES__CONTROL_CLASS;
+	int TABULAR_UNIT_STYLES__CONTROL_CLASS = COLLECTION_STYLES__CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Action Navigation Class</b></em>' attribute.
@@ -2339,7 +2466,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_UNIT_STYLES__ACTION_NAVIGATION_CLASS;
+	int TABULAR_UNIT_STYLES__ACTION_NAVIGATION_CLASS = COLLECTION_STYLES__ACTION_NAVIGATION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Anchor Class</b></em>' attribute.
@@ -2348,7 +2475,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_UNIT_STYLES__ANCHOR_CLASS;
+	int TABULAR_UNIT_STYLES__ANCHOR_CLASS = COLLECTION_STYLES__ANCHOR_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Class</b></em>' attribute.
@@ -2357,7 +2484,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__FILTERS_CLASS = COLLECTION_UNIT_STYLES__FILTERS_CLASS;
+	int TABULAR_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -2366,7 +2493,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS;
+	int TABULAR_UNIT_STYLES__INSTANCE_CONTROL_CLASS = COLLECTION_STYLES__INSTANCE_CONTROL_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
@@ -2375,7 +2502,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS;
+	int TABULAR_UNIT_STYLES__INSTANCE_ACTION_CLASS = COLLECTION_STYLES__INSTANCE_ACTION_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Header Class</b></em>' attribute.
@@ -2384,7 +2511,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__HEADER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 0;
+	int TABULAR_UNIT_STYLES__HEADER_CLASS = COLLECTION_STYLES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Footer Class</b></em>' attribute.
@@ -2393,7 +2520,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__FOOTER_CLASS = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 1;
+	int TABULAR_UNIT_STYLES__FOOTER_CLASS = COLLECTION_STYLES_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Tabular Unit Styles</em>' class.
@@ -2402,7 +2529,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES_FEATURE_COUNT = COLLECTION_UNIT_STYLES_FEATURE_COUNT + 2;
+	int TABULAR_UNIT_STYLES_FEATURE_COUNT = COLLECTION_STYLES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Tabular Unit Styles</em>' class.
@@ -2411,7 +2538,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES_OPERATION_COUNT = COLLECTION_UNIT_STYLES_OPERATION_COUNT + 0;
+	int TABULAR_UNIT_STYLES_OPERATION_COUNT = COLLECTION_STYLES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControllerImpl <em>Controller</em>}' class.
@@ -2421,7 +2548,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getController()
 	 * @generated
 	 */
-	int CONTROLLER = 20;
+	int CONTROLLER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2521,7 +2648,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControllerLink()
 	 * @generated
 	 */
-	int CONTROLLER_LINK = 21;
+	int CONTROLLER_LINK = 22;
 
 	/**
 	 * The feature id for the '<em><b>Target Controller</b></em>' reference.
@@ -2558,7 +2685,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSinglePageController()
 	 * @generated
 	 */
-	int SINGLE_PAGE_CONTROLLER = 22;
+	int SINGLE_PAGE_CONTROLLER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2658,7 +2785,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMultiPageController()
 	 * @generated
 	 */
-	int MULTI_PAGE_CONTROLLER = 23;
+	int MULTI_PAGE_CONTROLLER = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2758,7 +2885,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContentUnit()
 	 * @generated
 	 */
-	int CONTENT_UNIT = 24;
+	int CONTENT_UNIT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2903,7 +3030,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRouteActual()
 	 * @generated
 	 */
-	int ROUTE_ACTUAL = 28;
+	int ROUTE_ACTUAL = 29;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.StaticUnitImpl <em>Static Unit</em>}' class.
@@ -2913,7 +3040,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getStaticUnit()
 	 * @generated
 	 */
-	int STATIC_UNIT = 25;
+	int STATIC_UNIT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3067,7 +3194,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateSitemapUnit()
 	 * @generated
 	 */
-	int CREATE_SITEMAP_UNIT = 26;
+	int CREATE_SITEMAP_UNIT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3230,7 +3357,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDynamicUnit()
 	 * @generated
 	 */
-	int DYNAMIC_UNIT = 27;
+	int DYNAMIC_UNIT = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3618,7 +3745,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitField()
 	 * @generated
 	 */
-	int UNIT_FIELD = 29;
+	int UNIT_FIELD = 30;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -3781,7 +3908,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitFeature()
 	 * @generated
 	 */
-	int UNIT_FEATURE = 30;
+	int UNIT_FEATURE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -4106,7 +4233,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitElement()
 	 * @generated
 	 */
-	int UNIT_ELEMENT = 31;
+	int UNIT_ELEMENT = 32;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -4476,7 +4603,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitResource()
 	 * @generated
 	 */
-	int UNIT_RESOURCE = 32;
+	int UNIT_RESOURCE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -4846,7 +4973,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitAssociation()
 	 * @generated
 	 */
-	int UNIT_ASSOCIATION = 33;
+	int UNIT_ASSOCIATION = 34;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -5261,7 +5388,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUnitLabel()
 	 * @generated
 	 */
-	int UNIT_LABEL = 34;
+	int UNIT_LABEL = 35;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -5442,7 +5569,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInterfaceField()
 	 * @generated
 	 */
-	int INTERFACE_FIELD = 35;
+	int INTERFACE_FIELD = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -5704,7 +5831,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDataTypeField()
 	 * @generated
 	 */
-	int DATA_TYPE_FIELD = 36;
+	int DATA_TYPE_FIELD = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6002,7 +6129,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateField()
 	 * @generated
 	 */
-	int DATE_FIELD = 37;
+	int DATE_FIELD = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6282,7 +6409,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectableUnit()
 	 * @generated
 	 */
-	int SELECTABLE_UNIT = 38;
+	int SELECTABLE_UNIT = 39;
 
 	/**
 	 * The number of structural features of the '<em>Selectable Unit</em>' class.
@@ -6310,7 +6437,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSingletonUnit()
 	 * @generated
 	 */
-	int SINGLETON_UNIT = 39;
+	int SINGLETON_UNIT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -6662,7 +6789,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionUnit()
 	 * @generated
 	 */
-	int COLLECTION_UNIT = 40;
+	int COLLECTION_UNIT = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7176,7 +7303,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionFilter()
 	 * @generated
 	 */
-	int COLLECTION_FILTER = 41;
+	int COLLECTION_FILTER = 42;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7267,7 +7394,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getArrayFilter()
 	 * @generated
 	 */
-	int ARRAY_FILTER = 42;
+	int ARRAY_FILTER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7358,7 +7485,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBooleanFilter()
 	 * @generated
 	 */
-	int BOOLEAN_FILTER = 43;
+	int BOOLEAN_FILTER = 44;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7449,7 +7576,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getChoiceFilter()
 	 * @generated
 	 */
-	int CHOICE_FILTER = 44;
+	int CHOICE_FILTER = 45;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7540,7 +7667,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getComparisionFilter()
 	 * @generated
 	 */
-	int COMPARISION_FILTER = 45;
+	int COMPARISION_FILTER = 46;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7631,7 +7758,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateTimeFilter()
 	 * @generated
 	 */
-	int DATE_TIME_FILTER = 46;
+	int DATE_TIME_FILTER = 47;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7722,7 +7849,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEntityFilter()
 	 * @generated
 	 */
-	int ENTITY_FILTER = 47;
+	int ENTITY_FILTER = 48;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7813,7 +7940,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getNullFilter()
 	 * @generated
 	 */
-	int NULL_FILTER = 48;
+	int NULL_FILTER = 49;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7904,7 +8031,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getNumericFilter()
 	 * @generated
 	 */
-	int NUMERIC_FILTER = 49;
+	int NUMERIC_FILTER = 50;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -7995,7 +8122,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextFilter()
 	 * @generated
 	 */
-	int TEXT_FILTER = 50;
+	int TEXT_FILTER = 51;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8086,7 +8213,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getEditUnit()
 	 * @generated
 	 */
-	int EDIT_UNIT = 51;
+	int EDIT_UNIT = 52;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8537,7 +8664,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUnit()
 	 * @generated
 	 */
-	int CREATE_UNIT = 52;
+	int CREATE_UNIT = 53;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8988,7 +9115,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCreateUpdateUnit()
 	 * @generated
 	 */
-	int CREATE_UPDATE_UNIT = 54;
+	int CREATE_UPDATE_UNIT = 55;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.UpdateUnitImpl <em>Update Unit</em>}' class.
@@ -8998,7 +9125,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getUpdateUnit()
 	 * @generated
 	 */
-	int UPDATE_UNIT = 53;
+	int UPDATE_UNIT = 54;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -9935,7 +10062,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMapUnit()
 	 * @generated
 	 */
-	int MAP_UNIT = 55;
+	int MAP_UNIT = 56;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10422,7 +10549,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDetailsUnit()
 	 * @generated
 	 */
-	int DETAILS_UNIT = 56;
+	int DETAILS_UNIT = 57;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -10792,7 +10919,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTabularUnit()
 	 * @generated
 	 */
-	int TABULAR_UNIT = 57;
+	int TABULAR_UNIT = 58;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -11333,7 +11460,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCardsUnit()
 	 * @generated
 	 */
-	int CARDS_UNIT = 58;
+	int CARDS_UNIT = 59;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -11910,7 +12037,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getValueContext()
 	 * @generated
 	 */
-	int VALUE_CONTEXT = 73;
+	int VALUE_CONTEXT = 74;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.TextCardsUnitImpl <em>Text Cards Unit</em>}' class.
@@ -11920,7 +12047,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTextCardsUnit()
 	 * @generated
 	 */
-	int TEXT_CARDS_UNIT = 60;
+	int TEXT_CARDS_UNIT = 61;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DateCardsUnitImpl <em>Date Cards Unit</em>}' class.
@@ -11930,7 +12057,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDateCardsUnit()
 	 * @generated
 	 */
-	int DATE_CARDS_UNIT = 61;
+	int DATE_CARDS_UNIT = 62;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ControlUnitImpl <em>Control Unit</em>}' class.
@@ -11940,7 +12067,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getControlUnit()
 	 * @generated
 	 */
-	int CONTROL_UNIT = 66;
+	int CONTROL_UNIT = 67;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SearchUnitImpl <em>Search Unit</em>}' class.
@@ -11950,7 +12077,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSearchUnit()
 	 * @generated
 	 */
-	int SEARCH_UNIT = 67;
+	int SEARCH_UNIT = 68;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ImageUnit <em>Image Unit</em>}' class.
@@ -11960,7 +12087,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageUnit()
 	 * @generated
 	 */
-	int IMAGE_UNIT = 62;
+	int IMAGE_UNIT = 63;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ImageCardsUnitImpl <em>Image Cards Unit</em>}' class.
@@ -11970,7 +12097,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getImageCardsUnit()
 	 * @generated
 	 */
-	int IMAGE_CARDS_UNIT = 63;
+	int IMAGE_CARDS_UNIT = 64;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SliderUnitImpl <em>Slider Unit</em>}' class.
@@ -11980,7 +12107,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSliderUnit()
 	 * @generated
 	 */
-	int SLIDER_UNIT = 64;
+	int SLIDER_UNIT = 65;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.GalleryUnitImpl <em>Gallery Unit</em>}' class.
@@ -11990,7 +12117,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGalleryUnit()
 	 * @generated
 	 */
-	int GALLERY_UNIT = 65;
+	int GALLERY_UNIT = 66;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.SelectActionImpl <em>Select Action</em>}' class.
@@ -12000,7 +12127,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSelectAction()
 	 * @generated
 	 */
-	int SELECT_ACTION = 83;
+	int SELECT_ACTION = 84;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.DeleteActionImpl <em>Delete Action</em>}' class.
@@ -12010,7 +12137,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDeleteAction()
 	 * @generated
 	 */
-	int DELETE_ACTION = 82;
+	int DELETE_ACTION = 83;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.BadgeImpl <em>Badge</em>}' class.
@@ -12020,7 +12147,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getBadge()
 	 * @generated
 	 */
-	int BADGE = 59;
+	int BADGE = 60;
 
 	/**
 	 * The feature id for the '<em><b>Referencable Entities</b></em>' reference list.
@@ -15882,7 +16009,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getRegistrationUnit()
 	 * @generated
 	 */
-	int REGISTRATION_UNIT = 68;
+	int REGISTRATION_UNIT = 69;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16333,7 +16460,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLoginUnit()
 	 * @generated
 	 */
-	int LOGIN_UNIT = 69;
+	int LOGIN_UNIT = 70;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -16784,7 +16911,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLogoutUnit()
 	 * @generated
 	 */
-	int LOGOUT_UNIT = 70;
+	int LOGOUT_UNIT = 71;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17127,7 +17254,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getForgottenPasswordUnit()
 	 * @generated
 	 */
-	int FORGOTTEN_PASSWORD_UNIT = 71;
+	int FORGOTTEN_PASSWORD_UNIT = 72;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -17632,7 +17759,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResetPasswordUnit()
 	 * @generated
 	 */
-	int RESET_PASSWORD_UNIT = 72;
+	int RESET_PASSWORD_UNIT = 73;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18083,7 +18210,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getDisplayValue()
 	 * @generated
 	 */
-	int DISPLAY_VALUE = 74;
+	int DISPLAY_VALUE = 75;
 
 	/**
 	 * The number of structural features of the '<em>Display Value</em>' class.
@@ -18111,7 +18238,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAssociationDisplayValue()
 	 * @generated
 	 */
-	int ASSOCIATION_DISPLAY_VALUE = 75;
+	int ASSOCIATION_DISPLAY_VALUE = 76;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18229,7 +18356,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAttributeDisplayValue()
 	 * @generated
 	 */
-	int ATTRIBUTE_DISPLAY_VALUE = 76;
+	int ATTRIBUTE_DISPLAY_VALUE = 77;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18293,7 +18420,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getLabelDisplayValue()
 	 * @generated
 	 */
-	int LABEL_DISPLAY_VALUE = 77;
+	int LABEL_DISPLAY_VALUE = 78;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' reference.
@@ -18339,7 +18466,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getResourceDisplayValue()
 	 * @generated
 	 */
-	int RESOURCE_DISPLAY_VALUE = 78;
+	int RESOURCE_DISPLAY_VALUE = 79;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18403,7 +18530,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getActionContainer()
 	 * @generated
 	 */
-	int ACTION_CONTAINER = 79;
+	int ACTION_CONTAINER = 80;
 
 	/**
 	 * The feature id for the '<em><b>Container Actions Placement</b></em>' attribute.
@@ -18467,7 +18594,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 80;
+	int ACTION = 81;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18639,7 +18766,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getSecurityAction()
 	 * @generated
 	 */
-	int SECURITY_ACTION = 81;
+	int SECURITY_ACTION = 82;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -18847,7 +18974,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getOperationAction()
 	 * @generated
 	 */
-	int OPERATION_ACTION = 87;
+	int OPERATION_ACTION = 88;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerSelectActionImpl <em>Container Select Action</em>}' class.
@@ -18857,7 +18984,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerSelectAction()
 	 * @generated
 	 */
-	int CONTAINER_SELECT_ACTION = 84;
+	int CONTAINER_SELECT_ACTION = 85;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.InstanceSelectActionImpl <em>Instance Select Action</em>}' class.
@@ -18867,7 +18994,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceSelectAction()
 	 * @generated
 	 */
-	int INSTANCE_SELECT_ACTION = 85;
+	int INSTANCE_SELECT_ACTION = 86;
 
 	/**
 	 * The feature id for the '<em><b>Used By</b></em>' container reference.
@@ -19570,7 +19697,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getTargetAction()
 	 * @generated
 	 */
-	int TARGET_ACTION = 86;
+	int TARGET_ACTION = 87;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -19949,7 +20076,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceOperationAction()
 	 * @generated
 	 */
-	int INSTANCE_OPERATION_ACTION = 89;
+	int INSTANCE_OPERATION_ACTION = 90;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.impl.ContainerOperationActionImpl <em>Container Operation Action</em>}' class.
@@ -19959,7 +20086,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerOperationAction()
 	 * @generated
 	 */
-	int CONTAINER_OPERATION_ACTION = 88;
+	int CONTAINER_OPERATION_ACTION = 89;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -20347,7 +20474,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getGeneralOperationAction()
 	 * @generated
 	 */
-	int GENERAL_OPERATION_ACTION = 90;
+	int GENERAL_OPERATION_ACTION = 91;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -20546,7 +20673,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 91;
+	int MESSAGE = 92;
 
 	/**
 	 * The feature id for the '<em><b>Value Entities</b></em>' reference list.
@@ -20610,7 +20737,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getAuthenticationMenuPlacement()
 	 * @generated
 	 */
-	int AUTHENTICATION_MENU_PLACEMENT = 92;
+	int AUTHENTICATION_MENU_PLACEMENT = 93;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.PageTopMenuOptions <em>Page Top Menu Options</em>}' enum.
@@ -20620,7 +20747,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getPageTopMenuOptions()
 	 * @generated
 	 */
-	int PAGE_TOP_MENU_OPTIONS = 93;
+	int PAGE_TOP_MENU_OPTIONS = 94;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions <em>Collection Display Options</em>}' enum.
@@ -20630,7 +20757,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionDisplayOptions()
 	 * @generated
 	 */
-	int COLLECTION_DISPLAY_OPTIONS = 94;
+	int COLLECTION_DISPLAY_OPTIONS = 95;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement <em>Container Actions Placement</em>}' enum.
@@ -20640,7 +20767,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getContainerActionsPlacement()
 	 * @generated
 	 */
-	int CONTAINER_ACTIONS_PLACEMENT = 95;
+	int CONTAINER_ACTIONS_PLACEMENT = 96;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement <em>Instance Actions Placement</em>}' enum.
@@ -20650,7 +20777,7 @@ public interface WebuiPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getInstanceActionsPlacement()
 	 * @generated
 	 */
-	int INSTANCE_ACTIONS_PLACEMENT = 96;
+	int INSTANCE_ACTIONS_PLACEMENT = 97;
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.WebUI <em>Web UI</em>}'.
@@ -20870,6 +20997,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWebUI_DefaultCardsStyles();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCollectionStyles <em>Default Collection Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Default Collection Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCollectionStyles()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EReference getWebUI_DefaultCollectionStyles();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}'.
@@ -21314,6 +21452,49 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getDynamicUnitStyles_AnchorClass();
 
 	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles <em>Collection Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Collection Styles</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionStyles
+	 * @generated
+	 */
+	EClass getCollectionStyles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersClass <em>Filters Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filters Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersClass()
+	 * @see #getCollectionStyles()
+	 * @generated
+	 */
+	EAttribute getCollectionStyles_FiltersClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getInstanceControlClass <em>Instance Control Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instance Control Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionStyles#getInstanceControlClass()
+	 * @see #getCollectionStyles()
+	 * @generated
+	 */
+	EAttribute getCollectionStyles_InstanceControlClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getInstanceActionClass <em>Instance Action Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instance Action Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionStyles#getInstanceActionClass()
+	 * @see #getCollectionStyles()
+	 * @generated
+	 */
+	EAttribute getCollectionStyles_InstanceActionClass();
+
+	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.DefaultUnitStyles <em>Default Unit Styles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -21332,39 +21513,6 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCollectionUnitStyles();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getFiltersClass <em>Filters Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Filters Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getFiltersClass()
-	 * @see #getCollectionUnitStyles()
-	 * @generated
-	 */
-	EAttribute getCollectionUnitStyles_FiltersClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceControlClass <em>Instance Control Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instance Control Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceControlClass()
-	 * @see #getCollectionUnitStyles()
-	 * @generated
-	 */
-	EAttribute getCollectionUnitStyles_InstanceControlClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceActionClass <em>Instance Action Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instance Action Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnitStyles#getInstanceActionClass()
-	 * @see #getCollectionUnitStyles()
-	 * @generated
-	 */
-	EAttribute getCollectionUnitStyles_InstanceActionClass();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.webui.CardsUnitStyles <em>Cards Unit Styles</em>}'.
@@ -24925,6 +25073,14 @@ public interface WebuiPackage extends EPackage {
 		EReference WEB_UI__DEFAULT_CARDS_STYLES = eINSTANCE.getWebUI_DefaultCardsStyles();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Collection Styles</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_UI__DEFAULT_COLLECTION_STYLES = eINSTANCE.getWebUI_DefaultCollectionStyles();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Image Cards Styles</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25271,6 +25427,40 @@ public interface WebuiPackage extends EPackage {
 		EAttribute DYNAMIC_UNIT_STYLES__ANCHOR_CLASS = eINSTANCE.getDynamicUnitStyles_AnchorClass();
 
 		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl <em>Collection Styles</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl
+		 * @see work.andycarpenter.webgen.pims.webui.impl.WebuiPackageImpl#getCollectionStyles()
+		 * @generated
+		 */
+		EClass COLLECTION_STYLES = eINSTANCE.getCollectionStyles();
+
+		/**
+		 * The meta object literal for the '<em><b>Filters Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_STYLES__FILTERS_CLASS = eINSTANCE.getCollectionStyles_FiltersClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Instance Control Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_STYLES__INSTANCE_CONTROL_CLASS = eINSTANCE.getCollectionStyles_InstanceControlClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Instance Action Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_STYLES__INSTANCE_ACTION_CLASS = eINSTANCE.getCollectionStyles_InstanceActionClass();
+
+		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.DefaultUnitStylesImpl <em>Default Unit Styles</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -25289,30 +25479,6 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COLLECTION_UNIT_STYLES = eINSTANCE.getCollectionUnitStyles();
-
-		/**
-		 * The meta object literal for the '<em><b>Filters Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT_STYLES__FILTERS_CLASS = eINSTANCE.getCollectionUnitStyles_FiltersClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Instance Control Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT_STYLES__INSTANCE_CONTROL_CLASS = eINSTANCE.getCollectionUnitStyles_InstanceControlClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Instance Action Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_UNIT_STYLES__INSTANCE_ACTION_CLASS = eINSTANCE.getCollectionUnitStyles_InstanceActionClass();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.webui.impl.CardsUnitStylesImpl <em>Cards Unit Styles</em>}' class.

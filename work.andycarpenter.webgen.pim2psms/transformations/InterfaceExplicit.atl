@@ -69,15 +69,13 @@ rule WafModel {
 		defaultSearchLabel <- thisModule.findWebsiteUI().defaultSearchLabel,
 		defaultSearchIcon <- thisModule.findWebsiteUI().defaultSearchIcon,
 		defaultPageClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
-		defaultUnitStyles <- thisModule.findWebsiteUI().defaultStyles,
 		defaultCardsStyles <- thisModule.findWebsiteUI().defaultCardsStyles,
-		defaultImageCardsStyles <- thisModule.findWebsiteUI().defaultImageCardsStyles,
+		defaultCollectionStyles <- thisModule.findWebsiteUI().defaultCollectionStyles,
 		defaultDetailsStyles <- thisModule.findWebsiteUI().defaultDetailsStyles,
-		defaultFormStyles <- thisModule.findWebsiteUI().defaultFormStyles,
-		defaultGalleryStyles <- thisModule.findWebsiteUI().defaultGalleryStyles,
-		defaultSliderStyles <- thisModule.findWebsiteUI().defaultSliderStyles,
+		defaultEditStyles <- thisModule.findWebsiteUI().defaultFormStyles,
 		defaultStaticStyles <- thisModule.findWebsiteUI().defaultStaticStyles,
-		defaultTabularStyles <- thisModule.findWebsiteUI().defaultTabularStyles
+		defaultTabularStyles <- thisModule.findWebsiteUI().defaultTabularStyles,
+		defaultUnitStyles <- thisModule.findWebsiteUI().defaultStyles
 	)
 }
 
@@ -163,6 +161,7 @@ rule EditStaticTextMenuEntry {
 	)
 }
 
+
 abstract rule ContentUnitStyles {
 	from website : Website!ContentUnitStyles
 	to waf : WAF!ContentUnitStyles (
@@ -173,11 +172,18 @@ abstract rule ContentUnitStyles {
 }
 
 -- @extends ContentUnitStyles
+rule StaticUnitStyles {
+	from website : Website!StaticUnitStyles
+	to waf : WAF!DefaultUnitStyles (
+	)
+}
+
+-- @extends ContentUnitStyles
 abstract rule DynamicUnitStyles {
 	from website : Website!DynamicUnitStyles
 	to waf : WAF!DynamicUnitStyles (
 		fieldListClass <- website.fieldListClass,
-		definitionFieldListClass <- website.definitionFieldListClass,
+		fieldDefinitionListClass <- website.definitionFieldListClass,
 		fieldLabelClass <- website.fieldLabelClass,
 		fieldValueClass <- website.fieldValueClass,
 		controlClass <- website.controlClass,
@@ -186,23 +192,45 @@ abstract rule DynamicUnitStyles {
 }
 
 -- @extends DynamicUnitStyles
-rule CollectionUnitStyles {
-	from website : Website!CollectionUnitStyles
-	to waf : WAF!CollectionUnitStyles (
-		filtersClass <- website.filtersClass,
-		instanceControlClass <- website.instanceControlClass,
-		instanceActionClass <- website.instanceActionClass
-	)
-}
-
--- @extends CollectionUnitStyles
 rule DefaultUnitStyles {
 	from website : Website!DefaultUnitStyles
 	to waf : WAF!DefaultUnitStyles (
 	)
 }
 
--- @extends CollectionUnitStyles
+-- @extends DynamicUnitStyles
+rule DetailsUnitStyles {
+	from website : Website!DetailsUnitStyles
+	to waf : WAF!DefaultUnitStyles (
+	)
+}
+
+-- @extends DynamicUnitStyles
+rule FormUnitStyles {
+	from website : Website!FormUnitStyles
+	to waf : WAF!EditUnitStyles (
+		inputGroupClass <- website.inputGroupClass
+	)
+}
+
+-- @extends DynamicUnitStyles
+abstract rule CollectionStyles {
+	from website : Website!CollectionStyles
+	to waf : WAF!CollectionStyles (
+		filtersClass <- website.filtersClass,
+		instanceControlClass <- website.instanceControlClass,
+		instanceActionClass <- website.instanceActionClass
+	)
+}
+
+-- @extends CollectionStyles
+rule CollectionUnitStyles {
+	from website : Website!CollectionUnitStyles
+	to waf : WAF!CollectionUnitStyles (
+	)
+}
+
+-- @extends CollectionStyles
 rule CardsUnitStyles {
 	from website : Website!CardsUnitStyles
 	to waf : WAF!CardsUnitStyles (
@@ -214,51 +242,7 @@ rule CardsUnitStyles {
 	)
 }
 
--- @extends CardsUnitStyles
-rule ImageCardsUnitStyles {
-	from website : Website!ImageCardsUnitStyles
-	to waf : WAF!ImageCardsUnitStyles (
-		imageActionClass <- website.imageActionClass
-	)
-}
-
--- @extends DynamicUnitStyles
-rule DetailsUnitStyles {
-	from website : Website!DetailsUnitStyles
-	to waf : WAF!DetailsUnitStyles (
-	)
-}
-
--- @extends DynamicUnitStyles
-rule FormUnitStyles {
-	from website : Website!FormUnitStyles
-	to waf : WAF!FormUnitStyles (
-		inputGroupClass <- website.inputGroupClass
-	)
-}
-
--- @extends CollectionUnitStyles
-rule GalleryUnitStyles {
-	from website : Website!GalleryUnitStyles
-	to waf : WAF!GalleryUnitStyles (
-	)
-}
-
--- @extends CollectionUnitStyles
-rule SliderUnitStyles {
-	from website : Website!SliderUnitStyles
-	to waf : WAF!SliderUnitStyles (
-	)
-}
-
--- @extends ContentUnitStyles
-rule StaticUnitStyles {
-	from website : Website!StaticUnitStyles
-	to waf : WAF!StaticUnitStyles (
-	)
-}
-
--- @extends CollectionUnitStyles
+-- @extends CollectionStyles
 rule TabularUnitStyles {
 	from website : Website!TabularUnitStyles
 	to waf : WAF!TabularUnitStyles (
@@ -352,9 +336,9 @@ abstract rule ContentUnit {
 		purposeSummary <- website.purposeSummary,
 		alternative <- website.alternative,
 		omitCaption <- website.omitCaption,
-		localSectionClass <- website.localSectionClass,
-		localCaptionClass <- website.localCaptionClass,
-		localContentClass <- website.localContentClass
+		sectionClassOverride <- website.localSectionClass,
+		captionClassOverride <- website.localCaptionClass,
+		contentClassOverride <- website.localContentClass
 	)
 }
 
@@ -378,11 +362,11 @@ abstract rule DynamicUnit {
 		messageWhenHidden <- website.messageWhenHidden,
 		allActions <- website.actions,
 		footer <- website.footer,
-		localFieldListClass <- website.localFieldListClass,
-		localFieldLabelClass <- website.localFieldLabelClass,
-		localFieldValueClass <- website.localFieldValueClass,
-		localControlClass <- website.localControlClass,
-		localActionClass <- website.localAnchorClass
+		fieldListClassOverride <- website.localFieldListClass,
+		fieldLabelClassOverride <- website.localFieldLabelClass,
+		fieldValueClassOverride <- website.localFieldValueClass,
+		controlClassOverride <- website.localControlClass,
+		actionClassOverride <- website.localAnchorClass
 	)
 }
 
@@ -783,11 +767,11 @@ rule TabularUnit {
 	from website : Website!TabularUnit
 	to waf : WAF!TabularUnit (
 		header <- website.header,
-		localHeaderClass <- website.headerClassOverride,
-		localFooterClass <- website.footerClassOverride,
-		rowClasses <- website.rowClasses,
-		localInstanceControlClass <- website.localInstanceControlClass,
-		localInstanceActionClass <- website.localInstanceActionClass
+		headerClassOverride <- website.headerClassOverride,
+		footerClassOverride <- website.footerClassOverride,
+		rowClassesOverride <- website.rowClasses,
+		instanceControlClassOverride <- website.localInstanceControlClass,
+		instanceActionClassOverride <- website.localInstanceActionClass
 	)
 }
 
@@ -797,11 +781,11 @@ abstract rule CardsUnit {
 	to waf : WAF!CardsUnit (
 		badges <- website.badges,
 		overlaySingleSelectAction <- website.overlaySingleSelectAction,
-		localCardClass <- website.localCardClass,
-		localCardHeaderClass <- website.localCardHeaderClass,
-		localCardBodyClass <- website.localCardBodyClass,
-		localCardFooterClass <- website.localCardFooterClass,
-		localBadgeClass <- website.localBadgeClass
+		cardClassOverride <- website.localCardClass,
+		cardHeaderClassOverride <- website.localCardHeaderClass,
+		cardBodyClassOverride <- website.localCardBodyClass,
+		cardFooterClassOverride <- website.localCardFooterClass,
+		badgeClassOverride <- website.localBadgeClass
 	)
 }
 
@@ -817,7 +801,7 @@ rule Badge {
 				website.title.findOrmLabel()
 			endif,
 		displayWhen <- website.displayWhen,
-		localBadgeClass <- website.localBadgeClass
+		bdgeClassOverride <- website.localBadgeClass
 	)
 }
 
@@ -852,8 +836,7 @@ rule ImageCardsUnit {
 	from website : Website!ImageCardsUnit
 	to waf : WAF!ImageCardsUnit (
 		enableImageEnlargement <- website.enableImageEnlargement,
-		overlayTitle <- website.overlayTitle,
-		revealUntruncatedContent <- website.revealUntruncatedContent
+		overlayTitle <- website.overlayTitle
 	)
 }
 

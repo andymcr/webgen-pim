@@ -53,6 +53,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultPageStyleClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultCardsStyles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultCollectionStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultImageCardsStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultDetailsStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultFormStyles"/>
@@ -105,11 +106,12 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnitStyles/actionNavigationClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnitStyles/anchorClass"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//CollectionUnitStyles">
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/filtersClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceControlClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnitStyles/instanceActionClass"/>
+    <genClasses image="false" ecoreClass="webui.ecore#//CollectionStyles">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceControlClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceActionClass"/>
     </genClasses>
+    <genClasses ecoreClass="webui.ecore#//CollectionUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//DefaultUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//CardsUnitStyles">
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/cardClass"/>

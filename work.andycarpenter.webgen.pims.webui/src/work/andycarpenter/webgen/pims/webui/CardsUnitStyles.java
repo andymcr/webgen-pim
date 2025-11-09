@@ -23,7 +23,7 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface CardsUnitStyles extends CollectionUnitStyles {
+public interface CardsUnitStyles extends CollectionStyles {
 	/**
 	 * Returns the value of the '<em><b>Card Class</b></em>' attribute.
 	 * The default value is <code>"card"</code>.

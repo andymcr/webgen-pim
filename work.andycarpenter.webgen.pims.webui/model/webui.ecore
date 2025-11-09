@@ -59,6 +59,8 @@
         eType="#//DefaultUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultCardsStyles" lowerBound="1"
         eType="#//CardsUnitStyles" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultCollectionStyles"
+        lowerBound="1" eType="#//CollectionUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultImageCardsStyles"
         lowerBound="1" eType="#//ImageCardsUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultDetailsStyles" lowerBound="1"
@@ -152,8 +154,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anchorClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CollectionUnitStyles" abstract="true"
-      eSuperTypes="#//DynamicUnitStyles">
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionStyles" abstract="true" eSuperTypes="#//DynamicUnitStyles">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filtersClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -161,8 +162,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceActionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DefaultUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="CardsUnitStyles" eSuperTypes="#//CollectionUnitStyles">
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionUnitStyles" eSuperTypes="#//CollectionStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DefaultUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CardsUnitStyles" eSuperTypes="#//CollectionStyles">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="card"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardHeaderClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -183,10 +185,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SliderUnitStyles" eSuperTypes="#//CollectionUnitStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnitStyles" eSuperTypes="#//CollectionStyles"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SliderUnitStyles" eSuperTypes="#//CollectionStyles"/>
   <eClassifiers xsi:type="ecore:EClass" name="StaticUnitStyles" eSuperTypes="#//ContentUnitStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//CollectionUnitStyles">
+  <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//CollectionStyles">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="footerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

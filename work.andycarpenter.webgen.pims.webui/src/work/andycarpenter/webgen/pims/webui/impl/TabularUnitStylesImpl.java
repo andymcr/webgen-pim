@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *
  * @generated
  */
-public class TabularUnitStylesImpl extends CollectionUnitStylesImpl implements TabularUnitStyles {
+public class TabularUnitStylesImpl extends CollectionStylesImpl implements TabularUnitStyles {
 	/**
 	 * The default value of the '{@link #getHeaderClass() <em>Header Class</em>}' attribute.
 	 * <!-- begin-user-doc -->

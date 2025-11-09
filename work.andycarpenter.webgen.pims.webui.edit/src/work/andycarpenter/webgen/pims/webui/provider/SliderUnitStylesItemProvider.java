@@ -19,7 +19,7 @@ import work.andycarpenter.webgen.pims.webui.SliderUnitStyles;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SliderUnitStylesItemProvider extends CollectionUnitStylesItemProvider {
+public class SliderUnitStylesItemProvider extends CollectionStylesItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

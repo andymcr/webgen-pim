@@ -20,7 +20,7 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface TabularUnitStyles extends CollectionUnitStyles {
+public interface TabularUnitStyles extends CollectionStyles {
 
 	/**
 	 * Returns the value of the '<em><b>Header Class</b></em>' attribute.

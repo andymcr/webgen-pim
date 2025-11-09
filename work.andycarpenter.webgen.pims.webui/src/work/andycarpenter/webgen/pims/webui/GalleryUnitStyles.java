@@ -13,5 +13,5 @@ package work.andycarpenter.webgen.pims.webui;
  * @model
  * @generated
  */
-public interface GalleryUnitStyles extends CollectionUnitStyles {
+public interface GalleryUnitStyles extends CollectionStyles {
 } // GalleryUnitStyles

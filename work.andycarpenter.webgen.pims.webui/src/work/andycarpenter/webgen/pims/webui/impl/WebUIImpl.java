@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import work.andycarpenter.webgen.pims.persistence.Persistence;
 import work.andycarpenter.webgen.pims.service.Services;
 import work.andycarpenter.webgen.pims.webui.CardsUnitStyles;
+import work.andycarpenter.webgen.pims.webui.CollectionUnitStyles;
 import work.andycarpenter.webgen.pims.webui.Controller;
 import work.andycarpenter.webgen.pims.webui.DefaultUnitStyles;
 import work.andycarpenter.webgen.pims.webui.DetailsUnitStyles;
@@ -57,6 +58,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultPageStyleClass <em>Default Page Style Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStyles <em>Default Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsStyles <em>Default Cards Styles</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCollectionStyles <em>Default Collection Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsStyles <em>Default Details Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormStyles <em>Default Form Styles</em>}</li>
@@ -389,6 +391,16 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected CardsUnitStyles defaultCardsStyles;
+
+	/**
+	 * The cached value of the '{@link #getDefaultCollectionStyles() <em>Default Collection Styles</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDefaultCollectionStyles()
+	 * @generated
+	 * @ordered
+	 */
+	protected CollectionUnitStyles defaultCollectionStyles;
 
 	/**
 	 * The cached value of the '{@link #getDefaultImageCardsStyles() <em>Default Image Cards Styles</em>}' containment reference.
@@ -1032,6 +1044,51 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
+	public CollectionUnitStyles getDefaultCollectionStyles() {
+		return defaultCollectionStyles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDefaultCollectionStyles(CollectionUnitStyles newDefaultCollectionStyles, NotificationChain msgs) {
+		CollectionUnitStyles oldDefaultCollectionStyles = defaultCollectionStyles;
+		defaultCollectionStyles = newDefaultCollectionStyles;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES, oldDefaultCollectionStyles, newDefaultCollectionStyles);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDefaultCollectionStyles(CollectionUnitStyles newDefaultCollectionStyles) {
+		if (newDefaultCollectionStyles != defaultCollectionStyles) {
+			NotificationChain msgs = null;
+			if (defaultCollectionStyles != null)
+				msgs = ((InternalEObject)defaultCollectionStyles).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES, null, msgs);
+			if (newDefaultCollectionStyles != null)
+				msgs = ((InternalEObject)newDefaultCollectionStyles).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES, null, msgs);
+			msgs = basicSetDefaultCollectionStyles(newDefaultCollectionStyles, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES, newDefaultCollectionStyles, newDefaultCollectionStyles));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public ImageCardsUnitStyles getDefaultImageCardsStyles() {
 		return defaultImageCardsStyles;
 	}
@@ -1399,6 +1456,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return basicSetDefaultStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
 				return basicSetDefaultCardsStyles(null, msgs);
+			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
+				return basicSetDefaultCollectionStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 				return basicSetDefaultImageCardsStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
@@ -1465,6 +1524,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
 				return getDefaultCardsStyles();
+			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
+				return getDefaultCollectionStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 				return getDefaultImageCardsStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
@@ -1551,6 +1612,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
 				setDefaultCardsStyles((CardsUnitStyles)newValue);
+				return;
+			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
+				setDefaultCollectionStyles((CollectionUnitStyles)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 				setDefaultImageCardsStyles((ImageCardsUnitStyles)newValue);
@@ -1645,6 +1709,9 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
 				setDefaultCardsStyles((CardsUnitStyles)null);
 				return;
+			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
+				setDefaultCollectionStyles((CollectionUnitStyles)null);
+				return;
 			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 				setDefaultImageCardsStyles((ImageCardsUnitStyles)null);
 				return;
@@ -1719,6 +1786,8 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return defaultStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
 				return defaultCardsStyles != null;
+			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
+				return defaultCollectionStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 				return defaultImageCardsStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:

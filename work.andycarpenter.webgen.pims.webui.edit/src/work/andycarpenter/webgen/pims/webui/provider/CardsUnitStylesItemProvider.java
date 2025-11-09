@@ -23,7 +23,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CardsUnitStylesItemProvider extends CollectionUnitStylesItemProvider {
+public class CardsUnitStylesItemProvider extends CollectionStylesItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
