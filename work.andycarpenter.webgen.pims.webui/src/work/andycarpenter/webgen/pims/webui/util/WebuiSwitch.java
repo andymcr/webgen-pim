@@ -148,9 +148,18 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case WebuiPackage.COLLECTION_STYLES: {
+				CollectionStyles collectionStyles = (CollectionStyles)theEObject;
+				T result = caseCollectionStyles(collectionStyles);
+				if (result == null) result = caseDynamicUnitStyles(collectionStyles);
+				if (result == null) result = caseContentUnitStyles(collectionStyles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case WebuiPackage.COLLECTION_UNIT_STYLES: {
 				CollectionUnitStyles collectionUnitStyles = (CollectionUnitStyles)theEObject;
 				T result = caseCollectionUnitStyles(collectionUnitStyles);
+				if (result == null) result = caseCollectionStyles(collectionUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(collectionUnitStyles);
 				if (result == null) result = caseContentUnitStyles(collectionUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
@@ -159,7 +168,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.DEFAULT_UNIT_STYLES: {
 				DefaultUnitStyles defaultUnitStyles = (DefaultUnitStyles)theEObject;
 				T result = caseDefaultUnitStyles(defaultUnitStyles);
-				if (result == null) result = caseCollectionUnitStyles(defaultUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(defaultUnitStyles);
 				if (result == null) result = caseContentUnitStyles(defaultUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
@@ -168,7 +176,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.CARDS_UNIT_STYLES: {
 				CardsUnitStyles cardsUnitStyles = (CardsUnitStyles)theEObject;
 				T result = caseCardsUnitStyles(cardsUnitStyles);
-				if (result == null) result = caseCollectionUnitStyles(cardsUnitStyles);
+				if (result == null) result = caseCollectionStyles(cardsUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(cardsUnitStyles);
 				if (result == null) result = caseContentUnitStyles(cardsUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
@@ -178,7 +186,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 				ImageCardsUnitStyles imageCardsUnitStyles = (ImageCardsUnitStyles)theEObject;
 				T result = caseImageCardsUnitStyles(imageCardsUnitStyles);
 				if (result == null) result = caseCardsUnitStyles(imageCardsUnitStyles);
-				if (result == null) result = caseCollectionUnitStyles(imageCardsUnitStyles);
+				if (result == null) result = caseCollectionStyles(imageCardsUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(imageCardsUnitStyles);
 				if (result == null) result = caseContentUnitStyles(imageCardsUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
@@ -203,7 +211,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.GALLERY_UNIT_STYLES: {
 				GalleryUnitStyles galleryUnitStyles = (GalleryUnitStyles)theEObject;
 				T result = caseGalleryUnitStyles(galleryUnitStyles);
-				if (result == null) result = caseCollectionUnitStyles(galleryUnitStyles);
+				if (result == null) result = caseCollectionStyles(galleryUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(galleryUnitStyles);
 				if (result == null) result = caseContentUnitStyles(galleryUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
@@ -212,7 +220,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.SLIDER_UNIT_STYLES: {
 				SliderUnitStyles sliderUnitStyles = (SliderUnitStyles)theEObject;
 				T result = caseSliderUnitStyles(sliderUnitStyles);
-				if (result == null) result = caseCollectionUnitStyles(sliderUnitStyles);
+				if (result == null) result = caseCollectionStyles(sliderUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(sliderUnitStyles);
 				if (result == null) result = caseContentUnitStyles(sliderUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
@@ -228,7 +236,7 @@ public class WebuiSwitch<T> extends Switch<T> {
 			case WebuiPackage.TABULAR_UNIT_STYLES: {
 				TabularUnitStyles tabularUnitStyles = (TabularUnitStyles)theEObject;
 				T result = caseTabularUnitStyles(tabularUnitStyles);
-				if (result == null) result = caseCollectionUnitStyles(tabularUnitStyles);
+				if (result == null) result = caseCollectionStyles(tabularUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(tabularUnitStyles);
 				if (result == null) result = caseContentUnitStyles(tabularUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
@@ -1150,6 +1158,21 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDynamicUnitStyles(DynamicUnitStyles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Collection Styles</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Collection Styles</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCollectionStyles(CollectionStyles object) {
 		return null;
 	}
 
