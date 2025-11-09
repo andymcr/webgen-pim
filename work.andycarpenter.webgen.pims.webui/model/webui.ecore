@@ -40,19 +40,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCancelLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Cancel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultCancelIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Cancel"/>
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultClearLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Cancel"/>
+        defaultValueLiteral="Clear"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultClearIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Cancel"/>
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSaveLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="Save"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSaveIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Save"/>
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSearchLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Save"/>
+        defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultSearchIcon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="Cancel"/>
+        defaultValueLiteral="Search"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPageStyleClass"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultStyles" lowerBound="1"
@@ -61,16 +61,10 @@
         eType="#//CardsUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultCollectionStyles"
         lowerBound="1" eType="#//CollectionUnitStyles" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultImageCardsStyles"
-        lowerBound="1" eType="#//ImageCardsUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultDetailsStyles" lowerBound="1"
         eType="#//DetailsUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultFormStyles" lowerBound="1"
         eType="#//FormUnitStyles" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultGalleryStyles" lowerBound="1"
-        eType="#//GalleryUnitStyles" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultSliderStyles" lowerBound="1"
-        eType="#//SliderUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultStaticStyles" lowerBound="1"
         eType="#//StaticUnitStyles" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defaultTabularStyles" lowerBound="1"
@@ -157,9 +151,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="CollectionStyles" abstract="true" eSuperTypes="#//DynamicUnitStyles">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filtersClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filtersActionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filtersBodyClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filtersControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceActionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceControlClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CollectionUnitStyles" eSuperTypes="#//CollectionStyles"/>
@@ -176,17 +176,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="badgeClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="badge"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImageCardsUnitStyles" eSuperTypes="#//CardsUnitStyles">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imageActionClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DetailsUnitStyles" eSuperTypes="#//DynamicUnitStyles"/>
   <eClassifiers xsi:type="ecore:EClass" name="FormUnitStyles" eSuperTypes="#//DynamicUnitStyles">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputGroupClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GalleryUnitStyles" eSuperTypes="#//CollectionStyles"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SliderUnitStyles" eSuperTypes="#//CollectionStyles"/>
   <eClassifiers xsi:type="ecore:EClass" name="StaticUnitStyles" eSuperTypes="#//ContentUnitStyles"/>
   <eClassifiers xsi:type="ecore:EClass" name="TabularUnitStyles" eSuperTypes="#//CollectionStyles">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="headerClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

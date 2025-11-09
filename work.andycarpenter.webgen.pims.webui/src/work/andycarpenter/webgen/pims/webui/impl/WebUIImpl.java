@@ -22,10 +22,7 @@ import work.andycarpenter.webgen.pims.webui.Controller;
 import work.andycarpenter.webgen.pims.webui.DefaultUnitStyles;
 import work.andycarpenter.webgen.pims.webui.DetailsUnitStyles;
 import work.andycarpenter.webgen.pims.webui.FormUnitStyles;
-import work.andycarpenter.webgen.pims.webui.GalleryUnitStyles;
-import work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles;
 import work.andycarpenter.webgen.pims.webui.Navigation;
-import work.andycarpenter.webgen.pims.webui.SliderUnitStyles;
 import work.andycarpenter.webgen.pims.webui.StaticUnitStyles;
 import work.andycarpenter.webgen.pims.webui.TabularUnitStyles;
 import work.andycarpenter.webgen.pims.webui.WebUI;
@@ -59,11 +56,8 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStyles <em>Default Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCardsStyles <em>Default Cards Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultCollectionStyles <em>Default Collection Styles</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultDetailsStyles <em>Default Details Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultFormStyles <em>Default Form Styles</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultGalleryStyles <em>Default Gallery Styles</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultSliderStyles <em>Default Slider Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultStaticStyles <em>Default Static Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultTabularStyles <em>Default Tabular Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.WebUIImpl#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
@@ -220,7 +214,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_CANCEL_ICON_EDEFAULT = "Cancel";
+	protected static final String DEFAULT_CANCEL_ICON_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDefaultCancelIcon() <em>Default Cancel Icon</em>}' attribute.
@@ -240,7 +234,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_CLEAR_LABEL_EDEFAULT = "Cancel";
+	protected static final String DEFAULT_CLEAR_LABEL_EDEFAULT = "Clear";
 
 	/**
 	 * The cached value of the '{@link #getDefaultClearLabel() <em>Default Clear Label</em>}' attribute.
@@ -260,7 +254,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_CLEAR_ICON_EDEFAULT = "Cancel";
+	protected static final String DEFAULT_CLEAR_ICON_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDefaultClearIcon() <em>Default Clear Icon</em>}' attribute.
@@ -300,7 +294,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SAVE_ICON_EDEFAULT = "Save";
+	protected static final String DEFAULT_SAVE_ICON_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDefaultSaveIcon() <em>Default Save Icon</em>}' attribute.
@@ -320,7 +314,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SEARCH_LABEL_EDEFAULT = "Save";
+	protected static final String DEFAULT_SEARCH_LABEL_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDefaultSearchLabel() <em>Default Search Label</em>}' attribute.
@@ -340,7 +334,7 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DEFAULT_SEARCH_ICON_EDEFAULT = "Cancel";
+	protected static final String DEFAULT_SEARCH_ICON_EDEFAULT = "Search";
 
 	/**
 	 * The cached value of the '{@link #getDefaultSearchIcon() <em>Default Search Icon</em>}' attribute.
@@ -403,16 +397,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	protected CollectionUnitStyles defaultCollectionStyles;
 
 	/**
-	 * The cached value of the '{@link #getDefaultImageCardsStyles() <em>Default Image Cards Styles</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultImageCardsStyles()
-	 * @generated
-	 * @ordered
-	 */
-	protected ImageCardsUnitStyles defaultImageCardsStyles;
-
-	/**
 	 * The cached value of the '{@link #getDefaultDetailsStyles() <em>Default Details Styles</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -431,26 +415,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @ordered
 	 */
 	protected FormUnitStyles defaultFormStyles;
-
-	/**
-	 * The cached value of the '{@link #getDefaultGalleryStyles() <em>Default Gallery Styles</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultGalleryStyles()
-	 * @generated
-	 * @ordered
-	 */
-	protected GalleryUnitStyles defaultGalleryStyles;
-
-	/**
-	 * The cached value of the '{@link #getDefaultSliderStyles() <em>Default Slider Styles</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDefaultSliderStyles()
-	 * @generated
-	 * @ordered
-	 */
-	protected SliderUnitStyles defaultSliderStyles;
 
 	/**
 	 * The cached value of the '{@link #getDefaultStaticStyles() <em>Default Static Styles</em>}' containment reference.
@@ -1089,51 +1053,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 	 * @generated
 	 */
 	@Override
-	public ImageCardsUnitStyles getDefaultImageCardsStyles() {
-		return defaultImageCardsStyles;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDefaultImageCardsStyles(ImageCardsUnitStyles newDefaultImageCardsStyles, NotificationChain msgs) {
-		ImageCardsUnitStyles oldDefaultImageCardsStyles = defaultImageCardsStyles;
-		defaultImageCardsStyles = newDefaultImageCardsStyles;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES, oldDefaultImageCardsStyles, newDefaultImageCardsStyles);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDefaultImageCardsStyles(ImageCardsUnitStyles newDefaultImageCardsStyles) {
-		if (newDefaultImageCardsStyles != defaultImageCardsStyles) {
-			NotificationChain msgs = null;
-			if (defaultImageCardsStyles != null)
-				msgs = ((InternalEObject)defaultImageCardsStyles).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES, null, msgs);
-			if (newDefaultImageCardsStyles != null)
-				msgs = ((InternalEObject)newDefaultImageCardsStyles).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES, null, msgs);
-			msgs = basicSetDefaultImageCardsStyles(newDefaultImageCardsStyles, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES, newDefaultImageCardsStyles, newDefaultImageCardsStyles));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public DetailsUnitStyles getDefaultDetailsStyles() {
 		return defaultDetailsStyles;
 	}
@@ -1216,96 +1135,6 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES, newDefaultFormStyles, newDefaultFormStyles));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public GalleryUnitStyles getDefaultGalleryStyles() {
-		return defaultGalleryStyles;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDefaultGalleryStyles(GalleryUnitStyles newDefaultGalleryStyles, NotificationChain msgs) {
-		GalleryUnitStyles oldDefaultGalleryStyles = defaultGalleryStyles;
-		defaultGalleryStyles = newDefaultGalleryStyles;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES, oldDefaultGalleryStyles, newDefaultGalleryStyles);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDefaultGalleryStyles(GalleryUnitStyles newDefaultGalleryStyles) {
-		if (newDefaultGalleryStyles != defaultGalleryStyles) {
-			NotificationChain msgs = null;
-			if (defaultGalleryStyles != null)
-				msgs = ((InternalEObject)defaultGalleryStyles).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES, null, msgs);
-			if (newDefaultGalleryStyles != null)
-				msgs = ((InternalEObject)newDefaultGalleryStyles).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES, null, msgs);
-			msgs = basicSetDefaultGalleryStyles(newDefaultGalleryStyles, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES, newDefaultGalleryStyles, newDefaultGalleryStyles));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SliderUnitStyles getDefaultSliderStyles() {
-		return defaultSliderStyles;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDefaultSliderStyles(SliderUnitStyles newDefaultSliderStyles, NotificationChain msgs) {
-		SliderUnitStyles oldDefaultSliderStyles = defaultSliderStyles;
-		defaultSliderStyles = newDefaultSliderStyles;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES, oldDefaultSliderStyles, newDefaultSliderStyles);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setDefaultSliderStyles(SliderUnitStyles newDefaultSliderStyles) {
-		if (newDefaultSliderStyles != defaultSliderStyles) {
-			NotificationChain msgs = null;
-			if (defaultSliderStyles != null)
-				msgs = ((InternalEObject)defaultSliderStyles).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES, null, msgs);
-			if (newDefaultSliderStyles != null)
-				msgs = ((InternalEObject)newDefaultSliderStyles).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES, null, msgs);
-			msgs = basicSetDefaultSliderStyles(newDefaultSliderStyles, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES, newDefaultSliderStyles, newDefaultSliderStyles));
 	}
 
 	/**
@@ -1458,16 +1287,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return basicSetDefaultCardsStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
 				return basicSetDefaultCollectionStyles(null, msgs);
-			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
-				return basicSetDefaultImageCardsStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 				return basicSetDefaultDetailsStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
 				return basicSetDefaultFormStyles(null, msgs);
-			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES:
-				return basicSetDefaultGalleryStyles(null, msgs);
-			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES:
-				return basicSetDefaultSliderStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_STYLES:
 				return basicSetDefaultStaticStyles(null, msgs);
 			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_STYLES:
@@ -1526,16 +1349,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return getDefaultCardsStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
 				return getDefaultCollectionStyles();
-			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
-				return getDefaultImageCardsStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 				return getDefaultDetailsStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
 				return getDefaultFormStyles();
-			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES:
-				return getDefaultGalleryStyles();
-			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES:
-				return getDefaultSliderStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_STYLES:
 				return getDefaultStaticStyles();
 			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_STYLES:
@@ -1616,20 +1433,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
 				setDefaultCollectionStyles((CollectionUnitStyles)newValue);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
-				setDefaultImageCardsStyles((ImageCardsUnitStyles)newValue);
-				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 				setDefaultDetailsStyles((DetailsUnitStyles)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
 				setDefaultFormStyles((FormUnitStyles)newValue);
-				return;
-			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES:
-				setDefaultGalleryStyles((GalleryUnitStyles)newValue);
-				return;
-			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES:
-				setDefaultSliderStyles((SliderUnitStyles)newValue);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_STYLES:
 				setDefaultStaticStyles((StaticUnitStyles)newValue);
@@ -1712,20 +1520,11 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
 				setDefaultCollectionStyles((CollectionUnitStyles)null);
 				return;
-			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
-				setDefaultImageCardsStyles((ImageCardsUnitStyles)null);
-				return;
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 				setDefaultDetailsStyles((DetailsUnitStyles)null);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
 				setDefaultFormStyles((FormUnitStyles)null);
-				return;
-			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES:
-				setDefaultGalleryStyles((GalleryUnitStyles)null);
-				return;
-			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES:
-				setDefaultSliderStyles((SliderUnitStyles)null);
 				return;
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_STYLES:
 				setDefaultStaticStyles((StaticUnitStyles)null);
@@ -1788,16 +1587,10 @@ public class WebUIImpl extends MinimalEObjectImpl.Container implements WebUI {
 				return defaultCardsStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
 				return defaultCollectionStyles != null;
-			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
-				return defaultImageCardsStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 				return defaultDetailsStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
 				return defaultFormStyles != null;
-			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES:
-				return defaultGalleryStyles != null;
-			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES:
-				return defaultSliderStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_STYLES:
 				return defaultStaticStyles != null;
 			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_STYLES:

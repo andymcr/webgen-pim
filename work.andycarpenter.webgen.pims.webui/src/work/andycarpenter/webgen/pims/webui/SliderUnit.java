@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Slider Unit</b></em>'.
@@ -24,10 +25,6 @@ public interface SliderUnit extends CollectionUnit, ImageUnit {
 	 * Returns the value of the '<em><b>Show Time</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Show Time</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Show Time</em>' attribute.
 	 * @see #setShowTime(int)
@@ -51,10 +48,6 @@ public interface SliderUnit extends CollectionUnit, ImageUnit {
 	 * Returns the value of the '<em><b>Transition Time</b></em>' attribute.
 	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Transition Time</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transition Time</em>' attribute.
 	 * @see #setTransitionTime(int)

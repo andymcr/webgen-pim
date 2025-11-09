@@ -17,7 +17,103 @@ import work.andycarpenter.webgen.pims.image.ImagePackage;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
 import work.andycarpenter.webgen.pims.security.SecurityPackage;
 import work.andycarpenter.webgen.pims.service.ServicePackage;
-import work.andycarpenter.webgen.pims.webui.*;
+import work.andycarpenter.webgen.pims.webui.Action;
+import work.andycarpenter.webgen.pims.webui.ActionContainer;
+import work.andycarpenter.webgen.pims.webui.ActionMenuEntry;
+import work.andycarpenter.webgen.pims.webui.ArrayFilter;
+import work.andycarpenter.webgen.pims.webui.AssociationDisplayValue;
+import work.andycarpenter.webgen.pims.webui.AttributeDisplayValue;
+import work.andycarpenter.webgen.pims.webui.AuthenticationMenuPlacement;
+import work.andycarpenter.webgen.pims.webui.Badge;
+import work.andycarpenter.webgen.pims.webui.BooleanFilter;
+import work.andycarpenter.webgen.pims.webui.CardsUnit;
+import work.andycarpenter.webgen.pims.webui.CardsUnitStyles;
+import work.andycarpenter.webgen.pims.webui.ChoiceFilter;
+import work.andycarpenter.webgen.pims.webui.CollectionDisplayOptions;
+import work.andycarpenter.webgen.pims.webui.CollectionFilter;
+import work.andycarpenter.webgen.pims.webui.CollectionStyles;
+import work.andycarpenter.webgen.pims.webui.CollectionUnit;
+import work.andycarpenter.webgen.pims.webui.CollectionUnitStyles;
+import work.andycarpenter.webgen.pims.webui.ComparisionFilter;
+import work.andycarpenter.webgen.pims.webui.ContainerActionsPlacement;
+import work.andycarpenter.webgen.pims.webui.ContainerOperationAction;
+import work.andycarpenter.webgen.pims.webui.ContainerSelectAction;
+import work.andycarpenter.webgen.pims.webui.ContentUnit;
+import work.andycarpenter.webgen.pims.webui.ContentUnitStyles;
+import work.andycarpenter.webgen.pims.webui.ControlUnit;
+import work.andycarpenter.webgen.pims.webui.Controller;
+import work.andycarpenter.webgen.pims.webui.ControllerLink;
+import work.andycarpenter.webgen.pims.webui.CreateSitemapUnit;
+import work.andycarpenter.webgen.pims.webui.CreateUnit;
+import work.andycarpenter.webgen.pims.webui.CreateUpdateUnit;
+import work.andycarpenter.webgen.pims.webui.DataTypeField;
+import work.andycarpenter.webgen.pims.webui.DateCardsUnit;
+import work.andycarpenter.webgen.pims.webui.DateField;
+import work.andycarpenter.webgen.pims.webui.DateTimeFilter;
+import work.andycarpenter.webgen.pims.webui.DefaultUnitStyles;
+import work.andycarpenter.webgen.pims.webui.DeleteAction;
+import work.andycarpenter.webgen.pims.webui.DetailsUnit;
+import work.andycarpenter.webgen.pims.webui.DetailsUnitStyles;
+import work.andycarpenter.webgen.pims.webui.DisplayValue;
+import work.andycarpenter.webgen.pims.webui.DynamicUnit;
+import work.andycarpenter.webgen.pims.webui.DynamicUnitStyles;
+import work.andycarpenter.webgen.pims.webui.EditStaticTextMenuEntry;
+import work.andycarpenter.webgen.pims.webui.EditUnit;
+import work.andycarpenter.webgen.pims.webui.EntityFilter;
+import work.andycarpenter.webgen.pims.webui.ForgottenPasswordUnit;
+import work.andycarpenter.webgen.pims.webui.FormUnitStyles;
+import work.andycarpenter.webgen.pims.webui.GalleryUnit;
+import work.andycarpenter.webgen.pims.webui.GeneralOperationAction;
+import work.andycarpenter.webgen.pims.webui.ImageCardsUnit;
+import work.andycarpenter.webgen.pims.webui.ImageUnit;
+import work.andycarpenter.webgen.pims.webui.InstanceActionsPlacement;
+import work.andycarpenter.webgen.pims.webui.InstanceOperationAction;
+import work.andycarpenter.webgen.pims.webui.InstanceSelectAction;
+import work.andycarpenter.webgen.pims.webui.InterfaceField;
+import work.andycarpenter.webgen.pims.webui.LabelDisplayValue;
+import work.andycarpenter.webgen.pims.webui.LoginUnit;
+import work.andycarpenter.webgen.pims.webui.LogoutUnit;
+import work.andycarpenter.webgen.pims.webui.MapUnit;
+import work.andycarpenter.webgen.pims.webui.Menu;
+import work.andycarpenter.webgen.pims.webui.MenuEntry;
+import work.andycarpenter.webgen.pims.webui.MenuFeature;
+import work.andycarpenter.webgen.pims.webui.Message;
+import work.andycarpenter.webgen.pims.webui.MultiPageController;
+import work.andycarpenter.webgen.pims.webui.Navigation;
+import work.andycarpenter.webgen.pims.webui.NullFilter;
+import work.andycarpenter.webgen.pims.webui.NumericFilter;
+import work.andycarpenter.webgen.pims.webui.OperationAction;
+import work.andycarpenter.webgen.pims.webui.PageTopMenuOptions;
+import work.andycarpenter.webgen.pims.webui.RegistrationUnit;
+import work.andycarpenter.webgen.pims.webui.ResetPasswordUnit;
+import work.andycarpenter.webgen.pims.webui.ResourceDisplayValue;
+import work.andycarpenter.webgen.pims.webui.RouteActual;
+import work.andycarpenter.webgen.pims.webui.SearchUnit;
+import work.andycarpenter.webgen.pims.webui.SecurityAction;
+import work.andycarpenter.webgen.pims.webui.SelectAction;
+import work.andycarpenter.webgen.pims.webui.SelectableUnit;
+import work.andycarpenter.webgen.pims.webui.SinglePageController;
+import work.andycarpenter.webgen.pims.webui.SingletonUnit;
+import work.andycarpenter.webgen.pims.webui.SliderUnit;
+import work.andycarpenter.webgen.pims.webui.StaticUnit;
+import work.andycarpenter.webgen.pims.webui.StaticUnitStyles;
+import work.andycarpenter.webgen.pims.webui.SubmenuEntry;
+import work.andycarpenter.webgen.pims.webui.TabularUnit;
+import work.andycarpenter.webgen.pims.webui.TabularUnitStyles;
+import work.andycarpenter.webgen.pims.webui.TargetAction;
+import work.andycarpenter.webgen.pims.webui.TextCardsUnit;
+import work.andycarpenter.webgen.pims.webui.TextFilter;
+import work.andycarpenter.webgen.pims.webui.UnitAssociation;
+import work.andycarpenter.webgen.pims.webui.UnitElement;
+import work.andycarpenter.webgen.pims.webui.UnitFeature;
+import work.andycarpenter.webgen.pims.webui.UnitField;
+import work.andycarpenter.webgen.pims.webui.UnitLabel;
+import work.andycarpenter.webgen.pims.webui.UnitResource;
+import work.andycarpenter.webgen.pims.webui.UpdateUnit;
+import work.andycarpenter.webgen.pims.webui.ValueContext;
+import work.andycarpenter.webgen.pims.webui.WebUI;
+import work.andycarpenter.webgen.pims.webui.WebuiFactory;
+import work.andycarpenter.webgen.pims.webui.WebuiPackage;
 import work.andycarpenter.webgen.pims.webui.util.WebuiValidator;
 
 /**
@@ -130,13 +226,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass imageCardsUnitStylesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass detailsUnitStylesEClass = null;
 
 	/**
@@ -145,20 +234,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	private EClass formUnitStylesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass galleryUnitStylesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sliderUnitStylesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1008,7 +1083,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_DefaultImageCardsStyles() {
+	public EReference getWebUI_DefaultDetailsStyles() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -1018,7 +1093,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_DefaultDetailsStyles() {
+	public EReference getWebUI_DefaultFormStyles() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -1028,7 +1103,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_DefaultFormStyles() {
+	public EReference getWebUI_DefaultStaticStyles() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -1038,7 +1113,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_DefaultGalleryStyles() {
+	public EReference getWebUI_DefaultTabularStyles() {
 		return (EReference)webUIEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -1048,38 +1123,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWebUI_DefaultSliderStyles() {
-		return (EReference)webUIEClass.getEStructuralFeatures().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getWebUI_DefaultStaticStyles() {
-		return (EReference)webUIEClass.getEStructuralFeatures().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getWebUI_DefaultTabularStyles() {
-		return (EReference)webUIEClass.getEStructuralFeatures().get(26);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getWebUI_DefaultMaximumUploadSize() {
-		return (EAttribute)webUIEClass.getEStructuralFeatures().get(27);
+		return (EAttribute)webUIEClass.getEStructuralFeatures().get(24);
 	}
 
 	/**
@@ -1438,7 +1483,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionStyles_InstanceControlClass() {
+	public EAttribute getCollectionStyles_FiltersActionClass() {
 		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1448,8 +1493,38 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionStyles_InstanceActionClass() {
+	public EAttribute getCollectionStyles_FiltersBodyClass() {
 		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionStyles_FiltersControlClass() {
+		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionStyles_InstanceControlClass() {
+		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionStyles_InstanceActionClass() {
+		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1538,26 +1613,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getImageCardsUnitStyles() {
-		return imageCardsUnitStylesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getImageCardsUnitStyles_ImageActionClass() {
-		return (EAttribute)imageCardsUnitStylesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getDetailsUnitStyles() {
 		return detailsUnitStylesEClass;
 	}
@@ -1580,26 +1635,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	@Override
 	public EAttribute getFormUnitStyles_InputGroupClass() {
 		return (EAttribute)formUnitStylesEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getGalleryUnitStyles() {
-		return galleryUnitStylesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getSliderUnitStyles() {
-		return sliderUnitStylesEClass;
 	}
 
 	/**
@@ -4682,11 +4717,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(webUIEClass, WEB_UI__DEFAULT_STYLES);
 		createEReference(webUIEClass, WEB_UI__DEFAULT_CARDS_STYLES);
 		createEReference(webUIEClass, WEB_UI__DEFAULT_COLLECTION_STYLES);
-		createEReference(webUIEClass, WEB_UI__DEFAULT_IMAGE_CARDS_STYLES);
 		createEReference(webUIEClass, WEB_UI__DEFAULT_DETAILS_STYLES);
 		createEReference(webUIEClass, WEB_UI__DEFAULT_FORM_STYLES);
-		createEReference(webUIEClass, WEB_UI__DEFAULT_GALLERY_STYLES);
-		createEReference(webUIEClass, WEB_UI__DEFAULT_SLIDER_STYLES);
 		createEReference(webUIEClass, WEB_UI__DEFAULT_STATIC_STYLES);
 		createEReference(webUIEClass, WEB_UI__DEFAULT_TABULAR_STYLES);
 		createEAttribute(webUIEClass, WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE);
@@ -4735,8 +4767,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		collectionStylesEClass = createEClass(COLLECTION_STYLES);
 		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_CLASS);
-		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__INSTANCE_CONTROL_CLASS);
+		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_ACTION_CLASS);
+		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_BODY_CLASS);
+		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_CONTROL_CLASS);
 		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__INSTANCE_ACTION_CLASS);
+		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__INSTANCE_CONTROL_CLASS);
 
 		collectionUnitStylesEClass = createEClass(COLLECTION_UNIT_STYLES);
 
@@ -4749,17 +4784,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(cardsUnitStylesEClass, CARDS_UNIT_STYLES__CARD_FOOTER_CLASS);
 		createEAttribute(cardsUnitStylesEClass, CARDS_UNIT_STYLES__BADGE_CLASS);
 
-		imageCardsUnitStylesEClass = createEClass(IMAGE_CARDS_UNIT_STYLES);
-		createEAttribute(imageCardsUnitStylesEClass, IMAGE_CARDS_UNIT_STYLES__IMAGE_ACTION_CLASS);
-
 		detailsUnitStylesEClass = createEClass(DETAILS_UNIT_STYLES);
 
 		formUnitStylesEClass = createEClass(FORM_UNIT_STYLES);
 		createEAttribute(formUnitStylesEClass, FORM_UNIT_STYLES__INPUT_GROUP_CLASS);
-
-		galleryUnitStylesEClass = createEClass(GALLERY_UNIT_STYLES);
-
-		sliderUnitStylesEClass = createEClass(SLIDER_UNIT_STYLES);
 
 		staticUnitStylesEClass = createEClass(STATIC_UNIT_STYLES);
 
@@ -5190,11 +5218,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		collectionUnitStylesEClass.getESuperTypes().add(this.getCollectionStyles());
 		defaultUnitStylesEClass.getESuperTypes().add(this.getDynamicUnitStyles());
 		cardsUnitStylesEClass.getESuperTypes().add(this.getCollectionStyles());
-		imageCardsUnitStylesEClass.getESuperTypes().add(this.getCardsUnitStyles());
 		detailsUnitStylesEClass.getESuperTypes().add(this.getDynamicUnitStyles());
 		formUnitStylesEClass.getESuperTypes().add(this.getDynamicUnitStyles());
-		galleryUnitStylesEClass.getESuperTypes().add(this.getCollectionStyles());
-		sliderUnitStylesEClass.getESuperTypes().add(this.getCollectionStyles());
 		staticUnitStylesEClass.getESuperTypes().add(this.getContentUnitStyles());
 		tabularUnitStylesEClass.getESuperTypes().add(this.getCollectionStyles());
 		controllerEClass.getESuperTypes().add(theBasePackage.getNamedDisplayElement());
@@ -5304,22 +5329,19 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getWebUI_DefaultTimeFormat(), ecorePackage.getEString(), "defaultTimeFormat", "G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultDateTimeFormat(), ecorePackage.getEString(), "defaultDateTimeFormat", "jS F Y G.i", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultCancelLabel(), ecorePackage.getEString(), "defaultCancelLabel", "Cancel", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultCancelIcon(), ecorePackage.getEString(), "defaultCancelIcon", "Cancel", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultClearLabel(), ecorePackage.getEString(), "defaultClearLabel", "Cancel", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultClearIcon(), ecorePackage.getEString(), "defaultClearIcon", "Cancel", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultCancelIcon(), ecorePackage.getEString(), "defaultCancelIcon", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultClearLabel(), ecorePackage.getEString(), "defaultClearLabel", "Clear", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultClearIcon(), ecorePackage.getEString(), "defaultClearIcon", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultSaveLabel(), ecorePackage.getEString(), "defaultSaveLabel", "Save", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultSaveIcon(), ecorePackage.getEString(), "defaultSaveIcon", "Save", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultSearchLabel(), ecorePackage.getEString(), "defaultSearchLabel", "Save", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWebUI_DefaultSearchIcon(), ecorePackage.getEString(), "defaultSearchIcon", "Cancel", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultSaveIcon(), ecorePackage.getEString(), "defaultSaveIcon", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultSearchLabel(), ecorePackage.getEString(), "defaultSearchLabel", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebUI_DefaultSearchIcon(), ecorePackage.getEString(), "defaultSearchIcon", "Search", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultPageStyleClass(), ecorePackage.getEString(), "defaultPageStyleClass", "", 0, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultStyles(), this.getDefaultUnitStyles(), null, "defaultStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultCardsStyles(), this.getCardsUnitStyles(), null, "defaultCardsStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultCollectionStyles(), this.getCollectionUnitStyles(), null, "defaultCollectionStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebUI_DefaultImageCardsStyles(), this.getImageCardsUnitStyles(), null, "defaultImageCardsStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultDetailsStyles(), this.getDetailsUnitStyles(), null, "defaultDetailsStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultFormStyles(), this.getFormUnitStyles(), null, "defaultFormStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebUI_DefaultGalleryStyles(), this.getGalleryUnitStyles(), null, "defaultGalleryStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWebUI_DefaultSliderStyles(), this.getSliderUnitStyles(), null, "defaultSliderStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultStaticStyles(), this.getStaticUnitStyles(), null, "defaultStaticStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebUI_DefaultTabularStyles(), this.getTabularUnitStyles(), null, "defaultTabularStyles", null, 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebUI_DefaultMaximumUploadSize(), ecorePackage.getEString(), "defaultMaximumUploadSize", "2000000", 1, 1, WebUI.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5368,8 +5390,11 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(collectionStylesEClass, CollectionStyles.class, "CollectionStyles", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCollectionStyles_FiltersClass(), ecorePackage.getEString(), "filtersClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionStyles_InstanceControlClass(), ecorePackage.getEString(), "instanceControlClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionStyles_FiltersActionClass(), ecorePackage.getEString(), "filtersActionClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionStyles_FiltersBodyClass(), ecorePackage.getEString(), "filtersBodyClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionStyles_FiltersControlClass(), ecorePackage.getEString(), "filtersControlClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionStyles_InstanceActionClass(), ecorePackage.getEString(), "instanceActionClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionStyles_InstanceControlClass(), ecorePackage.getEString(), "instanceControlClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(collectionUnitStylesEClass, CollectionUnitStyles.class, "CollectionUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -5382,17 +5407,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCardsUnitStyles_CardFooterClass(), ecorePackage.getEString(), "cardFooterClass", "card-footer", 0, 1, CardsUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCardsUnitStyles_BadgeClass(), ecorePackage.getEString(), "badgeClass", "badge", 0, 1, CardsUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(imageCardsUnitStylesEClass, ImageCardsUnitStyles.class, "ImageCardsUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImageCardsUnitStyles_ImageActionClass(), ecorePackage.getEString(), "imageActionClass", "", 0, 1, ImageCardsUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(detailsUnitStylesEClass, DetailsUnitStyles.class, "DetailsUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(formUnitStylesEClass, FormUnitStyles.class, "FormUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFormUnitStyles_InputGroupClass(), ecorePackage.getEString(), "inputGroupClass", "", 0, 1, FormUnitStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(galleryUnitStylesEClass, GalleryUnitStyles.class, "GalleryUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(sliderUnitStylesEClass, SliderUnitStyles.class, "SliderUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(staticUnitStylesEClass, StaticUnitStyles.class, "StaticUnitStyles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

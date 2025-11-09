@@ -67,11 +67,8 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 			case WebuiPackage.COLLECTION_UNIT_STYLES: return createCollectionUnitStyles();
 			case WebuiPackage.DEFAULT_UNIT_STYLES: return createDefaultUnitStyles();
 			case WebuiPackage.CARDS_UNIT_STYLES: return createCardsUnitStyles();
-			case WebuiPackage.IMAGE_CARDS_UNIT_STYLES: return createImageCardsUnitStyles();
 			case WebuiPackage.DETAILS_UNIT_STYLES: return createDetailsUnitStyles();
 			case WebuiPackage.FORM_UNIT_STYLES: return createFormUnitStyles();
-			case WebuiPackage.GALLERY_UNIT_STYLES: return createGalleryUnitStyles();
-			case WebuiPackage.SLIDER_UNIT_STYLES: return createSliderUnitStyles();
 			case WebuiPackage.STATIC_UNIT_STYLES: return createStaticUnitStyles();
 			case WebuiPackage.TABULAR_UNIT_STYLES: return createTabularUnitStyles();
 			case WebuiPackage.CONTROLLER_LINK: return createControllerLink();
@@ -293,17 +290,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	 * @generated
 	 */
 	@Override
-	public ImageCardsUnitStyles createImageCardsUnitStyles() {
-		ImageCardsUnitStylesImpl imageCardsUnitStyles = new ImageCardsUnitStylesImpl();
-		return imageCardsUnitStyles;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public DetailsUnitStyles createDetailsUnitStyles() {
 		DetailsUnitStylesImpl detailsUnitStyles = new DetailsUnitStylesImpl();
 		return detailsUnitStyles;
@@ -318,28 +304,6 @@ public class WebuiFactoryImpl extends EFactoryImpl implements WebuiFactory {
 	public FormUnitStyles createFormUnitStyles() {
 		FormUnitStylesImpl formUnitStyles = new FormUnitStylesImpl();
 		return formUnitStyles;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public GalleryUnitStyles createGalleryUnitStyles() {
-		GalleryUnitStylesImpl galleryUnitStyles = new GalleryUnitStylesImpl();
-		return galleryUnitStyles;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public SliderUnitStyles createSliderUnitStyles() {
-		SliderUnitStylesImpl sliderUnitStyles = new SliderUnitStylesImpl();
-		return sliderUnitStyles;
 	}
 
 	/**

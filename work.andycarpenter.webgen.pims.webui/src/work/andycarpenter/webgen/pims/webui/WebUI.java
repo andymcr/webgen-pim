@@ -37,11 +37,8 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyles <em>Default Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsStyles <em>Default Cards Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCollectionStyles <em>Default Collection Styles</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDetailsStyles <em>Default Details Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultFormStyles <em>Default Form Styles</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryStyles <em>Default Gallery Styles</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderStyles <em>Default Slider Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStaticStyles <em>Default Static Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultTabularStyles <em>Default Tabular Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultMaximumUploadSize <em>Default Maximum Upload Size</em>}</li>
@@ -268,13 +265,13 @@ public interface WebUI extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Default Cancel Icon</b></em>' attribute.
-	 * The default value is <code>"Cancel"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Cancel Icon</em>' attribute.
 	 * @see #setDefaultCancelIcon(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCancelIcon()
-	 * @model default="Cancel"
+	 * @model default=""
 	 * @generated
 	 */
 	String getDefaultCancelIcon();
@@ -291,13 +288,13 @@ public interface WebUI extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Default Clear Label</b></em>' attribute.
-	 * The default value is <code>"Cancel"</code>.
+	 * The default value is <code>"Clear"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Clear Label</em>' attribute.
 	 * @see #setDefaultClearLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultClearLabel()
-	 * @model default="Cancel"
+	 * @model default="Clear"
 	 * @generated
 	 */
 	String getDefaultClearLabel();
@@ -314,13 +311,13 @@ public interface WebUI extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Default Clear Icon</b></em>' attribute.
-	 * The default value is <code>"Cancel"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Clear Icon</em>' attribute.
 	 * @see #setDefaultClearIcon(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultClearIcon()
-	 * @model default="Cancel"
+	 * @model default=""
 	 * @generated
 	 */
 	String getDefaultClearIcon();
@@ -360,13 +357,13 @@ public interface WebUI extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Default Save Icon</b></em>' attribute.
-	 * The default value is <code>"Save"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Save Icon</em>' attribute.
 	 * @see #setDefaultSaveIcon(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSaveIcon()
-	 * @model default="Save"
+	 * @model default=""
 	 * @generated
 	 */
 	String getDefaultSaveIcon();
@@ -383,13 +380,13 @@ public interface WebUI extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Default Search Label</b></em>' attribute.
-	 * The default value is <code>"Save"</code>.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Search Label</em>' attribute.
 	 * @see #setDefaultSearchLabel(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSearchLabel()
-	 * @model default="Save"
+	 * @model default=""
 	 * @generated
 	 */
 	String getDefaultSearchLabel();
@@ -406,13 +403,13 @@ public interface WebUI extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Default Search Icon</b></em>' attribute.
-	 * The default value is <code>"Cancel"</code>.
+	 * The default value is <code>"Search"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Default Search Icon</em>' attribute.
 	 * @see #setDefaultSearchIcon(String)
 	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSearchIcon()
-	 * @model default="Cancel"
+	 * @model default="Search"
 	 * @generated
 	 */
 	String getDefaultSearchIcon();
@@ -517,28 +514,6 @@ public interface WebUI extends EObject {
 	void setDefaultCollectionStyles(CollectionUnitStyles value);
 
 	/**
-	 * Returns the value of the '<em><b>Default Image Cards Styles</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Image Cards Styles</em>' containment reference.
-	 * @see #setDefaultImageCardsStyles(ImageCardsUnitStyles)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultImageCardsStyles()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	ImageCardsUnitStyles getDefaultImageCardsStyles();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultImageCardsStyles <em>Default Image Cards Styles</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Image Cards Styles</em>' containment reference.
-	 * @see #getDefaultImageCardsStyles()
-	 * @generated
-	 */
-	void setDefaultImageCardsStyles(ImageCardsUnitStyles value);
-
-	/**
 	 * Returns the value of the '<em><b>Default Details Styles</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -581,50 +556,6 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultFormStyles(FormUnitStyles value);
-
-	/**
-	 * Returns the value of the '<em><b>Default Gallery Styles</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Gallery Styles</em>' containment reference.
-	 * @see #setDefaultGalleryStyles(GalleryUnitStyles)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultGalleryStyles()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	GalleryUnitStyles getDefaultGalleryStyles();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultGalleryStyles <em>Default Gallery Styles</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Gallery Styles</em>' containment reference.
-	 * @see #getDefaultGalleryStyles()
-	 * @generated
-	 */
-	void setDefaultGalleryStyles(GalleryUnitStyles value);
-
-	/**
-	 * Returns the value of the '<em><b>Default Slider Styles</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Default Slider Styles</em>' containment reference.
-	 * @see #setDefaultSliderStyles(SliderUnitStyles)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSliderStyles()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	SliderUnitStyles getDefaultSliderStyles();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSliderStyles <em>Default Slider Styles</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Default Slider Styles</em>' containment reference.
-	 * @see #getDefaultSliderStyles()
-	 * @generated
-	 */
-	void setDefaultSliderStyles(SliderUnitStyles value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Static Styles</b></em>' containment reference.

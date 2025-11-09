@@ -429,11 +429,8 @@ public class WebUIItemProvider
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_COLLECTION_STYLES);
-			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_DETAILS_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_FORM_STYLES);
-			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_GALLERY_STYLES);
-			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_SLIDER_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_STATIC_STYLES);
 			childrenFeatures.add(WebuiPackage.Literals.WEB_UI__DEFAULT_TABULAR_STYLES);
 		}
@@ -510,11 +507,8 @@ public class WebUIItemProvider
 			case WebuiPackage.WEB_UI__DEFAULT_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_CARDS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_COLLECTION_STYLES:
-			case WebuiPackage.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_DETAILS_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_FORM_STYLES:
-			case WebuiPackage.WEB_UI__DEFAULT_GALLERY_STYLES:
-			case WebuiPackage.WEB_UI__DEFAULT_SLIDER_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_STATIC_STYLES:
 			case WebuiPackage.WEB_UI__DEFAULT_TABULAR_STYLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -561,18 +555,8 @@ public class WebUIItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES,
-				 WebuiFactory.eINSTANCE.createImageCardsUnitStyles()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(WebuiPackage.Literals.WEB_UI__DEFAULT_COLLECTION_STYLES,
 				 WebuiFactory.eINSTANCE.createCollectionUnitStyles()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES,
-				 WebuiFactory.eINSTANCE.createImageCardsUnitStyles()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -586,16 +570,6 @@ public class WebUIItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.WEB_UI__DEFAULT_GALLERY_STYLES,
-				 WebuiFactory.eINSTANCE.createGalleryUnitStyles()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.WEB_UI__DEFAULT_SLIDER_STYLES,
-				 WebuiFactory.eINSTANCE.createSliderUnitStyles()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(WebuiPackage.Literals.WEB_UI__DEFAULT_STATIC_STYLES,
 				 WebuiFactory.eINSTANCE.createStaticUnitStyles()));
 
@@ -603,29 +577,6 @@ public class WebUIItemProvider
 			(createChildParameter
 				(WebuiPackage.Literals.WEB_UI__DEFAULT_TABULAR_STYLES,
 				 WebuiFactory.eINSTANCE.createTabularUnitStyles()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == WebuiPackage.Literals.WEB_UI__DEFAULT_CARDS_STYLES ||
-			childFeature == WebuiPackage.Literals.WEB_UI__DEFAULT_IMAGE_CARDS_STYLES;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

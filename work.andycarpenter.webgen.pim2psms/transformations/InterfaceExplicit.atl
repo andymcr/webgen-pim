@@ -218,6 +218,9 @@ abstract rule CollectionStyles {
 	from website : Website!CollectionStyles
 	to waf : WAF!CollectionStyles (
 		filtersClass <- website.filtersClass,
+		filtersActionClass <- website.filtersActionClass,
+		filtersBodyClass <- website.filtersBodyClass,
+		filtersControlClass <- website.filtersControlClass,
 		instanceControlClass <- website.instanceControlClass,
 		instanceActionClass <- website.instanceActionClass
 	)

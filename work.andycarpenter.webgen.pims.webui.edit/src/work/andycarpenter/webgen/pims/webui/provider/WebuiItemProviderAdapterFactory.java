@@ -298,29 +298,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ImageCardsUnitStylesItemProvider imageCardsUnitStylesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createImageCardsUnitStylesAdapter() {
-		if (imageCardsUnitStylesItemProvider == null) {
-			imageCardsUnitStylesItemProvider = new ImageCardsUnitStylesItemProvider(this);
-		}
-
-		return imageCardsUnitStylesItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.DetailsUnitStyles} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -364,52 +341,6 @@ public class WebuiItemProviderAdapterFactory extends WebuiAdapterFactory impleme
 		}
 
 		return formUnitStylesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.GalleryUnitStyles} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GalleryUnitStylesItemProvider galleryUnitStylesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.GalleryUnitStyles}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGalleryUnitStylesAdapter() {
-		if (galleryUnitStylesItemProvider == null) {
-			galleryUnitStylesItemProvider = new GalleryUnitStylesItemProvider(this);
-		}
-
-		return galleryUnitStylesItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.webui.SliderUnitStyles} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SliderUnitStylesItemProvider sliderUnitStylesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.webui.SliderUnitStyles}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSliderUnitStylesAdapter() {
-		if (sliderUnitStylesItemProvider == null) {
-			sliderUnitStylesItemProvider = new SliderUnitStylesItemProvider(this);
-		}
-
-		return sliderUnitStylesItemProvider;
 	}
 
 	/**

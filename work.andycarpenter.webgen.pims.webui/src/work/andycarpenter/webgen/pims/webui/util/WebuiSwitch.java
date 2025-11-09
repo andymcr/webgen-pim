@@ -182,16 +182,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebuiPackage.IMAGE_CARDS_UNIT_STYLES: {
-				ImageCardsUnitStyles imageCardsUnitStyles = (ImageCardsUnitStyles)theEObject;
-				T result = caseImageCardsUnitStyles(imageCardsUnitStyles);
-				if (result == null) result = caseCardsUnitStyles(imageCardsUnitStyles);
-				if (result == null) result = caseCollectionStyles(imageCardsUnitStyles);
-				if (result == null) result = caseDynamicUnitStyles(imageCardsUnitStyles);
-				if (result == null) result = caseContentUnitStyles(imageCardsUnitStyles);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case WebuiPackage.DETAILS_UNIT_STYLES: {
 				DetailsUnitStyles detailsUnitStyles = (DetailsUnitStyles)theEObject;
 				T result = caseDetailsUnitStyles(detailsUnitStyles);
@@ -205,24 +195,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 				T result = caseFormUnitStyles(formUnitStyles);
 				if (result == null) result = caseDynamicUnitStyles(formUnitStyles);
 				if (result == null) result = caseContentUnitStyles(formUnitStyles);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.GALLERY_UNIT_STYLES: {
-				GalleryUnitStyles galleryUnitStyles = (GalleryUnitStyles)theEObject;
-				T result = caseGalleryUnitStyles(galleryUnitStyles);
-				if (result == null) result = caseCollectionStyles(galleryUnitStyles);
-				if (result == null) result = caseDynamicUnitStyles(galleryUnitStyles);
-				if (result == null) result = caseContentUnitStyles(galleryUnitStyles);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case WebuiPackage.SLIDER_UNIT_STYLES: {
-				SliderUnitStyles sliderUnitStyles = (SliderUnitStyles)theEObject;
-				T result = caseSliderUnitStyles(sliderUnitStyles);
-				if (result == null) result = caseCollectionStyles(sliderUnitStyles);
-				if (result == null) result = caseDynamicUnitStyles(sliderUnitStyles);
-				if (result == null) result = caseContentUnitStyles(sliderUnitStyles);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1222,21 +1194,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Image Cards Unit Styles</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image Cards Unit Styles</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseImageCardsUnitStyles(ImageCardsUnitStyles object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Details Unit Styles</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1263,36 +1220,6 @@ public class WebuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFormUnitStyles(FormUnitStyles object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Gallery Unit Styles</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Gallery Unit Styles</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGalleryUnitStyles(GalleryUnitStyles object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Slider Unit Styles</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Slider Unit Styles</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSliderUnitStyles(SliderUnitStyles object) {
 		return null;
 	}
 

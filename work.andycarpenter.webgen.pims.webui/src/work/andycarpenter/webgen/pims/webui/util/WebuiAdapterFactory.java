@@ -132,24 +132,12 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 				return createCardsUnitStylesAdapter();
 			}
 			@Override
-			public Adapter caseImageCardsUnitStyles(ImageCardsUnitStyles object) {
-				return createImageCardsUnitStylesAdapter();
-			}
-			@Override
 			public Adapter caseDetailsUnitStyles(DetailsUnitStyles object) {
 				return createDetailsUnitStylesAdapter();
 			}
 			@Override
 			public Adapter caseFormUnitStyles(FormUnitStyles object) {
 				return createFormUnitStylesAdapter();
-			}
-			@Override
-			public Adapter caseGalleryUnitStyles(GalleryUnitStyles object) {
-				return createGalleryUnitStylesAdapter();
-			}
-			@Override
-			public Adapter caseSliderUnitStyles(SliderUnitStyles object) {
-				return createSliderUnitStylesAdapter();
 			}
 			@Override
 			public Adapter caseStaticUnitStyles(StaticUnitStyles object) {
@@ -700,20 +688,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles <em>Image Cards Unit Styles</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.ImageCardsUnitStyles
-	 * @generated
-	 */
-	public Adapter createImageCardsUnitStylesAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.DetailsUnitStyles <em>Details Unit Styles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -738,34 +712,6 @@ public class WebuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFormUnitStylesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.GalleryUnitStyles <em>Gallery Unit Styles</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.GalleryUnitStyles
-	 * @generated
-	 */
-	public Adapter createGalleryUnitStylesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.webui.SliderUnitStyles <em>Slider Unit Styles</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see work.andycarpenter.webgen.pims.webui.SliderUnitStyles
-	 * @generated
-	 */
-	public Adapter createSliderUnitStylesAdapter() {
 		return null;
 	}
 

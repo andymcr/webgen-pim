@@ -54,11 +54,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultCardsStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultCollectionStyles"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultImageCardsStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultDetailsStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultFormStyles"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultGalleryStyles"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultSliderStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultStaticStyles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//WebUI/defaultTabularStyles"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//WebUI/defaultMaximumUploadSize"/>
@@ -108,8 +105,11 @@
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CollectionStyles">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceControlClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersActionClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersBodyClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersControlClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceActionClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceControlClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//CollectionUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//DefaultUnitStyles"/>
@@ -120,15 +120,10 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/cardFooterClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CardsUnitStyles/badgeClass"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//ImageCardsUnitStyles">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//ImageCardsUnitStyles/imageActionClass"/>
-    </genClasses>
     <genClasses ecoreClass="webui.ecore#//DetailsUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//FormUnitStyles">
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//FormUnitStyles/inputGroupClass"/>
     </genClasses>
-    <genClasses ecoreClass="webui.ecore#//GalleryUnitStyles"/>
-    <genClasses ecoreClass="webui.ecore#//SliderUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//StaticUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//TabularUnitStyles">
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//TabularUnitStyles/headerClass"/>
