@@ -6036,7 +6036,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		  (getCollectionFilter__ReferencableEntities(),
 		   source,
 		   new String[] {
-			   "body", "if affects.selection.oclIsUndefined(} then\t\n\tOrderedSet{self.definedBy.serves}\nelse\n\taffects.selection.referencableEntities(}\nendif"
+			   "body", "if affects.selection.oclIsUndefined() then\t\n\tOrderedSet{self.definedBy.serves}\nelse\n\taffects.selection.referencableEntities()\nendif"
 		   });
 		addAnnotation
 		  (detailsUnitEClass,
