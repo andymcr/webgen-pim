@@ -25,6 +25,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilters <em>Filters</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isFiltersUseAutoSubmit <em>Filters Use Auto Submit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearLabelOverride <em>Clear Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearIconOverride <em>Clear Icon Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchLabelOverride <em>Search Label Override</em>}</li>
@@ -212,6 +213,29 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContex
 	 * @generated
 	 */
 	EList<CollectionFilter> getFilters();
+
+	/**
+	 * Returns the value of the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Filters Use Auto Submit</em>' attribute.
+	 * @see #setFiltersUseAutoSubmit(boolean)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_FiltersUseAutoSubmit()
+	 * @model default="true"
+	 * @generated
+	 */
+	boolean isFiltersUseAutoSubmit();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isFiltersUseAutoSubmit <em>Filters Use Auto Submit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Filters Use Auto Submit</em>' attribute.
+	 * @see #isFiltersUseAutoSubmit()
+	 * @generated
+	 */
+	void setFiltersUseAutoSubmit(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Clear Label Override</b></em>' attribute.

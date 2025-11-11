@@ -2623,6 +2623,16 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getUnitAssociation_AutocompleteKeys() {
+		return (EReference)unitAssociationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EOperation getUnitAssociation__Name() {
 		return unitAssociationEClass.getEOperations().get(0);
 	}
@@ -2953,7 +2963,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_ClearLabelOverride() {
+	public EAttribute getCollectionUnit_FiltersUseAutoSubmit() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -2963,7 +2973,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_ClearIconOverride() {
+	public EAttribute getCollectionUnit_ClearLabelOverride() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -2973,7 +2983,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_SearchLabelOverride() {
+	public EAttribute getCollectionUnit_ClearIconOverride() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -2983,8 +2993,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_SearchIconOverride() {
+	public EAttribute getCollectionUnit_SearchLabelOverride() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionUnit_SearchIconOverride() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -3004,7 +3024,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getCollectionUnit_EmptyMessage() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -3014,16 +3034,6 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getCollectionUnit_OmitFieldLabels() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getCollectionUnit_DefaultPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -3033,8 +3043,18 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_MaximumPaginationSize() {
+	public EAttribute getCollectionUnit_DefaultPaginationSize() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionUnit_MaximumPaginationSize() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -4902,6 +4922,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__OPTIONS);
 		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__COLLECTION_SORT_BY);
 		createEAttribute(unitAssociationEClass, UNIT_ASSOCIATION__USE_AUTOCOMPLETE);
+		createEReference(unitAssociationEClass, UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS);
 		createEOperation(unitAssociationEClass, UNIT_ASSOCIATION___NAME);
 
 		unitLabelEClass = createEClass(UNIT_LABEL);
@@ -4943,6 +4964,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FIND_ELEMENT_SELECTION);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FILTER);
 		createEReference(collectionUnitEClass, COLLECTION_UNIT__FILTERS);
+		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__CLEAR_ICON_OVERRIDE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE);
@@ -5531,6 +5553,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getUnitAssociation_Options(), thePersistencePackage.getSelection(), null, "options", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitAssociation_CollectionSortBy(), thePersistencePackage.getAttribute(), null, "collectionSortBy", null, 0, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitAssociation_UseAutocomplete(), ecorePackage.getEBoolean(), "useAutocomplete", "false", 1, 1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitAssociation_AutocompleteKeys(), thePersistencePackage.getAttribute(), null, "autocompleteKeys", null, 0, -1, UnitAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getUnitAssociation__Name(), ecorePackage.getEString(), "name", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -5573,6 +5596,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getCollectionUnit_FindElementSelection(), thePersistencePackage.getSelection(), null, "findElementSelection", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_Filter(), thePersistencePackage.getFilter(), null, "filter", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCollectionUnit_Filters(), this.getCollectionFilter(), this.getCollectionFilter_Affects(), "filters", null, 0, -1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionUnit_FiltersUseAutoSubmit(), ecorePackage.getEBoolean(), "filtersUseAutoSubmit", "true", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_ClearLabelOverride(), ecorePackage.getEString(), "clearLabelOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_ClearIconOverride(), ecorePackage.getEString(), "clearIconOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_SearchLabelOverride(), ecorePackage.getEString(), "searchLabelOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

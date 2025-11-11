@@ -64,6 +64,7 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 			addOptionsPropertyDescriptor(object);
 			addCollectionSortByPropertyDescriptor(object);
 			addUseAutocompletePropertyDescriptor(object);
+			addAutocompleteKeysPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -248,6 +249,28 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Autocomplete Keys feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAutocompleteKeysPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_UnitAssociation_autocompleteKeys_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_autocompleteKeys_feature", "_UI_UnitAssociation_type"),
+				 WebuiPackage.Literals.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}

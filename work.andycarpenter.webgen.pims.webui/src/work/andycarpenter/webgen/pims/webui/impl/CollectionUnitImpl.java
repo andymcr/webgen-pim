@@ -44,6 +44,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFindElementSelection <em>Find Element Selection</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilter <em>Filter</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getFilters <em>Filters</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#isFiltersUseAutoSubmit <em>Filters Use Auto Submit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getClearLabelOverride <em>Clear Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getClearIconOverride <em>Clear Icon Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionUnitImpl#getSearchLabelOverride <em>Search Label Override</em>}</li>
@@ -156,6 +157,26 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @ordered
 	 */
 	protected EList<CollectionFilter> filters;
+
+	/**
+	 * The default value of the '{@link #isFiltersUseAutoSubmit() <em>Filters Use Auto Submit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFiltersUseAutoSubmit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean FILTERS_USE_AUTO_SUBMIT_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isFiltersUseAutoSubmit() <em>Filters Use Auto Submit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFiltersUseAutoSubmit()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean filtersUseAutoSubmit = FILTERS_USE_AUTO_SUBMIT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getClearLabelOverride() <em>Clear Label Override</em>}' attribute.
@@ -675,6 +696,29 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 	 * @generated
 	 */
 	@Override
+	public boolean isFiltersUseAutoSubmit() {
+		return filtersUseAutoSubmit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setFiltersUseAutoSubmit(boolean newFiltersUseAutoSubmit) {
+		boolean oldFiltersUseAutoSubmit = filtersUseAutoSubmit;
+		filtersUseAutoSubmit = newFiltersUseAutoSubmit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT, oldFiltersUseAutoSubmit, filtersUseAutoSubmit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getClearLabelOverride() {
 		return clearLabelOverride;
 	}
@@ -940,6 +984,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return basicGetFilter();
 			case WebuiPackage.COLLECTION_UNIT__FILTERS:
 				return getFilters();
+			case WebuiPackage.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT:
+				return isFiltersUseAutoSubmit();
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
 				return getClearLabelOverride();
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
@@ -993,6 +1039,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FILTERS:
 				getFilters().clear();
 				getFilters().addAll((Collection<? extends CollectionFilter>)newValue);
+				return;
+			case WebuiPackage.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT:
+				setFiltersUseAutoSubmit((Boolean)newValue);
 				return;
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
 				setClearLabelOverride((String)newValue);
@@ -1054,6 +1103,9 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 			case WebuiPackage.COLLECTION_UNIT__FILTERS:
 				getFilters().clear();
 				return;
+			case WebuiPackage.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT:
+				setFiltersUseAutoSubmit(FILTERS_USE_AUTO_SUBMIT_EDEFAULT);
+				return;
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
 				setClearLabelOverride(CLEAR_LABEL_OVERRIDE_EDEFAULT);
 				return;
@@ -1108,6 +1160,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 				return filter != null;
 			case WebuiPackage.COLLECTION_UNIT__FILTERS:
 				return filters != null && !filters.isEmpty();
+			case WebuiPackage.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT:
+				return filtersUseAutoSubmit != FILTERS_USE_AUTO_SUBMIT_EDEFAULT;
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
 				return CLEAR_LABEL_OVERRIDE_EDEFAULT == null ? clearLabelOverride != null : !CLEAR_LABEL_OVERRIDE_EDEFAULT.equals(clearLabelOverride);
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
@@ -1219,6 +1273,8 @@ public abstract class CollectionUnitImpl extends DynamicUnitImpl implements Coll
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (truncateElementTitle: ");
 		result.append(truncateElementTitle);
+		result.append(", filtersUseAutoSubmit: ");
+		result.append(filtersUseAutoSubmit);
 		result.append(", clearLabelOverride: ");
 		result.append(clearLabelOverride);
 		result.append(", clearIconOverride: ");

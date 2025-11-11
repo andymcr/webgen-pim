@@ -3,6 +3,7 @@
 package work.andycarpenter.webgen.pims.webui.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -11,6 +12,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import work.andycarpenter.webgen.pims.persistence.Association;
 import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
@@ -39,6 +41,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getCollectionSortBy <em>Collection Sort By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#isUseAutocomplete <em>Use Autocomplete</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.UnitAssociationImpl#getAutocompleteKeys <em>Autocomplete Keys</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,6 +136,16 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * @ordered
 	 */
 	protected boolean useAutocomplete = USE_AUTOCOMPLETE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAutocompleteKeys() <em>Autocomplete Keys</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAutocompleteKeys()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Attribute> autocompleteKeys;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -474,6 +487,19 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Attribute> getAutocompleteKeys() {
+		if (autocompleteKeys == null) {
+			autocompleteKeys = new EObjectResolvingEList<Attribute>(Attribute.class, this, WebuiPackage.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS);
+		}
+		return autocompleteKeys;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	@Override
@@ -567,6 +593,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return basicGetCollectionSortBy();
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				return isUseAutocomplete();
+			case WebuiPackage.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS:
+				return getAutocompleteKeys();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -576,6 +604,7 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -596,6 +625,10 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return;
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				setUseAutocomplete((Boolean)newValue);
+				return;
+			case WebuiPackage.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS:
+				getAutocompleteKeys().clear();
+				getAutocompleteKeys().addAll((Collection<? extends Attribute>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -627,6 +660,9 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				setUseAutocomplete(USE_AUTOCOMPLETE_EDEFAULT);
 				return;
+			case WebuiPackage.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS:
+				getAutocompleteKeys().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -655,6 +691,8 @@ public class UnitAssociationImpl extends UnitFeatureImpl implements UnitAssociat
 				return collectionSortBy != null;
 			case WebuiPackage.UNIT_ASSOCIATION__USE_AUTOCOMPLETE:
 				return useAutocomplete != USE_AUTOCOMPLETE_EDEFAULT;
+			case WebuiPackage.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS:
+				return autocompleteKeys != null && !autocompleteKeys.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

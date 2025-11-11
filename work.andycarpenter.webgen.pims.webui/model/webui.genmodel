@@ -104,12 +104,12 @@
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//DynamicUnitStyles/anchorClass"/>
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CollectionStyles">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersActionClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersBodyClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersControlClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceActionClass"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceControlClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersActionClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersBodyClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersControlClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceActionClass"/>
+      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceControlClass"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//CollectionUnitStyles"/>
     <genClasses ecoreClass="webui.ecore#//DefaultUnitStyles"/>
@@ -248,6 +248,8 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/options"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/collectionSortBy"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//UnitAssociation/useAutocomplete"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="Interface"
+          propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//UnitAssociation/autocompleteKeys"/>
       <genOperations ecoreOperation="webui.ecore#//UnitAssociation/name"/>
     </genClasses>
     <genClasses ecoreClass="webui.ecore#//UnitLabel">
@@ -297,6 +299,7 @@
       <genFeatures notify="false" createChild="false" propertyCategory="Business"
           propertySortChoices="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filter"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference webui.ecore#//CollectionUnit/filters"/>
+      <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/filtersUseAutoSubmit"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/clearLabelOverride"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/clearIconOverride"/>
       <genFeatures createChild="false" propertyCategory="Interface" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionUnit/searchLabelOverride"/>

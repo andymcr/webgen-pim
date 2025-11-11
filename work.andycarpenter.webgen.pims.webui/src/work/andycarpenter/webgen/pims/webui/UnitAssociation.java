@@ -2,6 +2,7 @@
  */
 package work.andycarpenter.webgen.pims.webui;
 
+import org.eclipse.emf.common.util.EList;
 import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
 import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Selection;
@@ -18,6 +19,7 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getOptions <em>Options</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getCollectionSortBy <em>Collection Sort By</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#isUseAutocomplete <em>Use Autocomplete</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getAutocompleteKeys <em>Autocomplete Keys</em>}</li>
  * </ul>
  *
  * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation()
@@ -96,6 +98,18 @@ public interface UnitAssociation extends UnitFeature, AssociationPathElement {
 	 * @generated
 	 */
 	void setUseAutocomplete(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Autocomplete Keys</b></em>' reference list.
+	 * The list contents are of type {@link work.andycarpenter.webgen.pims.persistence.Attribute}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Autocomplete Keys</em>' reference list.
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getUnitAssociation_AutocompleteKeys()
+	 * @model
+	 * @generated
+	 */
+	EList<Attribute> getAutocompleteKeys();
 
 	/**
 	 * <!-- begin-user-doc -->

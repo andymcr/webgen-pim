@@ -4910,13 +4910,22 @@ public interface WebuiPackage extends EPackage {
 	int UNIT_ASSOCIATION__USE_AUTOCOMPLETE = UNIT_FEATURE_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Autocomplete Keys</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS = UNIT_FEATURE_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Unit Association</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 8;
+	int UNIT_ASSOCIATION_FEATURE_COUNT = UNIT_FEATURE_FEATURE_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Referencable Entities</em>' operation.
@@ -6762,13 +6771,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__FILTERS = DYNAMIC_UNIT_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+
+	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 9;
+	int COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Clear Icon Override</b></em>' attribute.
@@ -6777,7 +6795,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__CLEAR_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 10;
+	int COLLECTION_UNIT__CLEAR_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
@@ -6786,7 +6804,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
+	int COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
@@ -6795,7 +6813,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SEARCH_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+	int COLLECTION_UNIT__SEARCH_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -6804,7 +6822,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -6813,7 +6831,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -6822,7 +6840,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 15;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -6831,7 +6849,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 16;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -6840,7 +6858,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 17;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -10892,6 +10910,15 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
 
 	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__FILTERS_USE_AUTO_SUBMIT = COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT;
+
+	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11431,6 +11458,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__FILTERS_USE_AUTO_SUBMIT = COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT;
 
 	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
@@ -12228,6 +12264,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
 
 	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__FILTERS_USE_AUTO_SUBMIT = CARDS_UNIT__FILTERS_USE_AUTO_SUBMIT;
+
+	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12793,6 +12838,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__FILTERS_USE_AUTO_SUBMIT = CARDS_UNIT__FILTERS_USE_AUTO_SUBMIT;
 
 	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
@@ -13479,6 +13533,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__FILTERS = CARDS_UNIT__FILTERS;
 
 	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__FILTERS_USE_AUTO_SUBMIT = CARDS_UNIT__FILTERS_USE_AUTO_SUBMIT;
+
+	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14118,6 +14181,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
 
 	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__FILTERS_USE_AUTO_SUBMIT = COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT;
+
+	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14674,6 +14746,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__FILTERS = COLLECTION_UNIT__FILTERS;
+
+	/**
+	 * The feature id for the '<em><b>Filters Use Auto Submit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__FILTERS_USE_AUTO_SUBMIT = COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT;
 
 	/**
 	 * The feature id for the '<em><b>Clear Label Override</b></em>' attribute.
@@ -22259,6 +22340,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getUnitAssociation_UseAutocomplete();
 
 	/**
+	 * Returns the meta object for the reference list '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#getAutocompleteKeys <em>Autocomplete Keys</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Autocomplete Keys</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.UnitAssociation#getAutocompleteKeys()
+	 * @see #getUnitAssociation()
+	 * @generated
+	 */
+	EReference getUnitAssociation_AutocompleteKeys();
+
+	/**
 	 * Returns the meta object for the '{@link work.andycarpenter.webgen.pims.webui.UnitAssociation#name() <em>Name</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22612,6 +22704,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCollectionUnit_Filters();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isFiltersUseAutoSubmit <em>Filters Use Auto Submit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filters Use Auto Submit</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#isFiltersUseAutoSubmit()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_FiltersUseAutoSubmit();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearLabelOverride <em>Clear Label Override</em>}'.
@@ -25926,6 +26029,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute UNIT_ASSOCIATION__USE_AUTOCOMPLETE = eINSTANCE.getUnitAssociation_UseAutocomplete();
 
 		/**
+		 * The meta object literal for the '<em><b>Autocomplete Keys</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS = eINSTANCE.getUnitAssociation_AutocompleteKeys();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26202,6 +26313,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COLLECTION_UNIT__FILTERS = eINSTANCE.getCollectionUnit_Filters();
+
+		/**
+		 * The meta object literal for the '<em><b>Filters Use Auto Submit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT = eINSTANCE.getCollectionUnit_FiltersUseAutoSubmit();
 
 		/**
 		 * The meta object literal for the '<em><b>Clear Label Override</b></em>' attribute feature.

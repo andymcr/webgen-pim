@@ -61,6 +61,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addFindContainerSelectionPropertyDescriptor(object);
 			addFindElementSelectionPropertyDescriptor(object);
 			addFilterPropertyDescriptor(object);
+			addFiltersUseAutoSubmitPropertyDescriptor(object);
 			addClearLabelOverridePropertyDescriptor(object);
 			addClearIconOverridePropertyDescriptor(object);
 			addSearchLabelOverridePropertyDescriptor(object);
@@ -257,6 +258,28 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				 true,
 				 null,
 				 getString("_UI_BusinessPropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Filters Use Auto Submit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFiltersUseAutoSubmitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_filtersUseAutoSubmit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_filtersUseAutoSubmit_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
 				 null));
 	}
 
@@ -495,6 +518,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 
 		switch (notification.getFeatureID(CollectionUnit.class)) {
 			case WebuiPackage.COLLECTION_UNIT__TRUNCATE_ELEMENT_TITLE:
+			case WebuiPackage.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT:
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
 			case WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE:
