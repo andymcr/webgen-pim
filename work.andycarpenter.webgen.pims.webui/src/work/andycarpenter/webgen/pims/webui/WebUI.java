@@ -27,12 +27,16 @@ import work.andycarpenter.webgen.pims.service.Services;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultDateTimeFormat <em>Default Date Time Format</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelLabel <em>Default Cancel Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelIcon <em>Default Cancel Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelTitle <em>Default Cancel Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearLabel <em>Default Clear Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearIcon <em>Default Clear Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearTitle <em>Default Clear Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveLabel <em>Default Save Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveIcon <em>Default Save Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveTitle <em>Default Save Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchLabel <em>Default Search Label</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchIcon <em>Default Search Icon</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchTitle <em>Default Search Title</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultPageStyleClass <em>Default Page Style Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultStyles <em>Default Styles</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCardsStyles <em>Default Cards Styles</em>}</li>
@@ -287,6 +291,29 @@ public interface WebUI extends EObject {
 	void setDefaultCancelIcon(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Default Cancel Title</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Cancel Title</em>' attribute.
+	 * @see #setDefaultCancelTitle(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultCancelTitle()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultCancelTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelTitle <em>Default Cancel Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Cancel Title</em>' attribute.
+	 * @see #getDefaultCancelTitle()
+	 * @generated
+	 */
+	void setDefaultCancelTitle(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Default Clear Label</b></em>' attribute.
 	 * The default value is <code>"Clear"</code>.
 	 * <!-- begin-user-doc -->
@@ -331,6 +358,29 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultClearIcon(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Clear Title</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Clear Title</em>' attribute.
+	 * @see #setDefaultClearTitle(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultClearTitle()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultClearTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearTitle <em>Default Clear Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Clear Title</em>' attribute.
+	 * @see #getDefaultClearTitle()
+	 * @generated
+	 */
+	void setDefaultClearTitle(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Save Label</b></em>' attribute.
@@ -379,6 +429,29 @@ public interface WebUI extends EObject {
 	void setDefaultSaveIcon(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Default Save Title</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Save Title</em>' attribute.
+	 * @see #setDefaultSaveTitle(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSaveTitle()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDefaultSaveTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveTitle <em>Default Save Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Save Title</em>' attribute.
+	 * @see #getDefaultSaveTitle()
+	 * @generated
+	 */
+	void setDefaultSaveTitle(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Default Search Label</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
@@ -423,6 +496,29 @@ public interface WebUI extends EObject {
 	 * @generated
 	 */
 	void setDefaultSearchIcon(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Default Search Title</b></em>' attribute.
+	 * The default value is <code>"Search"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Default Search Title</em>' attribute.
+	 * @see #setDefaultSearchTitle(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getWebUI_DefaultSearchTitle()
+	 * @model default="Search"
+	 * @generated
+	 */
+	String getDefaultSearchTitle();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchTitle <em>Default Search Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Default Search Title</em>' attribute.
+	 * @see #getDefaultSearchTitle()
+	 * @generated
+	 */
+	void setDefaultSearchTitle(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Default Page Style Class</b></em>' attribute.

@@ -163,13 +163,22 @@ public interface WebuiPackage extends EPackage {
 	int WEB_UI__DEFAULT_CANCEL_ICON = 9;
 
 	/**
+	 * The feature id for the '<em><b>Default Cancel Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CANCEL_TITLE = 10;
+
+	/**
 	 * The feature id for the '<em><b>Default Clear Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CLEAR_LABEL = 10;
+	int WEB_UI__DEFAULT_CLEAR_LABEL = 11;
 
 	/**
 	 * The feature id for the '<em><b>Default Clear Icon</b></em>' attribute.
@@ -178,7 +187,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CLEAR_ICON = 11;
+	int WEB_UI__DEFAULT_CLEAR_ICON = 12;
+
+	/**
+	 * The feature id for the '<em><b>Default Clear Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_CLEAR_TITLE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Default Save Label</b></em>' attribute.
@@ -187,7 +205,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SAVE_LABEL = 12;
+	int WEB_UI__DEFAULT_SAVE_LABEL = 14;
 
 	/**
 	 * The feature id for the '<em><b>Default Save Icon</b></em>' attribute.
@@ -196,7 +214,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SAVE_ICON = 13;
+	int WEB_UI__DEFAULT_SAVE_ICON = 15;
+
+	/**
+	 * The feature id for the '<em><b>Default Save Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SAVE_TITLE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Search Label</b></em>' attribute.
@@ -205,7 +232,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SEARCH_LABEL = 14;
+	int WEB_UI__DEFAULT_SEARCH_LABEL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Default Search Icon</b></em>' attribute.
@@ -214,7 +241,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_SEARCH_ICON = 15;
+	int WEB_UI__DEFAULT_SEARCH_ICON = 18;
+
+	/**
+	 * The feature id for the '<em><b>Default Search Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_UI__DEFAULT_SEARCH_TITLE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Default Page Style Class</b></em>' attribute.
@@ -223,7 +259,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_PAGE_STYLE_CLASS = 16;
+	int WEB_UI__DEFAULT_PAGE_STYLE_CLASS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Default Styles</b></em>' containment reference.
@@ -232,7 +268,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STYLES = 17;
+	int WEB_UI__DEFAULT_STYLES = 21;
 
 	/**
 	 * The feature id for the '<em><b>Default Cards Styles</b></em>' containment reference.
@@ -241,7 +277,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_CARDS_STYLES = 18;
+	int WEB_UI__DEFAULT_CARDS_STYLES = 22;
 
 	/**
 	 * The feature id for the '<em><b>Default Collection Styles</b></em>' containment reference.
@@ -250,7 +286,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_COLLECTION_STYLES = 19;
+	int WEB_UI__DEFAULT_COLLECTION_STYLES = 23;
 
 	/**
 	 * The feature id for the '<em><b>Default Details Styles</b></em>' containment reference.
@@ -259,7 +295,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_DETAILS_STYLES = 20;
+	int WEB_UI__DEFAULT_DETAILS_STYLES = 24;
 
 	/**
 	 * The feature id for the '<em><b>Default Form Styles</b></em>' containment reference.
@@ -268,7 +304,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_FORM_STYLES = 21;
+	int WEB_UI__DEFAULT_FORM_STYLES = 25;
 
 	/**
 	 * The feature id for the '<em><b>Default Static Styles</b></em>' containment reference.
@@ -277,7 +313,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_STATIC_STYLES = 22;
+	int WEB_UI__DEFAULT_STATIC_STYLES = 26;
 
 	/**
 	 * The feature id for the '<em><b>Default Tabular Styles</b></em>' containment reference.
@@ -286,7 +322,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_TABULAR_STYLES = 23;
+	int WEB_UI__DEFAULT_TABULAR_STYLES = 27;
 
 	/**
 	 * The feature id for the '<em><b>Default Maximum Upload Size</b></em>' attribute.
@@ -295,7 +331,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 24;
+	int WEB_UI__DEFAULT_MAXIMUM_UPLOAD_SIZE = 28;
 
 	/**
 	 * The number of structural features of the '<em>Web UI</em>' class.
@@ -304,7 +340,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_UI_FEATURE_COUNT = 25;
+	int WEB_UI_FEATURE_COUNT = 29;
 
 	/**
 	 * The number of operations of the '<em>Web UI</em>' class.
@@ -20573,6 +20609,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultCancelIcon();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelTitle <em>Default Cancel Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Cancel Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultCancelTitle()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultCancelTitle();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearLabel <em>Default Clear Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20593,6 +20640,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWebUI_DefaultClearIcon();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearTitle <em>Default Clear Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Clear Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultClearTitle()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultClearTitle();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveLabel <em>Default Save Label</em>}'.
@@ -20617,6 +20675,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getWebUI_DefaultSaveIcon();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveTitle <em>Default Save Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Save Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSaveTitle()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSaveTitle();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchLabel <em>Default Search Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -20637,6 +20706,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWebUI_DefaultSearchIcon();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchTitle <em>Default Search Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Default Search Title</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.WebUI#getDefaultSearchTitle()
+	 * @see #getWebUI()
+	 * @generated
+	 */
+	EAttribute getWebUI_DefaultSearchTitle();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.WebUI#getDefaultPageStyleClass <em>Default Page Style Class</em>}'.
@@ -24655,6 +24735,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_CANCEL_ICON = eINSTANCE.getWebUI_DefaultCancelIcon();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Cancel Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CANCEL_TITLE = eINSTANCE.getWebUI_DefaultCancelTitle();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Clear Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24669,6 +24757,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_CLEAR_ICON = eINSTANCE.getWebUI_DefaultClearIcon();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Clear Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_CLEAR_TITLE = eINSTANCE.getWebUI_DefaultClearTitle();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Save Label</b></em>' attribute feature.
@@ -24687,6 +24783,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute WEB_UI__DEFAULT_SAVE_ICON = eINSTANCE.getWebUI_DefaultSaveIcon();
 
 		/**
+		 * The meta object literal for the '<em><b>Default Save Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SAVE_TITLE = eINSTANCE.getWebUI_DefaultSaveTitle();
+
+		/**
 		 * The meta object literal for the '<em><b>Default Search Label</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -24701,6 +24805,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute WEB_UI__DEFAULT_SEARCH_ICON = eINSTANCE.getWebUI_DefaultSearchIcon();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Search Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEB_UI__DEFAULT_SEARCH_TITLE = eINSTANCE.getWebUI_DefaultSearchTitle();
 
 		/**
 		 * The meta object literal for the '<em><b>Default Page Style Class</b></em>' attribute feature.
