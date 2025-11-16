@@ -19,8 +19,13 @@ import work.andycarpenter.webgen.pims.expression.Predicate;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelLabelOverride <em>Cancel Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelIconOverride <em>Cancel Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelTitleOverride <em>Cancel Title Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetLabelOverride <em>Reset Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetIconOverride <em>Reset Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetTitleOverride <em>Reset Title Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveLabelOverride <em>Save Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveIconOverride <em>Save Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveTitleOverride <em>Save Title Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getConfirmMessage <em>Confirm Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}</li>
@@ -221,6 +226,94 @@ public interface EditUnit extends SingletonUnit {
 	void setCancelIconOverride(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cancel Title Override</em>' attribute.
+	 * @see #setCancelTitleOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_CancelTitleOverride()
+	 * @model
+	 * @generated
+	 */
+	String getCancelTitleOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelTitleOverride <em>Cancel Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cancel Title Override</em>' attribute.
+	 * @see #getCancelTitleOverride()
+	 * @generated
+	 */
+	void setCancelTitleOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset Label Override</em>' attribute.
+	 * @see #setResetLabelOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ResetLabelOverride()
+	 * @model
+	 * @generated
+	 */
+	String getResetLabelOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetLabelOverride <em>Reset Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reset Label Override</em>' attribute.
+	 * @see #getResetLabelOverride()
+	 * @generated
+	 */
+	void setResetLabelOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset Icon Override</em>' attribute.
+	 * @see #setResetIconOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ResetIconOverride()
+	 * @model
+	 * @generated
+	 */
+	String getResetIconOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetIconOverride <em>Reset Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reset Icon Override</em>' attribute.
+	 * @see #getResetIconOverride()
+	 * @generated
+	 */
+	void setResetIconOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reset Title Override</em>' attribute.
+	 * @see #setResetTitleOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_ResetTitleOverride()
+	 * @model
+	 * @generated
+	 */
+	String getResetTitleOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetTitleOverride <em>Reset Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reset Title Override</em>' attribute.
+	 * @see #getResetTitleOverride()
+	 * @generated
+	 */
+	void setResetTitleOverride(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -263,6 +356,28 @@ public interface EditUnit extends SingletonUnit {
 	 * @generated
 	 */
 	void setSaveIconOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Save Title Override</em>' attribute.
+	 * @see #setSaveTitleOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getEditUnit_SaveTitleOverride()
+	 * @model
+	 * @generated
+	 */
+	String getSaveTitleOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveTitleOverride <em>Save Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Save Title Override</em>' attribute.
+	 * @see #getSaveTitleOverride()
+	 * @generated
+	 */
+	void setSaveTitleOverride(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Unit Input Group Class</b></em>' attribute.

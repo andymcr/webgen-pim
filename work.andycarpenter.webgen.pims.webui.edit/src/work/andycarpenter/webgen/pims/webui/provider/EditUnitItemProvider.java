@@ -53,8 +53,13 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 			addCancelDestinationPropertyDescriptor(object);
 			addCancelLabelOverridePropertyDescriptor(object);
 			addCancelIconOverridePropertyDescriptor(object);
+			addCancelTitleOverridePropertyDescriptor(object);
+			addResetLabelOverridePropertyDescriptor(object);
+			addResetIconOverridePropertyDescriptor(object);
+			addResetTitleOverridePropertyDescriptor(object);
 			addSaveLabelOverridePropertyDescriptor(object);
 			addSaveIconOverridePropertyDescriptor(object);
+			addSaveTitleOverridePropertyDescriptor(object);
 			addUnitInputGroupClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -171,6 +176,94 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Cancel Title Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCancelTitleOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EditUnit_cancelTitleOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_cancelTitleOverride_feature", "_UI_EditUnit_type"),
+				 WebuiPackage.Literals.EDIT_UNIT__CANCEL_TITLE_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reset Label Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResetLabelOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EditUnit_resetLabelOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_resetLabelOverride_feature", "_UI_EditUnit_type"),
+				 WebuiPackage.Literals.EDIT_UNIT__RESET_LABEL_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reset Icon Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResetIconOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EditUnit_resetIconOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_resetIconOverride_feature", "_UI_EditUnit_type"),
+				 WebuiPackage.Literals.EDIT_UNIT__RESET_ICON_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reset Title Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResetTitleOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EditUnit_resetTitleOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_resetTitleOverride_feature", "_UI_EditUnit_type"),
+				 WebuiPackage.Literals.EDIT_UNIT__RESET_TITLE_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Save Label Override feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -206,6 +299,28 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 				 getString("_UI_EditUnit_saveIconOverride_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_saveIconOverride_feature", "_UI_EditUnit_type"),
 				 WebuiPackage.Literals.EDIT_UNIT__SAVE_ICON_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Save Title Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSaveTitleOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_EditUnit_saveTitleOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EditUnit_saveTitleOverride_feature", "_UI_EditUnit_type"),
+				 WebuiPackage.Literals.EDIT_UNIT__SAVE_TITLE_OVERRIDE,
 				 true,
 				 false,
 				 false,
@@ -298,8 +413,13 @@ public class EditUnitItemProvider extends SingletonUnitItemProvider {
 			case WebuiPackage.EDIT_UNIT__USE_CAPTCHA:
 			case WebuiPackage.EDIT_UNIT__CANCEL_LABEL_OVERRIDE:
 			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
+			case WebuiPackage.EDIT_UNIT__CANCEL_TITLE_OVERRIDE:
+			case WebuiPackage.EDIT_UNIT__RESET_LABEL_OVERRIDE:
+			case WebuiPackage.EDIT_UNIT__RESET_ICON_OVERRIDE:
+			case WebuiPackage.EDIT_UNIT__RESET_TITLE_OVERRIDE:
 			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
 			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
+			case WebuiPackage.EDIT_UNIT__SAVE_TITLE_OVERRIDE:
 			case WebuiPackage.EDIT_UNIT__UNIT_INPUT_GROUP_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -64,8 +64,10 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			addFiltersUseAutoSubmitPropertyDescriptor(object);
 			addClearLabelOverridePropertyDescriptor(object);
 			addClearIconOverridePropertyDescriptor(object);
+			addClearTitleOverridePropertyDescriptor(object);
 			addSearchLabelOverridePropertyDescriptor(object);
 			addSearchIconOverridePropertyDescriptor(object);
+			addSearchTitleOverridePropertyDescriptor(object);
 			addOmitFieldLabelsPropertyDescriptor(object);
 			addDefaultPaginationSizePropertyDescriptor(object);
 			addMaximumPaginationSizePropertyDescriptor(object);
@@ -328,6 +330,28 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Clear Title Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addClearTitleOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_clearTitleOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_clearTitleOverride_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Search Label Override feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -363,6 +387,28 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 				 getString("_UI_CollectionUnit_searchIconOverride_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_searchIconOverride_feature", "_UI_CollectionUnit_type"),
 				 WebuiPackage.Literals.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 getString("_UI_InterfacePropertyCategory"),
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Search Title Override feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSearchTitleOverridePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_CollectionUnit_searchTitleOverride_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_searchTitleOverride_feature", "_UI_CollectionUnit_type"),
+				 WebuiPackage.Literals.COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE,
 				 true,
 				 false,
 				 false,
@@ -521,6 +567,7 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 			case WebuiPackage.COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT:
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE:
 			case WebuiPackage.COLLECTION_UNIT__CLEAR_ICON_OVERRIDE:
+			case WebuiPackage.COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE:
 			case WebuiPackage.COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE:
 			case WebuiPackage.COLLECTION_UNIT__SEARCH_ICON_OVERRIDE:
 			case WebuiPackage.COLLECTION_UNIT__OMIT_FIELD_LABELS:

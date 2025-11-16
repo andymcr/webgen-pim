@@ -6834,13 +6834,22 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT__CLEAR_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 11;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 12;
+	int COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Search Icon Override</b></em>' attribute.
@@ -6849,7 +6858,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__SEARCH_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 13;
+	int COLLECTION_UNIT__SEARCH_ICON_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE = DYNAMIC_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -6858,7 +6876,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 14;
+	int COLLECTION_UNIT__OMIT_FIELD_LABELS = DYNAMIC_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Default Pagination Size</b></em>' attribute.
@@ -6867,7 +6885,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 15;
+	int COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Pagination Size</b></em>' attribute.
@@ -6876,7 +6894,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 16;
+	int COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE = DYNAMIC_UNIT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Empty Message</b></em>' attribute.
@@ -6885,7 +6903,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 17;
+	int COLLECTION_UNIT__EMPTY_MESSAGE = DYNAMIC_UNIT_FEATURE_COUNT + 19;
 
 	/**
 	 * The number of structural features of the '<em>Collection Unit</em>' class.
@@ -6894,7 +6912,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 18;
+	int COLLECTION_UNIT_FEATURE_COUNT = DYNAMIC_UNIT_FEATURE_COUNT + 20;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -8222,13 +8240,49 @@ public interface WebuiPackage extends EPackage {
 	int EDIT_UNIT__CANCEL_ICON_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__CANCEL_TITLE_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__RESET_LABEL_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__RESET_ICON_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__RESET_TITLE_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 9;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__SAVE_LABEL_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 6;
+	int EDIT_UNIT__SAVE_LABEL_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Save Icon Override</b></em>' attribute.
@@ -8237,7 +8291,16 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__SAVE_ICON_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 7;
+	int EDIT_UNIT__SAVE_ICON_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDIT_UNIT__SAVE_TITLE_OVERRIDE = SINGLETON_UNIT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -8246,7 +8309,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 8;
+	int EDIT_UNIT__CONFIRM_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Success Message</b></em>' containment reference.
@@ -8255,7 +8318,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__SUCCESS_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 9;
+	int EDIT_UNIT__SUCCESS_MESSAGE = SINGLETON_UNIT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Unit Input Group Class</b></em>' attribute.
@@ -8264,7 +8327,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 10;
+	int EDIT_UNIT__UNIT_INPUT_GROUP_CLASS = SINGLETON_UNIT_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>Edit Unit</em>' class.
@@ -8273,7 +8336,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 11;
+	int EDIT_UNIT_FEATURE_COUNT = SINGLETON_UNIT_FEATURE_COUNT + 16;
 
 	/**
 	 * The operation id for the '<em>Containing Type</em>' operation.
@@ -8673,6 +8736,42 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8689,6 +8788,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -9134,6 +9242,42 @@ public interface WebuiPackage extends EPackage {
 	int UPDATE_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9150,6 +9294,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int UPDATE_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -9593,6 +9746,42 @@ public interface WebuiPackage extends EPackage {
 	int CREATE_UPDATE_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9609,6 +9798,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CREATE_UPDATE_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE_UPDATE_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -10071,6 +10269,42 @@ public interface WebuiPackage extends EPackage {
 	int MAP_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10087,6 +10321,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int MAP_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAP_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -10973,6 +11216,15 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__CLEAR_TITLE_OVERRIDE = COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10989,6 +11241,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TABULAR_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABULAR_UNIT__SEARCH_TITLE_OVERRIDE = COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -11523,6 +11784,15 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__CLEAR_TITLE_OVERRIDE = COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11539,6 +11809,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int CARDS_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARDS_UNIT__SEARCH_TITLE_OVERRIDE = COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -12327,6 +12606,15 @@ public interface WebuiPackage extends EPackage {
 	int TEXT_CARDS_UNIT__CLEAR_ICON_OVERRIDE = CARDS_UNIT__CLEAR_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__CLEAR_TITLE_OVERRIDE = CARDS_UNIT__CLEAR_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12343,6 +12631,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_CARDS_UNIT__SEARCH_ICON_OVERRIDE = CARDS_UNIT__SEARCH_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CARDS_UNIT__SEARCH_TITLE_OVERRIDE = CARDS_UNIT__SEARCH_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -12903,6 +13200,15 @@ public interface WebuiPackage extends EPackage {
 	int DATE_CARDS_UNIT__CLEAR_ICON_OVERRIDE = CARDS_UNIT__CLEAR_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__CLEAR_TITLE_OVERRIDE = CARDS_UNIT__CLEAR_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12919,6 +13225,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATE_CARDS_UNIT__SEARCH_ICON_OVERRIDE = CARDS_UNIT__SEARCH_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_CARDS_UNIT__SEARCH_TITLE_OVERRIDE = CARDS_UNIT__SEARCH_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -13596,6 +13911,15 @@ public interface WebuiPackage extends EPackage {
 	int IMAGE_CARDS_UNIT__CLEAR_ICON_OVERRIDE = CARDS_UNIT__CLEAR_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__CLEAR_TITLE_OVERRIDE = CARDS_UNIT__CLEAR_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13612,6 +13936,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE_CARDS_UNIT__SEARCH_ICON_OVERRIDE = CARDS_UNIT__SEARCH_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CARDS_UNIT__SEARCH_TITLE_OVERRIDE = CARDS_UNIT__SEARCH_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -14244,6 +14577,15 @@ public interface WebuiPackage extends EPackage {
 	int SLIDER_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__CLEAR_TITLE_OVERRIDE = COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14260,6 +14602,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int SLIDER_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SLIDER_UNIT__SEARCH_TITLE_OVERRIDE = COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -14811,6 +15162,15 @@ public interface WebuiPackage extends EPackage {
 	int GALLERY_UNIT__CLEAR_ICON_OVERRIDE = COLLECTION_UNIT__CLEAR_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__CLEAR_TITLE_OVERRIDE = COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14827,6 +15187,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int GALLERY_UNIT__SEARCH_ICON_OVERRIDE = COLLECTION_UNIT__SEARCH_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GALLERY_UNIT__SEARCH_TITLE_OVERRIDE = COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Omit Field Labels</b></em>' attribute.
@@ -16081,6 +16450,42 @@ public interface WebuiPackage extends EPackage {
 	int REGISTRATION_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16097,6 +16502,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGISTRATION_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTRATION_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -16532,6 +16946,42 @@ public interface WebuiPackage extends EPackage {
 	int LOGIN_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16548,6 +16998,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGIN_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGIN_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -17326,6 +17785,42 @@ public interface WebuiPackage extends EPackage {
 	int FORGOTTEN_PASSWORD_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17342,6 +17837,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int FORGOTTEN_PASSWORD_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORGOTTEN_PASSWORD_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -17831,6 +18335,42 @@ public interface WebuiPackage extends EPackage {
 	int RESET_PASSWORD_UNIT__CANCEL_ICON_OVERRIDE = EDIT_UNIT__CANCEL_ICON_OVERRIDE;
 
 	/**
+	 * The feature id for the '<em><b>Cancel Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__CANCEL_TITLE_OVERRIDE = EDIT_UNIT__CANCEL_TITLE_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Label Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__RESET_LABEL_OVERRIDE = EDIT_UNIT__RESET_LABEL_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Icon Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__RESET_ICON_OVERRIDE = EDIT_UNIT__RESET_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Reset Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__RESET_TITLE_OVERRIDE = EDIT_UNIT__RESET_TITLE_OVERRIDE;
+
+	/**
 	 * The feature id for the '<em><b>Save Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17847,6 +18387,15 @@ public interface WebuiPackage extends EPackage {
 	 * @ordered
 	 */
 	int RESET_PASSWORD_UNIT__SAVE_ICON_OVERRIDE = EDIT_UNIT__SAVE_ICON_OVERRIDE;
+
+	/**
+	 * The feature id for the '<em><b>Save Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESET_PASSWORD_UNIT__SAVE_TITLE_OVERRIDE = EDIT_UNIT__SAVE_TITLE_OVERRIDE;
 
 	/**
 	 * The feature id for the '<em><b>Confirm Message</b></em>' containment reference.
@@ -22819,6 +23368,17 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCollectionUnit_ClearIconOverride();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearTitleOverride <em>Clear Title Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Clear Title Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearTitleOverride()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_ClearTitleOverride();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchLabelOverride <em>Search Label Override</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22839,6 +23399,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCollectionUnit_SearchIconOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchTitleOverride <em>Search Title Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Search Title Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchTitleOverride()
+	 * @see #getCollectionUnit()
+	 * @generated
+	 */
+	EAttribute getCollectionUnit_SearchTitleOverride();
 
 	/**
 	 * Returns the meta object for the reference '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getFilter <em>Filter</em>}'.
@@ -23199,6 +23770,50 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getEditUnit_CancelIconOverride();
 
 	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getCancelTitleOverride <em>Cancel Title Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cancel Title Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getCancelTitleOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_CancelTitleOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetLabelOverride <em>Reset Label Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reset Label Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getResetLabelOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_ResetLabelOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetIconOverride <em>Reset Icon Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reset Icon Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getResetIconOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_ResetIconOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getResetTitleOverride <em>Reset Title Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Reset Title Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getResetTitleOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_ResetTitleOverride();
+
+	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveLabelOverride <em>Save Label Override</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -23219,6 +23834,17 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEditUnit_SaveIconOverride();
+
+	/**
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getSaveTitleOverride <em>Save Title Override</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Save Title Override</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.EditUnit#getSaveTitleOverride()
+	 * @see #getEditUnit()
+	 * @generated
+	 */
+	EAttribute getEditUnit_SaveTitleOverride();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.EditUnit#getUnitInputGroupClass <em>Unit Input Group Class</em>}'.
@@ -26451,6 +27077,14 @@ public interface WebuiPackage extends EPackage {
 		EAttribute COLLECTION_UNIT__CLEAR_ICON_OVERRIDE = eINSTANCE.getCollectionUnit_ClearIconOverride();
 
 		/**
+		 * The meta object literal for the '<em><b>Clear Title Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE = eINSTANCE.getCollectionUnit_ClearTitleOverride();
+
+		/**
 		 * The meta object literal for the '<em><b>Search Label Override</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26465,6 +27099,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COLLECTION_UNIT__SEARCH_ICON_OVERRIDE = eINSTANCE.getCollectionUnit_SearchIconOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Search Title Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE = eINSTANCE.getCollectionUnit_SearchTitleOverride();
 
 		/**
 		 * The meta object literal for the '<em><b>Filter</b></em>' reference feature.
@@ -26761,6 +27403,38 @@ public interface WebuiPackage extends EPackage {
 		EAttribute EDIT_UNIT__CANCEL_ICON_OVERRIDE = eINSTANCE.getEditUnit_CancelIconOverride();
 
 		/**
+		 * The meta object literal for the '<em><b>Cancel Title Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__CANCEL_TITLE_OVERRIDE = eINSTANCE.getEditUnit_CancelTitleOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset Label Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__RESET_LABEL_OVERRIDE = eINSTANCE.getEditUnit_ResetLabelOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset Icon Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__RESET_ICON_OVERRIDE = eINSTANCE.getEditUnit_ResetIconOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Reset Title Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__RESET_TITLE_OVERRIDE = eINSTANCE.getEditUnit_ResetTitleOverride();
+
+		/**
 		 * The meta object literal for the '<em><b>Save Label Override</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -26775,6 +27449,14 @@ public interface WebuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EDIT_UNIT__SAVE_ICON_OVERRIDE = eINSTANCE.getEditUnit_SaveIconOverride();
+
+		/**
+		 * The meta object literal for the '<em><b>Save Title Override</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EDIT_UNIT__SAVE_TITLE_OVERRIDE = eINSTANCE.getEditUnit_SaveTitleOverride();
 
 		/**
 		 * The meta object literal for the '<em><b>Unit Input Group Class</b></em>' attribute feature.

@@ -62,12 +62,16 @@ rule WafModel {
 		useFormFloatingLabels <- thisModule.findWebsiteUI().useFormFloatingLabels,
 		defaultCancelLabel <- thisModule.findWebsiteUI().defaultCancelLabel,
 		defaultCancelIcon <- thisModule.findWebsiteUI().defaultCancelIcon,
+		defaultCancelTitle <- thisModule.findWebsiteUI().defaultCancelTitle,
 		defaultClearLabel <- thisModule.findWebsiteUI().defaultClearLabel,
 		defaultClearIcon <- thisModule.findWebsiteUI().defaultClearIcon,
+		defaultClearTitle <- thisModule.findWebsiteUI().defaultClearTitle,
 		defaultSaveLabel <- thisModule.findWebsiteUI().defaultSaveLabel,
 		defaultSaveIcon <- thisModule.findWebsiteUI().defaultSaveIcon,
+		defaultSaveTitle <- thisModule.findWebsiteUI().defaultSaveTitle,
 		defaultSearchLabel <- thisModule.findWebsiteUI().defaultSearchLabel,
 		defaultSearchIcon <- thisModule.findWebsiteUI().defaultSearchIcon,
+		defaultSearchTitle <- thisModule.findWebsiteUI().defaultSearchTitle,
 		defaultPageClass <- thisModule.findWebsiteUI().defaultPageStyleClass,
 		defaultCardsStyles <- thisModule.findWebsiteUI().defaultCardsStyles,
 		defaultCollectionStyles <- thisModule.findWebsiteUI().defaultCollectionStyles,
@@ -580,8 +584,10 @@ abstract rule CollectionUnit {
 		emptyMessage <- website.emptyMessage,
 		clearLabelOverride <- website.clearLabelOverride,
 		clearIconOverride <- website.clearIconOverride,
+		clearTitleOverride <- website.clearTitleOverride,
 		searchLabelOverride <- website.searchLabelOverride,
-		searchIconOverride <- website.searchIconOverride
+		searchIconOverride <- website.searchIconOverride,
+		searchTitleOverride <- website.searchTitleOverride
 	)
 }
 
@@ -690,8 +696,13 @@ abstract rule EditUnit {
 		cancelDestination <- website.cancelDestination,
 		cancelLabelOverride <- website.cancelLabelOverride,
 		cancelIconOverride <- website.cancelIconOverride,
+		cancelTitleOverride <- website.cancelTitleOverride,
+		resetLabelOverride <- website.resetLabelOverride,
+		resetIconOverride <- website.resetIconOverride,
+		resetTitleOverride <- website.resetTitleOverride,
 		saveLabelOverride <- website.saveLabelOverride,
 		saveIconOverride <- website.saveIconOverride,
+		saveTitleOverride <- website.saveTitleOverride,
 		confirmMessage <- website.confirmMessage,
 		successMessage <- website.successMessage
 	)

@@ -3033,7 +3033,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_SearchLabelOverride() {
+	public EAttribute getCollectionUnit_ClearTitleOverride() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -3043,8 +3043,28 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionUnit_SearchIconOverride() {
+	public EAttribute getCollectionUnit_SearchLabelOverride() {
 		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionUnit_SearchIconOverride() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCollectionUnit_SearchTitleOverride() {
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -3064,7 +3084,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getCollectionUnit_EmptyMessage() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(18);
 	}
 
 	/**
@@ -3074,7 +3094,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getCollectionUnit_OmitFieldLabels() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(13);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -3084,7 +3104,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getCollectionUnit_DefaultPaginationSize() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(14);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -3094,7 +3114,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getCollectionUnit_MaximumPaginationSize() {
-		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(15);
+		return (EAttribute)collectionUnitEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -3344,7 +3364,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EReference getEditUnit_ConfirmMessage() {
-		return (EReference)editUnitEClass.getEStructuralFeatures().get(8);
+		return (EReference)editUnitEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -3354,7 +3374,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EReference getEditUnit_SuccessMessage() {
-		return (EReference)editUnitEClass.getEStructuralFeatures().get(9);
+		return (EReference)editUnitEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -3393,7 +3413,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEditUnit_SaveLabelOverride() {
+	public EAttribute getEditUnit_CancelTitleOverride() {
 		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -3403,7 +3423,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEditUnit_SaveIconOverride() {
+	public EAttribute getEditUnit_ResetLabelOverride() {
 		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -3413,8 +3433,58 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getEditUnit_UnitInputGroupClass() {
+	public EAttribute getEditUnit_ResetIconOverride() {
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEditUnit_ResetTitleOverride() {
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEditUnit_SaveLabelOverride() {
 		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEditUnit_SaveIconOverride() {
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEditUnit_SaveTitleOverride() {
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEditUnit_UnitInputGroupClass() {
+		return (EAttribute)editUnitEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -5011,8 +5081,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__FILTERS_USE_AUTO_SUBMIT);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__CLEAR_LABEL_OVERRIDE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__CLEAR_ICON_OVERRIDE);
+		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__CLEAR_TITLE_OVERRIDE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__SEARCH_LABEL_OVERRIDE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__SEARCH_ICON_OVERRIDE);
+		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__SEARCH_TITLE_OVERRIDE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__OMIT_FIELD_LABELS);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__DEFAULT_PAGINATION_SIZE);
 		createEAttribute(collectionUnitEClass, COLLECTION_UNIT__MAXIMUM_PAGINATION_SIZE);
@@ -5055,8 +5127,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		createEReference(editUnitEClass, EDIT_UNIT__CANCEL_DESTINATION);
 		createEAttribute(editUnitEClass, EDIT_UNIT__CANCEL_LABEL_OVERRIDE);
 		createEAttribute(editUnitEClass, EDIT_UNIT__CANCEL_ICON_OVERRIDE);
+		createEAttribute(editUnitEClass, EDIT_UNIT__CANCEL_TITLE_OVERRIDE);
+		createEAttribute(editUnitEClass, EDIT_UNIT__RESET_LABEL_OVERRIDE);
+		createEAttribute(editUnitEClass, EDIT_UNIT__RESET_ICON_OVERRIDE);
+		createEAttribute(editUnitEClass, EDIT_UNIT__RESET_TITLE_OVERRIDE);
 		createEAttribute(editUnitEClass, EDIT_UNIT__SAVE_LABEL_OVERRIDE);
 		createEAttribute(editUnitEClass, EDIT_UNIT__SAVE_ICON_OVERRIDE);
+		createEAttribute(editUnitEClass, EDIT_UNIT__SAVE_TITLE_OVERRIDE);
 		createEReference(editUnitEClass, EDIT_UNIT__CONFIRM_MESSAGE);
 		createEReference(editUnitEClass, EDIT_UNIT__SUCCESS_MESSAGE);
 		createEAttribute(editUnitEClass, EDIT_UNIT__UNIT_INPUT_GROUP_CLASS);
@@ -5647,8 +5724,10 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEAttribute(getCollectionUnit_FiltersUseAutoSubmit(), ecorePackage.getEBoolean(), "filtersUseAutoSubmit", "true", 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_ClearLabelOverride(), ecorePackage.getEString(), "clearLabelOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_ClearIconOverride(), ecorePackage.getEString(), "clearIconOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionUnit_ClearTitleOverride(), ecorePackage.getEString(), "clearTitleOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_SearchLabelOverride(), ecorePackage.getEString(), "searchLabelOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_SearchIconOverride(), ecorePackage.getEString(), "searchIconOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionUnit_SearchTitleOverride(), ecorePackage.getEString(), "searchTitleOverride", null, 0, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_OmitFieldLabels(), ecorePackage.getEBoolean(), "omitFieldLabels", "false", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_DefaultPaginationSize(), ecorePackage.getEInt(), "defaultPaginationSize", "10", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionUnit_MaximumPaginationSize(), ecorePackage.getEInt(), "maximumPaginationSize", "0", 1, 1, CollectionUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -5696,8 +5775,13 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 		initEReference(getEditUnit_CancelDestination(), this.getContentUnit(), null, "cancelDestination", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEditUnit_CancelLabelOverride(), ecorePackage.getEString(), "cancelLabelOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEditUnit_CancelIconOverride(), ecorePackage.getEString(), "cancelIconOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEditUnit_CancelTitleOverride(), ecorePackage.getEString(), "cancelTitleOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEditUnit_ResetLabelOverride(), ecorePackage.getEString(), "resetLabelOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEditUnit_ResetIconOverride(), ecorePackage.getEString(), "resetIconOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEditUnit_ResetTitleOverride(), ecorePackage.getEString(), "resetTitleOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEditUnit_SaveLabelOverride(), ecorePackage.getEString(), "saveLabelOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEditUnit_SaveIconOverride(), ecorePackage.getEString(), "saveIconOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEditUnit_SaveTitleOverride(), ecorePackage.getEString(), "saveTitleOverride", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEditUnit_ConfirmMessage(), this.getMessage(), null, "confirmMessage", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEditUnit_SuccessMessage(), this.getMessage(), null, "successMessage", null, 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEditUnit_UnitInputGroupClass(), ecorePackage.getEString(), "unitInputGroupClass", "", 0, 1, EditUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

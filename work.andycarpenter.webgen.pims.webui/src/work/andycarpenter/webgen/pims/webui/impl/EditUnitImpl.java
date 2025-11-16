@@ -29,8 +29,13 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelDestination <em>Cancel Destination</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelLabelOverride <em>Cancel Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelIconOverride <em>Cancel Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getCancelTitleOverride <em>Cancel Title Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getResetLabelOverride <em>Reset Label Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getResetIconOverride <em>Reset Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getResetTitleOverride <em>Reset Title Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSaveLabelOverride <em>Save Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSaveIconOverride <em>Save Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSaveTitleOverride <em>Save Title Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getConfirmMessage <em>Confirm Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getSuccessMessage <em>Success Message</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.EditUnitImpl#getUnitInputGroupClass <em>Unit Input Group Class</em>}</li>
@@ -130,6 +135,86 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	protected String cancelIconOverride = CANCEL_ICON_OVERRIDE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getCancelTitleOverride() <em>Cancel Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCancelTitleOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CANCEL_TITLE_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCancelTitleOverride() <em>Cancel Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCancelTitleOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cancelTitleOverride = CANCEL_TITLE_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getResetLabelOverride() <em>Reset Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESET_LABEL_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getResetLabelOverride() <em>Reset Label Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetLabelOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String resetLabelOverride = RESET_LABEL_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getResetIconOverride() <em>Reset Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESET_ICON_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getResetIconOverride() <em>Reset Icon Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetIconOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String resetIconOverride = RESET_ICON_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getResetTitleOverride() <em>Reset Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetTitleOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RESET_TITLE_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getResetTitleOverride() <em>Reset Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResetTitleOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String resetTitleOverride = RESET_TITLE_OVERRIDE_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getSaveLabelOverride() <em>Save Label Override</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -168,6 +253,26 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @ordered
 	 */
 	protected String saveIconOverride = SAVE_ICON_OVERRIDE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSaveTitleOverride() <em>Save Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaveTitleOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SAVE_TITLE_OVERRIDE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSaveTitleOverride() <em>Save Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaveTitleOverride()
+	 * @generated
+	 * @ordered
+	 */
+	protected String saveTitleOverride = SAVE_TITLE_OVERRIDE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getConfirmMessage() <em>Confirm Message</em>}' containment reference.
@@ -518,6 +623,98 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 	 * @generated
 	 */
 	@Override
+	public String getCancelTitleOverride() {
+		return cancelTitleOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCancelTitleOverride(String newCancelTitleOverride) {
+		String oldCancelTitleOverride = cancelTitleOverride;
+		cancelTitleOverride = newCancelTitleOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__CANCEL_TITLE_OVERRIDE, oldCancelTitleOverride, cancelTitleOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getResetLabelOverride() {
+		return resetLabelOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResetLabelOverride(String newResetLabelOverride) {
+		String oldResetLabelOverride = resetLabelOverride;
+		resetLabelOverride = newResetLabelOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__RESET_LABEL_OVERRIDE, oldResetLabelOverride, resetLabelOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getResetIconOverride() {
+		return resetIconOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResetIconOverride(String newResetIconOverride) {
+		String oldResetIconOverride = resetIconOverride;
+		resetIconOverride = newResetIconOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__RESET_ICON_OVERRIDE, oldResetIconOverride, resetIconOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getResetTitleOverride() {
+		return resetTitleOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setResetTitleOverride(String newResetTitleOverride) {
+		String oldResetTitleOverride = resetTitleOverride;
+		resetTitleOverride = newResetTitleOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__RESET_TITLE_OVERRIDE, oldResetTitleOverride, resetTitleOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getSaveLabelOverride() {
 		return saveLabelOverride;
 	}
@@ -556,6 +753,29 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		saveIconOverride = newSaveIconOverride;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE, oldSaveIconOverride, saveIconOverride));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getSaveTitleOverride() {
+		return saveTitleOverride;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSaveTitleOverride(String newSaveTitleOverride) {
+		String oldSaveTitleOverride = saveTitleOverride;
+		saveTitleOverride = newSaveTitleOverride;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.EDIT_UNIT__SAVE_TITLE_OVERRIDE, oldSaveTitleOverride, saveTitleOverride));
 	}
 
 	/**
@@ -621,10 +841,20 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return getCancelLabelOverride();
 			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
 				return getCancelIconOverride();
+			case WebuiPackage.EDIT_UNIT__CANCEL_TITLE_OVERRIDE:
+				return getCancelTitleOverride();
+			case WebuiPackage.EDIT_UNIT__RESET_LABEL_OVERRIDE:
+				return getResetLabelOverride();
+			case WebuiPackage.EDIT_UNIT__RESET_ICON_OVERRIDE:
+				return getResetIconOverride();
+			case WebuiPackage.EDIT_UNIT__RESET_TITLE_OVERRIDE:
+				return getResetTitleOverride();
 			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
 				return getSaveLabelOverride();
 			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
 				return getSaveIconOverride();
+			case WebuiPackage.EDIT_UNIT__SAVE_TITLE_OVERRIDE:
+				return getSaveTitleOverride();
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				return getConfirmMessage();
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
@@ -661,11 +891,26 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
 				setCancelIconOverride((String)newValue);
 				return;
+			case WebuiPackage.EDIT_UNIT__CANCEL_TITLE_OVERRIDE:
+				setCancelTitleOverride((String)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__RESET_LABEL_OVERRIDE:
+				setResetLabelOverride((String)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__RESET_ICON_OVERRIDE:
+				setResetIconOverride((String)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__RESET_TITLE_OVERRIDE:
+				setResetTitleOverride((String)newValue);
+				return;
 			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
 				setSaveLabelOverride((String)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
 				setSaveIconOverride((String)newValue);
+				return;
+			case WebuiPackage.EDIT_UNIT__SAVE_TITLE_OVERRIDE:
+				setSaveTitleOverride((String)newValue);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				setConfirmMessage((Message)newValue);
@@ -706,11 +951,26 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
 				setCancelIconOverride(CANCEL_ICON_OVERRIDE_EDEFAULT);
 				return;
+			case WebuiPackage.EDIT_UNIT__CANCEL_TITLE_OVERRIDE:
+				setCancelTitleOverride(CANCEL_TITLE_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.EDIT_UNIT__RESET_LABEL_OVERRIDE:
+				setResetLabelOverride(RESET_LABEL_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.EDIT_UNIT__RESET_ICON_OVERRIDE:
+				setResetIconOverride(RESET_ICON_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.EDIT_UNIT__RESET_TITLE_OVERRIDE:
+				setResetTitleOverride(RESET_TITLE_OVERRIDE_EDEFAULT);
+				return;
 			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
 				setSaveLabelOverride(SAVE_LABEL_OVERRIDE_EDEFAULT);
 				return;
 			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
 				setSaveIconOverride(SAVE_ICON_OVERRIDE_EDEFAULT);
+				return;
+			case WebuiPackage.EDIT_UNIT__SAVE_TITLE_OVERRIDE:
+				setSaveTitleOverride(SAVE_TITLE_OVERRIDE_EDEFAULT);
 				return;
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				setConfirmMessage((Message)null);
@@ -745,10 +1005,20 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 				return CANCEL_LABEL_OVERRIDE_EDEFAULT == null ? cancelLabelOverride != null : !CANCEL_LABEL_OVERRIDE_EDEFAULT.equals(cancelLabelOverride);
 			case WebuiPackage.EDIT_UNIT__CANCEL_ICON_OVERRIDE:
 				return CANCEL_ICON_OVERRIDE_EDEFAULT == null ? cancelIconOverride != null : !CANCEL_ICON_OVERRIDE_EDEFAULT.equals(cancelIconOverride);
+			case WebuiPackage.EDIT_UNIT__CANCEL_TITLE_OVERRIDE:
+				return CANCEL_TITLE_OVERRIDE_EDEFAULT == null ? cancelTitleOverride != null : !CANCEL_TITLE_OVERRIDE_EDEFAULT.equals(cancelTitleOverride);
+			case WebuiPackage.EDIT_UNIT__RESET_LABEL_OVERRIDE:
+				return RESET_LABEL_OVERRIDE_EDEFAULT == null ? resetLabelOverride != null : !RESET_LABEL_OVERRIDE_EDEFAULT.equals(resetLabelOverride);
+			case WebuiPackage.EDIT_UNIT__RESET_ICON_OVERRIDE:
+				return RESET_ICON_OVERRIDE_EDEFAULT == null ? resetIconOverride != null : !RESET_ICON_OVERRIDE_EDEFAULT.equals(resetIconOverride);
+			case WebuiPackage.EDIT_UNIT__RESET_TITLE_OVERRIDE:
+				return RESET_TITLE_OVERRIDE_EDEFAULT == null ? resetTitleOverride != null : !RESET_TITLE_OVERRIDE_EDEFAULT.equals(resetTitleOverride);
 			case WebuiPackage.EDIT_UNIT__SAVE_LABEL_OVERRIDE:
 				return SAVE_LABEL_OVERRIDE_EDEFAULT == null ? saveLabelOverride != null : !SAVE_LABEL_OVERRIDE_EDEFAULT.equals(saveLabelOverride);
 			case WebuiPackage.EDIT_UNIT__SAVE_ICON_OVERRIDE:
 				return SAVE_ICON_OVERRIDE_EDEFAULT == null ? saveIconOverride != null : !SAVE_ICON_OVERRIDE_EDEFAULT.equals(saveIconOverride);
+			case WebuiPackage.EDIT_UNIT__SAVE_TITLE_OVERRIDE:
+				return SAVE_TITLE_OVERRIDE_EDEFAULT == null ? saveTitleOverride != null : !SAVE_TITLE_OVERRIDE_EDEFAULT.equals(saveTitleOverride);
 			case WebuiPackage.EDIT_UNIT__CONFIRM_MESSAGE:
 				return confirmMessage != null;
 			case WebuiPackage.EDIT_UNIT__SUCCESS_MESSAGE:
@@ -775,10 +1045,20 @@ public abstract class EditUnitImpl extends SingletonUnitImpl implements EditUnit
 		result.append(cancelLabelOverride);
 		result.append(", cancelIconOverride: ");
 		result.append(cancelIconOverride);
+		result.append(", cancelTitleOverride: ");
+		result.append(cancelTitleOverride);
+		result.append(", resetLabelOverride: ");
+		result.append(resetLabelOverride);
+		result.append(", resetIconOverride: ");
+		result.append(resetIconOverride);
+		result.append(", resetTitleOverride: ");
+		result.append(resetTitleOverride);
 		result.append(", saveLabelOverride: ");
 		result.append(saveLabelOverride);
 		result.append(", saveIconOverride: ");
 		result.append(saveIconOverride);
+		result.append(", saveTitleOverride: ");
+		result.append(saveTitleOverride);
 		result.append(", unitInputGroupClass: ");
 		result.append(unitInputGroupClass);
 		result.append(')');

@@ -28,8 +28,10 @@ import work.andycarpenter.webgen.pims.persistence.Selection;
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isFiltersUseAutoSubmit <em>Filters Use Auto Submit</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearLabelOverride <em>Clear Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearIconOverride <em>Clear Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearTitleOverride <em>Clear Title Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchLabelOverride <em>Search Label Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchIconOverride <em>Search Icon Override</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchTitleOverride <em>Search Title Override</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#isOmitFieldLabels <em>Omit Field Labels</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getDefaultPaginationSize <em>Default Pagination Size</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getMaximumPaginationSize <em>Maximum Pagination Size</em>}</li>
@@ -282,6 +284,28 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContex
 	void setClearIconOverride(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Clear Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Clear Title Override</em>' attribute.
+	 * @see #setClearTitleOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_ClearTitleOverride()
+	 * @model
+	 * @generated
+	 */
+	String getClearTitleOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getClearTitleOverride <em>Clear Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Clear Title Override</em>' attribute.
+	 * @see #getClearTitleOverride()
+	 * @generated
+	 */
+	void setClearTitleOverride(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Search Label Override</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -324,6 +348,28 @@ public interface CollectionUnit extends DynamicUnit, SelectableUnit, ValueContex
 	 * @generated
 	 */
 	void setSearchIconOverride(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Search Title Override</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Search Title Override</em>' attribute.
+	 * @see #setSearchTitleOverride(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionUnit_SearchTitleOverride()
+	 * @model
+	 * @generated
+	 */
+	String getSearchTitleOverride();
+
+	/**
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionUnit#getSearchTitleOverride <em>Search Title Override</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Search Title Override</em>' attribute.
+	 * @see #getSearchTitleOverride()
+	 * @generated
+	 */
+	void setSearchTitleOverride(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Filter</b></em>' reference.
