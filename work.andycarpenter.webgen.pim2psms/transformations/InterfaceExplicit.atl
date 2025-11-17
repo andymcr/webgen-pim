@@ -470,7 +470,9 @@ rule UnitAssociation {
 			else
 				website.collectionSortBy.findOrmFeature()
 			endif,
-		useAutocomplete <- website.useAutocomplete
+		useAutocomplete <- website.useAutocomplete,
+		autocompleteKeys <- website.autocompleteKeys
+			->collect(k | k.findOrmFeature())
 	)
 }
 

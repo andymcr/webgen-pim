@@ -18,8 +18,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
 import work.andycarpenter.webgen.pims.persistence.AssociationPathElement;
+import work.andycarpenter.webgen.pims.persistence.Attribute;
 import work.andycarpenter.webgen.pims.persistence.Entity;
 import work.andycarpenter.webgen.pims.persistence.PersistenceFactory;
 import work.andycarpenter.webgen.pims.persistence.PersistencePackage;
@@ -257,22 +257,41 @@ public class UnitAssociationItemProvider extends UnitFeatureItemProvider {
 	 * This adds a property descriptor for the Autocomplete Keys feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void addAutocompleteKeysPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_UnitAssociation_autocompleteKeys_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_autocompleteKeys_feature", "_UI_UnitAssociation_type"),
-				 WebuiPackage.Literals.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_InterfacePropertyCategory"),
-				 null));
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_UnitAssociation_autocompleteKeys_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_UnitAssociation_autocompleteKeys_feature", "_UI_UnitAssociation_type"),
+			WebuiPackage.Literals.UNIT_ASSOCIATION__AUTOCOMPLETE_KEYS,
+			true, false, true, null,
+			getString("_UI_InterfacePropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof UnitAssociation) {
+						final UnitAssociation association = (UnitAssociation) object;
+						if (association.getAssociationTarget() != null) {
+							final Entity target = association.getAssociationTarget();
+							return containedAttributes(target);
+						}
+					}
+
+					return Collections.emptyList();
+				}
+			});
+	}
+
+	protected Set<Attribute> containedAttributes(final Entity type) {
+		final Set<Attribute> attributes = new HashSet<Attribute>();
+		attributes.addAll(type.getAttributes());
+		if (type.getContainingAssociation() != null) {
+			attributes.addAll(containedAttributes(type.getContainingType()));
+		}
+
+		return attributes;
 	}
 
 	/**
