@@ -245,22 +245,30 @@ public class CollectionUnitItemProvider extends DynamicUnitItemProvider {
 	 * This adds a property descriptor for the Filter feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void addFilterPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionUnit_filter_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_filter_feature", "_UI_CollectionUnit_type"),
-				 WebuiPackage.Literals.COLLECTION_UNIT__FILTER,
-				 true,
-				 false,
-				 true,
-				 null,
-				 getString("_UI_BusinessPropertyCategory"),
-				 null));
+		itemPropertyDescriptors.add(new ItemPropertyDescriptor(
+			((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+			getResourceLocator(),
+			getString("_UI_CollectionUnit_filter_feature"),
+			getString("_UI_PropertyDescriptor_description", "_UI_CollectionUnit_filter_feature", "_UI_CollectionUnit_type"),
+			WebuiPackage.Literals.COLLECTION_UNIT__FILTER,
+			true, false, true, null,
+			getString("_UI_BusinessPropertyCategory"),
+			null) {
+				@Override
+				public Collection<?> getChoiceOfValues(Object object) {
+					if (object instanceof CollectionUnit) {
+						final CollectionUnit unit = (CollectionUnit) object;
+						if (unit.getSelection() != null) {
+							return unit.getSelection().getFilters();
+						}
+					}
+
+					return Collections.emptySet();
+				}
+		});
 	}
 
 	/**
