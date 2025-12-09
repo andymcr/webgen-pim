@@ -222,7 +222,6 @@ abstract rule CollectionStyles {
 	from website : Website!CollectionStyles
 	to waf : WAF!CollectionStyles (
 		filtersClass <- website.filtersClass,
-		filtersActionClass <- website.filtersActionClass,
 		filtersBodyClass <- website.filtersBodyClass,
 		filtersControlClass <- website.filtersControlClass,
 		instanceControlClass <- website.instanceControlClass,
@@ -586,10 +585,7 @@ abstract rule CollectionUnit {
 		emptyMessage <- website.emptyMessage,
 		clearLabelOverride <- website.clearLabelOverride,
 		clearIconOverride <- website.clearIconOverride,
-		clearTitleOverride <- website.clearTitleOverride,
-		searchLabelOverride <- website.searchLabelOverride,
-		searchIconOverride <- website.searchIconOverride,
-		searchTitleOverride <- website.searchTitleOverride
+		clearTitleOverride <- website.clearTitleOverride
 	)
 }
 
