@@ -260,52 +260,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanVariable()
 	 * @generated
 	 */
-	int PREDICATE_BOOLEAN_VARIABLE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_BOOLEAN_VARIABLE__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Negated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_BOOLEAN_VARIABLE__NEGATED = PREDICATE__NEGATED;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_BOOLEAN_VARIABLE__VARIABLE = PREDICATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Predicate Boolean Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_BOOLEAN_VARIABLE_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Predicate Boolean Variable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_BOOLEAN_VARIABLE_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
+	int PREDICATE_BOOLEAN_VARIABLE = 6;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateBooleanOperatorImpl <em>Predicate Boolean Operator</em>}' class.
@@ -315,7 +270,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateBooleanOperator()
 	 * @generated
 	 */
-	int PREDICATE_BOOLEAN_OPERATOR = 6;
+	int PREDICATE_BOOLEAN_OPERATOR = 5;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -372,23 +327,13 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_BOOLEAN_OPERATOR_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateEqualityOperatorImpl <em>Predicate Equality Operator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateEqualityOperatorImpl
-	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateEqualityOperator()
-	 * @generated
-	 */
-	int PREDICATE_EQUALITY_OPERATOR = 7;
-
-	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_EQUALITY_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+	int PREDICATE_BOOLEAN_VARIABLE__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
 
 	/**
 	 * The feature id for the '<em><b>Negated</b></em>' attribute.
@@ -397,43 +342,44 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_EQUALITY_OPERATOR__NEGATED = PREDICATE__NEGATED;
+	int PREDICATE_BOOLEAN_VARIABLE__NEGATED = PREDICATE__NEGATED;
 
 	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_EQUALITY_OPERATOR__LEFT = PREDICATE_FEATURE_COUNT + 0;
+	int PREDICATE_BOOLEAN_VARIABLE__VARIABLE = PREDICATE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * The number of structural features of the '<em>Predicate Boolean Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_EQUALITY_OPERATOR__RIGHT = PREDICATE_FEATURE_COUNT + 1;
+	int PREDICATE_BOOLEAN_VARIABLE_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Predicate Equality Operator</em>' class.
+	 * The number of operations of the '<em>Predicate Boolean Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_EQUALITY_OPERATOR_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 2;
+	int PREDICATE_BOOLEAN_VARIABLE_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Predicate Equality Operator</em>' class.
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateEqualityOperatorImpl <em>Predicate Equality Operator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateEqualityOperatorImpl
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateEqualityOperator()
 	 * @generated
-	 * @ordered
 	 */
-	int PREDICATE_EQUALITY_OPERATOR_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
+	int PREDICATE_EQUALITY_OPERATOR = 8;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateComparisonOperatorImpl <em>Predicate Comparison Operator</em>}' class.
@@ -443,7 +389,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateComparisonOperator()
 	 * @generated
 	 */
-	int PREDICATE_COMPARISON_OPERATOR = 8;
+	int PREDICATE_COMPARISON_OPERATOR = 7;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -507,6 +453,60 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREDICATE_COMPARISON_OPERATOR_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_EQUALITY_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Negated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_EQUALITY_OPERATOR__NEGATED = PREDICATE__NEGATED;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_EQUALITY_OPERATOR__LEFT = PREDICATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_EQUALITY_OPERATOR__RIGHT = PREDICATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Predicate Equality Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_EQUALITY_OPERATOR_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Predicate Equality Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_EQUALITY_OPERATOR_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateInOperatorImpl <em>Predicate In Operator</em>}' class.
@@ -644,61 +644,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateLikeOperator()
 	 * @generated
 	 */
-	int PREDICATE_LIKE_OPERATOR = 11;
-
-	/**
-	 * The feature id for the '<em><b>Root Container</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_LIKE_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
-
-	/**
-	 * The feature id for the '<em><b>Negated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_LIKE_OPERATOR__NEGATED = PREDICATE__NEGATED;
-
-	/**
-	 * The feature id for the '<em><b>Left</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_LIKE_OPERATOR__LEFT = PREDICATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Right</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_LIKE_OPERATOR__RIGHT = PREDICATE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Predicate Like Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_LIKE_OPERATOR_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Predicate Like Operator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICATE_LIKE_OPERATOR_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
+	int PREDICATE_LIKE_OPERATOR = 14;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateIsEmptyImpl <em>Predicate Is Empty</em>}' class.
@@ -708,7 +654,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsEmpty()
 	 * @generated
 	 */
-	int PREDICATE_IS_EMPTY = 12;
+	int PREDICATE_IS_EMPTY = 11;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -754,6 +700,70 @@ public interface ExpressionPackage extends EPackage {
 	 * @ordered
 	 */
 	int PREDICATE_IS_EMPTY_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateIsMemberOfImpl <em>Predicate Is Member Of</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateIsMemberOfImpl
+	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsMemberOf()
+	 * @generated
+	 */
+	int PREDICATE_IS_MEMBER_OF = 12;
+
+	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_MEMBER_OF__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Negated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_MEMBER_OF__NEGATED = PREDICATE__NEGATED;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_MEMBER_OF__LEFT = PREDICATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_MEMBER_OF__RIGHT = PREDICATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Predicate Is Member Of</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_MEMBER_OF_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Predicate Is Member Of</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_IS_MEMBER_OF_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateIsNullImpl <em>Predicate Is Null</em>}' class.
@@ -811,6 +821,60 @@ public interface ExpressionPackage extends EPackage {
 	int PREDICATE_IS_NULL_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Root Container</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_LIKE_OPERATOR__ROOT_CONTAINER = PREDICATE__ROOT_CONTAINER;
+
+	/**
+	 * The feature id for the '<em><b>Negated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_LIKE_OPERATOR__NEGATED = PREDICATE__NEGATED;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_LIKE_OPERATOR__LEFT = PREDICATE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_LIKE_OPERATOR__RIGHT = PREDICATE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Predicate Like Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_LIKE_OPERATOR_FEATURE_COUNT = PREDICATE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Predicate Like Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICATE_LIKE_OPERATOR_OPERATION_COUNT = PREDICATE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.impl.ArithmeticOperationImpl <em>Arithmetic Operation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -818,7 +882,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getArithmeticOperation()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATION = 14;
+	int ARITHMETIC_OPERATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Root Container</b></em>' reference.
@@ -873,7 +937,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATOR = 15;
+	int ARITHMETIC_OPERATOR = 16;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.BooleanOperator <em>Boolean Operator</em>}' enum.
@@ -883,7 +947,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getBooleanOperator()
 	 * @generated
 	 */
-	int BOOLEAN_OPERATOR = 16;
+	int BOOLEAN_OPERATOR = 17;
 
 	/**
 	 * The meta object id for the '{@link work.andycarpenter.webgen.pims.expression.ComparisionOperator <em>Comparision Operator</em>}' enum.
@@ -893,7 +957,7 @@ public interface ExpressionPackage extends EPackage {
 	 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getComparisionOperator()
 	 * @generated
 	 */
-	int COMPARISION_OPERATOR = 17;
+	int COMPARISION_OPERATOR = 18;
 
 
 	/**
@@ -1212,6 +1276,38 @@ public interface ExpressionPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPredicateIsEmpty_Value();
+
+	/**
+	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf <em>Predicate Is Member Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Predicate Is Member Of</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf
+	 * @generated
+	 */
+	EClass getPredicateIsMemberOf();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf#getLeft()
+	 * @see #getPredicateIsMemberOf()
+	 * @generated
+	 */
+	EReference getPredicateIsMemberOf_Left();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right</em>'.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf#getRight()
+	 * @see #getPredicateIsMemberOf()
+	 * @generated
+	 */
+	EReference getPredicateIsMemberOf_Right();
 
 	/**
 	 * Returns the meta object for class '{@link work.andycarpenter.webgen.pims.expression.PredicateIsNull <em>Predicate Is Null</em>}'.
@@ -1584,6 +1680,32 @@ public interface ExpressionPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PREDICATE_IS_EMPTY__VALUE = eINSTANCE.getPredicateIsEmpty_Value();
+
+		/**
+		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateIsMemberOfImpl <em>Predicate Is Member Of</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see work.andycarpenter.webgen.pims.expression.impl.PredicateIsMemberOfImpl
+		 * @see work.andycarpenter.webgen.pims.expression.impl.ExpressionPackageImpl#getPredicateIsMemberOf()
+		 * @generated
+		 */
+		EClass PREDICATE_IS_MEMBER_OF = eINSTANCE.getPredicateIsMemberOf();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREDICATE_IS_MEMBER_OF__LEFT = eINSTANCE.getPredicateIsMemberOf_Left();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREDICATE_IS_MEMBER_OF__RIGHT = eINSTANCE.getPredicateIsMemberOf_Right();
 
 		/**
 		 * The meta object literal for the '{@link work.andycarpenter.webgen.pims.expression.impl.PredicateIsNullImpl <em>Predicate Is Null</em>}' class.

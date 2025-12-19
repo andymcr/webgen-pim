@@ -102,14 +102,6 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE: {
-				PredicateBooleanVariable predicateBooleanVariable = (PredicateBooleanVariable)theEObject;
-				T result = casePredicateBooleanVariable(predicateBooleanVariable);
-				if (result == null) result = casePredicate(predicateBooleanVariable);
-				if (result == null) result = caseExpression(predicateBooleanVariable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR: {
 				PredicateBooleanOperator predicateBooleanOperator = (PredicateBooleanOperator)theEObject;
 				T result = casePredicateBooleanOperator(predicateBooleanOperator);
@@ -118,11 +110,11 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpressionPackage.PREDICATE_EQUALITY_OPERATOR: {
-				PredicateEqualityOperator predicateEqualityOperator = (PredicateEqualityOperator)theEObject;
-				T result = casePredicateEqualityOperator(predicateEqualityOperator);
-				if (result == null) result = casePredicate(predicateEqualityOperator);
-				if (result == null) result = caseExpression(predicateEqualityOperator);
+			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE: {
+				PredicateBooleanVariable predicateBooleanVariable = (PredicateBooleanVariable)theEObject;
+				T result = casePredicateBooleanVariable(predicateBooleanVariable);
+				if (result == null) result = casePredicate(predicateBooleanVariable);
+				if (result == null) result = caseExpression(predicateBooleanVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -131,6 +123,14 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				T result = casePredicateComparisonOperator(predicateComparisonOperator);
 				if (result == null) result = casePredicate(predicateComparisonOperator);
 				if (result == null) result = caseExpression(predicateComparisonOperator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExpressionPackage.PREDICATE_EQUALITY_OPERATOR: {
+				PredicateEqualityOperator predicateEqualityOperator = (PredicateEqualityOperator)theEObject;
+				T result = casePredicateEqualityOperator(predicateEqualityOperator);
+				if (result == null) result = casePredicate(predicateEqualityOperator);
+				if (result == null) result = caseExpression(predicateEqualityOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,14 +150,6 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpressionPackage.PREDICATE_LIKE_OPERATOR: {
-				PredicateLikeOperator predicateLikeOperator = (PredicateLikeOperator)theEObject;
-				T result = casePredicateLikeOperator(predicateLikeOperator);
-				if (result == null) result = casePredicate(predicateLikeOperator);
-				if (result == null) result = caseExpression(predicateLikeOperator);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ExpressionPackage.PREDICATE_IS_EMPTY: {
 				PredicateIsEmpty predicateIsEmpty = (PredicateIsEmpty)theEObject;
 				T result = casePredicateIsEmpty(predicateIsEmpty);
@@ -166,11 +158,27 @@ public class ExpressionSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ExpressionPackage.PREDICATE_IS_MEMBER_OF: {
+				PredicateIsMemberOf predicateIsMemberOf = (PredicateIsMemberOf)theEObject;
+				T result = casePredicateIsMemberOf(predicateIsMemberOf);
+				if (result == null) result = casePredicate(predicateIsMemberOf);
+				if (result == null) result = caseExpression(predicateIsMemberOf);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ExpressionPackage.PREDICATE_IS_NULL: {
 				PredicateIsNull predicateIsNull = (PredicateIsNull)theEObject;
 				T result = casePredicateIsNull(predicateIsNull);
 				if (result == null) result = casePredicate(predicateIsNull);
 				if (result == null) result = caseExpression(predicateIsNull);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ExpressionPackage.PREDICATE_LIKE_OPERATOR: {
+				PredicateLikeOperator predicateLikeOperator = (PredicateLikeOperator)theEObject;
+				T result = casePredicateLikeOperator(predicateLikeOperator);
+				if (result == null) result = casePredicate(predicateLikeOperator);
+				if (result == null) result = caseExpression(predicateLikeOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -377,6 +385,21 @@ public class ExpressionSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePredicateIsEmpty(PredicateIsEmpty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Predicate Is Member Of</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Predicate Is Member Of</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePredicateIsMemberOf(PredicateIsMemberOf object) {
 		return null;
 	}
 

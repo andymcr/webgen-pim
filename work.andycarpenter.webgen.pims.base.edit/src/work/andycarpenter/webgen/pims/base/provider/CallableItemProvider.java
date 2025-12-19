@@ -236,22 +236,22 @@ public class CallableItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.CALLABLE__BODY,
-				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasePackage.Literals.CALLABLE__BODY,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.CALLABLE__BODY,
-				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.CALLABLE__BODY,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasePackage.Literals.CALLABLE__BODY,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -266,17 +266,22 @@ public class CallableItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.CALLABLE__BODY,
-				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasePackage.Literals.CALLABLE__BODY,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.CALLABLE__BODY,
+				 ExpressionFactory.eINSTANCE.createPredicateIsMemberOf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasePackage.Literals.CALLABLE__BODY,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasePackage.Literals.CALLABLE__BODY,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter

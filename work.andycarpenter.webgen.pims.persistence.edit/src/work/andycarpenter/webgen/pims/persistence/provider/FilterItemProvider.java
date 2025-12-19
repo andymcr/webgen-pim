@@ -201,22 +201,22 @@ public class FilterItemProvider extends NamedDisplayElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.FILTER__CONDITION,
-				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PersistencePackage.Literals.FILTER__CONDITION,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.FILTER__CONDITION,
-				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.FILTER__CONDITION,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.FILTER__CONDITION,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -231,17 +231,22 @@ public class FilterItemProvider extends NamedDisplayElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.FILTER__CONDITION,
-				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(PersistencePackage.Literals.FILTER__CONDITION,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(PersistencePackage.Literals.FILTER__CONDITION,
+				 ExpressionFactory.eINSTANCE.createPredicateIsMemberOf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.FILTER__CONDITION,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(PersistencePackage.Literals.FILTER__CONDITION,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 	}
 
 	/**

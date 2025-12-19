@@ -377,22 +377,22 @@ public class ActionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -407,12 +407,12 @@ public class ActionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
+				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
+				 ExpressionFactory.eINSTANCE.createPredicateIsMemberOf()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -421,8 +421,8 @@ public class ActionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
+				(WebuiPackage.Literals.ACTION__DISPLAY_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -432,12 +432,17 @@ public class ActionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -452,17 +457,22 @@ public class ActionItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsMemberOf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.ACTION__ENABLE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 	}
 
 	/**

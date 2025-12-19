@@ -204,22 +204,22 @@ public class ReduceFunctionItemProvider extends OperandItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -234,17 +234,22 @@ public class ReduceFunctionItemProvider extends OperandItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
-				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
+				 ExpressionFactory.eINSTANCE.createPredicateIsMemberOf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(BasePackage.Literals.REDUCE_FUNCTION__INITIAL,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
-import work.andycarpenter.webgen.pims.expression.Operand;
 import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
+import work.andycarpenter.webgen.pims.expression.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class PredicateIsEmptyImpl extends ExpressionImpl implements PredicateIsE
 	 * @generated
 	 * @ordered
 	 */
-	protected Operand value;
+	protected Variable value;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,7 +103,7 @@ public class PredicateIsEmptyImpl extends ExpressionImpl implements PredicateIsE
 	 * @generated
 	 */
 	@Override
-	public Operand getValue() {
+	public Variable getValue() {
 		return value;
 	}
 
@@ -112,8 +112,8 @@ public class PredicateIsEmptyImpl extends ExpressionImpl implements PredicateIsE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(Operand newValue, NotificationChain msgs) {
-		Operand oldValue = value;
+	public NotificationChain basicSetValue(Variable newValue, NotificationChain msgs) {
+		Variable oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExpressionPackage.PREDICATE_IS_EMPTY__VALUE, oldValue, newValue);
@@ -128,7 +128,7 @@ public class PredicateIsEmptyImpl extends ExpressionImpl implements PredicateIsE
 	 * @generated
 	 */
 	@Override
-	public void setValue(Operand newValue) {
+	public void setValue(Variable newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
@@ -184,7 +184,7 @@ public class PredicateIsEmptyImpl extends ExpressionImpl implements PredicateIsE
 				setNegated((Boolean)newValue);
 				return;
 			case ExpressionPackage.PREDICATE_IS_EMPTY__VALUE:
-				setValue((Operand)newValue);
+				setValue((Variable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -202,7 +202,7 @@ public class PredicateIsEmptyImpl extends ExpressionImpl implements PredicateIsE
 				setNegated(NEGATED_EDEFAULT);
 				return;
 			case ExpressionPackage.PREDICATE_IS_EMPTY__VALUE:
-				setValue((Operand)null);
+				setValue((Variable)null);
 				return;
 		}
 		super.eUnset(featureID);

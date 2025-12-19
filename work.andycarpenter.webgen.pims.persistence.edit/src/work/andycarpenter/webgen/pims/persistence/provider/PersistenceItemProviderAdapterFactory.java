@@ -35,6 +35,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
+import work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
@@ -1614,6 +1615,55 @@ public class PersistenceItemProviderAdapterFactory extends PersistenceAdapterFac
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object casePredicateIsMemberOf(PredicateIsMemberOf object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__LEFT,
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__LEFT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__LEFT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__LEFT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__RIGHT,
+						 PersistenceFactory.eINSTANCE.createAssociationVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__RIGHT,
+						 PersistenceFactory.eINSTANCE.createAttributeVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__RIGHT,
+						 PersistenceFactory.eINSTANCE.createResourceVariable()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__RIGHT,
+						 PersistenceFactory.eINSTANCE.createParameterVariable()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

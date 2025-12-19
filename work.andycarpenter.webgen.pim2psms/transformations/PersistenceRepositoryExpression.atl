@@ -296,14 +296,6 @@ abstract rule Predicate {
 }
 
 -- @extends Predicate
-rule PredicateBooleanVariable {
-	from website : Website!PredicateBooleanVariable (website.isRepositoryExpression())
-	to orm : ORM!PredicateBooleanVariable (
-		feature <- website.feature
-	)
-}
-
--- @extends Predicate
 rule PredicateBooleanOperator {
 	from website : Website!PredicateBooleanOperator (website.isRepositoryExpression())
 	to orm : ORM!PredicateBooleanOperator (
@@ -313,11 +305,10 @@ rule PredicateBooleanOperator {
 }
 
 -- @extends Predicate
-rule PredicateEqualityOperator {
-	from website : Website!PredicateEqualityOperator (website.isRepositoryExpression())
-	to orm : ORM!PredicateEqualityOperator (
-		left <- website.left,
-		right <- website.right
+rule PredicateBooleanVariable {
+	from website : Website!PredicateBooleanVariable (website.isRepositoryExpression())
+	to orm : ORM!PredicateBooleanVariable (
+		feature <- website.feature
 	)
 }
 
@@ -332,9 +323,9 @@ rule PredicateComparisonOperator {
 }
 
 -- @extends Predicate
-rule PredicateLikeOperator {
-	from website : Website!PredicateLikeOperator (website.isRepositoryExpression())
-	to orm : ORM!PredicateLikeOperator (
+rule PredicateEqualityOperator {
+	from website : Website!PredicateEqualityOperator (website.isRepositoryExpression())
+	to orm : ORM!PredicateEqualityOperator (
 		left <- website.left,
 		right <- website.right
 	)
@@ -353,6 +344,24 @@ rule PredicateIsEmptyOperator {
 	from website : Website!PredicateIsEmpty (website.isRepositoryExpression())
 	to orm : ORM!PredicateIsEmpty (
 		value <- website.value
+	)
+}
+
+-- @extends Predicate
+rule PredicateLikeOperator {
+	from website : Website!PredicateLikeOperator (website.isRepositoryExpression())
+	to orm : ORM!PredicateLikeOperator (
+		left <- website.left,
+		right <- website.right
+	)
+}
+
+-- @extends Predicate
+rule PredicateIsMemberOfOperator {
+	from website : Website!PredicateIsMemberOfOperator (website.isRepositoryExpression())
+	to orm : ORM!PredicateIsMemberOdOperator (
+		left <- website.left,
+		right <- website.right
 	)
 }
 

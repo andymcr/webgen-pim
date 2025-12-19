@@ -57,15 +57,16 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE: return createPredicateBooleanVariable();
 			case ExpressionPackage.PREDICATE_BOOLEAN_OPERATOR: return createPredicateBooleanOperator();
-			case ExpressionPackage.PREDICATE_EQUALITY_OPERATOR: return createPredicateEqualityOperator();
+			case ExpressionPackage.PREDICATE_BOOLEAN_VARIABLE: return createPredicateBooleanVariable();
 			case ExpressionPackage.PREDICATE_COMPARISON_OPERATOR: return createPredicateComparisonOperator();
+			case ExpressionPackage.PREDICATE_EQUALITY_OPERATOR: return createPredicateEqualityOperator();
 			case ExpressionPackage.PREDICATE_IN_OPERATOR: return createPredicateInOperator();
 			case ExpressionPackage.PREDICATE_IS_OPERATOR: return createPredicateIsOperator();
-			case ExpressionPackage.PREDICATE_LIKE_OPERATOR: return createPredicateLikeOperator();
 			case ExpressionPackage.PREDICATE_IS_EMPTY: return createPredicateIsEmpty();
+			case ExpressionPackage.PREDICATE_IS_MEMBER_OF: return createPredicateIsMemberOf();
 			case ExpressionPackage.PREDICATE_IS_NULL: return createPredicateIsNull();
+			case ExpressionPackage.PREDICATE_LIKE_OPERATOR: return createPredicateLikeOperator();
 			case ExpressionPackage.ARITHMETIC_OPERATION: return createArithmeticOperation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -196,6 +197,17 @@ public class ExpressionFactoryImpl extends EFactoryImpl implements ExpressionFac
 	public PredicateIsEmpty createPredicateIsEmpty() {
 		PredicateIsEmptyImpl predicateIsEmpty = new PredicateIsEmptyImpl();
 		return predicateIsEmpty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PredicateIsMemberOf createPredicateIsMemberOf() {
+		PredicateIsMemberOfImpl predicateIsMemberOf = new PredicateIsMemberOfImpl();
+		return predicateIsMemberOf;
 	}
 
 	/**

@@ -42,6 +42,7 @@ import work.andycarpenter.webgen.pims.expression.PredicateComparisonOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateEqualityOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateInOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateIsEmpty;
+import work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf;
 import work.andycarpenter.webgen.pims.expression.PredicateIsNull;
 import work.andycarpenter.webgen.pims.expression.PredicateIsOperator;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
@@ -605,6 +606,25 @@ public class ServiceItemProviderAdapterFactory extends ServiceAdapterFactory imp
 				return null;
 			}
  
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object casePredicateIsMemberOf(PredicateIsMemberOf object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__LEFT,
+						 ServiceFactory.eINSTANCE.createConstantReference()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(ExpressionPackage.Literals.PREDICATE_IS_MEMBER_OF__RIGHT,
+						 ServiceFactory.eINSTANCE.createConstantReference()));
+
+				return null;
+			}
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

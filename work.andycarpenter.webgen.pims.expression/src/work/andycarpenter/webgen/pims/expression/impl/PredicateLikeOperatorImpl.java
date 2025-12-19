@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import work.andycarpenter.webgen.pims.expression.Expression;
 import work.andycarpenter.webgen.pims.expression.ExpressionPackage;
 import work.andycarpenter.webgen.pims.expression.PredicateLikeOperator;
+import work.andycarpenter.webgen.pims.expression.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +58,7 @@ public class PredicateLikeOperatorImpl extends ExpressionImpl implements Predica
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression left;
+	protected Variable left;
 
 	/**
 	 * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -117,7 +118,7 @@ public class PredicateLikeOperatorImpl extends ExpressionImpl implements Predica
 	 * @generated
 	 */
 	@Override
-	public Expression getLeft() {
+	public Variable getLeft() {
 		return left;
 	}
 
@@ -126,8 +127,8 @@ public class PredicateLikeOperatorImpl extends ExpressionImpl implements Predica
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs) {
-		Expression oldLeft = left;
+	public NotificationChain basicSetLeft(Variable newLeft, NotificationChain msgs) {
+		Variable oldLeft = left;
 		left = newLeft;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExpressionPackage.PREDICATE_LIKE_OPERATOR__LEFT, oldLeft, newLeft);
@@ -142,7 +143,7 @@ public class PredicateLikeOperatorImpl extends ExpressionImpl implements Predica
 	 * @generated
 	 */
 	@Override
-	public void setLeft(Expression newLeft) {
+	public void setLeft(Variable newLeft) {
 		if (newLeft != left) {
 			NotificationChain msgs = null;
 			if (left != null)
@@ -247,7 +248,7 @@ public class PredicateLikeOperatorImpl extends ExpressionImpl implements Predica
 				setNegated((Boolean)newValue);
 				return;
 			case ExpressionPackage.PREDICATE_LIKE_OPERATOR__LEFT:
-				setLeft((Expression)newValue);
+				setLeft((Variable)newValue);
 				return;
 			case ExpressionPackage.PREDICATE_LIKE_OPERATOR__RIGHT:
 				setRight((Expression)newValue);
@@ -268,7 +269,7 @@ public class PredicateLikeOperatorImpl extends ExpressionImpl implements Predica
 				setNegated(NEGATED_EDEFAULT);
 				return;
 			case ExpressionPackage.PREDICATE_LIKE_OPERATOR__LEFT:
-				setLeft((Expression)null);
+				setLeft((Variable)null);
 				return;
 			case ExpressionPackage.PREDICATE_LIKE_OPERATOR__RIGHT:
 				setRight((Expression)null);

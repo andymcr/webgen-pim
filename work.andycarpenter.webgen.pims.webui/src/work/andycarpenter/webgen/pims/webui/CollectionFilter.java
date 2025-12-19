@@ -147,7 +147,7 @@ public interface CollectionFilter extends NamedElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if affects.selection.oclIsUndefined() then\t\n\tOrderedSet{self.definedBy.serves}\nelse\n\taffects.selection.referencableEntities()\nendif'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL body='if affects.selection.oclIsUndefined() then\t\n\tOrderedSet{affects.contentType}\nelse\n\taffects.selection.referencableEntities()\nendif'"
 	 * @generated
 	 */
 	EList<Entity> referencableEntities();

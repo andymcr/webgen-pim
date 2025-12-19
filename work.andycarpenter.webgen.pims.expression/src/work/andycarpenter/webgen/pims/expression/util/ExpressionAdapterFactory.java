@@ -88,20 +88,20 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 				return createPredicateAdapter();
 			}
 			@Override
-			public Adapter casePredicateBooleanVariable(PredicateBooleanVariable object) {
-				return createPredicateBooleanVariableAdapter();
-			}
-			@Override
 			public Adapter casePredicateBooleanOperator(PredicateBooleanOperator object) {
 				return createPredicateBooleanOperatorAdapter();
 			}
 			@Override
-			public Adapter casePredicateEqualityOperator(PredicateEqualityOperator object) {
-				return createPredicateEqualityOperatorAdapter();
+			public Adapter casePredicateBooleanVariable(PredicateBooleanVariable object) {
+				return createPredicateBooleanVariableAdapter();
 			}
 			@Override
 			public Adapter casePredicateComparisonOperator(PredicateComparisonOperator object) {
 				return createPredicateComparisonOperatorAdapter();
+			}
+			@Override
+			public Adapter casePredicateEqualityOperator(PredicateEqualityOperator object) {
+				return createPredicateEqualityOperatorAdapter();
 			}
 			@Override
 			public Adapter casePredicateInOperator(PredicateInOperator object) {
@@ -112,16 +112,20 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 				return createPredicateIsOperatorAdapter();
 			}
 			@Override
-			public Adapter casePredicateLikeOperator(PredicateLikeOperator object) {
-				return createPredicateLikeOperatorAdapter();
-			}
-			@Override
 			public Adapter casePredicateIsEmpty(PredicateIsEmpty object) {
 				return createPredicateIsEmptyAdapter();
 			}
 			@Override
+			public Adapter casePredicateIsMemberOf(PredicateIsMemberOf object) {
+				return createPredicateIsMemberOfAdapter();
+			}
+			@Override
 			public Adapter casePredicateIsNull(PredicateIsNull object) {
 				return createPredicateIsNullAdapter();
+			}
+			@Override
+			public Adapter casePredicateLikeOperator(PredicateLikeOperator object) {
+				return createPredicateLikeOperatorAdapter();
 			}
 			@Override
 			public Adapter caseArithmeticOperation(ArithmeticOperation object) {
@@ -326,6 +330,20 @@ public class ExpressionAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPredicateIsEmptyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf <em>Predicate Is Member Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf
+	 * @generated
+	 */
+	public Adapter createPredicateIsMemberOfAdapter() {
 		return null;
 	}
 

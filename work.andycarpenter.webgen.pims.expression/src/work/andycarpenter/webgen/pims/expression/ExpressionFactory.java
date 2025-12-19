@@ -94,6 +94,15 @@ public interface ExpressionFactory extends EFactory {
 	PredicateIsEmpty createPredicateIsEmpty();
 
 	/**
+	 * Returns a new object of class '<em>Predicate Is Member Of</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Predicate Is Member Of</em>'.
+	 * @generated
+	 */
+	PredicateIsMemberOf createPredicateIsMemberOf();
+
+	/**
 	 * Returns a new object of class '<em>Predicate Is Null</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

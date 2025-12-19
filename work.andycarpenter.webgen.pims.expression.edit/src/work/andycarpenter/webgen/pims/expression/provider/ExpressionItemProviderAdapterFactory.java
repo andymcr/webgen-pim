@@ -273,6 +273,29 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PredicateIsMemberOfItemProvider predicateIsMemberOfItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link work.andycarpenter.webgen.pims.expression.PredicateIsMemberOf}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPredicateIsMemberOfAdapter() {
+		if (predicateIsMemberOfItemProvider == null) {
+			predicateIsMemberOfItemProvider = new PredicateIsMemberOfItemProvider(this);
+		}
+
+		return predicateIsMemberOfItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link work.andycarpenter.webgen.pims.expression.PredicateIsNull} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -450,15 +473,16 @@ public class ExpressionItemProviderAdapterFactory extends ExpressionAdapterFacto
 	 */
 	@Override
 	public void dispose() {
-		if (predicateBooleanVariableItemProvider != null) predicateBooleanVariableItemProvider.dispose();
 		if (predicateBooleanOperatorItemProvider != null) predicateBooleanOperatorItemProvider.dispose();
-		if (predicateEqualityOperatorItemProvider != null) predicateEqualityOperatorItemProvider.dispose();
+		if (predicateBooleanVariableItemProvider != null) predicateBooleanVariableItemProvider.dispose();
 		if (predicateComparisonOperatorItemProvider != null) predicateComparisonOperatorItemProvider.dispose();
+		if (predicateEqualityOperatorItemProvider != null) predicateEqualityOperatorItemProvider.dispose();
 		if (predicateInOperatorItemProvider != null) predicateInOperatorItemProvider.dispose();
 		if (predicateIsOperatorItemProvider != null) predicateIsOperatorItemProvider.dispose();
-		if (predicateLikeOperatorItemProvider != null) predicateLikeOperatorItemProvider.dispose();
 		if (predicateIsEmptyItemProvider != null) predicateIsEmptyItemProvider.dispose();
+		if (predicateIsMemberOfItemProvider != null) predicateIsMemberOfItemProvider.dispose();
 		if (predicateIsNullItemProvider != null) predicateIsNullItemProvider.dispose();
+		if (predicateLikeOperatorItemProvider != null) predicateLikeOperatorItemProvider.dispose();
 		if (arithmeticOperationItemProvider != null) arithmeticOperationItemProvider.dispose();
 	}
 

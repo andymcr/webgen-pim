@@ -269,22 +269,22 @@ public class SliderUnitItemProvider extends CollectionUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateBooleanOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
+				 ExpressionFactory.eINSTANCE.createPredicateBooleanVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateComparisonOperator()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateEqualityOperator()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -299,17 +299,22 @@ public class SliderUnitItemProvider extends CollectionUnitItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
-				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateIsEmpty()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateIsMemberOf()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
 				 ExpressionFactory.eINSTANCE.createPredicateIsNull()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(WebuiPackage.Literals.IMAGE_UNIT__SHOW_MISSING_IMAGE_WHEN,
+				 ExpressionFactory.eINSTANCE.createPredicateLikeOperator()));
 	}
 
 	/**

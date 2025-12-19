@@ -30,12 +30,12 @@ public interface PredicateLikeOperator extends Predicate {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left</em>' containment reference.
-	 * @see #setLeft(Expression)
+	 * @see #setLeft(Variable)
 	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateLikeOperator_Left()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Expression getLeft();
+	Variable getLeft();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.expression.PredicateLikeOperator#getLeft <em>Left</em>}' containment reference.
@@ -45,7 +45,7 @@ public interface PredicateLikeOperator extends Predicate {
 	 * @see #getLeft()
 	 * @generated
 	 */
-	void setLeft(Expression value);
+	void setLeft(Variable value);
 
 	/**
 	 * Returns the value of the '<em><b>Right</b></em>' containment reference.

@@ -25,12 +25,12 @@ public interface PredicateIsEmpty extends Predicate {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(Operand)
+	 * @see #setValue(Variable)
 	 * @see work.andycarpenter.webgen.pims.expression.ExpressionPackage#getPredicateIsEmpty_Value()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Operand getValue();
+	Variable getValue();
 
 	/**
 	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.expression.PredicateIsEmpty#getValue <em>Value</em>}' containment reference.
@@ -40,6 +40,6 @@ public interface PredicateIsEmpty extends Predicate {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(Operand value);
+	void setValue(Variable value);
 
 } // PredicateIsEmpty
