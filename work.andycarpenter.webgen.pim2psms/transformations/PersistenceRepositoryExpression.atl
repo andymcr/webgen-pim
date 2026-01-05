@@ -357,9 +357,9 @@ rule PredicateLikeOperator {
 }
 
 -- @extends Predicate
-rule PredicateIsMemberOfOperator {
-	from website : Website!PredicateIsMemberOfOperator (website.isRepositoryExpression())
-	to orm : ORM!PredicateIsMemberOdOperator (
+rule PredicateIsMemberOf {
+	from website : Website!PredicateIsMemberOf (website.isRepositoryExpression())
+	to orm : ORM!PredicateIsMemberOfOperator (
 		left <- website.left,
 		right <- website.right
 	)

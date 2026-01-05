@@ -109,8 +109,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="webui.ecore#//CollectionStyles">
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersActionClass"/>
-      <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersBodyClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersFieldsClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/filtersControlClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceActionClass"/>
       <genFeatures createChild="false" propertyCategory="Style" ecoreFeature="ecore:EAttribute webui.ecore#//CollectionStyles/instanceControlClass"/>

@@ -20,8 +20,7 @@ import work.andycarpenter.webgen.pims.webui.WebuiPackage;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl#getFiltersClass <em>Filters Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl#getFiltersActionClass <em>Filters Action Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl#getFiltersBodyClass <em>Filters Body Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl#getFiltersFieldsClass <em>Filters Fields Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl#getFiltersControlClass <em>Filters Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl#getInstanceActionClass <em>Instance Action Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.impl.CollectionStylesImpl#getInstanceControlClass <em>Instance Control Class</em>}</li>
@@ -51,44 +50,24 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 	protected String filtersClass = FILTERS_CLASS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getFiltersActionClass() <em>Filters Action Class</em>}' attribute.
+	 * The default value of the '{@link #getFiltersFieldsClass() <em>Filters Fields Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFiltersActionClass()
+	 * @see #getFiltersFieldsClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FILTERS_ACTION_CLASS_EDEFAULT = "";
+	protected static final String FILTERS_FIELDS_CLASS_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getFiltersActionClass() <em>Filters Action Class</em>}' attribute.
+	 * The cached value of the '{@link #getFiltersFieldsClass() <em>Filters Fields Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFiltersActionClass()
+	 * @see #getFiltersFieldsClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String filtersActionClass = FILTERS_ACTION_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getFiltersBodyClass() <em>Filters Body Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFiltersBodyClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String FILTERS_BODY_CLASS_EDEFAULT = "";
-
-	/**
-	 * The cached value of the '{@link #getFiltersBodyClass() <em>Filters Body Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFiltersBodyClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String filtersBodyClass = FILTERS_BODY_CLASS_EDEFAULT;
+	protected String filtersFieldsClass = FILTERS_FIELDS_CLASS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFiltersControlClass() <em>Filters Control Class</em>}' attribute.
@@ -198,8 +177,8 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 	 * @generated
 	 */
 	@Override
-	public String getFiltersActionClass() {
-		return filtersActionClass;
+	public String getFiltersFieldsClass() {
+		return filtersFieldsClass;
 	}
 
 	/**
@@ -208,34 +187,11 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 	 * @generated
 	 */
 	@Override
-	public void setFiltersActionClass(String newFiltersActionClass) {
-		String oldFiltersActionClass = filtersActionClass;
-		filtersActionClass = newFiltersActionClass;
+	public void setFiltersFieldsClass(String newFiltersFieldsClass) {
+		String oldFiltersFieldsClass = filtersFieldsClass;
+		filtersFieldsClass = newFiltersFieldsClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_STYLES__FILTERS_ACTION_CLASS, oldFiltersActionClass, filtersActionClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getFiltersBodyClass() {
-		return filtersBodyClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setFiltersBodyClass(String newFiltersBodyClass) {
-		String oldFiltersBodyClass = filtersBodyClass;
-		filtersBodyClass = newFiltersBodyClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_STYLES__FILTERS_BODY_CLASS, oldFiltersBodyClass, filtersBodyClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, WebuiPackage.COLLECTION_STYLES__FILTERS_FIELDS_CLASS, oldFiltersFieldsClass, filtersFieldsClass));
 	}
 
 	/**
@@ -317,10 +273,8 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CLASS:
 				return getFiltersClass();
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_ACTION_CLASS:
-				return getFiltersActionClass();
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_BODY_CLASS:
-				return getFiltersBodyClass();
+			case WebuiPackage.COLLECTION_STYLES__FILTERS_FIELDS_CLASS:
+				return getFiltersFieldsClass();
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CONTROL_CLASS:
 				return getFiltersControlClass();
 			case WebuiPackage.COLLECTION_STYLES__INSTANCE_ACTION_CLASS:
@@ -342,11 +296,8 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CLASS:
 				setFiltersClass((String)newValue);
 				return;
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_ACTION_CLASS:
-				setFiltersActionClass((String)newValue);
-				return;
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_BODY_CLASS:
-				setFiltersBodyClass((String)newValue);
+			case WebuiPackage.COLLECTION_STYLES__FILTERS_FIELDS_CLASS:
+				setFiltersFieldsClass((String)newValue);
 				return;
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CONTROL_CLASS:
 				setFiltersControlClass((String)newValue);
@@ -372,11 +323,8 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CLASS:
 				setFiltersClass(FILTERS_CLASS_EDEFAULT);
 				return;
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_ACTION_CLASS:
-				setFiltersActionClass(FILTERS_ACTION_CLASS_EDEFAULT);
-				return;
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_BODY_CLASS:
-				setFiltersBodyClass(FILTERS_BODY_CLASS_EDEFAULT);
+			case WebuiPackage.COLLECTION_STYLES__FILTERS_FIELDS_CLASS:
+				setFiltersFieldsClass(FILTERS_FIELDS_CLASS_EDEFAULT);
 				return;
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CONTROL_CLASS:
 				setFiltersControlClass(FILTERS_CONTROL_CLASS_EDEFAULT);
@@ -401,10 +349,8 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 		switch (featureID) {
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CLASS:
 				return FILTERS_CLASS_EDEFAULT == null ? filtersClass != null : !FILTERS_CLASS_EDEFAULT.equals(filtersClass);
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_ACTION_CLASS:
-				return FILTERS_ACTION_CLASS_EDEFAULT == null ? filtersActionClass != null : !FILTERS_ACTION_CLASS_EDEFAULT.equals(filtersActionClass);
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_BODY_CLASS:
-				return FILTERS_BODY_CLASS_EDEFAULT == null ? filtersBodyClass != null : !FILTERS_BODY_CLASS_EDEFAULT.equals(filtersBodyClass);
+			case WebuiPackage.COLLECTION_STYLES__FILTERS_FIELDS_CLASS:
+				return FILTERS_FIELDS_CLASS_EDEFAULT == null ? filtersFieldsClass != null : !FILTERS_FIELDS_CLASS_EDEFAULT.equals(filtersFieldsClass);
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CONTROL_CLASS:
 				return FILTERS_CONTROL_CLASS_EDEFAULT == null ? filtersControlClass != null : !FILTERS_CONTROL_CLASS_EDEFAULT.equals(filtersControlClass);
 			case WebuiPackage.COLLECTION_STYLES__INSTANCE_ACTION_CLASS:
@@ -427,10 +373,8 @@ public abstract class CollectionStylesImpl extends DynamicUnitStylesImpl impleme
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (filtersClass: ");
 		result.append(filtersClass);
-		result.append(", filtersActionClass: ");
-		result.append(filtersActionClass);
-		result.append(", filtersBodyClass: ");
-		result.append(filtersBodyClass);
+		result.append(", filtersFieldsClass: ");
+		result.append(filtersFieldsClass);
 		result.append(", filtersControlClass: ");
 		result.append(filtersControlClass);
 		result.append(", instanceActionClass: ");

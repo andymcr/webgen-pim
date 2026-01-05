@@ -13,8 +13,7 @@ package work.andycarpenter.webgen.pims.webui;
  * </p>
  * <ul>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersClass <em>Filters Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersActionClass <em>Filters Action Class</em>}</li>
- *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersBodyClass <em>Filters Body Class</em>}</li>
+ *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersFieldsClass <em>Filters Fields Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersControlClass <em>Filters Control Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getInstanceActionClass <em>Instance Action Class</em>}</li>
  *   <li>{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getInstanceControlClass <em>Instance Control Class</em>}</li>
@@ -49,50 +48,27 @@ public interface CollectionStyles extends DynamicUnitStyles {
 	void setFiltersClass(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Filters Action Class</b></em>' attribute.
+	 * Returns the value of the '<em><b>Filters Fields Class</b></em>' attribute.
 	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filters Action Class</em>' attribute.
-	 * @see #setFiltersActionClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionStyles_FiltersActionClass()
+	 * @return the value of the '<em>Filters Fields Class</em>' attribute.
+	 * @see #setFiltersFieldsClass(String)
+	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionStyles_FiltersFieldsClass()
 	 * @model default=""
 	 * @generated
 	 */
-	String getFiltersActionClass();
+	String getFiltersFieldsClass();
 
 	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersActionClass <em>Filters Action Class</em>}' attribute.
+	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersFieldsClass <em>Filters Fields Class</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Filters Action Class</em>' attribute.
-	 * @see #getFiltersActionClass()
+	 * @param value the new value of the '<em>Filters Fields Class</em>' attribute.
+	 * @see #getFiltersFieldsClass()
 	 * @generated
 	 */
-	void setFiltersActionClass(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Filters Body Class</b></em>' attribute.
-	 * The default value is <code>""</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Filters Body Class</em>' attribute.
-	 * @see #setFiltersBodyClass(String)
-	 * @see work.andycarpenter.webgen.pims.webui.WebuiPackage#getCollectionStyles_FiltersBodyClass()
-	 * @model default=""
-	 * @generated
-	 */
-	String getFiltersBodyClass();
-
-	/**
-	 * Sets the value of the '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersBodyClass <em>Filters Body Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Filters Body Class</em>' attribute.
-	 * @see #getFiltersBodyClass()
-	 * @generated
-	 */
-	void setFiltersBodyClass(String value);
+	void setFiltersFieldsClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Filters Control Class</b></em>' attribute.

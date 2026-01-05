@@ -46,8 +46,7 @@ public class CollectionStylesItemProvider extends DynamicUnitStylesItemProvider 
 			super.getPropertyDescriptors(object);
 
 			addFiltersClassPropertyDescriptor(object);
-			addFiltersActionClassPropertyDescriptor(object);
-			addFiltersBodyClassPropertyDescriptor(object);
+			addFiltersFieldsClassPropertyDescriptor(object);
 			addFiltersControlClassPropertyDescriptor(object);
 			addInstanceActionClassPropertyDescriptor(object);
 			addInstanceControlClassPropertyDescriptor(object);
@@ -78,46 +77,24 @@ public class CollectionStylesItemProvider extends DynamicUnitStylesItemProvider 
 	}
 
 	/**
-	 * This adds a property descriptor for the Filters Action Class feature.
+	 * This adds a property descriptor for the Filters Fields Class feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addFiltersActionClassPropertyDescriptor(Object object) {
+	protected void addFiltersFieldsClassPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_CollectionStyles_filtersActionClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionStyles_filtersActionClass_feature", "_UI_CollectionStyles_type"),
-				 WebuiPackage.Literals.COLLECTION_STYLES__FILTERS_ACTION_CLASS,
+				 getString("_UI_CollectionStyles_filtersFieldsClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionStyles_filtersFieldsClass_feature", "_UI_CollectionStyles_type"),
+				 WebuiPackage.Literals.COLLECTION_STYLES__FILTERS_FIELDS_CLASS,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Filters Body Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFiltersBodyClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CollectionStyles_filtersBodyClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CollectionStyles_filtersBodyClass_feature", "_UI_CollectionStyles_type"),
-				 WebuiPackage.Literals.COLLECTION_STYLES__FILTERS_BODY_CLASS,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 getString("_UI_StylePropertyCategory"),
+				 null,
 				 null));
 	}
 
@@ -215,8 +192,7 @@ public class CollectionStylesItemProvider extends DynamicUnitStylesItemProvider 
 
 		switch (notification.getFeatureID(CollectionStyles.class)) {
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CLASS:
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_ACTION_CLASS:
-			case WebuiPackage.COLLECTION_STYLES__FILTERS_BODY_CLASS:
+			case WebuiPackage.COLLECTION_STYLES__FILTERS_FIELDS_CLASS:
 			case WebuiPackage.COLLECTION_STYLES__FILTERS_CONTROL_CLASS:
 			case WebuiPackage.COLLECTION_STYLES__INSTANCE_ACTION_CLASS:
 			case WebuiPackage.COLLECTION_STYLES__INSTANCE_CONTROL_CLASS:

@@ -1109,22 +1109,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_STYLES__FILTERS_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Filters Action Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Filters Fields Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_STYLES__FILTERS_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Filters Body Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_STYLES__FILTERS_BODY_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 2;
+	int COLLECTION_STYLES__FILTERS_FIELDS_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Filters Control Class</b></em>' attribute.
@@ -1133,7 +1124,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_STYLES__FILTERS_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 3;
+	int COLLECTION_STYLES__FILTERS_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Instance Action Class</b></em>' attribute.
@@ -1142,7 +1133,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_STYLES__INSTANCE_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 4;
+	int COLLECTION_STYLES__INSTANCE_ACTION_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Instance Control Class</b></em>' attribute.
@@ -1151,7 +1142,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_STYLES__INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 5;
+	int COLLECTION_STYLES__INSTANCE_CONTROL_CLASS = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Collection Styles</em>' class.
@@ -1160,7 +1151,7 @@ public interface WebuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 6;
+	int COLLECTION_STYLES_FEATURE_COUNT = DYNAMIC_UNIT_STYLES_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Collection Styles</em>' class.
@@ -1291,22 +1282,13 @@ public interface WebuiPackage extends EPackage {
 	int COLLECTION_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Filters Action Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Filters Fields Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COLLECTION_UNIT_STYLES__FILTERS_ACTION_CLASS = COLLECTION_STYLES__FILTERS_ACTION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Filters Body Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLECTION_UNIT_STYLES__FILTERS_BODY_CLASS = COLLECTION_STYLES__FILTERS_BODY_CLASS;
+	int COLLECTION_UNIT_STYLES__FILTERS_FIELDS_CLASS = COLLECTION_STYLES__FILTERS_FIELDS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Control Class</b></em>' attribute.
@@ -1571,22 +1553,13 @@ public interface WebuiPackage extends EPackage {
 	int CARDS_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Filters Action Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Filters Fields Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARDS_UNIT_STYLES__FILTERS_ACTION_CLASS = COLLECTION_STYLES__FILTERS_ACTION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Filters Body Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CARDS_UNIT_STYLES__FILTERS_BODY_CLASS = COLLECTION_STYLES__FILTERS_BODY_CLASS;
+	int CARDS_UNIT_STYLES__FILTERS_FIELDS_CLASS = COLLECTION_STYLES__FILTERS_FIELDS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Control Class</b></em>' attribute.
@@ -2088,22 +2061,13 @@ public interface WebuiPackage extends EPackage {
 	int TABULAR_UNIT_STYLES__FILTERS_CLASS = COLLECTION_STYLES__FILTERS_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Filters Action Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Filters Fields Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABULAR_UNIT_STYLES__FILTERS_ACTION_CLASS = COLLECTION_STYLES__FILTERS_ACTION_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Filters Body Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABULAR_UNIT_STYLES__FILTERS_BODY_CLASS = COLLECTION_STYLES__FILTERS_BODY_CLASS;
+	int TABULAR_UNIT_STYLES__FILTERS_FIELDS_CLASS = COLLECTION_STYLES__FILTERS_FIELDS_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Filters Control Class</b></em>' attribute.
@@ -21742,26 +21706,15 @@ public interface WebuiPackage extends EPackage {
 	EAttribute getCollectionStyles_FiltersClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersActionClass <em>Filters Action Class</em>}'.
+	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersFieldsClass <em>Filters Fields Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Filters Action Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersActionClass()
+	 * @return the meta object for the attribute '<em>Filters Fields Class</em>'.
+	 * @see work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersFieldsClass()
 	 * @see #getCollectionStyles()
 	 * @generated
 	 */
-	EAttribute getCollectionStyles_FiltersActionClass();
-
-	/**
-	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersBodyClass <em>Filters Body Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Filters Body Class</em>'.
-	 * @see work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersBodyClass()
-	 * @see #getCollectionStyles()
-	 * @generated
-	 */
-	EAttribute getCollectionStyles_FiltersBodyClass();
+	EAttribute getCollectionStyles_FiltersFieldsClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link work.andycarpenter.webgen.pims.webui.CollectionStyles#getFiltersControlClass <em>Filters Control Class</em>}'.
@@ -25813,20 +25766,12 @@ public interface WebuiPackage extends EPackage {
 		EAttribute COLLECTION_STYLES__FILTERS_CLASS = eINSTANCE.getCollectionStyles_FiltersClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Filters Action Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Filters Fields Class</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COLLECTION_STYLES__FILTERS_ACTION_CLASS = eINSTANCE.getCollectionStyles_FiltersActionClass();
-
-		/**
-		 * The meta object literal for the '<em><b>Filters Body Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COLLECTION_STYLES__FILTERS_BODY_CLASS = eINSTANCE.getCollectionStyles_FiltersBodyClass();
+		EAttribute COLLECTION_STYLES__FILTERS_FIELDS_CLASS = eINSTANCE.getCollectionStyles_FiltersFieldsClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Filters Control Class</b></em>' attribute feature.

@@ -1523,7 +1523,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionStyles_FiltersActionClass() {
+	public EAttribute getCollectionStyles_FiltersFieldsClass() {
 		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1533,7 +1533,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionStyles_FiltersBodyClass() {
+	public EAttribute getCollectionStyles_FiltersControlClass() {
 		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1543,18 +1543,8 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getCollectionStyles_FiltersControlClass() {
-		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getCollectionStyles_InstanceControlClass() {
-		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1564,7 +1554,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 	 */
 	@Override
 	public EAttribute getCollectionStyles_InstanceActionClass() {
-		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)collectionStylesEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -4901,8 +4891,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		collectionStylesEClass = createEClass(COLLECTION_STYLES);
 		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_CLASS);
-		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_ACTION_CLASS);
-		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_BODY_CLASS);
+		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_FIELDS_CLASS);
 		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__FILTERS_CONTROL_CLASS);
 		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__INSTANCE_ACTION_CLASS);
 		createEAttribute(collectionStylesEClass, COLLECTION_STYLES__INSTANCE_CONTROL_CLASS);
@@ -5537,8 +5526,7 @@ public class WebuiPackageImpl extends EPackageImpl implements WebuiPackage {
 
 		initEClass(collectionStylesEClass, CollectionStyles.class, "CollectionStyles", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCollectionStyles_FiltersClass(), ecorePackage.getEString(), "filtersClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionStyles_FiltersActionClass(), ecorePackage.getEString(), "filtersActionClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCollectionStyles_FiltersBodyClass(), ecorePackage.getEString(), "filtersBodyClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCollectionStyles_FiltersFieldsClass(), ecorePackage.getEString(), "filtersFieldsClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionStyles_FiltersControlClass(), ecorePackage.getEString(), "filtersControlClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionStyles_InstanceActionClass(), ecorePackage.getEString(), "instanceActionClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCollectionStyles_InstanceControlClass(), ecorePackage.getEString(), "instanceControlClass", "", 0, 1, CollectionStyles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
